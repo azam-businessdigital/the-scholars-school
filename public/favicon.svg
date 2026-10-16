@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142B4A"/>
+      <stop offset="100%" stop-color="#1D3D63"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C37A"/>
+      <stop offset="50%" stop-color="#C6A15B"/>
+      <stop offset="100%" stop-color="#9E7A32"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="128" height="128" rx="28" fill="url(#crestGrad)"/>
+  <rect x="5" y="5" width="118" height="118" rx="23" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.85"/>
+  
+  <!-- Graduation Cap & Knowledge Emblem -->
+  <!-- Cap Top Diamond -->
+  <polygon points="64,22 104,40 64,56 24,40" fill="url(#goldGrad)"/>
+  <!-- Cap Skull Base -->
+  <path d="M40,49 L40,68 C40,79 64,86 64,86 C64,86 88,79 88,68 L88,49 L64,60 Z" fill="#FFFFFF"/>
+  <!-- Tassel Cord & Bead -->
+  <path d="M64,39 Q96,44 98,66 L94,76 L98,82 L102,76 L98,66" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="98" cy="80" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Open Book of Knowledge at Bottom -->
+  <path d="M26,98 C42,92 58,95 64,103 C70,95 86,92 102,98 L102,91 C86,85 70,88 64,95 C58,88 42,85 26,91 Z" fill="url(#goldGrad)"/>
+  <path d="M64,95 L64,104" stroke="#142B4A" stroke-width="2"/>
+</svg>

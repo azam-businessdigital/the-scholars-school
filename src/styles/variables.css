@@ -1,0 +1,75 @@
+:root {
+  /* Approved Palette */
+  --color-royal-navy: #142B4A;
+  --color-deep-blue: #1D3D63;
+  --color-deep-blue-hover: #122842;
+  --color-champagne-gold: #C6A15B;
+  --color-champagne-gold-light: #E0C792;
+  --color-champagne-gold-subtle: rgba(198, 161, 91, 0.12);
+  --color-ivory-white: #FAF8F2;
+  --color-pure-white: #FFFFFF;
+  --color-slate-grey: #64748B;
+  --color-slate-grey-dark: #334155;
+  --color-slate-grey-light: #94A3B8;
+  --color-border-subtle: #E2E8F0;
+  --color-border-accent: #C6A15B;
+
+  /* Feedback Colors */
+  --color-success: #15803D;
+  --color-success-bg: #F0FDF4;
+  --color-error: #B91C1C;
+  --color-error-bg: #FEF2F2;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography Scale (Matching Al-Irfan 72px Hero Scale) */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 2.625rem;   /* 42px */
+  --text-6xl: 3rem;       /* 48px */
+  --text-7xl: 3.5rem;     /* 56px */
+  --text-8xl: 4.5rem;     /* 72px */
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radii (Subtly rounded, strictly non-capsule) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(20, 43, 74, 0.06), 0 1px 2px rgba(20, 43, 74, 0.04);
+  --shadow-md: 0 4px 10px rgba(20, 43, 74, 0.08), 0 2px 4px rgba(20, 43, 74, 0.04);
+  --shadow-lg: 0 10px 24px rgba(20, 43, 74, 0.1), 0 4px 8px rgba(20, 43, 74, 0.05);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-wide: 1320px;
+  --header-height: 84px;
+  --topbar-height: 38px;
+}
