@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/the-scholars-school/",
+    "build:staging": "vite build --base=/the-scholars-school/",
+    "build:prod": "vite build --base=/",
     "preview": "vite preview"
   },
   "dependencies": {

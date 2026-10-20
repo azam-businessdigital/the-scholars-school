@@ -6,12 +6,16 @@
 
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
 
 // Handle preflight OPTIONS
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+    header('Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With');
+    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
     http_response_code(204);
     exit;
 }
@@ -117,13 +121,29 @@ $sendResult = sendSmtpEmail(
     $name
 );
 
+// Local Data Archive (Preserve enquiry in all circumstances)
+$archiveFile = __DIR__ . '/contacts_archive.json';
+$entries = file_exists($archiveFile) ? json_decode(@file_get_contents($archiveFile), true) : [];
+if (!is_array($entries)) $entries = [];
+$entries[] = [
+    'id' => 'CNT-' . date('Ymd-His') . '-' . substr(md5(uniqid()), 0, 4),
+    'date' => date('Y-m-d H:i:s'),
+    'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
+    'name' => $name,
+    'phone' => $phone,
+    'email' => $email,
+    'subject' => $subject,
+    'message' => $message,
+    'recaptchaScore' => $captchaResult['score'] ?? 1.0
+];
+@file_put_contents($archiveFile, json_encode($entries, JSON_PRETTY_PRINT));
+
 if (!$sendResult['success']) {
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'error' => 'Unable to dispatch email message through the mail server at this moment. Please call our desk at +91 8976890569.'
-    ]);
-    exit;
+    @file_put_contents(
+        __DIR__ . '/mail_debug.log',
+        date('[Y-m-d H:i:s] ') . "Email delivery queued/delayed: " . ($sendResult['error'] ?? 'Unknown error') . " - Record saved in archive.\n",
+        FILE_APPEND
+    );
 }
 
 // Optionally send acknowledgment to the user

@@ -7,9 +7,12 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
+  /* Instant scrolling so route transitions always start at the top without visible scrolling animation */
+  scroll-behavior: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -18,7 +21,23 @@ body {
   line-height: 1.7;
   color: var(--color-slate-grey-dark);
   background-color: var(--color-pure-white);
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root,
+.site-wrapper {
+  overflow: visible;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Accessibility: Skip Link */
@@ -116,14 +135,17 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-img {
+img, svg, video, canvas, iframe {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 ul, ol {
   list-style-position: inside;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
 }
 
 button {
@@ -137,4 +159,18 @@ hr {
   border: none;
   border-top: 1px solid var(--color-border-subtle);
   margin: var(--space-8) 0;
+}
+
+/* Prevent unwanted iOS auto-zoom on form inputs by ensuring min 16px font-size */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }

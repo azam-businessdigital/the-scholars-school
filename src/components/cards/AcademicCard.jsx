@@ -7,8 +7,8 @@ export default function AcademicCard({ section }) {
   const descText = section.desc || section.summary;
 
   return (
-    <article className="academic-card-modern">
-      <div className="academic-card-media">
+    <article className="academic-card-modern card reveal-up">
+      <div className="academic-card-media img-sheen-wrap">
         <img
           src={section.heroImage}
           alt={section.title}

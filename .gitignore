@@ -46,4 +46,7 @@ public/api/.env
 *.local.php
 recaptcha_debug.log
 mail_debug.log
+*_archive.json
+public/api/*_archive.json
+
 

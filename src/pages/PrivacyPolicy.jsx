@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
       <Breadcrumbs items={[{ label: 'Privacy Policy', path: '/privacy-policy/' }]} />
 
       <section className="section section-white">
-        <div className="container" style={{ maxWidth: '850px' }}>
+        <div className="container reveal-up" style={{ maxWidth: '850px' }}>
           <div>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-royal-navy)', marginBottom: '12px' }}>
               1. Institutional Commitment

@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="container">
-        <div className="footer-grid">
+        <div className="footer-grid stagger-group reveal-up">
           {/* Column 1: Institution Info */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
               <img
                 src="/images/logo.png"
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Academic Sections */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up">
             <h4>Academic Sections</h4>
             <ul className="footer-links">
               <li>
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Quick Links */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up">
             <h4>Quick Links</h4>
             <ul className="footer-links">
               <li>
@@ -123,7 +123,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Contact Info */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up">
             <h4>Contact Details</h4>
             <ul className="footer-contact-list">
               <li className="footer-contact-item">

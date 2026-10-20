@@ -38,10 +38,11 @@ export default function Results() {
           />
 
           {/* Results Cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+          <div className="stagger-group reveal-up" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
             {resultsData.map((res) => (
               <article
                 key={res.id}
+                className="card result-detailed-card reveal-up"
                 style={{
                   backgroundColor: '#fff',
                   border: '1px solid var(--color-border-subtle)',

@@ -12,7 +12,7 @@ export default function NotFound() {
       />
 
       <section className="section section-ivory" style={{ minHeight: '65vh', display: 'flex', alignItems: 'center' }}>
-        <div className="container" style={{ maxWidth: '680px', textAlign: 'center' }}>
+        <div className="container reveal-scale" style={{ maxWidth: '680px', textAlign: 'center' }}>
           <span
             style={{
               fontFamily: 'var(--font-heading)',

@@ -17,7 +17,7 @@ export default function Lightbox({ images, currentIndex, onClose, onPrev, onNext
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [onClose, onPrev, onNext]);
 

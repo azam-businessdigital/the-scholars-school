@@ -32,18 +32,18 @@ export default function Contact() {
       {/* Main Contact Section with Warm Contrast */}
       <section className="section contact-main-section">
         <div className="container">
-          <div className="contact-layout-grid">
+          <div className="contact-layout-grid stagger-group reveal-up">
             {/* Left Column: Campus Information */}
-            <div className="contact-info-column">
+            <div className="contact-info-column section-header reveal-up">
               <span className="eyebrow">OFFICE DETAILS</span>
               <h2 className="section-title" style={{ marginBottom: '12px' }}>Campus Information</h2>
-              <p style={{ color: 'var(--color-slate-grey-dark)', marginBottom: '28px', lineHeight: 1.6 }}>
+              <p className="section-subtitle" style={{ color: 'var(--color-slate-grey-dark)', marginBottom: '28px', lineHeight: 1.6 }}>
                 Visit our campus at Hill Park, Jogeshwari West, or reach out directly to our administrative office via telephone, WhatsApp, or email during school working hours.
               </p>
 
-              <div className="contact-cards-stack">
+              <div className="contact-cards-stack stagger-group reveal-up">
                 {/* Location Card */}
-                <div className="contact-info-card">
+                <div className="contact-info-card reveal-up">
                   <div className="contact-info-icon-box">
                     <MapPin size={22} />
                   </div>
@@ -54,7 +54,7 @@ export default function Contact() {
                 </div>
 
                 {/* Telephone Card */}
-                <div className="contact-info-card">
+                <div className="contact-info-card reveal-up">
                   <div className="contact-info-icon-box">
                     <Phone size={22} />
                   </div>
@@ -68,7 +68,7 @@ export default function Contact() {
                 </div>
 
                 {/* Email Card */}
-                <div className="contact-info-card">
+                <div className="contact-info-card reveal-up">
                   <div className="contact-info-icon-box">
                     <Mail size={22} />
                   </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                 </div>
 
                 {/* Visiting Hours Card */}
-                <div className="contact-info-card">
+                <div className="contact-info-card reveal-up">
                   <div className="contact-info-icon-box">
                     <Clock size={22} />
                   </div>
@@ -98,36 +98,55 @@ export default function Contact() {
             </div>
 
             {/* Right Column: Premium Contrast Contact Form */}
-            <div className="contact-form-column">
+            <div className="contact-form-column reveal-up">
               <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Embed Section with User Provided Iframe */}
+      {/* Map Embed Section with Responsive Container & Navigation Button */}
       <section className="section contact-map-section">
-        <div className="container" style={{ marginBottom: 'var(--space-6)' }}>
+        <div className="container">
           <SectionHeader
             eyebrow="MAP DIRECTIONS"
             title="Locate Our 7-Floor Campus"
             subtitle="Situated on Captain Suresh Samant Marg, Opposite Hill Park Tower in Jogeshwari West, Mumbai."
             centered
           />
-        </div>
 
-        <div className="contact-map-wrapper">
-          <iframe
-            src={mapIframeUrl}
-            width="100%"
-            height="450"
-            frameBorder="0"
-            style={{ border: 0, display: 'block' }}
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-            title="The Scholar High School & The Scholar Junior College of Arts & Commerce Location Map"
-          />
+          <div className="contact-map-card card reveal-up">
+            <div className="contact-map-wrapper">
+              <iframe
+                src={mapIframeUrl}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0, display: 'block', width: '100%', height: '100%' }}
+                allowFullScreen=""
+                aria-hidden="false"
+                tabIndex="0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="The Scholar High School & The Scholar Junior College of Arts & Commerce Location Map"
+              />
+            </div>
+
+            <div className="contact-map-footer-bar">
+              <div className="contact-map-footer-info">
+                <MapPin size={18} className="contact-map-pin-icon" />
+                <span>Opposite Hill Park Tower, Captain Suresh Samant Marg, Jogeshwari (West), Mumbai 400102</span>
+              </div>
+              <a
+                href="https://maps.google.com/?q=The+Scholar+High+School+Jogeshwari+West+Mumbai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold btn-sm contact-map-directions-btn"
+              >
+                <span>Open in Google Maps / Directions</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

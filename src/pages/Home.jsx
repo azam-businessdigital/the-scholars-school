@@ -122,7 +122,7 @@ export default function Home() {
       {/* VERIFIED STATS STRIP */}
       <section className="stats-strip" aria-label="Institutional Highlights">
         <div className="container">
-          <div className="stats-grid">
+          <div className="stats-grid stagger-group reveal-up">
             {schoolData.stats.map((stat, i) => (
               <div key={i} className="stat-item">
                 <div className="stat-number">{stat.value}</div>
@@ -137,35 +137,37 @@ export default function Home() {
       <section className="section section-white" aria-labelledby="about-heading">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'stretch', gap: 'var(--space-12)' }}>
-            {/* Left Column: Overlapping Campus Photography & ESTD 1993 (Equal to Content Height) */}
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div className="about-collage-wrap" style={{ flex: 1, height: '100%' }}>
+            {/* Left Column: Overlapping Campus Photography & ESTD 1993 */}
+            <div className="reveal-left">
+              <div className="about-collage-wrap">
                 <div className="about-year-badge">
                   <span>EST 1993</span>
                 </div>
-                <div className="about-thumb-main">
-                  <img
-                    src="/images/campus/building.jpg"
-                    alt="The Scholars High School 7-story campus building at Hill Park"
-                    loading="lazy"
-                    width="600"
-                    height="380"
-                  />
-                </div>
-                <div className="about-thumb-secondary">
-                  <img
-                    src="/images/campus/banner2.jpg"
-                    alt="Students and Academic Activities"
-                    loading="lazy"
-                    width="360"
-                    height="220"
-                  />
+                <div className="about-image-collage">
+                  <div className="about-thumb-main">
+                    <img
+                      src="/images/campus/building.jpg"
+                      alt="The Scholars High School 7-story campus building at Hill Park"
+                      loading="lazy"
+                      width="600"
+                      height="380"
+                    />
+                  </div>
+                  <div className="about-thumb-secondary">
+                    <img
+                      src="/images/campus/banner2.jpg"
+                      alt="Neuroscience Based Curriculum at The Scholars School"
+                      loading="lazy"
+                      width="360"
+                      height="202"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Heading, Overview & Highlights */}
-            <div>
+            <div className="reveal-right">
               <span className="eyebrow">ABOUT THE SCHOLARS</span>
               <h2 id="about-heading" className="section-title">
                 Building Future Leaders Through Modern &amp; Moral Education
@@ -216,7 +218,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <div className="about-cta-actions">
                 <Link to="/about-us/" className="btn btn-primary">
                   <span>More About Us</span>
                   <ArrowUpRight size={16} />
@@ -235,7 +237,7 @@ export default function Home() {
       <section className="section admission-highlight-section" aria-labelledby="admission-banner-heading">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+            <div className="reveal-left">
               <span className="eyebrow">START YOUR CHILD&apos;S JOURNEY</span>
               <h2 id="admission-banner-heading" className="section-title">
                 Admissions Open <br />For Academic Year 2026-27
@@ -244,7 +246,7 @@ export default function Home() {
                 Join The Scholars High School &amp; Junior College for Commerce, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
               </p>
 
-              <div className="admission-features-grid">
+              <div className="admission-features-grid stagger-group">
                 <div className="admission-feature-chip">
                   <School size={20} className="chip-icon" />
                   <span>Pre-School to Class X (SSC)</span>
@@ -275,7 +277,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="reveal-right">
               <div className="admission-thumb-wrap">
                 <img
                   src="/images/campus/banner1.jpg"
@@ -305,7 +307,7 @@ export default function Home() {
             centered
           />
 
-          <div className="grid-3">
+          <div className="grid-3 stagger-group reveal-up">
             <div className="why-choose-card">
               <div className="why-choose-icon">
                 <Award size={28} />
@@ -379,7 +381,7 @@ export default function Home() {
             centered
           />
 
-          <div className="grid-3">
+          <div className="grid-3 stagger-group reveal-up">
             {academicSectionsHome.map((section) => (
               <AcademicCard key={section.id} section={section} />
             ))}
@@ -404,16 +406,18 @@ export default function Home() {
             centered
           />
 
-          <div className="leadership-box">
+          <div className="leadership-box reveal-scale">
             <div style={{ textAlign: 'center' }}>
-              <img
-                src={schoolData.leadership.chairman.image}
-                alt={schoolData.leadership.chairman.name}
-                className="leadership-avatar"
-                loading="lazy"
-                width="180"
-                height="200"
-              />
+              <div className="leadership-avatar-wrap">
+                <img
+                  src={schoolData.leadership.chairman.image}
+                  alt={schoolData.leadership.chairman.name}
+                  className="leadership-avatar"
+                  loading="lazy"
+                  width="180"
+                  height="200"
+                />
+              </div>
               <div style={{ marginTop: '12px' }}>
                 <div className="leadership-author">{schoolData.leadership.chairman.name}</div>
                 <div className="leadership-title">{schoolData.leadership.chairman.title}</div>
@@ -454,7 +458,7 @@ export default function Home() {
           {/* Clean 2-Column Campus Showcase */}
           <div className="campus-showcase-grid">
             {/* Left: Building Spotlight Card */}
-            <div className="campus-building-spotlight">
+            <div className="campus-building-spotlight reveal-left">
               <div className="campus-img-container">
                 <img
                   src="/images/campus/building.jpg"
@@ -494,7 +498,7 @@ export default function Home() {
             </div>
 
             {/* Right: 6 Simple Facility Cards (Concise, Less Text) */}
-            <div className="campus-cards-grid">
+            <div className="campus-cards-grid stagger-group reveal-right">
               <div className="simple-facility-card">
                 <div className="simple-facility-icon">
                   <Monitor size={22} />
@@ -580,7 +584,7 @@ export default function Home() {
       {/* SECTION 7: LATEST ANNOUNCEMENTS (MARQUEE SHOWCASE) */}
       <section className="section section-white" aria-labelledby="notices-heading" style={{ overflow: 'hidden' }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-8)', flexWrap: 'wrap', gap: '16px' }}>
+          <div className="reveal-up" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-8)', flexWrap: 'wrap', gap: '16px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
                 <span className="eyebrow" style={{ marginBottom: 0 }}>OFFICIAL NOTICES &amp; CIRCULARS</span>
@@ -661,7 +665,7 @@ export default function Home() {
             centered
           />
 
-          <div className="grid-3">
+          <div className="grid-3 stagger-group reveal-up">
             {resultsData.map((result) => (
               <div
                 key={result.id}
@@ -716,8 +720,8 @@ export default function Home() {
       {/* SECTION 9: NEWS & MEDIA (ELECTRONIC YOUTUBE + PRINT NEWSPAPER CLIPPINGS) */}
       <section className="section section-ivory" aria-labelledby="media-heading">
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'var(--space-8)', flexWrap: 'wrap', gap: '16px' }}>
-            <div>
+          <div className="reveal-up" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'var(--space-8)', flexWrap: 'wrap', gap: '16px' }}>
+            <div className="section-header" style={{ marginBottom: 0 }}>
               <span className="eyebrow">BROADCAST &amp; PRESS COVERAGE</span>
               <h2 id="media-heading" className="section-title" style={{ marginBottom: 0 }}>
                 News &amp; Media
@@ -730,7 +734,7 @@ export default function Home() {
           </div>
 
           {/* Filter Tabs */}
-          <div className="filter-bar" role="tablist" aria-label="Media category filter" style={{ marginBottom: 'var(--space-8)' }}>
+          <div className="filter-bar reveal-up" role="tablist" aria-label="Media category filter" style={{ marginBottom: 'var(--space-8)' }}>
             <button
               type="button"
               className={`filter-btn ${mediaFilter === 'all' ? 'active' : ''}`}
@@ -765,7 +769,7 @@ export default function Home() {
           </div>
 
           {/* Media Grid */}
-          <div className="media-news-grid">
+          <div className="media-news-grid stagger-group reveal-up">
             {homeMediaItems.map((item) => (
               <article
                 key={item.id}
@@ -1028,7 +1032,7 @@ export default function Home() {
           />
 
           {/* Minimal Album Cards Grid */}
-          <div className="albums-grid">
+          <div className="albums-grid stagger-group reveal-up">
             {albumsData.slice(0, 6).map((album) => (
               <Link
                 key={album.id}
@@ -1097,7 +1101,7 @@ export default function Home() {
 
       {/* SECTION 11: CAMPUS VISIT CTA */}
       <section className="section section-navy text-center" aria-labelledby="cta-heading" style={{ borderTop: '4px solid var(--color-champagne-gold)', textAlign: 'center' }}>
-        <div className="container text-center" style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto' }}>
+        <div className="container text-center reveal-scale" style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto' }}>
           <span className="eyebrow" style={{ display: 'inline-block' }}>EXPERIENCE OUR CAMPUS</span>
           <h2 id="cta-heading" className="section-title text-center" style={{ color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
             Empowering Every Student Toward Academic &amp; Moral Excellence.
@@ -1130,6 +1134,7 @@ export default function Home() {
 
           <div className="grid-2" style={{ alignItems: 'stretch' }}>
             <div
+              className="reveal-left"
               style={{
                 backgroundColor: '#fff',
                 padding: 'clamp(16px, 3.5vw, var(--space-8))',
@@ -1206,6 +1211,7 @@ export default function Home() {
             </div>
 
             <div
+              className="reveal-right"
               style={{
                 borderRadius: 'var(--radius-sm)',
                 overflow: 'hidden',

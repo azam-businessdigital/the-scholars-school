@@ -75,9 +75,6 @@ export default function SEO({
     setTwitterMeta('twitter:description', description);
     setTwitterMeta('twitter:image', absoluteOgImage);
     setTwitterMeta('twitter:image:alt', fullTitle);
-
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
   }, [fullTitle, description, canonicalUrl, absoluteOgImage, type]);
 
   return null;

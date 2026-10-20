@@ -5,7 +5,7 @@ export default function PearlsOfWisdom({ className = '', id = 'pearls-of-wisdom'
   return (
     <section id={id} className={`section pearls-section ${className}`} aria-labelledby="pearls-heading">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center reveal-up">
           <span className="eyebrow">SPIRITUAL &amp; MORAL HERITAGE</span>
           <h2 id="pearls-heading" className="section-title">
             Pearls Of Wisdom
@@ -15,9 +15,9 @@ export default function PearlsOfWisdom({ className = '', id = 'pearls-of-wisdom'
           </p>
         </div>
 
-        <div className="pearls-grid">
+        <div className="pearls-grid stagger-group reveal-up">
           {pearlsOfWisdomData.map((item) => (
-            <div key={item.id} className="pearl-card">
+            <div key={item.id} className="pearl-card card reveal-up">
               <div>
                 <div className="pearl-card-top">
                   <div className="pearl-icon-badge">
@@ -57,7 +57,7 @@ export default function PearlsOfWisdom({ className = '', id = 'pearls-of-wisdom'
           ))}
         </div>
 
-        <div className="pearls-footer-banner">
+        <div className="pearls-footer-banner reveal-up">
           <div className="pearls-footer-pill">
             <span className="pearls-pill-dot" aria-hidden="true"></span>
             <span className="pearls-pill-label">Foundational Philosophy</span>

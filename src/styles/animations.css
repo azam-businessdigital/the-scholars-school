@@ -1,0 +1,1405 @@
+/* ==============================================================================
+   THE SCHOLARS HIGH SCHOOL & JUNIOR COLLEGE
+   PREMIUM BESPOKE ANIMATION & INTERACTION SYSTEM
+   ============================================================================== */
+
+:root {
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-gentle: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --anim-reveal-dur: 0.85s;
+  --anim-sheen-dur: 0.85s;
+  --anim-card-dur: 0.38s;
+}
+
+/* ==============================================================================
+   1. KEYFRAME DEFINITIONS
+   ============================================================================== */
+
+/* Velvet Entrance Keyframes */
+@keyframes luxuryFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes luxuryFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes luxuryScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.94, 0.94, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes luxurySlideLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-36px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes luxurySlideRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(36px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Title & Gold Accent Keyframes */
+@keyframes goldUnderlineExpand {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes goldSheenContinuous {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes goldShimmerSweep {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Image Light Glint & Sheen */
+@keyframes imageSheenPass {
+  0% {
+    left: -130%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+/* Subtle Ambient Float */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Gentle Pulse Glow for Gold Badges */
+@keyframes pulseGoldGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(198, 161, 91, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(198, 161, 91, 0);
+  }
+}
+
+/* Button Radiant Gleam */
+@keyframes btnGleamPass {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* ==============================================================================
+   2. SCROLL REVEAL SYSTEM (.reveal-on-scroll / .is-revealed)
+   ============================================================================== */
+
+/* Base hidden state for observed elements */
+.reveal-on-scroll,
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+  will-change: transform, opacity;
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity var(--anim-reveal-dur) var(--ease-luxury);
+  will-change: opacity;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale3d(0.94, 0.94, 1);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+  will-change: transform, opacity;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-35px, 0, 0);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+  will-change: transform, opacity;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(35px, 0, 0);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+  will-change: transform, opacity;
+}
+
+/* Active Revealed State */
+.reveal-on-scroll.is-revealed,
+.reveal-up.is-revealed,
+.reveal-fade.is-revealed,
+.reveal-scale.is-revealed,
+.reveal-left.is-revealed,
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+/* Stagger Groups: all child items smoothly enter */
+.stagger-group:not(.is-revealed) > * {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+}
+
+.stagger-group.is-revealed > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity var(--anim-reveal-dur) var(--ease-luxury),
+    transform var(--anim-reveal-dur) var(--ease-luxury);
+}
+
+/* Stagger Children within Groups */
+.stagger-group > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-group > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger-group > *:nth-child(3) { transition-delay: 0.19s; }
+.stagger-group > *:nth-child(4) { transition-delay: 0.26s; }
+.stagger-group > *:nth-child(5) { transition-delay: 0.33s; }
+.stagger-group > *:nth-child(6) { transition-delay: 0.40s; }
+.stagger-group > *:nth-child(7) { transition-delay: 0.47s; }
+.stagger-group > *:nth-child(8) { transition-delay: 0.54s; }
+.stagger-group > *:nth-child(9) { transition-delay: 0.61s; }
+
+/* Grid Stagger Cascades */
+.grid-2.is-revealed > *:nth-child(1),
+.grid-3.is-revealed > *:nth-child(1),
+.media-news-grid.is-revealed > *:nth-child(1),
+.albums-grid.is-revealed > *:nth-child(1),
+.campus-cards-grid.is-revealed > *:nth-child(1),
+.pearls-grid.is-revealed > *:nth-child(1),
+.mrak-gallery-grid-4.is-revealed > *:nth-child(1),
+.academic-domain-grid.is-revealed > *:nth-child(1),
+.mrak-routine-grid.is-revealed > *:nth-child(1),
+.faculty-roster-grid.is-revealed > *:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.grid-2.is-revealed > *:nth-child(2),
+.grid-3.is-revealed > *:nth-child(2),
+.media-news-grid.is-revealed > *:nth-child(2),
+.albums-grid.is-revealed > *:nth-child(2),
+.campus-cards-grid.is-revealed > *:nth-child(2),
+.pearls-grid.is-revealed > *:nth-child(2),
+.mrak-gallery-grid-4.is-revealed > *:nth-child(2),
+.academic-domain-grid.is-revealed > *:nth-child(2),
+.mrak-routine-grid.is-revealed > *:nth-child(2),
+.faculty-roster-grid.is-revealed > *:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+.grid-3.is-revealed > *:nth-child(3),
+.media-news-grid.is-revealed > *:nth-child(3),
+.albums-grid.is-revealed > *:nth-child(3),
+.campus-cards-grid.is-revealed > *:nth-child(3),
+.pearls-grid.is-revealed > *:nth-child(3),
+.mrak-gallery-grid-4.is-revealed > *:nth-child(3),
+.academic-domain-grid.is-revealed > *:nth-child(3),
+.mrak-routine-grid.is-revealed > *:nth-child(3),
+.faculty-roster-grid.is-revealed > *:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.grid-3.is-revealed > *:nth-child(4),
+.albums-grid.is-revealed > *:nth-child(4),
+.campus-cards-grid.is-revealed > *:nth-child(4),
+.mrak-gallery-grid-4.is-revealed > *:nth-child(4),
+.academic-domain-grid.is-revealed > *:nth-child(4),
+.mrak-routine-grid.is-revealed > *:nth-child(4),
+.faculty-roster-grid.is-revealed > *:nth-child(4) {
+  transition-delay: 0.32s;
+}
+
+.grid-3.is-revealed > *:nth-child(5),
+.albums-grid.is-revealed > *:nth-child(5),
+.campus-cards-grid.is-revealed > *:nth-child(5),
+.academic-domain-grid.is-revealed > *:nth-child(5),
+.faculty-roster-grid.is-revealed > *:nth-child(5) {
+  transition-delay: 0.40s;
+}
+
+.grid-3.is-revealed > *:nth-child(6),
+.albums-grid.is-revealed > *:nth-child(6),
+.campus-cards-grid.is-revealed > *:nth-child(6),
+.academic-domain-grid.is-revealed > *:nth-child(6),
+.faculty-roster-grid.is-revealed > *:nth-child(6) {
+  transition-delay: 0.48s;
+}
+
+/* ==============================================================================
+   3. SECTION HEADER & TITLE LUXURY CHOREOGRAPHY
+   ============================================================================== */
+
+.section-header {
+  position: relative;
+}
+
+/* Eyebrow badge animation across all pages */
+.section-header .eyebrow,
+.eyebrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 0.6s var(--ease-luxury),
+    transform 0.6s var(--ease-luxury),
+    letter-spacing 0.6s var(--ease-luxury);
+  position: relative;
+}
+
+.section-header.is-revealed .eyebrow,
+.is-revealed .eyebrow,
+.is-revealed > .eyebrow,
+.is-revealed.eyebrow,
+.eyebrow.is-revealed,
+section.is-revealed .eyebrow,
+.section.is-revealed .eyebrow,
+.grid-2.is-revealed .eyebrow,
+.academic-hero-grid.is-revealed .eyebrow,
+.page-banner .eyebrow,
+.page-banner .mrak-banner-badge,
+.page-banner .mrak-banner-tag,
+.mrak-banner-badge,
+.mrak-banner-tag {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Section Titles & All Section Headings Entrance */
+.section-header .section-title,
+.section-title,
+h2.section-title,
+section h2,
+.section h2,
+.album-hero-title {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 0.75s var(--ease-luxury) 0.12s,
+    transform 0.75s var(--ease-luxury) 0.12s;
+}
+
+.section-header.is-revealed .section-title,
+.is-revealed .section-title,
+.is-revealed > .section-title,
+.is-revealed.section-title,
+.section-title.is-revealed,
+section h2.is-revealed,
+.section h2.is-revealed,
+section.is-revealed h2,
+.section.is-revealed h2,
+section.is-revealed .section-title,
+.section.is-revealed .section-title,
+.grid-2.is-revealed .section-title,
+.academic-hero-grid.is-revealed .section-title,
+.is-revealed h2,
+.is-revealed section h2,
+.is-revealed > h2,
+.album-hero-title.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Decorative Gold Underline Expansion with Shimmer */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 58px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #B58A3E 0%,
+    #EAD79B 35%,
+    #FFF4D2 50%,
+    #EAD79B 65%,
+    #B58A3E 100%
+  );
+  background-size: 200% auto;
+  margin-top: var(--space-3);
+  border-radius: var(--radius-xs);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s var(--ease-luxury) 0.32s;
+  box-shadow: 0 1px 6px rgba(198, 161, 91, 0.35);
+  animation: goldSheenContinuous 6s linear infinite;
+}
+
+/* Centered section headers expand underline from center */
+.section-header.text-center .section-title::after,
+.section-title.text-center::after,
+.text-center .section-title::after,
+[style*="text-align: center"] .section-title::after,
+[style*="text-align:center"] .section-title::after {
+  transform-origin: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header.is-revealed .section-title::after,
+.is-revealed .section-title::after,
+.is-revealed > .section-title::after,
+.is-revealed.section-title::after,
+.section-title.is-revealed::after,
+section.is-revealed .section-title::after,
+.section.is-revealed .section-title::after,
+.grid-2.is-revealed .section-title::after,
+.academic-hero-grid.is-revealed .section-title::after,
+.is-revealed h2::after {
+  transform: scaleX(1);
+}
+
+/* Section Subtitle Entrance */
+.section-header .section-subtitle,
+.section-subtitle {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.75s var(--ease-luxury) 0.22s,
+    transform 0.75s var(--ease-luxury) 0.22s;
+}
+
+.section-header.is-revealed .section-subtitle,
+.is-revealed .section-subtitle,
+.is-revealed > .section-subtitle,
+.is-revealed.section-subtitle,
+.section-subtitle.is-revealed,
+section.is-revealed .section-subtitle,
+.section.is-revealed .section-subtitle,
+.grid-2.is-revealed .section-subtitle,
+.academic-hero-grid.is-revealed .section-subtitle {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+/* Page Hero Banner Title Entrance */
+.page-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(198, 161, 91, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  animation: floatSubtle 8s ease-in-out infinite;
+}
+
+.page-banner .eyebrow,
+.page-banner .mrak-banner-badge,
+.page-banner .mrak-banner-tag {
+  animation: luxuryFadeUp 0.6s var(--ease-luxury) 0.1s both;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.page-banner h1 {
+  animation: luxuryFadeUp 0.8s var(--ease-luxury) 0.2s both;
+  position: relative;
+}
+
+.page-banner h1::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-champagne-gold), transparent);
+  margin-top: 14px;
+  border-radius: var(--radius-xs);
+  animation: goldUnderlineExpand 0.9s var(--ease-luxury) 0.45s both;
+  transform-origin: left;
+}
+
+.page-banner p {
+  animation: luxuryFadeUp 0.8s var(--ease-luxury) 0.35s both;
+}
+
+/* ==============================================================================
+   4. IMAGE ANIMATIONS & BESPOKE LIGHT GLINT
+   ============================================================================== */
+
+/* Base container for images with luxury glint sheen */
+.img-sheen-wrap,
+.academic-card-media,
+.academic-hero-media,
+.mrak-gallery-card,
+.mrak-principal-media,
+.faculty-large-showcase,
+.about-thumb-main,
+.admission-thumb-wrap,
+.campus-img-container,
+.media-card .card-media,
+.album-card-cover-wrap,
+.gallery-card-thumb,
+.leadership-avatar-wrap,
+.admissions-stream-img-box,
+.pinterest-pin,
+.trustee-avatar-wrap,
+.head-avatar-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Angled Glass Light Sheen Beam */
+.img-sheen-wrap::after,
+.academic-card-media::after,
+.academic-hero-media::after,
+.mrak-gallery-card::after,
+.mrak-principal-media::after,
+.faculty-large-showcase::after,
+.about-thumb-main::after,
+.about-thumb-secondary::after,
+.admission-thumb-wrap::after,
+.campus-img-container::after,
+.media-card .card-media::after,
+.album-card-cover-wrap::after,
+.gallery-card-thumb::after,
+.leadership-avatar-wrap::after,
+.admissions-stream-img-box::after,
+.pinterest-pin::after,
+.trustee-avatar-wrap::after,
+.head-avatar-wrap::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -130%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.26) 50%,
+    rgba(255, 255, 255, 0.45) 55%,
+    transparent 75%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  z-index: 5;
+  transition: left 0.9s var(--ease-luxury);
+  opacity: 0.85;
+}
+
+/* Trigger Light Sheen on Hover */
+.img-sheen-wrap:hover::after,
+.academic-card-modern:hover .academic-card-media::after,
+.academic-hero-media:hover::after,
+.mrak-gallery-card:hover::after,
+.mrak-principal-card:hover .mrak-principal-media::after,
+.faculty-large-showcase:hover::after,
+.about-thumb-main:hover::after,
+.about-thumb-secondary:hover::after,
+.admission-thumb-wrap:hover::after,
+.campus-building-spotlight:hover .campus-img-container::after,
+.media-card:hover .card-media::after,
+.album-card:hover .album-card-cover-wrap::after,
+.gallery-card-thumb:hover::after,
+.leadership-avatar-wrap:hover::after,
+.admissions-stream-card:hover .admissions-stream-img-box::after,
+.pinterest-pin:hover::after,
+.trustee-card:hover .trustee-avatar-wrap::after,
+.academic-head-card:hover .head-avatar-wrap::after {
+  left: 140%;
+}
+
+/* High-End Image Zoom with GPU acceleration */
+.academic-card-media img,
+.academic-hero-img,
+.mrak-gallery-img,
+.mrak-principal-avatar,
+.faculty-large-img,
+.about-thumb-main img,
+.about-thumb-secondary img,
+.admission-thumb-img,
+.campus-building-img,
+.media-card .card-media img,
+.album-card-cover-img,
+.gallery-card-thumb img,
+.leadership-avatar,
+.admissions-stream-img,
+.pinterest-pin-img,
+.trustee-avatar-img,
+.head-avatar-img {
+  transition:
+    transform 0.85s var(--ease-luxury),
+    filter 0.6s var(--ease-luxury);
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.academic-card-modern:hover .academic-card-media img,
+.academic-hero-media:hover .academic-hero-img,
+.mrak-gallery-card:hover .mrak-gallery-img,
+.mrak-principal-card:hover .mrak-principal-avatar,
+.faculty-large-showcase:hover .faculty-large-img,
+.about-thumb-main:hover img,
+.about-thumb-secondary:hover img,
+.admission-thumb-wrap:hover .admission-thumb-img,
+.campus-building-spotlight:hover .campus-building-img,
+.media-card:hover .card-media img,
+.album-card:hover .album-card-cover-img,
+.gallery-card-thumb:hover img,
+.leadership-avatar-wrap:hover .leadership-avatar,
+.admissions-stream-card:hover .admissions-stream-img,
+.pinterest-pin:hover .pinterest-pin-img,
+.trustee-card:hover .trustee-avatar-img,
+.academic-head-card:hover .head-avatar-img {
+  transform: scale3d(1.065, 1.065, 1);
+  filter: contrast(102%) brightness(102%);
+}
+
+/* About Collage Overlapping Layer Depth */
+.about-collage-wrap {
+  perspective: 1000px;
+}
+
+.about-year-badge {
+  animation: floatSubtle 6s ease-in-out infinite;
+  text-shadow: 0 4px 16px rgba(198, 161, 91, 0.25);
+}
+
+.about-thumb-main {
+  transition:
+    transform 0.6s var(--ease-luxury),
+    box-shadow 0.6s var(--ease-luxury);
+}
+
+.about-thumb-main:hover {
+  box-shadow: 0 28px 56px -12px rgba(20, 43, 74, 0.26);
+}
+
+.about-thumb-secondary {
+  transition:
+    transform 0.6s var(--ease-luxury),
+    box-shadow 0.6s var(--ease-luxury);
+}
+
+.about-thumb-secondary:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 32px 64px -12px rgba(20, 43, 74, 0.35);
+}
+
+/* Admission Float Badge Ambient Glow */
+.admission-float-badge {
+  animation: floatSubtle 5.5s ease-in-out infinite;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(198, 161, 91, 0.25);
+  transition: transform 0.4s var(--ease-luxury);
+}
+
+.admission-thumb-wrap:hover .admission-float-badge {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Floating Image Badges */
+.academic-card-badge {
+  transition:
+    transform 0.35s var(--ease-luxury),
+    box-shadow 0.35s var(--ease-luxury);
+}
+
+.academic-card-modern:hover .academic-card-badge {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(198, 161, 91, 0.3);
+}
+
+.album-photo-count-badge {
+  transition: transform 0.35s var(--ease-luxury);
+}
+
+.album-card:hover .album-photo-count-badge {
+  transform: translateY(-2px);
+}
+
+/* Leadership Avatar Frame with Gold Accent */
+.leadership-avatar-wrap {
+  display: inline-block;
+  position: relative;
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(198, 161, 91, 0.6), rgba(20, 43, 74, 0.2));
+  box-shadow: 0 12px 28px rgba(20, 43, 74, 0.12);
+  transition: transform 0.5s var(--ease-luxury), box-shadow 0.5s var(--ease-luxury);
+}
+
+.leadership-avatar-wrap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(20, 43, 74, 0.18), 0 0 20px rgba(198, 161, 91, 0.25);
+}
+
+.leadership-avatar {
+  border: 2px solid #FFFFFF;
+}
+
+/* ==============================================================================
+   5. CARDS & GRID COMPONENTS LUXURY HOVER PHYSICS
+   ============================================================================== */
+
+/* Universal Base Card Physics */
+.card,
+article.card,
+div.card,
+.feature-card,
+.info-card,
+.academic-card-modern,
+.why-choose-card,
+.simple-facility-card,
+.modern-result-card,
+.pearl-card,
+.media-card,
+.album-card,
+.announcement-card,
+.result-detailed-card,
+.career-card,
+.contact-info-card,
+.admissions-stream-card,
+.trustee-card,
+.academic-head-card,
+.roadmap-card,
+.mrak-principal-card,
+.mrak-gallery-card,
+.academic-domain-card,
+.mrak-routine-card,
+.faculty-roster-card,
+.faculty-large-showcase {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.card:hover,
+article.card:hover,
+div.card:hover,
+.feature-card:hover,
+.info-card:hover,
+.academic-card-modern:hover,
+.why-choose-card:hover,
+.simple-facility-card:hover,
+.modern-result-card:hover,
+.pearl-card:hover,
+.media-card:hover,
+.album-card:hover,
+.announcement-card:hover,
+.result-detailed-card:hover,
+.career-card:hover,
+.contact-info-card:hover,
+.admissions-stream-card:hover,
+.trustee-card:hover,
+.academic-head-card:hover,
+.roadmap-card:hover,
+.mrak-principal-card:hover,
+.mrak-gallery-card:hover,
+.academic-domain-card:hover,
+.mrak-routine-card:hover,
+.faculty-roster-card:hover,
+.faculty-large-showcase:hover {
+  transform: translate3d(0, -7px, 0);
+  box-shadow:
+    0 22px 45px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.5);
+}
+
+/* Academic Cards */
+.academic-card-modern {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.academic-card-modern:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 22px 45px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.5);
+}
+
+.academic-card-modern .academic-card-title {
+  transition: color 0.3s ease;
+}
+
+.academic-card-modern:hover .academic-card-title {
+  color: var(--color-deep-blue);
+}
+
+/* Why Choose Us Cards */
+.why-choose-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-champagne-gold), transparent);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.4s ease, transform 0.4s var(--ease-luxury);
+}
+
+.why-choose-card:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 20px 42px -10px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.25);
+  border-color: rgba(198, 161, 91, 0.35);
+}
+
+.why-choose-card:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.why-choose-icon {
+  transition:
+    transform 0.4s var(--ease-luxury),
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-icon {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 20px rgba(198, 161, 91, 0.3);
+}
+
+/* Simple Facility Cards */
+.simple-facility-card {
+  transition:
+    transform 0.35s var(--ease-luxury),
+    box-shadow 0.35s var(--ease-luxury),
+    border-color 0.25s ease;
+}
+
+.simple-facility-card:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 14px 30px -6px rgba(20, 43, 74, 0.1);
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+.simple-facility-icon {
+  transition: transform 0.35s var(--ease-luxury);
+}
+
+.simple-facility-card:hover .simple-facility-icon {
+  transform: scale(1.12);
+}
+
+/* Modern Board Results Cards */
+.modern-result-card {
+  transition:
+    transform 0.4s var(--ease-luxury),
+    box-shadow 0.4s var(--ease-luxury),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.modern-result-card:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(198, 161, 91, 0.25);
+  border-color: var(--color-champagne-gold);
+}
+
+/* Pearls of Wisdom Quote Cards */
+.pearl-card {
+  transition:
+    transform 0.4s var(--ease-luxury),
+    box-shadow 0.4s var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.pearl-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -10px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+.pearl-quote-icon {
+  transition: transform 0.4s var(--ease-luxury), opacity 0.3s ease;
+}
+
+.pearl-card:hover .pearl-quote-icon {
+  transform: scale(1.12) rotate(-3deg);
+  opacity: 0.95;
+}
+
+/* Media News Cards */
+.media-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translate3d(0, -7px, 0);
+  box-shadow:
+    0 22px 44px -8px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+.media-play-icon-wrap,
+.media-zoom-icon-wrap {
+  transition:
+    transform 0.35s var(--ease-spring),
+    box-shadow 0.35s ease;
+}
+
+.media-card:hover .media-play-icon-wrap,
+.media-card:hover .media-zoom-icon-wrap {
+  transform: scale(1.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Album Gallery Cards */
+.album-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(20, 43, 74, 0.16),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Academic Leadership Head Cards */
+.academic-head-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.academic-head-card:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+.academic-head-card:hover .head-avatar-ring {
+  animation: pulseGoldGlow 1.8s infinite;
+}
+
+/* Trustee Cards */
+.trustee-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.trustee-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+/* Admissions Stream Cards */
+.admissions-stream-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.admissions-stream-card:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Gallery Pinterest Pins */
+.pinterest-pin {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.pinterest-pin:hover {
+  transform: translate3d(0, -8px, 0) scale(1.01);
+  box-shadow:
+    0 20px 40px -10px rgba(20, 43, 74, 0.16),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Announcement & Notice Cards */
+.announcement-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.announcement-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -10px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+}
+
+/* Result Detailed Cards */
+.result-detailed-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.result-detailed-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 22px 44px -8px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+}
+
+/* Career Vacancy Cards */
+.career-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+}
+
+/* Contact Info Cards */
+.contact-info-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow:
+    0 18px 36px -8px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+}
+
+/* Roadmap Steps & Helpdesk Boxes */
+.roadmap-card,
+.admissions-checklist-box,
+.eligibility-box,
+.trust-policy-banner {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+}
+
+/* Academic Subpage Specific Cards */
+.mrak-principal-card,
+.mrak-gallery-card,
+.academic-domain-card,
+.mrak-routine-card,
+.faculty-roster-card,
+.faculty-large-showcase {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.mrak-principal-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+}
+
+.mrak-gallery-card:hover {
+  transform: translate3d(0, -7px, 0);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+}
+
+.academic-domain-card:hover,
+.mrak-routine-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+.faculty-roster-card:hover {
+  transform: translate3d(0, -4px, 0);
+  box-shadow:
+    0 16px 32px -6px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-left-color: var(--color-champagne-gold);
+}
+
+.faculty-large-showcase:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 24px 48px -10px rgba(20, 43, 74, 0.16),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+}
+
+.mrak-stat-pill {
+  transition:
+    transform 0.3s var(--ease-luxury),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mrak-stat-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -4px rgba(20, 43, 74, 0.1);
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+/* Stat Items in Stats Strip */
+.stat-item {
+  transition: transform 0.35s var(--ease-luxury);
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  transition: transform 0.35s var(--ease-luxury), color 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.05);
+  color: var(--color-champagne-gold-light);
+}
+
+/* Marquee Notice Cards */
+.marquee-notice-card {
+  transition:
+    transform 0.3s var(--ease-luxury),
+    box-shadow 0.3s ease,
+    border-color 0.25s ease;
+}
+
+.marquee-notice-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -6px rgba(20, 43, 74, 0.14);
+  border-color: var(--color-champagne-gold);
+}
+
+/* ==============================================================================
+   6. INTERACTIVE BUTTONS & ARROW TRANSLATION
+   ============================================================================== */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.28s var(--ease-luxury),
+    box-shadow 0.28s var(--ease-luxury),
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+  will-change: transform;
+}
+
+.btn:active {
+  transform: scale3d(0.97, 0.97, 1);
+}
+
+/* Diagonal arrow icon glide */
+.btn svg,
+.album-open-link svg,
+.marquee-read-link svg {
+  transition: transform 0.3s var(--ease-luxury);
+}
+
+.btn:hover svg,
+.album-card:hover .album-open-link svg,
+.marquee-notice-card:hover .marquee-read-link svg {
+  transform: translate3d(3px, -3px, 0);
+}
+
+/* Button Radiant Light Gleam on Hover */
+.btn-gold::after,
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.32) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: left 0.75s var(--ease-luxury);
+}
+
+.btn-gold:hover::after,
+.btn-primary:hover::after {
+  left: 130%;
+}
+
+.btn-gold {
+  box-shadow: 0 4px 16px rgba(198, 161, 91, 0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(198, 161, 91, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(20, 43, 74, 0.2);
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline-white:hover {
+  transform: translateY(-2px);
+}
+
+/* ==============================================================================
+   7. NAVBAR & HEADER ELEVATIONS
+   ============================================================================== */
+
+.site-header {
+  transition:
+    background-color 0.4s var(--ease-luxury),
+    backdrop-filter 0.4s var(--ease-luxury),
+    box-shadow 0.4s var(--ease-luxury),
+    height 0.3s ease;
+}
+
+/* Announcement Cards */
+.announcement-card,
+article.announcement-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.announcement-card:hover,
+article.announcement-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -10px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Detailed Board Results Cards */
+.result-detailed-card,
+.results-page-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.result-detailed-card:hover,
+.results-page-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 22px 45px -10px rgba(20, 43, 74, 0.14),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Career Vacancy Cards */
+.career-card {
+  transition:
+    transform var(--anim-card-dur) var(--ease-luxury),
+    box-shadow var(--anim-card-dur) var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow:
+    0 20px 40px -10px rgba(20, 43, 74, 0.12),
+    0 0 0 1px rgba(198, 161, 91, 0.3);
+  border-color: rgba(198, 161, 91, 0.45);
+}
+
+/* Campus Contact Info Cards */
+.contact-info-card {
+  transition:
+    transform 0.32s var(--ease-luxury),
+    box-shadow 0.32s var(--ease-luxury),
+    border-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow:
+    0 16px 32px -8px rgba(20, 43, 74, 0.1),
+    0 0 0 1px rgba(198, 161, 91, 0.35);
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+.contact-info-card:hover .contact-info-icon-box {
+  transform: scale(1.12);
+  color: var(--color-champagne-gold);
+}
+
+/* ==============================================================================
+   8. ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   ============================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-up,
+  .reveal-fade,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .section-header .eyebrow,
+  .section-header .section-title,
+  .section-header .section-subtitle {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .section-title::after {
+    transform: scaleX(1) !important;
+  }
+}

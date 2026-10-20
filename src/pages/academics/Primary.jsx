@@ -155,10 +155,10 @@ export default function Primary() {
       />
 
       {/* SECTION 1: ABOUT PRIMARY SECTION & CAMPUS HERO */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">ACADEMIC FOUNDATION &amp; GROWTH</span>
               <h2 className="section-title">Where Knowledge, Character &amp; Confidence Take Shape</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -168,7 +168,7 @@ export default function Primary() {
                 At The Scholars High School, the Primary Section provides a vibrant, intellectually stimulating atmosphere following the Maharashtra State Board curriculum in English medium. With separate sections for boys and girls, students receive tailored instruction from dedicated faculty, blending interactive smart classroom technology, mental arithmetic, and daily Deeniyat moral guidance.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <GraduationCap size={19} />
@@ -201,7 +201,7 @@ export default function Primary() {
               </div>
             </div>
 
-            <div className="academic-hero-media">
+            <div className="academic-hero-media card reveal-right img-sheen-wrap">
               <div className="academic-hero-floating-badge">
                 <Sparkles size={14} /> Smart Classrooms &amp; Labs
               </div>

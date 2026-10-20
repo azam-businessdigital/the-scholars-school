@@ -155,15 +155,15 @@ export default function JuniorCollegeBoys() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Junior College (Boys)', path: '/academics/junior-college/boys/' }
+          { label: 'Junior College (Boys Section)', path: '/academics/junior-college/boys/' }
         ]}
       />
 
       {/* SECTION 1: ABOUT BOYS COMMERCE COLLEGE & CAMPUS HERO */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">COMMERCE CURRICULUM</span>
               <h2 className="section-title">Academic Strength &amp; Professional Direction in Commerce</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -173,7 +173,7 @@ export default function JuniorCollegeBoys() {
                 Our Boys Section is structured to cultivate intellectual discipline, economic insight, and strong financial calculation skills. Students have access to computer facilities for commerce practicals, comprehensive library resources, and dedicated mock examination drills designed to secure distinction in the Maharashtra HSC Board examinations.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <Award size={19} />
@@ -206,7 +206,7 @@ export default function JuniorCollegeBoys() {
               </div>
             </div>
 
-            <div className="academic-hero-media">
+            <div className="academic-hero-media card reveal-right img-sheen-wrap">
               <div className="academic-hero-floating-badge">
                 <TrendingUp size={14} /> Professional Career Prep
               </div>

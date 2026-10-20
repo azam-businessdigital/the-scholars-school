@@ -159,10 +159,10 @@ export default function Secondary() {
       />
 
       {/* SECTION 1: ABOUT SECONDARY SECTION & CAMPUS HERO */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">ACADEMIC RIGOUR &amp; SSC DISTINCTION</span>
               <h2 className="section-title">Consistently 100% SSC Board Pass Record</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -172,7 +172,7 @@ export default function Secondary() {
                 At The Scholars High School, our secondary students benefit from dedicated subject specialist teachers across Mathematics, Sciences, Social Sciences, and Languages. In separate wings for boys and girls, students participate in laboratory experiments, regular unit assessments, board-style prelims, and personalized doubt-solving clinics to ensure comprehensive mastery and confidence for the Class 10 State Board examinations.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <Award size={19} />
@@ -205,7 +205,7 @@ export default function Secondary() {
               </div>
             </div>
 
-            <div className="academic-hero-media">
+            <div className="academic-hero-media card reveal-right img-sheen-wrap">
               <div className="academic-hero-floating-badge">
                 <Award size={14} /> 100% SSC Distinction
               </div>

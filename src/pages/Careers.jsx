@@ -38,8 +38,8 @@ export default function Careers() {
 
       <section className="section section-white">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div>
+          <div className="grid-2 stagger-group reveal-up" style={{ alignItems: 'center' }}>
+            <div className="section-header reveal-up">
               <span className="eyebrow">TEACHING ENVIRONMENT</span>
               <h2 className="section-title">
                 Why You Will Love Working with The Scholars School Family
@@ -63,6 +63,7 @@ export default function Careers() {
 
             <div>
               <div
+                className="card reveal-up"
                 style={{
                   backgroundColor: 'var(--color-ivory-white)',
                   padding: 'clamp(16px, 3.5vw, var(--space-8))',
@@ -110,6 +111,7 @@ export default function Careers() {
 
           {/* Head Mistress Card */}
           <div
+            className="career-card card reveal-up"
             style={{
               backgroundColor: '#fff',
               border: '1px solid var(--color-border-subtle)',
@@ -146,6 +148,7 @@ export default function Careers() {
 
           {/* Subject Teachers Table */}
           <div
+            className="career-card card reveal-up"
             style={{
               backgroundColor: '#fff',
               border: '1px solid var(--color-border-subtle)',

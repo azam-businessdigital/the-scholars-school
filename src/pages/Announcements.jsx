@@ -65,8 +65,18 @@ export default function Announcements() {
 
       <section className="section section-white">
         <div className="container">
+          {/* Section Header */}
+          <div className="section-header reveal-up" style={{ marginBottom: 'var(--space-8)' }}>
+            <span className="eyebrow">ACADEMIC &amp; ADMINISTRATIVE NOTICES</span>
+            <h2 className="section-title">Institutional Circulars &amp; Updates</h2>
+            <p className="section-subtitle">
+              Verified circulars, exam schedules, vacation schedules, and key administrative announcements for students, parents, and faculty.
+            </p>
+          </div>
+
           {/* Search & Category Filter */}
           <div
+            className="filter-bar-wrap reveal-up"
             style={{
               display: 'flex',
               flexWrap: 'wrap',
@@ -120,10 +130,11 @@ export default function Announcements() {
 
           {/* Announcements List */}
           {filteredNotices.length > 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
+            <div className="stagger-group reveal-up" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
               {filteredNotices.map((notice) => (
                 <article
                   key={notice.id}
+                  className="announcement-card card reveal-up"
                   style={{
                     backgroundColor: '#fff',
                     border: '1px solid var(--color-border-subtle)',

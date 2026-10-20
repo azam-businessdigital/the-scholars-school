@@ -1,7 +1,35 @@
 /* Responsive Styles for The Scholars High School & Junior College
-   Supports: 320px, 360px, 375px, 390px, 430px, 768px, 1024px, 1366px+
-   Tested against horizontal overflow, typography scaling, touch targets, and flex wrapping.
+   Supports: 320px, 360px, 375px, 390px, 412px, 430px, 640px, 768px, 992px, 1024px, 1200px+
+   Strictly engineered against horizontal overflow, typography scaling, touch target ergonomics, and responsive flex wrapping.
 */
+
+/* ==============================================================================
+   0. UNIVERSAL RESPONSIVE SAFETY SHIELD
+   ============================================================================== */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip !important;
+  width: 100%;
+  position: relative;
+}
+
+#root,
+.site-wrapper {
+  max-width: 100%;
+  width: 100%;
+  overflow: visible !important;
+  overflow-x: clip !important;
+  position: relative;
+}
+
+img,
+video,
+canvas,
+iframe,
+svg {
+  max-width: 100%;
+}
 
 /* ==============================================================================
    1. LAPTOPS & DESKTOPS (<= 1200px)
@@ -82,6 +110,7 @@
 
   .mega-menu-wrapper {
     width: 540px !important;
+    max-width: calc(100vw - 36px) !important;
   }
 
   .grid-4 {
@@ -120,11 +149,11 @@
 }
 
 /* ==============================================================================
-   3. TABLETS (<= 992px) - CLEAN TRANSITION TO MOBILE DRAWER & VERTICAL HERO
+   3. TABLETS (<= 992px) - CLEAN TRANSITION TO MOBILE DRAWER & SINGLE COLUMNS
    ============================================================================== */
 @media (max-width: 992px) {
   .topbar {
-    display: none !important; /* Hide top bar on mobile/tablet to conserve vertical screen space */
+    display: none !important; /* Conserve vertical screen space */
   }
 
   .nav-menu {
@@ -138,11 +167,14 @@
     width: 44px;
     height: 44px;
     border-radius: var(--radius-sm);
+    color: var(--color-royal-navy);
+    cursor: pointer;
+    flex-shrink: 0;
   }
 
   .header-actions .btn,
   .header-cta-btn {
-    display: none !important; /* Action moves into mobile navigation drawer */
+    display: none !important; /* Actions moved into mobile navigation drawer */
   }
 
   .header-quick-call {
@@ -165,62 +197,63 @@
   /* 3D Hero Slider Stacks Vertically on Tablets & Mobile */
   .hero-3d-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--space-8);
+    gap: var(--space-6) !important;
   }
 
   .hero-3d-text-col {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .hero-3d-card-col {
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: flex-start !important;
+    width: 100% !important;
   }
 
   .hero-3d-glass-card {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .hero-arrow-floating {
-    display: none !important; /* Swipe gesture replaces floating arrows on touch devices */
+    display: none !important; /* Touch swipe gesture replaces floating arrows */
   }
 
-  /* Contact Page Grid Stacks */
-  .contact-layout-grid {
+  /* Contact Page & Admissions Grid Stacks on Tablet */
+  .contact-layout-grid,
+  .admissions-split-grid {
     grid-template-columns: 1fr !important;
-    gap: 32px;
+    gap: 28px !important;
   }
 
-  /* Mobile Navigation Drawer System */
+  /* Mobile Navigation Drawer System - Fixed Inset (Prevents 100vw Scrollbar Shift) */
   .mobile-drawer-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    background-color: rgba(20, 43, 74, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 999;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    background-color: rgba(20, 43, 74, 0.65) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 9999 !important;
   }
 
   .mobile-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 320px;
-    max-width: 88vw;
-    height: 100vh;
-    height: 100dvh;
-    background-color: var(--color-pure-white);
-    z-index: 1000;
-    padding: var(--space-6) var(--space-5);
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: -8px 0 32px rgba(11, 25, 44, 0.25);
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 320px !important;
+    max-width: 88vw !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    background-color: var(--color-pure-white) !important;
+    z-index: 10000 !important;
+    padding: var(--space-5) var(--space-4) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-shadow: -8px 0 32px rgba(11, 25, 44, 0.25) !important;
+    box-sizing: border-box !important;
   }
 
   .mobile-drawer-header {
@@ -230,6 +263,7 @@
     padding-bottom: var(--space-3);
     border-bottom: 1px solid var(--color-border-subtle);
     margin-bottom: var(--space-3);
+    flex-shrink: 0;
   }
 
   .mobile-drawer-nav {
@@ -239,28 +273,37 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-grow: 1;
   }
 
   .mobile-nav-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 44px;
     padding: 11px 0;
     font-size: 15px;
     font-weight: 600;
     color: var(--color-royal-navy);
     border-bottom: 1px solid rgba(20, 43, 74, 0.06);
     text-decoration: none;
+    touch-action: manipulation;
   }
 
   .mobile-nav-link:active,
-  .mobile-nav-link:hover {
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
     color: var(--color-champagne-gold);
+    font-weight: 700;
+  }
+
+  .mobile-nav-link.active {
+    border-bottom: 2px solid var(--color-champagne-gold);
   }
 
   .mobile-submenu {
     list-style: none;
-    padding: 6px 12px;
+    padding: 6px 14px;
     background-color: var(--color-ivory-white);
     border-radius: 8px;
     margin: 4px 0 8px 0;
@@ -268,12 +311,20 @@
   }
 
   .mobile-submenu li a {
-    display: block;
-    padding: 8px 4px;
-    font-size: 13px;
-    color: var(--color-deep-blue);
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 0;
+    font-size: 13.5px;
+    color: var(--color-slate-grey-dark);
     text-decoration: none;
-    line-height: 1.35;
+    border-bottom: 1px dashed rgba(20, 43, 74, 0.06);
+    touch-action: manipulation;
+  }
+
+  .mobile-submenu li a.active {
+    color: var(--color-champagne-gold);
+    font-weight: 700;
   }
 
   .mobile-submenu li a:hover {
@@ -282,43 +333,50 @@
 
   .mobile-drawer-footer {
     margin-top: auto;
-    padding-top: var(--space-5);
+    padding-top: var(--space-4);
     border-top: 1px solid var(--color-border-subtle);
+    flex-shrink: 0;
   }
 
   .mobile-drawer-footer .btn {
-    white-space: normal;
-    text-align: center;
-    line-height: 1.3;
-    padding: 10px 14px;
-    font-size: 13.5px;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    padding: 11px 14px !important;
+    font-size: 13px !important;
+    width: 100% !important;
   }
 
-  /* Layout Grids Stacking */
+  /* Layout Grids Stacking (Overrides inline gap as well) */
   .grid-2 {
     grid-template-columns: 1fr !important;
-    gap: var(--space-6);
+    gap: var(--space-6) !important;
   }
 
   .grid-3 {
     grid-template-columns: 1fr !important;
-  }
-
-  .albums-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .media-news-grid {
-    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
   }
 
   .grid-4 {
     grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
+  .albums-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
+  .media-news-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-4) !important;
   }
 
   .stat-item {
@@ -331,13 +389,13 @@
 
   .footer-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--space-8);
+    gap: var(--space-8) !important;
   }
 
   .footer-bottom-inner {
-    flex-direction: column;
-    gap: var(--space-3);
-    text-align: center;
+    flex-direction: column !important;
+    gap: var(--space-3) !important;
+    text-align: center !important;
   }
 
   .lightbox-nav-btn.prev {
@@ -347,6 +405,14 @@
   .lightbox-nav-btn.next {
     right: 10px;
   }
+
+  /* Experience Badge Safe Positioning */
+  .floating-experience-badge {
+    position: static !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* ==============================================================================
@@ -354,41 +420,75 @@
    ============================================================================== */
 @media (max-width: 768px) {
   .section {
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-12);
+    padding-top: var(--space-10) !important;
+    padding-bottom: var(--space-10) !important;
   }
 
   .section-sm {
-    padding-top: var(--space-8);
-    padding-bottom: var(--space-8);
+    padding-top: var(--space-6) !important;
+    padding-bottom: var(--space-6) !important;
   }
 
   .section-header {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-6) !important;
   }
 
   .section-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Admissions Split Grid & Contact Form on Tablet Portrait & Large Mobile */
+  .admissions-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .contact-form-premium {
+    padding: 24px 18px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Critical: 16px minimum font size to prevent iOS Safari auto-zoom on input focus */
+  .contact-premium-input,
+  .contact-premium-select,
+  .contact-premium-textarea {
+    font-size: 16px !important;
+  }
+
+  .helpdesk-call-btns .btn {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
   }
 
   /* Academic Heads & Principal Cards */
   .academic-heads-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--space-6);
+    gap: var(--space-6) !important;
   }
 
   .trustees-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: var(--space-5) !important;
   }
 
   .trustee-card {
-    padding: 22px 18px;
+    padding: 24px 18px 20px !important;
+  }
+
+  .trustee-avatar-wrap {
+    max-width: 155px !important;
   }
 
   .trustee-name {
-    min-height: auto;
+    min-height: auto !important;
   }
 
   /* MRAK Kids & Academics */
@@ -397,58 +497,304 @@
   }
 
   .mrak-principal-media {
-    border-right: none;
-    border-bottom: 1px solid rgba(198, 161, 91, 0.2);
-    min-height: auto;
-    padding: 24px 16px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(198, 161, 91, 0.2) !important;
+    min-height: auto !important;
+    padding: 24px 16px !important;
   }
 
   .mrak-principal-content {
-    padding: 24px 20px;
+    padding: 24px 20px !important;
   }
 
   .mrak-badges-row {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column !important;
+    gap: 10px !important;
   }
 
   .mrak-stat-pill {
-    width: 100%;
+    width: 100% !important;
   }
 
   .mrak-gallery-grid,
   .mrak-gallery-grid-4,
   .mrak-routine-grid {
     grid-template-columns: 1fr !important;
-    gap: 16px;
+    gap: 16px !important;
   }
 
   .academic-domain-grid {
     grid-template-columns: 1fr !important;
-    gap: 16px;
+    gap: 16px !important;
   }
 
   .faculty-roster-grid {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Campus Showcase Grid on Mobile */
+  .campus-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .campus-img-container {
+    height: 240px !important;
+    width: 100% !important;
+  }
+
+  .campus-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .campus-simple-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    padding: 16px !important;
+  }
+
+  .campus-cta-actions {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .campus-cta-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Admissions Banner & Actions */
+  .admission-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .admission-cta-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .admission-cta-row .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .admission-thumb-img {
+    height: 260px !important;
+    width: 100% !important;
+  }
+
+  /* About Collage Image Scaling - Overlap Bottom Right of Main Image */
+  .about-collage-wrap {
+    min-height: auto !important;
+    height: auto !important;
+    flex: none !important;
+    padding-bottom: 22px !important;
+    padding-right: 0 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .about-year-badge {
+    font-size: clamp(24px, 5.5vw, 32px) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .about-image-collage {
+    position: relative !important;
+    width: 100% !important;
+    flex: none !important;
+    height: auto !important;
+  }
+
+  .about-thumb-main {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    width: 100% !important;
+    flex: none !important;
+    border-radius: 14px !important;
+  }
+
+  .about-thumb-secondary {
+    position: absolute !important;
+    bottom: -16px !important;
+    right: 10px !important;
+    left: auto !important;
+    top: auto !important;
+    width: clamp(165px, 52%, 240px) !important;
+    max-width: 240px !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    margin: 0 !important;
+    border: 3.5px solid var(--color-pure-white) !important;
+    background-color: #ffffff !important;
+    padding: 4px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 12px 30px -6px rgba(20, 43, 74, 0.28), 0 0 0 1px rgba(198, 161, 91, 0.35) !important;
+    border-radius: 12px !important;
+    z-index: 4 !important;
+  }
+
+  /* About Features List & CTA Buttons on Mobile */
+  .about-features-list {
+    gap: 14px !important;
+    margin: 20px 0 24px 0 !important;
+  }
+
+  .about-feature-item {
+    gap: 14px !important;
+  }
+
+  .about-feature-icon {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .about-feature-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .about-feature-title {
+    font-size: 1.0625rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 3px !important;
+  }
+
+  .about-feature-text {
+    font-size: 0.8125rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .about-cta-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .about-cta-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Pearls of Wisdom Quote Banner */
+  .pearls-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .pearl-card {
+    padding: 20px 16px !important;
+  }
+
+  .pearls-footer-pill {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 14px !important;
+    padding: 12px 16px !important;
+    gap: 8px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .pearls-pill-divider {
+    display: none !important;
+  }
+
+  .pearls-pill-quote {
+    white-space: normal !important;
+    text-align: center !important;
+    font-size: 0.875rem !important;
+  }
+
+  .pearls-pill-label {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* Hero Slider Actions */
+  .hero-3d-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .hero-3d-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Floating Action Buttons (WhatsApp & AI Guide) */
+  .floating-ai-trigger {
+    padding: 0 !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 20px rgba(11, 25, 44, 0.35) !important;
+  }
+
+  .floating-ai-label {
+    display: none !important;
+  }
+
+  .floating-ai-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .floating-whatsapp-btn {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .floating-whatsapp-tooltip {
+    display: none !important;
+  }
+
+  .floating-whatsapp-container {
+    bottom: 16px !important;
+    left: 14px !important;
+    z-index: 99998 !important;
+  }
+
+  .floating-ai-container {
+    bottom: 16px !important;
+    right: 14px !important;
+    z-index: 99999 !important;
   }
 
   /* Data Table Horizontal Scroll Container */
   .data-table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    margin-bottom: var(--space-4);
-    border: 1px solid var(--color-border-subtle);
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: var(--space-4) !important;
+    border: 1px solid var(--color-border-subtle) !important;
   }
 
   .data-table {
-    min-width: 580px; /* Controlled horizontal scroll table */
+    min-width: 540px !important;
   }
 
   /* Results Page Gazette Actions */
   .results-action-row {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column !important;
+    align-items: stretch !important;
   }
 }
 
@@ -460,101 +806,115 @@
   .gallery-control-bar {
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 12px;
+    gap: 12px !important;
   }
 
   .gallery-view-toggle {
     display: flex !important;
     width: 100% !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
   }
 
   .view-toggle-btn {
     flex: 1 1 0 !important;
     justify-content: center !important;
-    padding: 9px 8px !important;
+    padding: 10px 8px !important;
     font-size: 12px !important;
-    text-align: center;
+    text-align: center !important;
   }
 
   .gallery-search-wrap {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .gallery-category-pills {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
-    gap: 6px;
+    display: flex !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    padding-bottom: 6px !important;
+    -webkit-overflow-scrolling: touch !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
   }
 
   .gallery-pill-btn {
-    flex-shrink: 0;
-    white-space: nowrap;
-    font-size: 12px;
-    padding: 6px 12px;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
   }
 
   .album-nav-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
   }
 
   .album-nav-header .btn {
-    width: 100%;
+    width: 100% !important;
+    justify-content: center !important;
   }
 
   .album-meta-pills {
-    flex-wrap: wrap;
-    gap: 6px;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .album-hero-banner {
+    padding: 22px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .album-hero-title {
+    font-size: 1.35rem !important;
   }
 
   /* Full Screen Responsive Lightbox */
   .pinterest-lightbox-main {
-    padding: 10px 14px;
+    padding: 10px 14px !important;
   }
 
   .pinterest-lightbox-nav.prev {
-    left: 6px;
-    width: 38px;
-    height: 38px;
+    left: 8px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 
   .pinterest-lightbox-nav.next {
-    right: 6px;
-    width: 38px;
-    height: 38px;
+    right: 8px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 
   .pinterest-lightbox-bottom {
-    padding: 12px 14px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    padding: 12px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
   }
 
   .pinterest-lightbox-info {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .pinterest-lightbox-thumbs {
-    max-width: 100%;
-    width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   /* Media News Modals (YouTube & Newspaper Clippings) */
   .media-modal-backdrop {
-    padding: 10px;
+    padding: 10px !important;
+    position: fixed !important;
+    inset: 0 !important;
   }
 
   .media-modal-box {
-    max-width: 100vw;
-    border-radius: 12px;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 12px !important;
   }
 
   .media-modal-body {
@@ -586,20 +946,22 @@
   }
 
   .print-modal-box {
-    max-height: 94vh;
-    max-height: 94dvh;
-    border-radius: 12px;
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 94vh !important;
+    max-height: 94dvh !important;
+    border-radius: 12px !important;
   }
 
   /* Contact Form 2-Column Inputs to 1 Column */
   .contact-form-row {
     grid-template-columns: 1fr !important;
-    gap: 12px;
+    gap: 12px !important;
   }
 
   .contact-form-premium {
-    padding: 24px 18px;
-    border-radius: 14px;
+    padding: 24px 18px !important;
+    border-radius: 14px !important;
   }
 
   /* AI Chatbot Window to Full Screen on Mobile */
@@ -608,69 +970,105 @@
     width: 100% !important;
     height: 100% !important;
     max-height: 100dvh !important;
-    max-width: 100vw !important;
+    max-width: 100% !important;
     border-radius: 0 !important;
     bottom: 0 !important;
     right: 0 !important;
     border: none !important;
+    position: fixed !important;
+    z-index: 99999 !important;
   }
 
-  /* Floating Trigger Buttons Positioning */
-  .floating-whatsapp-container {
-    bottom: 18px;
-    left: 14px;
+  .ai-chat-footer {
+    padding-bottom: max(14px, env(safe-area-inset-bottom)) !important;
   }
 
-  .floating-ai-container {
-    bottom: 18px;
-    right: 14px;
+  /* Filter Bar Wrap in Announcements */
+  .filter-bar-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
   }
 
   /* Admissions Page Responsive Enhancements */
   .admissions-streams-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 
   .eligibility-nav-chips {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: column !important;
+    gap: 8px !important;
   }
 
   .eligibility-chip-btn {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    padding: 10px 14px;
-    font-size: 13px;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
   }
 
   .roadmap-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
   }
 
   .roadmap-card {
-    padding: 24px 18px 20px;
+    padding: 24px 18px 20px !important;
   }
 
+  /* Required Document Checklist Tabs - Full Width Stack on Mobile so No Text is Cut Off */
   .checklist-tab-row {
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 16px !important;
+    overflow: visible !important;
   }
 
-  .checklist-tab-row::-webkit-scrollbar {
-    display: none;
+  .checklist-tab-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+    border-radius: 8px !important;
+    background: #F8FAFC !important;
+    border: 1.5px solid var(--color-border-subtle) !important;
+    color: var(--color-royal-navy) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .checklist-tab-btn.active {
+    background: linear-gradient(135deg, var(--color-royal-navy) 0%, var(--color-deep-blue) 100%) !important;
+    color: #FFFFFF !important;
+    border-color: var(--color-royal-navy) !important;
+    box-shadow: 0 4px 12px rgba(11, 25, 44, 0.18) !important;
+    font-weight: 700 !important;
   }
 
   .admissions-faq-trigger {
-    padding: 14px 16px;
-    font-size: 14.5px;
+    padding: 14px 16px !important;
+    font-size: 14.5px !important;
   }
 
   .admissions-faq-body {
-    padding: 0 16px 16px;
-    font-size: 13.5px;
+    padding: 0 16px 16px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* Pinterest Masonry */
+  .pinterest-masonry {
+    column-count: 2 !important;
+    column-gap: 10px !important;
+  }
+
+  .pinterest-pin {
+    margin-bottom: 10px !important;
   }
 }
 
@@ -688,112 +1086,142 @@
 
   /* Fluid Headings for Mobile */
   h1 {
-    font-size: clamp(1.65rem, 6vw, 2.25rem) !important;
+    font-size: clamp(1.6rem, 5.8vw, 2.1rem) !important;
     line-height: 1.25 !important;
   }
 
   h2 {
-    font-size: clamp(1.35rem, 5vw, 1.875rem) !important;
+    font-size: clamp(1.3rem, 4.8vw, 1.75rem) !important;
     line-height: 1.3 !important;
   }
 
   .section-title {
-    font-size: clamp(1.35rem, 5vw, 1.875rem) !important;
+    font-size: clamp(1.3rem, 4.8vw, 1.75rem) !important;
   }
 
   /* 3D Hero Slider Typography & Actions */
   .hero-3d-container {
-    min-height: 520px;
+    min-height: 500px !important;
   }
 
   .hero-3d-content-wrapper {
-    padding-top: var(--space-8);
-    padding-bottom: var(--space-6);
+    padding-top: var(--space-6) !important;
+    padding-bottom: var(--space-4) !important;
   }
 
   .hero-3d-title {
-    font-size: clamp(1.6rem, 6.2vw, 2.25rem) !important;
+    font-size: clamp(1.5rem, 5.8vw, 2.1rem) !important;
     line-height: 1.22 !important;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-3) !important;
   }
 
   .hero-3d-description {
-    font-size: 0.9375rem;
-    line-height: 1.55;
-    margin-bottom: var(--space-4);
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: var(--space-4) !important;
   }
 
   .hero-3d-eyebrow-pill {
-    font-size: 10px;
-    padding: 5px 10px;
-    letter-spacing: 0.08em;
+    font-size: 10px !important;
+    padding: 5px 10px !important;
+    letter-spacing: 0.08em !important;
   }
 
   .hero-3d-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
   }
 
   .hero-3d-actions .btn {
     width: 100% !important;
     justify-content: center !important;
+    text-align: center !important;
   }
 
   .hero-3d-glass-card {
-    padding: 18px 14px;
-    border-radius: 12px;
+    padding: 18px 14px !important;
+    border-radius: 12px !important;
   }
 
   .hero-3d-card-top {
-    gap: 10px;
+    gap: 10px !important;
   }
 
   .hero-3d-badge-icon-box {
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
+    height: 44px !important;
   }
 
   .hero-3d-card-title {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .hero-3d-card-stats-grid {
-    gap: 6px;
+    gap: 6px !important;
   }
 
   .hero-3d-card-stat-num {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .hero-3d-card-stat-lbl {
-    font-size: 8.5px;
-    letter-spacing: 0.02em;
+    font-size: 8.5px !important;
+    letter-spacing: 0.02em !important;
   }
 
   .hero-3d-controls-bar {
-    padding: 6px 10px;
-    gap: 8px;
+    padding: 6px 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-3d-nav-arrow {
-    width: 32px;
-    height: 32px;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .hero-3d-indicator-label {
+    display: none !important;
   }
 
   .hero-3d-indicator-dot {
-    padding: 3px 6px;
-    font-size: 10.5px;
+    width: 8px !important;
+    height: 8px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .hero-3d-indicator-dot.active {
+    background: var(--color-champagne-gold) !important;
+    transform: scale(1.25) !important;
+  }
+
+  .hero-3d-indicator-progress {
+    display: none !important;
   }
 
   .hero-3d-counter {
-    font-size: 11.5px;
+    font-size: 11.5px !important;
+  }
+
+  /* Campus Quick Stats Grid: 2 Columns */
+  .campus-quick-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 12px 10px !important;
+  }
+
+  .quick-stat-divider {
+    display: none !important;
   }
 
   /* Verified Stats Strip on Mobile */
   .stats-grid {
     grid-template-columns: 1fr !important;
-    gap: 0;
+    gap: 0 !important;
   }
 
   .stat-item {
@@ -808,33 +1236,29 @@
 
   .stats-strip .stat-number,
   .stat-item .stat-number {
-    font-size: 2rem !important;
-  }
-
-  /* About Collage Image Scaling */
-  .about-collage-wrap {
-    min-height: auto;
-    padding: 0;
-  }
-
-  .about-thumb-main {
-    min-height: 220px !important;
-    height: 240px !important;
+    font-size: 1.85rem !important;
   }
 
   .about-thumb-secondary {
-    position: static !important;
-    width: 100% !important;
-    height: 160px !important;
-    margin-top: 12px !important;
-    border: none !important;
+    bottom: -14px !important;
+    right: 8px !important;
+    width: clamp(140px, 54%, 200px) !important;
+    border: 3px solid var(--color-pure-white) !important;
+    padding: 3px !important;
+    border-radius: 10px !important;
   }
 
   /* Marquee Announcement Card Width */
+  .announcements-marquee-wrapper {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+
   .marquee-notice-card {
-    width: calc(100vw - 44px) !important;
-    max-width: 320px !important;
+    width: calc(100vw - 32px) !important;
+    max-width: 310px !important;
     padding: 16px !important;
+    box-sizing: border-box !important;
   }
 
   .marquee-notice-title {
@@ -850,14 +1274,26 @@
   }
 
   .btn {
-    white-space: normal;
-    text-align: center;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
   }
 
   .btn-lg,
   .btn-sm {
-    padding: 9px 18px;
-    font-size: 13.5px;
+    padding: 9px 16px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* All Bottom CTA button rows on Home, About, Admissions, Results */
+  .admission-cta-row .btn,
+  .campus-cta-actions .btn,
+  .hero-3d-actions .btn,
+  [style*="justifyContent: 'center'"] .btn,
+  [style*="justify-content: center"] .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
   }
 
   /* Not Found Helpful Links 3-Col to 1-Col */
@@ -867,17 +1303,17 @@
 
   /* Admissions Mobile Polishing (<= 480px) */
   .eligibility-box {
-    padding: 20px 16px !important;
+    padding: 18px 14px !important;
     border-radius: var(--radius-md) !important;
   }
 
   .eligibility-card-content {
-    padding: 18px 14px !important;
+    padding: 16px 12px !important;
   }
 
   .eligibility-detail-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
   .eligibility-info-pill {
@@ -885,17 +1321,179 @@
   }
 
   .admissions-checklist-box {
-    padding: 20px 16px !important;
+    padding: 16px 12px !important;
+  }
+
+  .admissions-checklist-title {
+    font-size: 1.15rem !important;
+  }
+
+  .admissions-checklist-item {
+    padding: 8px 10px !important;
+    gap: 10px !important;
+  }
+
+  .admissions-checklist-name {
+    font-size: 13px !important;
+  }
+
+  .admissions-checklist-note {
+    font-size: 11.5px !important;
+  }
+
+  .checklist-tab-row {
+    gap: 6px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .checklist-tab-btn {
+    font-size: 11.5px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Roadmap / Transparent Journey Mobile (<= 480px) */
+  .roadmap-grid {
+    gap: 38px !important;
+    margin-top: 28px !important;
+    padding-top: 22px !important;
+  }
+
+  .roadmap-card {
+    padding: 28px 16px 18px !important;
+    overflow: visible !important;
+  }
+
+  .roadmap-badge-num {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    top: -18px !important;
+    left: 16px !important;
+    z-index: 10 !important;
+  }
+
+  .roadmap-title {
+    font-size: 1.05rem !important;
+  }
+
+  .roadmap-desc {
+    font-size: 13px !important;
+  }
+
+  /* Trust Policy Banner Mobile (<= 480px) */
+  .trust-policy-banner {
+    padding: 16px 14px !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .trust-policy-icon-wrap {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .trust-policy-title {
+    font-size: 1rem !important;
+  }
+
+  .trust-policy-text {
+    font-size: 12.5px !important;
+  }
+
+  /* Admissions FAQ Mobile (<= 480px) */
+  .admissions-faq-trigger {
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+  }
+
+  .admissions-faq-body {
+    padding: 0 14px 14px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .faq-cat-filter {
+    gap: 6px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .faq-cat-btn {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* Bottom Admission CTA Actions */
+  .admission-cta-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .admission-cta-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 14px !important;
   }
 
   .admissions-helpdesk-banner {
-    padding: 22px 16px !important;
+    padding: 20px 14px !important;
+  }
+
+  .helpdesk-call-btns {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
 
   .helpdesk-call-btns .btn {
-    font-size: 12.5px !important;
+    font-size: 12px !important;
     padding: 10px 12px !important;
     width: 100% !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Admission Enquiry Form Mobile (<= 480px) */
+  .contact-form-premium {
+    padding: 20px 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .contact-form-title {
+    font-size: 1.25rem !important;
+  }
+
+  .contact-form-subtitle {
+    font-size: 12.5px !important;
+  }
+
+  .contact-submit-btn {
+    font-size: 13.5px !important;
+    padding: 12px 14px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.3 !important;
+  }
+
+  .contact-field-wrap {
+    border-radius: 8px !important;
+  }
+
+  .contact-premium-input,
+  .contact-premium-select,
+  .contact-premium-textarea {
+    font-size: 16px !important;
+    padding: 10px 12px 10px 38px !important;
+  }
+
+  .contact-input-icon {
+    left: 11px !important;
   }
 }
 
@@ -904,50 +1502,61 @@
    ============================================================================== */
 @media (max-width: 375px) {
   /* Ultra Clean Header Branding */
+  .header-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .container,
+  .container-wide {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
   .header-brand {
-    gap: 8px;
+    gap: 8px !important;
   }
 
   .header-logo {
-    height: 42px;
+    height: 42px !important;
+    width: auto !important;
   }
 
   .brand-title {
-    font-size: 16px;
-    letter-spacing: 0.01em;
+    font-size: 15px !important;
+    letter-spacing: 0.01em !important;
   }
 
-  /* Floating Buttons: Symmetrical Circles to prevent blocking page content */
-  .floating-ai-trigger {
-    padding: 0 !important;
-    width: 48px !important;
-    height: 48px !important;
-    border-radius: 50% !important;
-    justify-content: center !important;
-  }
-
-  .floating-ai-label {
+  .brand-sub {
     display: none !important;
   }
 
-  .floating-ai-icon-wrap {
-    width: 42px;
-    height: 42px;
+  .mobile-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 6px !important;
   }
 
+  /* Floating Buttons: Symmetrical Circles */
+  .floating-ai-trigger,
   .floating-whatsapp-btn {
-    width: 48px !important;
-    height: 48px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .floating-ai-icon-wrap {
+    width: 38px !important;
+    height: 38px !important;
   }
 
   .floating-whatsapp-container {
-    bottom: 14px;
-    left: 10px;
+    bottom: 14px !important;
+    left: 10px !important;
   }
 
   .floating-ai-container {
-    bottom: 14px;
-    right: 10px;
+    bottom: 14px !important;
+    right: 10px !important;
   }
 
   /* Gallery View Toggle on 375px & 360px */
@@ -963,35 +1572,6 @@
     flex-shrink: 0;
   }
 
-  /* Hero Indicators: dots only on narrow screens */
-  .hero-3d-indicator-label {
-    display: none !important;
-  }
-
-  .hero-3d-indicator-dot {
-    width: 8px !important;
-    height: 8px !important;
-    padding: 0 !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.3) !important;
-  }
-
-  .hero-3d-indicator-dot.active {
-    background: var(--color-champagne-gold) !important;
-    transform: scale(1.2);
-  }
-
-  .hero-3d-indicator-progress {
-    display: none !important;
-  }
-
-  /* Pearls Footer Pill */
-  .pearls-footer-pill {
-    border-radius: 12px;
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-
   /* Admissions Compact Screen (<= 375px) */
   .admissions-stream-badge,
   .admissions-stream-age {
@@ -1004,11 +1584,11 @@
   }
 
   .contact-form-premium {
-    padding: 20px 14px !important;
+    padding: 18px 12px !important;
   }
 
   .contact-form-title {
-    font-size: 1.2rem !important;
+    font-size: 1.15rem !important;
   }
 
   .contact-form-subtitle {
@@ -1016,15 +1596,55 @@
   }
 
   .contact-premium-input,
+  .contact-premium-select,
   .contact-premium-textarea {
-    font-size: 13.5px !important;
-    padding: 10px 12px 10px 38px !important;
+    font-size: 16px !important;
+    padding: 10px 12px 10px 36px !important;
+  }
+
+  .contact-submit-btn {
+    font-size: 13px !important;
+    padding: 11px 12px !important;
   }
 
   .contact-input-icon {
-    left: 12px !important;
-    width: 15px !important;
-    height: 15px !important;
+    left: 10px !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .card-body,
+  .form-card,
+  .feature-item,
+  .pearl-card {
+    padding: 16px 12px !important;
+  }
+
+  .admissions-checklist-box {
+    padding: 14px 10px !important;
+  }
+
+  .admissions-checklist-item {
+    padding: 7px 8px !important;
+    gap: 8px !important;
+  }
+
+  .roadmap-card {
+    padding: 26px 14px 16px !important;
+    overflow: visible !important;
+  }
+
+  .roadmap-badge-num {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 13px !important;
+    top: -17px !important;
+    left: 14px !important;
+    z-index: 10 !important;
+  }
+
+  .trust-policy-banner {
+    padding: 14px 10px !important;
   }
 }
 
@@ -1032,52 +1652,81 @@
    8. SMALL MOBILE (<= 330px: iPhone 5/SE 1st gen, narrow foldables)
    ============================================================================== */
 @media (max-width: 330px) {
+  .header-container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .container,
+  .container-wide {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
   .header-brand {
-    gap: 6px;
+    gap: 6px !important;
   }
 
   .header-logo {
-    height: 38px;
+    height: 36px !important;
   }
 
   .brand-title {
-    font-size: 14.5px;
+    font-size: 13.5px !important;
   }
 
   .mobile-toggle {
-    width: 38px;
-    height: 38px;
-    padding: 4px;
+    width: 36px !important;
+    height: 36px !important;
+    padding: 4px !important;
   }
 
   .mobile-drawer {
-    width: 290px;
-    max-width: 92vw;
-    padding: var(--space-4);
+    width: 270px !important;
+    max-width: 94vw !important;
+    padding: 14px 10px !important;
   }
 
   .mobile-nav-link {
-    font-size: 14px;
-    padding: 9px 0;
+    font-size: 13px !important;
+    padding: 8px 0 !important;
   }
 
   .marquee-notice-card {
-    width: calc(100vw - 28px) !important;
+    width: calc(100vw - 16px) !important;
+    padding: 12px 10px !important;
   }
 
   .btn {
-    padding: 8px 12px;
-    font-size: 12.5px;
+    padding: 8px 10px !important;
+    font-size: 12px !important;
   }
 
   .eligibility-chip-btn {
-    font-size: 12px !important;
-    padding: 8px 10px !important;
+    font-size: 11.5px !important;
+    padding: 8px 8px !important;
+  }
+
+  .contact-form-premium {
+    padding: 14px 10px !important;
   }
 
   .contact-submit-btn {
-    font-size: 13px !important;
-    padding: 12px 14px !important;
+    font-size: 12px !important;
+    padding: 10px 10px !important;
+  }
+
+  .admissions-checklist-box,
+  .roadmap-card,
+  .trust-policy-banner,
+  .eligibility-box {
+    padding: 12px 8px !important;
+  }
+
+  .floating-whatsapp-btn,
+  .floating-ai-trigger {
+    width: 42px !important;
+    height: 42px !important;
   }
 }
 

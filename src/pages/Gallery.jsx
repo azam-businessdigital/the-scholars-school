@@ -268,7 +268,7 @@ export default function Gallery() {
       <section className="section section-white" id="gallery-content-top">
         <div className="container">
           {/* Top Control Bar: Mode Switcher, Search, and Category Pills */}
-          <div className="gallery-control-bar">
+          <div className="gallery-control-bar reveal-up">
             {/* View Mode Switcher */}
             <div className="gallery-view-toggle" role="group" aria-label="Gallery view mode">
               <button
@@ -394,11 +394,11 @@ export default function Gallery() {
 
               {/* Masonry Layout for Album Photos */}
               <div className="pinterest-masonry-wrapper">
-                <div className="pinterest-masonry">
+                <div className="pinterest-masonry stagger-group reveal-up">
                   {currentPhotos.map((photo, index) => (
                     <div
                       key={photo.id || index}
-                      className="pinterest-pin"
+                      className="pinterest-pin reveal-up"
                       onClick={() => openLightbox(index)}
                       role="button"
                       tabIndex="0"
@@ -435,11 +435,11 @@ export default function Gallery() {
                 </div>
               ) : (
                 <>
-                  <div className="albums-grid">
+                  <div className="albums-grid stagger-group reveal-up">
                     {paginatedAlbums.map((album) => (
                       <article
                         key={album.id}
-                        className="album-card"
+                        className="album-card reveal-up"
                         onClick={() => handleSelectAlbum(album.id)}
                         role="button"
                         tabIndex="0"
@@ -524,11 +524,11 @@ export default function Gallery() {
               ) : (
                 <>
                   <div className="pinterest-masonry-wrapper">
-                    <div className="pinterest-masonry">
+                    <div className="pinterest-masonry stagger-group reveal-up">
                       {paginatedPhotos.map((photo, index) => (
                         <div
                           key={photo.id || index}
-                          className="pinterest-pin"
+                          className="pinterest-pin reveal-up"
                           onClick={() => openLightbox(index)}
                           role="button"
                           tabIndex="0"

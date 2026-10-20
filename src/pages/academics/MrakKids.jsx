@@ -145,10 +145,10 @@ export default function MrakKids() {
       />
 
       {/* SECTION 1: ABOUT MRAK KIDS & OFFICIAL EMBLEM */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">A LOVING EARLY START</span>
               <h2 className="section-title">Where Every Toddler Smiles, Explores &amp; Grows</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -158,7 +158,7 @@ export default function MrakKids() {
                 At MRAK Kids, we understand that a child's early developmental stage is where imagination, emotional resilience, and social bonding take root. Our activity-based curriculum blends Montessori inquiry with Islamic ethics, creating a balanced and happy transition from home to school.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <Sun size={19} />
@@ -191,7 +191,7 @@ export default function MrakKids() {
               </div>
             </div>
 
-            <div className="mrak-logo-display">
+            <div className="mrak-logo-display card reveal-right img-sheen-wrap">
               <img
                 src="/images/preschool-logo.png"
                 alt="MRAK The Scholars Kids Pre School Official Emblem"

@@ -152,15 +152,15 @@ export default function Deeniyat() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Deeniyat Program', path: '/academics/deeniyat/' }
+          { label: 'Integrated Deeniyat Program', path: '/academics/deeniyat/' }
         ]}
       />
 
       {/* SECTION 1: ABOUT DEENIYAT & CAMPUS HERO */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">INSTITUTIONAL IDENTITY</span>
               <h2 className="section-title">Harmonizing Modern Sciences with Islamic Moral Character</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -170,7 +170,7 @@ export default function Deeniyat() {
                 Under the guidance of Deeniyat Head <strong>Hasan Kamal</strong> and our visionary trustees, the Deeniyat curriculum ensures that every child grows up with an understanding of faith, honesty, respect for elders, civic harmony, and dedication to societal service.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <Heart size={19} />
@@ -203,7 +203,7 @@ export default function Deeniyat() {
               </div>
             </div>
 
-            <div className="academic-hero-media">
+            <div className="academic-hero-media card reveal-right img-sheen-wrap">
               <div className="academic-hero-floating-badge">
                 <Heart size={14} /> Moral Values &amp; Quranic Study
               </div>

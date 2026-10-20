@@ -26,12 +26,12 @@ export default function FacultyShowcase({
             centered
           />
 
-          <div className="faculty-roster-grid">
+          <div className="faculty-roster-grid stagger-group reveal-up">
             {teachers.map((t, index) => {
               const name = typeof t === 'string' ? t : t.name;
               const qualification = typeof t === 'object' ? t.qualification : null;
               return (
-                <div key={index} className="faculty-roster-card">
+                <div key={index} className="faculty-roster-card card reveal-up">
                   <span className="faculty-roster-number">{index + 1}</span>
                   <div className="faculty-roster-info">
                     <span className="faculty-roster-name">{name}</span>
@@ -57,9 +57,9 @@ export default function FacultyShowcase({
           />
 
           {largePhotos && largePhotos.length > 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+            <div className="stagger-group reveal-up" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
               {largePhotos.map((item, idx) => (
-                <div key={idx} className="faculty-large-showcase">
+                <div key={idx} className="faculty-large-showcase card reveal-up img-sheen-wrap">
                   <img
                     src={item.src}
                     alt={item.title}
@@ -81,7 +81,7 @@ export default function FacultyShowcase({
               ))}
             </div>
           ) : largePhoto ? (
-            <div className="faculty-large-showcase">
+            <div className="faculty-large-showcase card reveal-up img-sheen-wrap">
               <img
                 src={largePhoto}
                 alt={captionTitle || photoTitle}

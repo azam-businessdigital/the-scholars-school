@@ -112,6 +112,20 @@ export default function Admissions() {
         'Independent shifts for boys & girls',
         'Career mentorship & competitive exam support'
       ]
+    },
+    {
+      id: 'deeniyat',
+      title: 'Integrated Deeniyat Program',
+      category: 'Values & Islamic Ethics',
+      ageBadge: 'Integrated All Grades',
+      image: '/images/academics/deeniyat-classroom.jpg',
+      formValue: 'Integrated Deeniyat Program',
+      desc: 'Holistic values-based education integrating Quranic recitation with Tajweed, Hadith studies, and Islamic etiquette into daily school periods alongside English-medium academics.',
+      features: [
+        'Quranic recitation with authentic Tajweed rules',
+        'Hadith memorization, daily Duas & Islamic jurisprudence (Fiqh)',
+        'Moral character mentoring, elder respect & social responsibility'
+      ]
     }
   ];
 
@@ -160,6 +174,15 @@ export default function Admissions() {
       readiness: 'Minimum passing percentage in Class 10 board examination',
       initialDocs: '10th Board Marksheet, Original Leaving Certificate, Migration Cert',
       formValue: 'Junior College: Commerce (Girls Section)'
+    },
+    deeniyat: {
+      title: 'Integrated Deeniyat Program (Moral & Islamic Values)',
+      ageLimit: 'All Enrolled Students (Pre-School through Junior College)',
+      grades: 'Integrated into all grades (Nursery to Grade 10 & Junior College)',
+      shift: 'Embedded daily periods within regular school hours',
+      readiness: 'Open to all enrolled learners; interest in Quranic recitation with Tajweed and Islamic ethics',
+      initialDocs: 'Standard institutional admission documents (Birth Certificate, TC, or Aadhaar)',
+      formValue: 'Integrated Deeniyat Program'
     }
   };
 
@@ -275,14 +298,14 @@ export default function Admissions() {
           <SectionHeader
             eyebrow="ACADEMIC DIVISIONS"
             title="Explore Programs &amp; Grade Levels"
-            subtitle="Explore our structured academic divisions catering to early childhood, primary, secondary, and junior college students."
+            subtitle="Explore our structured academic divisions catering to early childhood, primary, secondary, junior college, and integrated Deeniyat values education."
             centered
           />
 
-          <div className="admissions-streams-grid">
+          <div className="admissions-streams-grid stagger-group reveal-up">
             {academicStreams.map((stream) => (
-              <div key={stream.id} className="admissions-stream-card">
-                <div className="admissions-stream-img-box">
+              <div key={stream.id} className="admissions-stream-card card reveal-up">
+                <div className="admissions-stream-img-box img-sheen-wrap">
                   <img
                     src={stream.image}
                     alt={stream.title}
@@ -334,7 +357,7 @@ export default function Admissions() {
             centered
           />
 
-          <div className="eligibility-box">
+          <div className="eligibility-box card reveal-up">
             <div className="eligibility-nav-chips">
               <button
                 type="button"
@@ -370,6 +393,13 @@ export default function Admissions() {
                 onClick={() => setActiveEligibility('juniorcollege')}
               >
                 <span>Junior College (XI &amp; XII Commerce)</span>
+              </button>
+              <button
+                type="button"
+                className={`eligibility-chip-btn ${activeEligibility === 'deeniyat' ? 'active' : ''}`}
+                onClick={() => setActiveEligibility('deeniyat')}
+              >
+                <span>Integrated Deeniyat (All Grades)</span>
               </button>
             </div>
 
@@ -411,10 +441,10 @@ export default function Admissions() {
                     </p>
                   </div>
 
-                  <div style={{ background: '#F8FAFC', border: '1.5px dashed rgba(198, 161, 91, 0.5)', borderRadius: 'var(--radius-sm)', padding: '24px', textAlign: 'center' }}>
-                    <GraduationCap size={36} style={{ color: 'var(--color-champagne-gold)', margin: '0 auto 12px' }} />
-                    <h4 style={{ color: 'var(--color-royal-navy)', marginBottom: '8px' }}>Ready to Apply?</h4>
-                    <p style={{ fontSize: '13px', color: 'var(--color-slate-grey)', marginBottom: '18px', lineHeight: 1.5 }}>
+                  <div className="eligibility-apply-box">
+                    <GraduationCap size={36} className="eligibility-apply-icon" />
+                    <h4>Ready to Apply?</h4>
+                    <p>
                       Select this stream to automatically configure the application form below.
                     </p>
                     <button
@@ -444,9 +474,9 @@ export default function Admissions() {
             centered
           />
 
-          <div className="roadmap-grid">
+          <div className="roadmap-grid stagger-group reveal-up">
             {roadmapSteps.map((step) => (
-              <div key={step.num} className="roadmap-card">
+              <div key={step.num} className="roadmap-card reveal-up">
                 <span className="roadmap-badge-num">{step.num}</span>
                 <span className="roadmap-time-badge">{step.time}</span>
                 <h3 className="roadmap-title">{step.title}</h3>
@@ -455,13 +485,15 @@ export default function Admissions() {
             ))}
           </div>
 
-          <div className="trust-policy-banner">
-            <Award size={36} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0 }} />
-            <div>
-              <h4 style={{ color: 'var(--color-royal-navy)', margin: '0 0 4px 0' }}>
+          <div className="trust-policy-banner reveal-up">
+            <div className="trust-policy-icon-wrap">
+              <Award size={32} className="trust-policy-icon" />
+            </div>
+            <div className="trust-policy-content">
+              <h4 className="trust-policy-title">
                 Affordable, Merit-Driven Policy under Al-Qalam Educational Trust
               </h4>
-              <p style={{ margin: 0, fontSize: '14px', color: 'var(--color-slate-grey-dark)', lineHeight: 1.6 }}>
+              <p className="trust-policy-text">
                 The Scholars High School is maintained on a non-profit foundation. We do not accept donations or capitation fees. Transparent fee schedules and installment payment options are provided to support parents.
               </p>
             </div>
@@ -487,11 +519,11 @@ export default function Admissions() {
 
             {/* Checklist & Helpdesk Column */}
             <div>
-              <div className="admissions-checklist-box">
-                <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-royal-navy)', fontSize: '1.25rem', marginBottom: '8px' }}>
+              <div className="admissions-checklist-box card reveal-up">
+                <h3 className="admissions-checklist-title">
                   Required Document Checklist
                 </h3>
-                <p style={{ fontSize: '13.5px', color: 'var(--color-slate-grey)', marginBottom: '16px' }}>
+                <p className="admissions-checklist-subtitle">
                   Please carry the following documents when visiting the campus administrative counter for verification:
                 </p>
 
@@ -520,15 +552,15 @@ export default function Admissions() {
                   </button>
                 </div>
 
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <ul className="admissions-checklist-list">
                   {checklistData[activeChecklistTab].map((item, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <CheckCircle2 size={18} style={{ color: 'var(--color-emerald-accent)', flexShrink: 0, marginTop: '2px' }} />
-                      <div>
-                        <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--color-royal-navy)' }}>
+                    <li key={idx} className="admissions-checklist-item">
+                      <CheckCircle2 size={18} className="admissions-checklist-icon" />
+                      <div className="admissions-checklist-text">
+                        <div className="admissions-checklist-name">
                           {item.item}
                         </div>
-                        <div style={{ fontSize: '12.5px', color: 'var(--color-slate-grey)', marginTop: '2px' }}>
+                        <div className="admissions-checklist-note">
                           {item.note}
                         </div>
                       </div>
@@ -569,10 +601,12 @@ export default function Admissions() {
                     href="https://wa.me/918976890569?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20The%20Scholars%20School."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-emerald btn-sm"
+                    className="btn btn-emerald btn-whatsapp btn-sm"
                     style={{ justifyContent: 'center' }}
                   >
-                    <MessageCircle size={15} />
+                    <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
+                      <path d="M16.01 2.01C8.28 2.01 2 8.28 2 16.02c0 2.6.7 5.04 1.93 7.15L2 30l7.05-1.85c2.05 1.13 4.4 1.76 6.96 1.76 7.73 0 14.01-6.27 14.01-14.01 0-7.74-6.28-14.01-14.01-14.01zm8.24 19.83c-.35.98-1.74 1.8-2.42 1.91-.65.11-1.49.16-2.42-.14-.56-.18-1.28-.42-2.22-.83-3.92-1.7-6.49-5.65-6.68-5.91-.2-.26-1.61-2.14-1.61-4.08 0-1.94 1.02-2.9 1.38-3.3.36-.4.78-.5 1.04-.5.26 0 .52 0 .75.01.24.01.56-.09.87.66.33.79 1.12 2.74 1.22 2.94.1.2.16.44.03.7-.13.26-.2.42-.39.65-.2.23-.42.51-.6.69-.2.2-.41.42-.18.82.23.4 1.03 1.7 2.21 2.75 1.52 1.35 2.8 1.77 3.2 1.97.4.2.63.17.86-.1.23-.26.99-1.15 1.25-1.55.26-.4.53-.33.89-.2.36.13 2.28 1.08 2.68 1.27.39.2.66.29.75.46.1.16.1.95-.25 1.93z" />
+                    </svg>
                     <span>WhatsApp Admissions Enquiry</span>
                   </a>
                 </div>
@@ -592,7 +626,7 @@ export default function Admissions() {
             centered
           />
 
-          <div className="admissions-faq-wrapper">
+          <div className="admissions-faq-wrapper reveal-up">
             <div className="faq-cat-filter">
               <button
                 type="button"
@@ -663,14 +697,14 @@ export default function Admissions() {
 
       {/* Bottom Call to Action */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '750px', margin: '0 auto' }}>
-          <h2 className="section-title" style={{ color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
+        <div className="container section-header text-center reveal-up" style={{ maxWidth: '750px', margin: '0 auto' }}>
+          <h2 className="section-title text-center" style={{ color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
             Ready to Enroll Your Child?
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>
             Admission enquiries are now open for the upcoming academic session. Connect with our admission counselor today or schedule an in-person campus visit.
           </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="admission-cta-actions" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
               href="#admission-enquiry-form"
               className="btn btn-gold btn-lg"

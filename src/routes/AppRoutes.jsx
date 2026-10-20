@@ -26,44 +26,9 @@ const Deeniyat = lazy(() => import('../pages/academics/Deeniyat'));
 const JuniorCollegeGirls = lazy(() => import('../pages/academics/JuniorCollegeGirls'));
 const JuniorCollegeBoys = lazy(() => import('../pages/academics/JuniorCollegeBoys'));
 
-function PageLoader() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '50vh',
-        gap: '16px'
-      }}
-      aria-label="Loading page content"
-    >
-      <div
-        style={{
-          width: '36px',
-          height: '36px',
-          border: '3px solid var(--color-champagne-gold-subtle)',
-          borderTopColor: 'var(--color-champagne-gold)',
-          borderRadius: '50%',
-          animation: 'spin 0.8s linear infinite'
-        }}
-      />
-      <span style={{ fontSize: '13px', color: 'var(--color-royal-navy)', fontWeight: 600 }}>
-        Loading The Scholars School...
-      </span>
-      <style>{`
-        @keyframes spin {
-          to { transform: rotate(360deg); }
-        }
-      `}</style>
-    </div>
-  );
-}
-
 export default function AppRoutes() {
   return (
-    <Suspense fallback={<PageLoader />}>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           {/* Main Pages */}

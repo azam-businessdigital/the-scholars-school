@@ -21,7 +21,7 @@ export default function Breadcrumbs({ items = [] }) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="breadcrumbs-bar">
+    <nav aria-label="Breadcrumb" className="breadcrumbs-bar reveal-fade is-revealed">
       <div className="container">
         <ol className="breadcrumbs-list">
           {fullItems.map((item, index) => {

@@ -18,7 +18,9 @@ export default function Academics() {
 
       <div className="page-banner">
         <div className="container">
-          <span className="eyebrow">ACADEMIC EXCELLENCE</span>
+          <div className="mrak-banner-badge">
+            <span className="mrak-banner-tag">ACADEMIC EXCELLENCE &bull; PRE-SCHOOL TO JUNIOR COLLEGE</span>
+          </div>
           <h1>Comprehensive Academic Programs</h1>
           <p>
             From early sensory learning in MRAK Kids Pre School to specialized Higher Secondary Commerce education, discover our structured academic journey.
@@ -28,16 +30,16 @@ export default function Academics() {
 
       <Breadcrumbs items={[{ label: 'Academics', path: '/academics/' }]} />
 
-      <section className="section section-white">
+      <section className="section section-white" id="academic-sections">
         <div className="container">
           <SectionHeader
             eyebrow="ACADEMIC DEPARTMENTS"
-            title="Six Dedicated Educational Sections"
-            subtitle="Explore each section to understand its curriculum, age criteria, faculty leadership, and specialized learning focus."
+            title="Seven Dedicated Academic Sections"
+            subtitle="From early childhood sensory exploration in MRAK Kids to specialized Higher Secondary Commerce preparation, explore our complete educational continuum."
             centered
           />
 
-          <div className="grid-3">
+          <div className="grid-3 stagger-group reveal-up">
             {academicsData.map((section) => (
               <AcademicCard key={section.id} section={section} />
             ))}
@@ -48,8 +50,8 @@ export default function Academics() {
       {/* Curriculum Framework */}
       <section className="section section-ivory">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div>
+          <div className="grid-2 stagger-group reveal-up" style={{ alignItems: 'center' }}>
+            <div className="section-header reveal-up">
               <span className="eyebrow">PEDAGOGICAL APPROACH</span>
               <h2 className="section-title">The Scholars Academic Framework</h2>
               <p>
@@ -75,7 +77,7 @@ export default function Academics() {
               </ul>
             </div>
 
-            <div>
+            <div className="img-sheen-wrap reveal-up">
               <img
                 src="/images/campus/teacher-head.jpg"
                 alt="The Scholars School Teachers and Students"
@@ -96,8 +98,8 @@ export default function Academics() {
 
       {/* Call to action */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '750px' }}>
-          <h2 className="section-title" style={{ color: '#fff', marginBottom: '16px' }}>
+        <div className="container section-header text-center reveal-up" style={{ maxWidth: '750px' }}>
+          <h2 className="section-title text-center" style={{ color: '#fff', marginBottom: '16px' }}>
             Ready to Enroll Your Child?
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>

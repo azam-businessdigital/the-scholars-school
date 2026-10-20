@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Phone,
   Mail,
@@ -59,11 +59,12 @@ export default function Header() {
     setAcademicsOpen(false);
   };
 
-  // Close menus on route change
+  // Close menus and reset scrolled header state on route change
   useEffect(() => {
     closeDropdown();
     setMobileMenuOpen(false);
     setMobileAcademicsOpen(false);
+    setIsScrolled(false);
   }, [location.pathname]);
 
   // Cleanup timeout on unmount
@@ -80,12 +81,22 @@ export default function Header() {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [mobileMenuOpen]);
+
+  // Exact and prefix active state matching that reliably handles subfolder routing & trailing slashes
+  const isLinkActive = (path, isExact = false) => {
+    const current = (location.pathname || '/').replace(/\/+$/, '') || '/';
+    const target = (path || '/').replace(/\/+$/, '') || '/';
+    if (isExact || target === '/') {
+      return current === target;
+    }
+    return current === target || current.startsWith(`${target}/`);
+  };
 
   const schoolingLinks = [
     {
@@ -191,13 +202,13 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="nav-menu" aria-label="Main Navigation">
-              <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} end>
+              <Link to="/" className={`nav-link ${isLinkActive('/', true) ? 'active' : ''}`}>
                 <span>Home</span>
-              </NavLink>
+              </Link>
 
-              <NavLink to="/about-us/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/about-us/" className={`nav-link ${isLinkActive('/about-us') ? 'active' : ''}`}>
                 <span>About Us</span>
-              </NavLink>
+              </Link>
 
               {/* Academics Mega Dropdown */}
               <div
@@ -205,16 +216,16 @@ export default function Header() {
                 onMouseEnter={handleAcademicsEnter}
                 onMouseLeave={handleAcademicsLeave}
               >
-                <NavLink
+                <Link
                   to="/academics/"
-                  className={`nav-link nav-link-dropdown ${location.pathname.startsWith('/academics') ? 'active' : ''}`}
+                  className={`nav-link nav-link-dropdown ${isLinkActive('/academics') ? 'active' : ''}`}
                   aria-haspopup="true"
                   aria-expanded={academicsOpen}
                   onClick={closeDropdown}
                 >
                   <span>Academics</span>
                   <ChevronDown size={14} className={`dropdown-chevron ${academicsOpen ? 'rotate' : ''}`} />
-                </NavLink>
+                </Link>
 
                 {/* Luxury Mega Dropdown */}
                 <div
@@ -301,25 +312,25 @@ export default function Header() {
                 </div>
               </div>
 
-              <NavLink to="/announcements/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/announcements/" className={`nav-link ${isLinkActive('/announcements') ? 'active' : ''}`}>
                 <span>Notices</span>
-              </NavLink>
+              </Link>
 
-              <NavLink to="/results/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/results/" className={`nav-link ${isLinkActive('/results') ? 'active' : ''}`}>
                 <span>Results</span>
-              </NavLink>
+              </Link>
 
-              <NavLink to="/media-news/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/media-news/" className={`nav-link ${isLinkActive('/media-news') ? 'active' : ''}`}>
                 <span>News &amp; Media</span>
-              </NavLink>
+              </Link>
 
-              <NavLink to="/gallery/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/gallery/" className={`nav-link ${isLinkActive('/gallery') ? 'active' : ''}`}>
                 <span>Gallery</span>
-              </NavLink>
+              </Link>
 
-              <NavLink to="/contact-us/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <Link to="/contact-us/" className={`nav-link ${isLinkActive('/contact-us') ? 'active' : ''}`}>
                 <span>Contact</span>
-              </NavLink>
+              </Link>
             </nav>
 
             {/* Header Actions */}
@@ -373,18 +384,18 @@ export default function Header() {
 
             <ul className="mobile-drawer-nav">
               <li>
-                <Link to="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/" className={`mobile-nav-link ${isLinkActive('/', true) ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>Home</span>
                 </Link>
               </li>
               <li>
-                <Link to="/about-us/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/about-us/" className={`mobile-nav-link ${isLinkActive('/about-us') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>About Us</span>
                 </Link>
               </li>
               <li>
                 <div
-                  className="mobile-nav-link"
+                  className={`mobile-nav-link ${isLinkActive('/academics') ? 'active' : ''}`}
                   onClick={() => setMobileAcademicsOpen(!mobileAcademicsOpen)}
                   style={{ cursor: 'pointer' }}
                 >
@@ -394,13 +405,13 @@ export default function Header() {
                 {mobileAcademicsOpen && (
                   <ul className="mobile-submenu">
                     <li>
-                      <Link to="/academics/" onClick={() => setMobileMenuOpen(false)}>
+                      <Link to="/academics/" className={location.pathname === '/academics/' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>
                         <strong>Overview of Academics</strong>
                       </Link>
                     </li>
                     {schoolingLinks.concat(collegeAndValuesLinks).map((item) => (
                       <li key={item.path}>
-                        <Link to={item.path} onClick={() => setMobileMenuOpen(false)}>
+                        <Link to={item.path} className={location.pathname === item.path ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>
                           {item.name}
                         </Link>
                       </li>
@@ -409,32 +420,32 @@ export default function Header() {
                 )}
               </li>
               <li>
-                <Link to="/announcements/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/announcements/" className={`mobile-nav-link ${isLinkActive('/announcements') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>Announcements</span>
                 </Link>
               </li>
               <li>
-                <Link to="/results/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/results/" className={`mobile-nav-link ${isLinkActive('/results') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>100% Board Results</span>
                 </Link>
               </li>
               <li>
-                <Link to="/media-news/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/media-news/" className={`mobile-nav-link ${isLinkActive('/media-news') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>News &amp; Media</span>
                 </Link>
               </li>
               <li>
-                <Link to="/gallery/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/gallery/" className={`mobile-nav-link ${isLinkActive('/gallery') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>Photo Gallery</span>
                 </Link>
               </li>
               <li>
-                <Link to="/careers/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/careers/" className={`mobile-nav-link ${isLinkActive('/careers') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>Careers &amp; Vacancies</span>
                 </Link>
               </li>
               <li>
-                <Link to="/contact-us/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/contact-us/" className={`mobile-nav-link ${isLinkActive('/contact-us') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                   <span>Contact Campus</span>
                 </Link>
               </li>

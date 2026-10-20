@@ -55,8 +55,17 @@ export default function MediaNews() {
 
       <section className="section section-white">
         <div className="container">
+          {/* Section Header */}
+          <div className="section-header reveal-up" style={{ marginBottom: 'var(--space-8)' }}>
+            <span className="eyebrow">BROADCAST &amp; PRESS COVERAGE</span>
+            <h2 className="section-title">Official Media Features &amp; Publications</h2>
+            <p className="section-subtitle">
+              Explore national electronic television features, academic excellence reports, and prominent Urdu &amp; English press clippings celebrating our campus milestones.
+            </p>
+          </div>
+
           {/* Category Switcher Tabs */}
-          <div className="filter-bar" role="tablist" aria-label="News and media category filter" style={{ marginBottom: 'var(--space-10)' }}>
+          <div className="filter-bar reveal-up" role="tablist" aria-label="News and media category filter" style={{ marginBottom: 'var(--space-10)' }}>
             <button
               type="button"
               className={`filter-btn ${activeTab === 'all' ? 'active' : ''}`}
@@ -91,11 +100,11 @@ export default function MediaNews() {
           </div>
 
           {/* Media Items Grid */}
-          <div className="media-news-grid">
+          <div className="media-news-grid stagger-group reveal-up">
             {displayedItems.map((item) => (
               <article
                 key={item.id}
-                className="card media-card"
+                className="card media-card reveal-up"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -112,7 +121,7 @@ export default function MediaNews() {
               >
                 {/* Media Preview Box */}
                 <div
-                  className="card-media"
+                  className="card-media img-sheen-wrap"
                   style={{
                     height: '210px',
                     position: 'relative',

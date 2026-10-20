@@ -52,35 +52,37 @@ export default function About() {
       <section className="section section-white" aria-labelledby="about-heading">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'stretch', gap: 'var(--space-12)' }}>
-            {/* Left Column: Overlapping Campus Photography & ESTD 1993 (Equal to Content Height) */}
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div className="about-collage-wrap" style={{ flex: 1, height: '100%' }}>
+            {/* Left Column: Overlapping Campus Photography & ESTD 1993 */}
+            <div className="reveal-left">
+              <div className="about-collage-wrap">
                 <div className="about-year-badge">
                   <span>EST 1993</span>
                 </div>
-                <div className="about-thumb-main">
-                  <img
-                    src="/images/campus/building.jpg"
-                    alt="The Scholars High School 7-story campus building at Hill Park"
-                    loading="lazy"
-                    width="600"
-                    height="380"
-                  />
-                </div>
-                <div className="about-thumb-secondary">
-                  <img
-                    src="/images/campus/banner2.jpg"
-                    alt="Students and Academic Activities"
-                    loading="lazy"
-                    width="360"
-                    height="220"
-                  />
+                <div className="about-image-collage">
+                  <div className="about-thumb-main">
+                    <img
+                      src="/images/campus/building.jpg"
+                      alt="The Scholars High School 7-story campus building at Hill Park"
+                      loading="lazy"
+                      width="600"
+                      height="380"
+                    />
+                  </div>
+                  <div className="about-thumb-secondary">
+                    <img
+                      src="/images/campus/banner2.jpg"
+                      alt="Neuroscience Based Curriculum at The Scholars School"
+                      loading="lazy"
+                      width="360"
+                      height="202"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Heading, Overview & Highlights */}
-            <div>
+            <div className="reveal-right">
               <span className="eyebrow">ABOUT THE SCHOLARS</span>
               <h2 id="about-heading" className="section-title">
                 Building Future Leaders Through Modern &amp; Moral Education
@@ -131,7 +133,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <div className="about-cta-actions">
                 <Link to="/admissions/" className="btn btn-gold">
                   <span>Admission Enquiry</span>
                   <ArrowUpRight size={15} />
@@ -156,8 +158,9 @@ export default function About() {
             centered
           />
 
-          <div className="grid-2">
+          <div className="grid-2 stagger-group reveal-up">
             <div
+              className="card reveal-up"
               style={{
                 backgroundColor: '#fff',
                 padding: 'var(--space-8)',
@@ -181,6 +184,7 @@ export default function About() {
             </div>
 
             <div
+              className="card reveal-up"
               style={{
                 backgroundColor: '#fff',
                 padding: 'var(--space-8)',
@@ -216,16 +220,18 @@ export default function About() {
             centered
           />
 
-          <div className="leadership-box">
+          <div className="leadership-box reveal-scale">
             <div style={{ textAlign: 'center' }}>
-              <img
-                src={schoolData.leadership.chairman.image}
-                alt={schoolData.leadership.chairman.name}
-                className="leadership-avatar"
-                loading="lazy"
-                width="180"
-                height="200"
-              />
+              <div className="leadership-avatar-wrap">
+                <img
+                  src={schoolData.leadership.chairman.image}
+                  alt={schoolData.leadership.chairman.name}
+                  className="leadership-avatar"
+                  loading="lazy"
+                  width="180"
+                  height="200"
+                />
+              </div>
               <div style={{ marginTop: '12px' }}>
                 <div className="leadership-author">{schoolData.leadership.chairman.name}</div>
                 <div className="leadership-title">{schoolData.leadership.chairman.title}</div>
@@ -257,9 +263,9 @@ export default function About() {
             centered
           />
 
-          <div className="academic-heads-grid">
+          <div className="academic-heads-grid stagger-group reveal-up">
             {schoolData.leadership.principals.map((leader, i) => (
-              <div key={i} className="academic-head-card">
+              <div key={i} className="academic-head-card card reveal-up">
                 {/* Visual Header Banner */}
                 <div className="head-card-hero">
                   <div className="head-hero-pattern" aria-hidden="true"></div>
@@ -331,19 +337,19 @@ export default function About() {
             </div>
           </div>
 
-          <div className="trustees-grid">
+          <div className="trustees-grid stagger-group reveal-up">
             {schoolData.trustees.map((trustee, i) => {
               const isExec = ['President', 'General Secretary', 'Treasurer', 'Founder Member'].includes(trustee.role);
               return (
-                <div key={i} className={`trustee-card ${isExec ? 'executive' : ''}`}>
+                <div key={i} className={`trustee-card card reveal-up ${isExec ? 'executive' : ''}`}>
                   <div className="trustee-avatar-wrap">
                     <img
                       src={trustee.image}
                       alt={trustee.name}
                       className="trustee-avatar-img"
                       loading="lazy"
-                      width="96"
-                      height="96"
+                      width="170"
+                      height="212"
                     />
                   </div>
 
@@ -372,7 +378,7 @@ export default function About() {
           {/* Clean 2-Column Campus Showcase */}
           <div className="campus-showcase-grid">
             {/* Left: Building Spotlight Card */}
-            <div className="campus-building-spotlight">
+            <div className="campus-building-spotlight reveal-left">
               <div className="campus-img-container">
                 <img
                   src="/images/campus/building.jpg"
@@ -497,7 +503,7 @@ export default function About() {
 
       {/* Bottom CTA */}
       <section className="section section-navy text-center" style={{ textAlign: 'center' }}>
-        <div className="container text-center" style={{ maxWidth: '750px', margin: '0 auto' }}>
+        <div className="container section-header text-center reveal-up" style={{ maxWidth: '750px', margin: '0 auto' }}>
           <h2 className="section-title text-center" style={{ color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
             Join The Scholars School Family Today
           </h2>

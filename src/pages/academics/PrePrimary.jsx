@@ -154,10 +154,10 @@ export default function PrePrimary() {
       />
 
       {/* SECTION 1: ABOUT PRE-PRIMARY & CAMPUS HERO */}
-      <section className="section section-white">
+      <section className="section section-white" id="section-overview">
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
-            <div>
+          <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
+            <div className="section-header reveal-left">
               <span className="eyebrow">FOUNDATIONAL LEARNING YEARS</span>
               <h2 className="section-title">Where Curiosity Blossoms into Confident Learning</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
@@ -167,7 +167,7 @@ export default function PrePrimary() {
                 The Pre-Primary years form the bedrock of a child's academic and emotional future. At The Scholars High School, we combine interactive Jolly Phonics, concrete mathematical manipulatives, and creative hands-on projects with timeless Islamic ethics (Adab). Our children learn to communicate expressively, explore fearlessly, and care deeply for one another.
               </p>
 
-              <div className="mrak-badges-row">
+              <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon sun">
                     <GraduationCap size={19} />
@@ -200,7 +200,7 @@ export default function PrePrimary() {
               </div>
             </div>
 
-            <div className="academic-hero-media">
+            <div className="academic-hero-media card reveal-right img-sheen-wrap">
               <div className="academic-hero-floating-badge">
                 <Sparkles size={14} /> Activity Based Learning
               </div>

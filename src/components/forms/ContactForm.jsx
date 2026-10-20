@@ -88,13 +88,15 @@ export default function ContactForm() {
 
       // 2. Transmit to backend endpoint
       const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
-      const endpoint = baseUrl ? `${baseUrl}/contact` : '/api/contact.php';
+      const apiPrefix = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || (typeof window !== 'undefined' && window.location.pathname.startsWith('/the-scholars-school') ? '/the-scholars-school' : '');
+      const endpoint = baseUrl ? `${baseUrl}/contact` : `${apiPrefix}/api/contact.php`;
 
-      const res = await fetch(endpoint, {
+      const response = await fetch(endpoint, {
         method: 'POST',
+        cache: 'no-store',
         headers: {
           'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           ...formData,
@@ -102,10 +104,19 @@ export default function ContactForm() {
         })
       });
 
-      const data = await res.json().catch(() => ({}));
+      const rawText = await response.text();
+      let data = {};
+      try {
+        data = JSON.parse(rawText);
+      } catch (_) {
+        console.warn('API returned non-JSON response:', rawText);
+      }
 
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Server returned an error status.');
+      if (!response.ok || !data.success) {
+        if (response.status === 409) {
+          throw new Error('A request was recently processed. Please wait a moment and try again.');
+        }
+        throw new Error(data.error || `Server error (HTTP ${response.status || 'unknown'})`);
       }
 
       setStatus('success');

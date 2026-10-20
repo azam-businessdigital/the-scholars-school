@@ -25,7 +25,7 @@ export default function Terms() {
       <Breadcrumbs items={[{ label: 'Terms of Use', path: '/terms-of-use/' }]} />
 
       <section className="section section-white">
-        <div className="container" style={{ maxWidth: '850px' }}>
+        <div className="container reveal-up" style={{ maxWidth: '850px' }}>
           <div>
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-royal-navy)', marginBottom: '12px' }}>
               1. Acceptance of Terms
