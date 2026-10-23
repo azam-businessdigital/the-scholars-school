@@ -1,10 +1,266 @@
 /* ==========================================================================
    THE SCHOLARS SCHOOL - ALBUM & GALLERY DATA
-   Complete authentic archive of 79 albums and 349 photographs
+   Complete authentic archive of 84 albums and 377 photographs
    Downloaded and self-hosted locally from the official school archive.
    ========================================================================== */
 
 export const albumsData = [
+  {
+    "id": "secondary-science-exhibition",
+    "title": "Secondary Science Exhibition & Working Model Showcase",
+    "category": "School Activities",
+    "eventDate": "Academic Session",
+    "location": "Science Laboratories & School Hall",
+    "coverImage": "/images/gallery/science-activity-4.jpeg",
+    "photoCount": 7,
+    "description": "Visual archive of secondary scholars demonstrating working scientific models, experimental setups, and investigative project displays at The Scholars High School & Junior College.",
+    "photos": [
+      {
+        "id": "secondary-science-exhibition-1",
+        "src": "/images/gallery/science-activity-4.jpeg",
+        "title": "Secondary Science Exhibition - Working Model Demonstration",
+        "alt": "Secondary students showcasing interactive working science models at The Scholars High School",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-science-exhibition-2",
+        "src": "/images/gallery/science-activity-1.jpeg",
+        "title": "Secondary Science Exhibition - Student Project Display",
+        "alt": "High school student presenting scientific project board and apparatus",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-science-exhibition-3",
+        "src": "/images/gallery/science-activity-2.jpeg",
+        "title": "Secondary Science Exhibition - Experimental Setup",
+        "alt": "Scholars demonstrating practical scientific experiment at The Scholars High School",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-science-exhibition-4",
+        "src": "/images/gallery/science-activity-3.jpeg",
+        "title": "Secondary Science Exhibition - Conceptual Science Model",
+        "alt": "Secondary scholar explaining physics and environmental model to visitors",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-science-exhibition-5",
+        "src": "/images/gallery/science-activity-5.jpeg",
+        "title": "Secondary Science Exhibition - Applied Science Showcase",
+        "alt": "Student presentation on renewable energy and biological systems",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-science-exhibition-6",
+        "src": "/images/gallery/science-activity-6.jpeg",
+        "title": "Secondary Science Exhibition - Scientific Investigation",
+        "alt": "High school learner demonstrating scientific hypothesis and observations",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-science-exhibition-7",
+        "src": "/images/gallery/science-activity-7.jpeg",
+        "title": "Secondary Science Exhibition - Faculty Evaluation",
+        "alt": "Secondary students presenting working project to science faculty at The Scholars High School",
+        "aspect": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "secondary-english-elocution",
+    "title": "Annual Secondary English Elocution Competition",
+    "category": "School Activities",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Auditorium & Stage, Hill Park Campus",
+    "coverImage": "/images/gallery/english-elocution-6.jpeg",
+    "photoCount": 6,
+    "description": "Visual archive of secondary students demonstrating exceptional rhetorical skills, articulate pronunciation, and stage presence at the Annual English Elocution Competition.",
+    "photos": [
+      {
+        "id": "secondary-english-elocution-1",
+        "src": "/images/gallery/english-elocution-6.jpeg",
+        "title": "Annual Secondary English Elocution - Stage Address",
+        "alt": "Secondary student delivering an impassioned elocution address on the auditorium stage",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-english-elocution-2",
+        "src": "/images/gallery/english-elocution-1.jpeg",
+        "title": "Annual Secondary English Elocution - Speaker Podium",
+        "alt": "Student speaker addressing the school audience at English elocution competition",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-english-elocution-3",
+        "src": "/images/gallery/english-elocution-2.jpeg",
+        "title": "Annual Secondary English Elocution - Oratorical Delivery",
+        "alt": "Scholars student displaying vocal modulation and poise at the podium",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-english-elocution-4",
+        "src": "/images/gallery/english-elocution-3.jpeg",
+        "title": "Annual Secondary English Elocution - Audience Engagement",
+        "alt": "High school scholar presenting persuasive speech to teachers and peers",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-english-elocution-5",
+        "src": "/images/gallery/english-elocution-4.jpeg",
+        "title": "Annual Secondary English Elocution - Confident Expression",
+        "alt": "Student orator expressing moral and literary perspectives on stage",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-english-elocution-6",
+        "src": "/images/gallery/english-elocution-5.jpeg",
+        "title": "Annual Secondary English Elocution - Keynote Speech",
+        "alt": "Secondary student concluding elocution address at The Scholars High School",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "secondary-geography-exhibition",
+    "title": "Secondary Geography Landform & Cartography Exhibition",
+    "category": "School Activities",
+    "eventDate": "Academic Session",
+    "location": "School Activity Hall",
+    "coverImage": "/images/gallery/geography-activity-5.jpeg",
+    "photoCount": 9,
+    "description": "Visual archive of secondary scholars exhibiting 3D geographical landforms, contour models, volcanic structures, and physical map studies at The Scholars High School.",
+    "photos": [
+      {
+        "id": "secondary-geography-exhibition-1",
+        "src": "/images/gallery/geography-activity-5.jpeg",
+        "title": "Geography Exhibition - 3D Landform Overview",
+        "alt": "Secondary students presenting comprehensive 3D terrain landforms and geographical models",
+        "aspect": "landscape"
+      },
+      {
+        "id": "secondary-geography-exhibition-2",
+        "src": "/images/gallery/geography-activity-1.jpeg",
+        "title": "Geography Exhibition - Topographical Landform Study",
+        "alt": "High school learner demonstrating handcrafted mountain and valley topography",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-3",
+        "src": "/images/gallery/geography-activity-2.jpeg",
+        "title": "Geography Exhibition - Volcanic Structure Model",
+        "alt": "Student presenting volcanic landform structure and tectonic activity model",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-4",
+        "src": "/images/gallery/geography-activity-3.jpeg",
+        "title": "Geography Exhibition - River Drainage Basin",
+        "alt": "Learner showcasing physical river course and delta landform display",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-5",
+        "src": "/images/gallery/geography-activity-4.jpeg",
+        "title": "Geography Exhibition - Physical Map & Relief Study",
+        "alt": "Secondary scholar explaining physical relief features and contour elevation",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-6",
+        "src": "/images/gallery/geography-activity-6.jpeg",
+        "title": "Geography Exhibition - Coastal Geomorphology Model",
+        "alt": "Handmade educational landform model explaining ocean erosion and coastlines",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-7",
+        "src": "/images/gallery/geography-activity-7.jpeg",
+        "title": "Geography Exhibition - Atmospheric & Climate Zones",
+        "alt": "Students explaining earth climate zones and ecological terrains",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-8",
+        "src": "/images/gallery/geography-activity-8.jpeg",
+        "title": "Geography Exhibition - Plateau & Canyon Formations",
+        "alt": "Student displaying geological plateau and rock formation models",
+        "aspect": "portrait"
+      },
+      {
+        "id": "secondary-geography-exhibition-9",
+        "src": "/images/gallery/geography-activity-9.jpeg",
+        "title": "Geography Exhibition - Peer Learning & Model Review",
+        "alt": "Secondary learners sharing geographical knowledge during exhibition at The Scholars School",
+        "aspect": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "rubiks-cube-challenge",
+    "title": "Rubik's Cube Speed-Solving & Spatial Logic Workshop",
+    "category": "School Activities",
+    "eventDate": "Mathematics & Logic Week",
+    "location": "Mathematics Lab & Secondary Classrooms",
+    "coverImage": "/images/gallery/rubiks-cube-activity-2.jpeg",
+    "photoCount": 3,
+    "description": "Visual archive of secondary scholars solving Rubik's Cubes, mastering spatial algorithms, and sharpening mental agility at The Scholars High School.",
+    "photos": [
+      {
+        "id": "rubiks-cube-challenge-1",
+        "src": "/images/gallery/rubiks-cube-activity-2.jpeg",
+        "title": "Rubik's Cube Workshop - Speed Cubing Demonstration",
+        "alt": "Secondary students actively solving 3x3 Rubik's Cubes with speed and concentration",
+        "aspect": "landscape"
+      },
+      {
+        "id": "rubiks-cube-challenge-2",
+        "src": "/images/gallery/rubiks-cube-activity-1.jpeg",
+        "title": "Rubik's Cube Workshop - Algorithmic Logic Practice",
+        "alt": "Student focusing on permutation algorithms and spatial reasoning with Rubik's Cube",
+        "aspect": "portrait"
+      },
+      {
+        "id": "rubiks-cube-challenge-3",
+        "src": "/images/gallery/rubiks-cube-activity-3.jpeg",
+        "title": "Rubik's Cube Workshop - Peer Problem Solving",
+        "alt": "Scholars collaborating on mathematical sequence techniques and speed solving",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "classroom-cleanliness-drive",
+    "title": "Classroom Cleanliness & Civic Responsibility Drive",
+    "category": "School Activities",
+    "eventDate": "Civic Values Drive",
+    "location": "Secondary Section Classrooms",
+    "coverImage": "/images/gallery/class-cleaning-2.jpeg",
+    "photoCount": 3,
+    "description": "Visual archive documenting secondary scholars participating in classroom cleanliness, waste segregation, and campus care at The Scholars High School.",
+    "photos": [
+      {
+        "id": "classroom-cleanliness-drive-1",
+        "src": "/images/gallery/class-cleaning-2.jpeg",
+        "title": "Classroom Cleanliness Drive - Teamwork & Sanitization",
+        "alt": "Secondary students working together to organize and sanitize their classroom space",
+        "aspect": "landscape"
+      },
+      {
+        "id": "classroom-cleanliness-drive-2",
+        "src": "/images/gallery/class-cleaning-1.jpeg",
+        "title": "Classroom Cleanliness Drive - Desk & Bench Upkeep",
+        "alt": "Students participating in thorough desk cleaning and tidying at The Scholars High School",
+        "aspect": "portrait"
+      },
+      {
+        "id": "classroom-cleanliness-drive-3",
+        "src": "/images/gallery/class-cleaning-3.jpeg",
+        "title": "Classroom Cleanliness Drive - Civic Care & Hygiene",
+        "alt": "Learners taking pride in a spotless and disciplined classroom learning environment",
+        "aspect": "portrait"
+      }
+    ]
+  },
   {
     "id": "fun-with-clay",
     "title": "Fun With Clay",
@@ -1143,69 +1399,69 @@ export const albumsData = [
     ]
   },
   {
-    "id": "lkg-meeting",
-    "title": "LKG Meeting",
+    "id": "mont-2-meeting",
+    "title": "Mont – 2 Parent Orientation",
     "category": "School Activities",
     "eventDate": "Annual Academic Calendar",
     "location": "School Campus Ground",
     "coverImage": "/images/gallery/lkg-meeting-8.jpeg",
     "photoCount": 8,
-    "description": "Visual archive of 8 photographs from LKG Meeting at The Scholars High School & Junior College.",
+    "description": "Visual archive of 8 photographs from Mont – 2 Parent Orientation at The Scholars High School & Junior College.",
     "photos": [
       {
-        "id": "lkg-meeting-1",
+        "id": "mont-2-meeting-1",
         "src": "/images/gallery/lkg-meeting-8.jpeg",
-        "title": "LKG Meeting - Photo 1",
-        "alt": "LKG Meeting photograph 1 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 1",
+        "alt": "Mont – 2 Parent Orientation photograph 1 at The Scholars High School",
         "aspect": "landscape"
       },
       {
-        "id": "lkg-meeting-2",
+        "id": "mont-2-meeting-2",
         "src": "/images/gallery/lkg-meeting-7.jpeg",
-        "title": "LKG Meeting - Photo 2",
-        "alt": "LKG Meeting photograph 2 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 2",
+        "alt": "Mont – 2 Parent Orientation photograph 2 at The Scholars High School",
         "aspect": "portrait"
       },
       {
-        "id": "lkg-meeting-3",
+        "id": "mont-2-meeting-3",
         "src": "/images/gallery/lkg-meeting-6.jpeg",
-        "title": "LKG Meeting - Photo 3",
-        "alt": "LKG Meeting photograph 3 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 3",
+        "alt": "Mont – 2 Parent Orientation photograph 3 at The Scholars High School",
         "aspect": "landscape"
       },
       {
-        "id": "lkg-meeting-4",
+        "id": "mont-2-meeting-4",
         "src": "/images/gallery/lkg-meeting-5.jpeg",
-        "title": "LKG Meeting - Photo 4",
-        "alt": "LKG Meeting photograph 4 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 4",
+        "alt": "Mont – 2 Parent Orientation photograph 4 at The Scholars High School",
         "aspect": "landscape"
       },
       {
-        "id": "lkg-meeting-5",
+        "id": "mont-2-meeting-5",
         "src": "/images/gallery/lkg-meeting-4.jpeg",
-        "title": "LKG Meeting - Photo 5",
-        "alt": "LKG Meeting photograph 5 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 5",
+        "alt": "Mont – 2 Parent Orientation photograph 5 at The Scholars High School",
         "aspect": "portrait"
       },
       {
-        "id": "lkg-meeting-6",
+        "id": "mont-2-meeting-6",
         "src": "/images/gallery/lkg-meeting-3.jpeg",
-        "title": "LKG Meeting - Photo 6",
-        "alt": "LKG Meeting photograph 6 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 6",
+        "alt": "Mont – 2 Parent Orientation photograph 6 at The Scholars High School",
         "aspect": "landscape"
       },
       {
-        "id": "lkg-meeting-7",
+        "id": "mont-2-meeting-7",
         "src": "/images/gallery/lkg-meeting-2.jpeg",
-        "title": "LKG Meeting - Photo 7",
-        "alt": "LKG Meeting photograph 7 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 7",
+        "alt": "Mont – 2 Parent Orientation photograph 7 at The Scholars High School",
         "aspect": "landscape"
       },
       {
-        "id": "lkg-meeting-8",
+        "id": "mont-2-meeting-8",
         "src": "/images/gallery/lkg-meeting-1.jpeg",
-        "title": "LKG Meeting - Photo 8",
-        "alt": "LKG Meeting photograph 8 at The Scholars High School",
+        "title": "Mont – 2 Parent Orientation - Photo 8",
+        "alt": "Mont – 2 Parent Orientation photograph 8 at The Scholars High School",
         "aspect": "portrait"
       }
     ]

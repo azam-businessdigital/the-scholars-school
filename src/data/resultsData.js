@@ -22,7 +22,7 @@ export const resultsData = [
     passingPercentage: "100%",
     status: "Declared",
     documentUrl: "/documents/hsc_result_2024_25_commerce.pdf",
-    description: "Our Junior College for Commerce students achieved a 100% pass outcome in the HSC examinations, demonstrating excellence in Accountancy, Economics, and Commercial Studies.",
+    description: "Our Junior College for Arts & Commerce students achieved a 100% pass outcome in the HSC examinations, demonstrating excellence in Accountancy, Economics, and Commercial Studies.",
     highlights: [
       "100% Passing Outcome in Higher Secondary Commerce",
       "Distinctions in Book Keeping & Accountancy",

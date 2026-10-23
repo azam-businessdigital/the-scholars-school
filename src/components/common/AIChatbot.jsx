@@ -19,7 +19,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'greetings',
     title: 'Greetings & Welcome',
     keywords: ['hi', 'hello', 'hey', 'salam', 'assalam', 'assalamu alaikum', 'assalamualaikum', 'good morning', 'good afternoon', 'good evening', 'subah bakhair', 'kaise ho', 'how are you'],
-    response: "Wa Alaikum Assalam! Welcome to **The Scholars High School & Junior College for Commerce** (Est. 1993, Al-Qalam Educational Trust).\n\nI am your comprehensive AI campus assistant. I can answer any questions regarding:\n• **Admissions 2026-27:** Procedure, age criteria, and document checklist\n• **Academic Sections:** MRAK Kids Pre-School to Junior College Commerce (XI & XII)\n• **Curriculum & Commerce:** Subjects (BK, OCM, Economics, SP, Math, IT)\n• **100% Board Results:** SSC and HSC state board examination records\n• **Campus Facilities:** 7-floor campus, passenger elevator/lift, interactive AC smart classrooms, science practical & IT labs, RO water, and prayer hall\n• **School Timings & Location:** Shift timings, office hours, and Jogeshwari West directions\n• **Fee Guidance:** Non-profit, transparent policy under Al-Qalam Trust\n• **Careers & Vacancies:** Head Mistress and Subject Teacher openings\n\nHow may I help you today?",
+    response: "Wa Alaikum Assalam! Welcome to **The Scholars High School & Junior College for Arts & Commerce** (Est. 1993, Al-Qalam Educational Trust).\n\nI am your comprehensive AI campus assistant. I can answer any questions regarding:\n• **Admissions 2026-27:** Procedure, age criteria, and document checklist\n• **Academic Sections:** MRAK Kids Pre-School to Junior College Arts & Commerce (XI & XII)\n• **Curriculum & Subjects:** Arts & Commerce subjects (BK, OCM, Economics, SP, Math, IT, Languages, Humanities)\n• **100% Board Results:** SSC and HSC state board examination records\n• **Campus Facilities:** 7-floor campus, passenger elevator/lift, interactive AC smart classrooms, science practical & IT labs, RO water, and prayer hall\n• **School Timings & Location:** Shift timings, office hours, and Jogeshwari West directions\n• **Fee Guidance:** Non-profit, transparent policy under Al-Qalam Trust\n• **Careers & Vacancies:** Head Mistress and Subject Teacher openings\n\nHow may I help you today?",
     actions: [
       { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
       { label: 'Academic Sections', query: 'What academic sections do you offer?' },
@@ -33,7 +33,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'admissions_procedure',
     title: 'Admissions Procedure & Roadmap',
     keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'enroll', 'enrollment', 'register', 'registration', 'seat', 'seats', 'enquiry', 'inquiry', 'procedure', 'admission process', 'admission form', 'admission step', 'steps to apply', 'online form', 'online enquiry'],
-    response: "**Admissions for Academic Session 2026-27 are open** across all sections from MRAK Kids Pre-School through Junior College for Commerce!\n\n**4-Step Admission Roadmap:**\n1. **Submit Enquiry:** Fill out the online admission enquiry form on our website or visit our administrative reception desk at Hill Park, Jogeshwari West.\n2. **Counseling & Interaction:** A friendly, constructive interaction with the student and parents (within 24–48 hours) to assess grade readiness.\n3. **Document Verification:** Verification of municipal birth certificate, previous school Leaving Certificate / Transfer Certificate (LC/TC), and marksheets.\n4. **Enrollment & Welcome Kit:** Formal confirmation of seat allotment, fee schedule briefing, uniforms, textbooks, and ID orientation.\n\nVisit our administrative desk Monday to Saturday (9:00 AM – 3:00 PM) or submit your online enquiry directly through the link below.",
+    response: "**Admissions for Academic Session 2026-27 are open** across all sections from MRAK Kids Pre-School through Junior College for Arts & Commerce!\n\n**4-Step Admission Roadmap:**\n1. **Submit Enquiry:** Fill out the online admission enquiry form on our website or visit our administrative reception desk at Hill Park, Jogeshwari West.\n2. **Counseling & Interaction:** A friendly, constructive interaction with the student and parents (within 24–48 hours) to assess grade readiness.\n3. **Document Verification:** Verification of municipal birth certificate, previous school Leaving Certificate / Transfer Certificate (LC/TC), and marksheets.\n4. **Enrollment & Welcome Kit:** Formal confirmation of seat allotment, fee schedule briefing, uniforms, textbooks, and ID orientation.\n\nVisit our administrative desk Monday to Saturday (9:00 AM – 3:00 PM) or submit your online enquiry directly through the link below.",
     linkTo: '/admissions/',
     linkText: 'Go to Online Admissions Page & Form',
     showContact: true,
@@ -47,8 +47,8 @@ const CAMPUS_KNOWLEDGE_BASE = [
   {
     id: 'age_criteria',
     title: 'Age Criteria & Eligibility',
-    keywords: ['age', 'age limit', 'age criteria', 'minimum age', 'cut off', 'how old', 'years old', 'eligibility', 'eligible', 'nursery age', 'kg age', 'primary age', 'class 1 age', 'grade 1 age'],
-    response: "**Official Age Criteria & Eligibility Guidelines (as per Maharashtra Education Norms):**\n\n• **MRAK Kids Pre-School:** 2.5 to 4 Years (Minimum 2.5 to 3 years completed as of December 31st).\n• **Pre-Primary Nursery:** 3+ Years completed.\n• **Pre-Primary Junior KG:** 4+ Years completed.\n• **Pre-Primary Senior KG:** 5+ Years completed.\n• **Primary Grade 1:** Minimum 6 Years completed as mandated by Maharashtra State Department of Education.\n• **Primary Grades 2 to 4:** Age-appropriate sequential progression (7 to 9 years).\n• **Secondary Section (Grades 5 to 10):** 10 to 15 Years (Separate instructional sections for boys and girls).\n• **Junior College for Commerce (XI & XII):** Successful completion and passing of Class 10 (SSC, CBSE, ICSE, or recognized state board).",
+    keywords: ['age', 'age limit', 'age criteria', 'minimum age', 'cut off', 'how old', 'years old', 'eligibility', 'eligible', 'nursery age', 'mont 2 age', 'sr kg age', 'primary age', 'class 1 age', 'grade 1 age'],
+    response: "**Official Age Criteria & Eligibility Guidelines (as per Maharashtra Education Norms):**\n\n• **MRAK Kids Pre-School (STD: Nursery, Mont – 2 & Sr.KG):** Nursery (3+ yrs) | Mont – 2 (4+ yrs) | Sr.KG (5+ yrs completed).\n• **Primary Grade 1:** Minimum 6 Years completed as mandated by Maharashtra State Department of Education.\n• **Primary Grades 2 to 4:** Age-appropriate sequential progression (7 to 9 years).\n• **Secondary Section (Grades 5 to 10):** 10 to 15 Years (Separate instructional sections for boys and girls).\n• **Junior College for Arts & Commerce (XI & XII):** Successful completion and passing of Class 10 (SSC, CBSE, ICSE, or recognized state board).",
     linkTo: '/admissions/',
     linkText: 'Check Eligibility Details on Admissions Page',
     actions: [
@@ -61,7 +61,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'required_documents',
     title: 'Required Documents Checklist',
     keywords: ['required documents', 'documents required', 'document checklist', 'admission documents', 'documents for admission', 'what documents', 'document', 'documents', 'certificate', 'certificates', 'paper', 'papers', 'tc', 'lc', 'leaving certificate', 'transfer certificate', 'birth certificate', 'marksheet', 'report card', 'aadhar', 'aadhaar', 'photo', 'photos', 'migration', 'proof', 'checklist', 'pen number', 'udise', 'u-dise'],
-    response: "**Mandatory Document Checklist for Admission:**\n\n**1. For Fresh Admissions (Pre-School, Nursery, KG, Grade 1):**\n• Original Municipal Corporation / Gram Panchayat Birth Certificate\n• Photocopy of Student's Aadhaar Card (for U-DISE records)\n• Photocopies of Parents/Guardian Aadhaar Cards\n• 4 Recent Passport-sized colored photographs\n• Proof of local residential address (electricity bill, registered rent agreement, or ration card)\n\n**2. For Transfer Admissions (Grades 2 to 10):**\n• Original School Leaving Certificate / Transfer Certificate (TC/LC) countersigned by the Education Officer if transferring from outside Maharashtra / Mumbai\n• Stamped cumulative progress report / marksheet of the previous academic year\n• Student Permanent Education Number (PEN / U-DISE ID)\n• Bonafide & Conduct Certificate\n\n**3. For Junior College Commerce (XI & XII):**\n• Original Class 10 Board Marksheet + 3 attested photocopies\n• Original Class 10 School Leaving Certificate (LC)\n• Board Migration Certificate (for CBSE, ICSE, or other state boards)\n• Class 10 Hall Ticket photocopy",
+    response: "**Mandatory Document Checklist for Admission:**\n\n**1. For Fresh Admissions (Pre-School, Nursery, KG, Grade 1):**\n• Original Municipal Corporation / Gram Panchayat Birth Certificate\n• Photocopy of Student's Aadhaar Card (for U-DISE records)\n• Photocopies of Parents/Guardian Aadhaar Cards\n• 4 Recent Passport-sized colored photographs\n• Proof of local residential address (electricity bill, registered rent agreement, or ration card)\n\n**2. For Transfer Admissions (Grades 2 to 10):**\n• Original School Leaving Certificate / Transfer Certificate (TC/LC) countersigned by the Education Officer if transferring from outside Maharashtra / Mumbai\n• Stamped cumulative progress report / marksheet of the previous academic year\n• Student Permanent Education Number (PEN / U-DISE ID)\n• Bonafide & Conduct Certificate\n\n**3. For Junior College Arts & Commerce (XI & XII):**\n• Original Class 10 Board Marksheet + 3 attested photocopies\n• Original Class 10 School Leaving Certificate (LC)\n• Board Migration Certificate (for CBSE, ICSE, or other state boards)\n• Class 10 Hall Ticket photocopy",
     linkTo: '/admissions/',
     linkText: 'View Document Checklist & Requirements',
     actions: [
@@ -74,7 +74,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'fee_structure',
     title: 'Fee Policy & Installment Guidelines',
     keywords: ['fee', 'fees', 'cost', 'tuition', 'price', 'kharcha', 'payment', 'installment', 'annual fee', 'charge', 'charges', 'donation', 'capitation', 'affordable', 'how much fees', 'structure of fee'],
-    response: "**Fee Structure & Financial Transparency Policy:**\n\n• **Non-Profit Patronage:** The Scholars High School & Junior College is operated under the non-profit trust **Al-Qalam Educational Trust (Regd. 1991)**.\n• **Zero Capitation / Donation:** There are **strictly NO capitation fees, donations, or hidden charges** of any kind.\n• **Affordable & Regulated:** All academic tuition fees are structured moderately according to Maharashtra Department of School Education norms to make quality English-medium education accessible to every family.\n• **Term-Wise Installments:** Convenient installment schedules are provided to ease payment for parents.\n\nDue to grade-specific variations across 6 distinct academic sections (Pre-School, Nursery, Primary, High School SSC, and Junior College Commerce), please obtain the exact fee breakdown from the administrative accounts counter at Hill Park or call +91 8976890569.",
+    response: "**Fee Structure & Financial Transparency Policy:**\n\n• **Non-Profit Patronage:** The Scholars High School & Junior College is operated under the non-profit trust **Al-Qalam Educational Trust (Regd. 1991)**.\n• **Zero Capitation / Donation:** There are **strictly NO capitation fees, donations, or hidden charges** of any kind.\n• **Affordable & Regulated:** All academic tuition fees are structured moderately according to Maharashtra Department of School Education norms to make quality English-medium education accessible to every family.\n• **Term-Wise Installments:** Convenient installment schedules are provided to ease payment for parents.\n\nDue to grade-specific variations across distinct academic sections (MRAK Kids, Primary, High School SSC, and Junior College Commerce), please obtain the exact fee breakdown from the administrative accounts counter at Hill Park or call +91 8976890569.",
     linkTo: '/contact-us/',
     linkText: 'Contact Administrative Accounts Desk',
     showContact: true,
@@ -88,47 +88,34 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'academic_sections_overview',
     title: 'All Academic Sections Overview',
     keywords: ['section', 'sections', 'academic', 'academics', 'program', 'programs', 'divisions', 'division', 'courses', 'classes', 'all classes', 'what classes', 'curriculum', 'offerings'],
-    response: "**The Scholars School comprises 6 Comprehensive Academic Divisions:**\n\n1. **MRAK Kids Pre-School (Ages 2.5–4):** Playgroup & Early Nursery fostering joyful sensory exploration, language curiosity, and fine motor skills.\n2. **Pre-Primary Section (Ages 3.5–5.5):** Nursery, Junior KG & Senior KG with phonics, numeracy, interactive smart boards, and moral habits.\n3. **Primary Section (Grades 1 to 4):** English medium curriculum under Maharashtra Education Dept, interactive science, math, digital computers, and languages.\n4. **Secondary Section (Grades 5 to 10 - SSC):** Rigorous academic training leading to 100% SSC Board results, science labs, IT lab, and **separate wings for boys and girls**.\n5. **Junior College for Commerce (XI & XII - HSC):** 100% HSC Commerce Board pass record, modern lecture halls, computer commerce lab, career prep (CA, CS, B.Com, BMS) with **dedicated separate wings**.\n6. **Deeniyat Program:** Integrated values education, Quran with Tajweed, Hadith memorization, and ethical conduct seamlessly blended into daily periods.",
+    response: "**The Scholars School comprises Dedicated Academic Divisions:**\n\n1. **MRAK Kids Pre-School (STD: Nursery, Mont – 2 & Sr.KG):** Joyful foundational early childhood education with Jolly Phonics, numeracy, sensory play, and Islamic ethics.\n2. **Primary Section (Grades 1 to 4):** English medium curriculum under Maharashtra Education Dept, interactive science, math, digital computers, and languages.\n3. **Secondary Section (Grades 5 to 10 - SSC):** Rigorous academic training leading to 100% SSC Board results, science labs, IT lab, and **separate wings for boys and girls**.\n4. **Junior College for Arts & Commerce (XI & XII - HSC):** 100% HSC Board pass record, modern lecture halls, computer lab, career prep (CA, CS, B.Com, BMS, B.A.) with **dedicated separate wings**.\n5. **Deeniyat Program:** Integrated values education, Quran with Tajweed, Hadith memorization, and ethical conduct seamlessly blended into daily periods.",
     linkTo: '/academics/',
     linkText: 'Explore All Academic Sections',
     actions: [
       { label: 'MRAK Pre-School', query: 'Tell me about MRAK Kids Pre School' },
       { label: 'Primary Section', query: 'Tell me about the Primary Section' },
       { label: 'Secondary Section', query: 'Tell me about the Secondary Section' },
-      { label: 'Junior College Commerce', query: 'Tell me about Junior College Commerce' }
+      { label: 'Junior College Arts & Commerce', query: 'Tell me about Junior College Arts & Commerce' }
     ]
   },
   {
     id: 'mrak_kids',
-    title: 'MRAK Kids Pre-School',
-    keywords: ['mrak', 'mrak kids', 'preschool', 'pre-school', 'playgroup', 'play group', 'play school', 'toddler', 'early childhood', 'riyaz', 'riyaz ahmed'],
-    response: "**Maulana Riyaz Ahmed Khan (MRAK) Kids Pre-School (Ages 2.5–4 Years):**\n\nNamed in honorable memory of Maulana Riyaz Ahmed Khan, MRAK Kids delivers a joyful, nurturing early childhood foundation:\n\n• **Montessori-Inspired Activities:** Sensory play clay, block building, bead threading, and pattern matching for gross & fine motor dexterity.\n• **Early Language & Phonics:** Phonemic awareness, interactive storytelling, and English vocabulary development.\n• **Child-Safe Infrastructure:** Safe, air-conditioned activity rooms with hygienic play amenities.\n• **Moral Culture:** Gentle nursery rhymes, sharing habits, and respectful manners.\n• **High Teacher Attention:** Low teacher-to-student ratio ensuring personalized individual care.\n• **Timings:** Morning Sessions (9:00 AM to 11:30 AM).",
+    title: 'MRAK Kids Pre-School (STD: Nursery, Mont – 2 & Sr.KG)',
+    keywords: ['mrak', 'mrak kids', 'preschool', 'pre-school', 'playgroup', 'play group', 'play school', 'nursery', 'mont 2', 'mont-2', 'sr kg', 'sr.kg', 'senior kg', 'toddler', 'early childhood', 'riyaz', 'kindergarten', 'pre primary', 'pre-primary', 'preprimary'],
+    response: "**Maulana Riyaz Ahmed Khan (MRAK) Kids Pre-School (STD: Nursery, Mont – 2 & Sr.KG):**\n\nNamed in honorable memory of Maulana Riyaz Ahmed Khan, MRAK Kids delivers a joyful, nurturing early childhood foundation covering **STD: Nursery, Mont – 2 & Sr.KG** (no LKG):\n\n• **Montessori-Inspired Activities:** Sensory play clay, block building, bead threading, and pattern matching for gross & fine motor dexterity.\n• **Jolly Phonics & Early Language:** Phonemic awareness, letter sounds, interactive storytelling, and English vocabulary development.\n• **Early Numeracy & Logic:** Sequential counting, shape discovery, spatial reasoning, and basic math concepts.\n• **Child-Safe Infrastructure:** Safe, air-conditioned activity rooms with hygienic play amenities and passenger elevator access.\n• **Islamic Ethics (Adab):** Gentle Duas, sharing habits, greeting with Salam, and respectful manners.\n• **High Individual Attention:** Caring educators providing loving pastoral care.\n• **Timings:** Morning Sessions.",
     linkTo: '/academics/mrak-kids/',
-    linkText: 'View MRAK Kids Pre-School Page',
-    actions: [
-      { label: 'Pre-Primary Section', query: 'Tell me about the Pre-Primary Section' },
-      { label: 'Admissions Form', query: 'How do I apply for admission?' },
-      { label: 'Campus Address', query: 'Where is the school located?' }
-    ]
-  },
-  {
-    id: 'pre_primary',
-    title: 'Pre-Primary Section (Nursery, Jr KG, Sr KG)',
-    keywords: ['pre primary', 'pre-primary', 'preprimary', 'nursery', 'jr kg', 'junior kg', 'sr kg', 'senior kg', 'kindergarten', 'lkg', 'ukg', 'kg'],
-    response: "**Pre-Primary Section (Nursery, Junior KG & Senior KG | Ages 3.5–5.5):**\n\nLed by experienced School Principal **Mrs. Zahida Kader Chunawala**:\n\n• **Interactive Smart Boards:** Audiovisual conceptual learning for letters, numbers, colors, and the living world.\n• **English Language Immersion:** Phonics word reading, letter tracing, active listening, and conversational English.\n• **Numeracy Foundation:** Sequential counting, shape discovery, spatial reasoning, and basic addition.\n• **Values & Etiquette:** Foundational Deeniyat, polite speech, sharing, and personal hygiene.\n• **Safety & Amenities:** Air-conditioned classrooms with passenger elevator access and sanitized floor restrooms.\n• **Timings:** Morning Shift (8:30 AM to 12:00 PM).",
-    linkTo: '/academics/pre-primary/',
-    linkText: 'View Pre-Primary Section Details',
+    linkText: 'View MRAK Kids Pre-School Details',
     actions: [
       { label: 'Primary Section', query: 'Tell me about the Primary Section' },
-      { label: 'Age Criteria', query: 'What is the age limit for nursery and KG?' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Age Criteria', query: 'What is the age limit for each class?' },
+      { label: 'Admissions Form', query: 'How do I apply for admission?' }
     ]
   },
   {
     id: 'primary',
     title: 'Primary Section (Grades 1 to 4)',
     keywords: ['primary', 'grade 1', 'grade 2', 'grade 3', 'grade 4', 'class 1', 'class 2', 'class 3', 'class 4', '1st standard', '2nd standard', '3rd standard', '4th standard', 'std 1', 'std 2', 'std 3', 'std 4'],
-    response: "**Primary Section (Grades 1 to 4 | Ages 6–10 Years):**\n\nSupervised by Principal **Mrs. Zahida Kader Chunawala**:\n\n• **Curriculum:** English-medium Maharashtra State Department of Education framework emphasizing conceptual clarity and independent thought.\n• **Core Disciplines:** English (Higher Language), Mathematics (mental arithmetic, geometry, problem-solving), Environmental Studies & General Science.\n• **Languages:** Marathi (State curriculum requirement) and Hindi (Composite).\n• **Modern IT Training:** Dedicated hands-on computer sessions in our air-conditioned IT lab.\n• **Daily Deeniyat:** Quran recitation with Tajweed, Hadith stories, and moral character education.\n• **Extracurriculars:** Leaf art, drawing, martial arts karate, elocution, and sports.",
+    response: "**Primary Section (Grades 1 to 4 | Ages 6–10 Years):**\n\nUnder the supervision of our experienced **School Principal**:\n\n• **Curriculum:** English-medium Maharashtra State Department of Education framework emphasizing conceptual clarity and independent thought.\n• **Core Disciplines:** English (Higher Language), Mathematics (mental arithmetic, geometry, problem-solving), Environmental Studies & General Science.\n• **Languages:** Marathi (State curriculum requirement) and Hindi (Composite).\n• **Modern IT Training:** Dedicated hands-on computer sessions in our air-conditioned IT lab.\n• **Daily Deeniyat:** Quran recitation with Tajweed, Hadith stories, and moral character education.\n• **Extracurriculars:** Leaf art, drawing, martial arts karate, elocution, and sports.",
     linkTo: '/academics/primary/',
     linkText: 'View Primary Section Details',
     actions: [
@@ -141,7 +128,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'secondary',
     title: 'Secondary Section (Grades 5 to 10 - SSC)',
     keywords: ['secondary', 'high school', 'grade 5', 'grade 6', 'grade 7', 'grade 8', 'grade 9', 'grade 10', 'class 5', 'class 6', 'class 7', 'class 8', 'class 9', 'class 10', '5th standard', '6th standard', '7th standard', '8th standard', '9th standard', '10th standard', 'std 5', 'std 6', 'std 7', 'std 8', 'std 9', 'std 10', 'matric', 'ssc'],
-    response: "**Secondary Section (Grades 5 to 10 | Maharashtra SSC Board):**\n\nUnder the leadership of Principal **Mrs. Azra Nasreen Abdul Hakim Khan**:\n\n• **100% Board Track Record:** Proud unbroken record of **100% passing results in the Maharashtra SSC Board examination** with numerous distinctions and first-class honors.\n• **Dedicated Segregated Wings:** Separate floors and dedicated faculty for Boys and Girls, ensuring concentrated academic focus and moral decorum.\n• **Practical Science Laboratories:** Fully equipped Physics, Chemistry, and Biology laboratories for hands-on experiments and board practicals.\n• **Advanced Computing:** High-speed computer lab for digital literacy and IT curriculum.\n• **Board Exam Mentorship:** Regular unit tests, terminal examinations, prelims, mock papers, and specialized remedial classes for board aspirants.",
+    response: "**Secondary Section (Grades 5 to 10 | Maharashtra SSC Board):**\n\nUnder the leadership of our **Principal (Secondary & College)**:\n\n• **100% Board Track Record:** Proud unbroken record of **100% passing results in the Maharashtra SSC Board examination** with numerous distinctions and first-class honors.\n• **Dedicated Segregated Wings:** Separate floors and dedicated faculty for Boys and Girls, ensuring concentrated academic focus and moral decorum.\n• **Practical Science Laboratories:** Fully equipped Physics, Chemistry, and Biology laboratories for hands-on experiments and board practicals.\n• **Advanced Computing:** High-speed computer lab for digital literacy and IT curriculum.\n• **Board Exam Mentorship:** Regular unit tests, terminal examinations, prelims, mock papers, and specialized remedial classes for board aspirants.",
     linkTo: '/academics/secondary/',
     linkText: 'View Secondary Section Details',
     actions: [
@@ -152,11 +139,11 @@ const CAMPUS_KNOWLEDGE_BASE = [
   },
   {
     id: 'junior_college_overview',
-    title: 'Junior College for Commerce (XI & XII)',
-    keywords: ['junior college', 'college', 'commerce', 'xi', 'xii', '11th', '12th', 'fyjc', 'syjc', 'higher secondary', 'hsc', 'stream', 'hsc board'],
-    response: "**Junior College for Commerce (Grades XI & XII | HSC Board):**\n\nAffiliated with the Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE):\n\n• **100% Board Pass Record:** Consistent 100% passing results in HSC Commerce examinations year after year.\n• **Separate Wings for Boys & Girls:** Dedicated lecture floors, separate faculty, and tailored instructional shifts.\n• **Comprehensive Commerce Syllabi:** Book-Keeping & Accountancy, Organization of Commerce & Management (OCM), Economics, Secretarial Practice (SP) / Mathematics & Statistics, English, and Second Languages / IT.\n• **University & Professional Readiness:** Structured preparation for Chartered Accountancy (CA), Company Secretary (CS), CMA, B.Com, BMS, BAF, and Corporate Law degrees.\n• **Campus Infrastructure:** Air-conditioned multimedia lecture halls, commerce computer laboratory, and passenger elevator across all 7 floors.",
+    title: 'Junior College for Arts & Commerce (XI & XII)',
+    keywords: ['junior college', 'college', 'commerce', 'arts', 'arts and commerce', 'xi', 'xii', '11th', '12th', 'fyjc', 'syjc', 'higher secondary', 'hsc', 'stream', 'hsc board'],
+    response: "**Junior College for Arts & Commerce (Grades XI & XII | HSC Board):**\n\nAffiliated with the Maharashtra State Board of Secondary and Higher Secondary Education (MSBSHSE):\n\n• **100% Board Pass Record:** Consistent 100% passing results in HSC Board examinations year after year.\n• **Separate Wings for Boys & Girls:** Dedicated lecture floors, separate faculty, and tailored instructional shifts.\n• **Comprehensive Arts & Commerce Syllabi:** Book-Keeping & Accountancy, Organization of Commerce & Management (OCM), Economics, Secretarial Practice (SP) / Mathematics & Statistics, English, Second Languages / IT, and Humanities subjects.\n• **University & Professional Readiness:** Structured preparation for Chartered Accountancy (CA), Company Secretary (CS), CMA, B.Com, BMS, BAF, B.A., and Civil Services.\n• **Campus Infrastructure:** Air-conditioned multimedia lecture halls, computer laboratory, and passenger elevator across all 7 floors.",
     linkTo: '/academics/junior-college/girls/',
-    linkText: 'Explore Junior College Commerce',
+    linkText: 'Explore Junior College Arts & Commerce',
     actions: [
       { label: 'Commerce Subjects', query: 'What subjects are taught in 11th and 12th Commerce?' },
       { label: 'Girls College Wing', query: 'Tell me about the Junior College Girls Wing' },
@@ -181,7 +168,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'college_girls',
     title: 'Junior College: Girls Section',
     keywords: ['girls college', 'college girls', 'girls section', 'junior college girls', 'female college', 'women college', 'girls wing'],
-    response: "**Junior College for Commerce: Girls Section (HSC Board):**\n\nPrincipal: **Mrs. Azra Nasreen Abdul Hakim Khan**\n\n• **Empowering Learning Environment:** Dedicated higher secondary commerce wing exclusively for young women, ensuring comfort, dignity, and academic focus.\n• **Academic Excellence:** 100% HSC Board pass record with distinctions in Accountancy, OCM, and Economics.\n• **Career Guidance:** Specialized coaching seminars for Chartered Accountancy (CA Foundation), CS, CMA, and Mumbai University degree entrance programs.\n• **Campus Facilities:** Air-conditioned lecture rooms, interactive audio-visual systems, lift access, and sanitized floor amenities.",
+    response: "**Junior College for Arts & Commerce: Girls Section (HSC Board):**\n\nAcademic Leadership: **Principal (Secondary & College)**\n\n• **Empowering Learning Environment:** Dedicated higher secondary wing exclusively for young women, ensuring comfort, dignity, and academic focus.\n• **Academic Excellence:** 100% HSC Board pass record with distinctions in Arts & Commerce subjects.\n• **Career Guidance:** Specialized coaching seminars for Chartered Accountancy (CA Foundation), CS, CMA, and University degree entrance programs.\n• **Campus Facilities:** Air-conditioned lecture rooms, interactive audio-visual systems, lift access, and sanitized floor amenities.",
     linkTo: '/academics/junior-college/girls/',
     linkText: 'Visit Junior College Girls Page',
     actions: [
@@ -194,7 +181,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'college_boys',
     title: 'Junior College: Boys Section',
     keywords: ['boys college', 'college boys', 'boys section', 'junior college boys', 'male college', 'men college', 'boys wing'],
-    response: "**Junior College for Commerce: Boys Section (HSC Board):**\n\nPrincipal: **Mrs. Azra Nasreen Abdul Hakim Khan**\n\n• **Commercial Rigor & Leadership:** A focused environment preparing young men for leadership in banking, corporate finance, capital markets, and entrepreneurship.\n• **Proven 100% Results:** Stellar track record in Maharashtra HSC Commerce Board examinations.\n• **Hands-On Skills:** Computer applications in commerce, real-world case analysis, business problem solving, and mock board assessments.\n• **Modern Campus:** Air-conditioned lecture rooms, modern IT lab, passenger elevator across all 7 floors, and career mentorship.",
+    response: "**Junior College for Arts & Commerce: Boys Section (HSC Board):**\n\nAcademic Leadership: **Principal (Secondary & College)**\n\n• **Academic Rigor & Leadership:** A focused environment preparing young men for leadership in banking, corporate finance, civil services, and entrepreneurship.\n• **Proven 100% Results:** Stellar track record in Maharashtra HSC Board examinations.\n• **Hands-On Skills:** Computer applications, real-world case analysis, business problem solving, and mock board assessments.\n• **Modern Campus:** Air-conditioned lecture rooms, modern IT lab, passenger elevator across all 7 floors, and career mentorship.",
     linkTo: '/academics/junior-college/boys/',
     linkText: 'Visit Junior College Boys Page',
     actions: [
@@ -207,7 +194,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'deeniyat_islamic',
     title: 'Deeniyat & Islamic Studies Program',
     keywords: ['deeniyat', 'islam', 'islamic', 'quran', 'tajweed', 'hadith', 'dua', 'duas', 'fiqh', 'akhlaq', 'moral', 'morals', 'namaz', 'prayer', 'pray', 'sunnah', 'religious', 'values', 'hasan kamal', 'tarbiyah'],
-    response: "**Deeniyat Program: Modern Education with Islamic Frame of Reference:**\n\nHead of Deeniyat: **Hasan Kamal**\n\nOur defining institutional ethos is the seamless harmonization of modern academic excellence with deep-rooted Islamic values:\n\n• **Quranic Studies with Tajweed:** Proper Makharij (pronunciation), Tajweed articulation, and understanding the core ethical messages of the Quran.\n• **Hadith Studies:** Memorization and practical reflection on authentic sayings of Prophet Muhammad (ﷺ) emphasizing truthfulness, compassion, diligence, and respect.\n• **Islamic Jurisprudence (Fiqh):** Daily practical guidance on Taharah (cleanliness), Wudu, Salat (daily prayers), Sawm (fasting), and civic etiquette.\n• **Akhlaq & Character (Tarbiyah):** Instilling humility, honesty, respect for elders and teachers, and peaceful community coexistence.\n• **Campus Musalla:** Dedicated prayer hall on campus for daily congregation prayers.",
+    response: "**Deeniyat Program: Modern Education with Islamic Frame of Reference:**\n\nAcademic Leadership: **Head of Deeniyat**\n\nOur defining institutional ethos is the seamless harmonization of modern academic excellence with deep-rooted Islamic values:\n\n• **Quranic Studies with Tajweed:** Proper Makharij (pronunciation), Tajweed articulation, and understanding the core ethical messages of the Quran.\n• **Hadith Studies:** Memorization and practical reflection on authentic sayings of Prophet Muhammad (ﷺ) emphasizing truthfulness, compassion, diligence, and respect.\n• **Islamic Jurisprudence (Fiqh):** Daily practical guidance on Taharah (cleanliness), Wudu, Salat (daily prayers), Sawm (fasting), and civic etiquette.\n• **Akhlaq & Character (Tarbiyah):** Instilling humility, honesty, respect for elders and teachers, and peaceful community coexistence.\n• **Campus Musalla:** Dedicated prayer hall on campus for daily congregation prayers.",
     linkTo: '/academics/deeniyat/',
     linkText: 'Explore Full Deeniyat Curriculum',
     actions: [
@@ -220,7 +207,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'segregation_policy',
     title: 'Segregation & Separate Wings Policy',
     keywords: ['segregation', 'separate', 'separate classes', 'separate wing', 'separate floors', 'boys and girls', 'coed', 'co-education', 'co-ed', 'gender', 'mixed', 'partition', 'segregated'],
-    response: "**Institutional Policy on Class Organization & Segregation:**\n\n• **Early Childhood (MRAK Kids & Pre-Primary):** Co-educational, providing a gentle, cooperative, and family-like learning atmosphere for very young toddlers and kindergarteners.\n• **Primary Section (Grades 1 to 4):** Co-educational classes with dedicated male and female instructional care.\n• **Secondary Section (Grades 5 to 10):** **Separate instructional wings and dedicated classroom floors for Boys and Girls**, with dedicated subject specialists.\n• **Junior College for Commerce (XI & XII):** **Independent, separate sections for Boys and Girls** with independent shifts and faculties.\n\nThis segregation policy is maintained in alignment with Islamic values and educational best practices, fostering exceptional academic focus, discipline, and mutual respect.",
+    response: "**Institutional Policy on Class Organization & Segregation:**\n\n• **Early Childhood (MRAK Kids):** Co-educational, providing a gentle, cooperative, and family-like learning atmosphere for toddlers and early learners.\n• **Primary Section (Grades 1 to 4):** Co-educational classes with dedicated male and female instructional care.\n• **Secondary Section (Grades 5 to 10):** **Separate instructional wings and dedicated classroom floors for Boys and Girls**, with dedicated subject specialists.\n• **Junior College for Arts & Commerce (XI & XII):** **Independent, separate sections for Boys and Girls** with independent shifts and faculties.\n\nThis segregation policy is maintained in alignment with Islamic values and educational best practices, fostering exceptional academic focus, discipline, and mutual respect.",
     linkTo: '/about-us/',
     linkText: 'Read About Our Institutional Ethos',
     actions: [
@@ -246,7 +233,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'timings_hours',
     title: 'School & Administrative Office Timings',
     keywords: ['timing', 'timings', 'time', 'hours', 'office hours', 'opening hours', 'schedule', 'what time', 'open', 'close', 'closing', 'saturday', 'sunday', 'weekend', 'shift', 'shifts', 'working hours'],
-    response: "**Official Campus & Office Timings:**\n\n• **Administrative & Admissions Office:**\n  Monday to Saturday: **9:00 AM to 3:00 PM**\n  Sunday: Closed\n\n• **Section-Wise Academic Shift Timings:**\n  • **MRAK Kids Pre-School:** Morning Shift (9:00 AM – 11:30 AM)\n  • **Pre-Primary (Nursery, Jr/Sr KG):** Morning Shift (8:30 AM – 12:00 PM)\n  • **Primary Section (Grades 1–4):** Day Shift (8:00 AM – 1:30 PM)\n  • **Secondary Section (Grades 5–10):** Regular High School Sessions (Morning/Afternoon shifts for segregated wings)\n  • **Junior College for Commerce (XI & XII):** Morning College Sessions\n\nFor parent-teacher consultations and campus visits, please report to the administrative counter during office hours.",
+    response: "**Official Campus & Office Timings:**\n\n• **Administrative & Admissions Office:**\n  Monday to Saturday: **9:00 AM to 3:00 PM**\n  Sunday: Closed\n\n• **Section-Wise Academic Shift Timings:**\n  • **MRAK Kids Pre-School (STD: Nursery, Mont – 2 & Sr.KG):** Morning Sessions\n  • **Primary Section (Grades 1–4):** Afternoon Shift\n  • **Secondary Section (Grades 5–10):** Regular High School Sessions (Morning/Afternoon shifts for segregated wings)\n  • **Junior College for Arts & Commerce (XI & XII):** Morning College Sessions\n\nFor parent-teacher consultations and campus visits, please report to the administrative counter during office hours.",
     linkTo: '/contact-us/',
     linkText: 'View Visiting Hours & Contact Page',
     showContact: true,
@@ -260,7 +247,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'address_location',
     title: 'Campus Address & Directions',
     keywords: ['address', 'location', 'where', 'reach', 'map', 'direction', 'directions', 'how to reach', 'jogeshwari', 'hill park', 'agarwal', 'suresh samant', 'station', 'landmark', 'nearest railway', 'pin code', 'pincode', 'postal', 'where is school'],
-    response: "**Campus Address & Directions:**\n\n**The Scholars High School & Junior College for Commerce**\nCaptain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower,\nJogeshwari (West), Mumbai 400102, Maharashtra, India.\n\n• **Landmarks:** Opposite Hill Park Tower, near Agarwal Estate.\n• **Nearest Railway Station:** Jogeshwari Railway Station (Western Railway Line) – approximately 7 to 10 minutes by auto-rickshaw.\n• **Connecting Areas:** Easily accessible from Oshiwara, Andheri (West), Goregaon (West), and SV Road.\n• **Google Maps:** Interactive map and driving navigation are embedded on our Contact page.",
+    response: "**Campus Address & Directions:**\n\n**The Scholars High School & Junior College for Arts & Commerce**\nCaptain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower,\nJogeshwari (West), Mumbai 400102, Maharashtra, India.\n\n• **Landmarks:** Opposite Hill Park Tower, near Agarwal Estate.\n• **Nearest Railway Station:** Jogeshwari Railway Station (Western Railway Line) – approximately 7 to 10 minutes by auto-rickshaw.\n• **Connecting Areas:** Easily accessible from Oshiwara, Andheri (West), Goregaon (West), and SV Road.\n• **Google Maps:** Interactive map and driving navigation are embedded on our Contact page.",
     linkTo: '/contact-us/',
     linkText: 'View Interactive Google Map & Location',
     showContact: true,
@@ -274,7 +261,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'contact_helpline',
     title: 'Official Helplines & Contact Details',
     keywords: ['contact', 'phone', 'call', 'number', 'numbers', 'mobile', 'telephone', 'helpline', 'helplines', 'enquiry number', 'reach out', 'front desk', 'reception', 'phone number', 'contact number'],
-    response: "**Official Helplines & Administrative Contact Numbers:**\n\n• **Admissions & Enquiries Desk 1:** +91 8976890569\n• **Admissions Helpline Desk 2:** +91 8976890570\n• **Administrative Counter Desk 3:** +91 8976890571\n• **Office & Accounts Desk 4:** +91 8976890572\n\n• **WhatsApp Direct Chat:** +91 8976890569\n• **General Enquiries Email:** info@thescholarsschool.edu.in\n• **Administration & Careers Email:** admin@thescholarsschool.edu.in\n\n*Administrative lines are answered Monday through Saturday from 9:00 AM to 3:00 PM.*",
+    response: "**Official Helplines & Administrative Contact Numbers:**\n\n• **Admissions & Enquiries Desk 1:** +91 8976890569\n• **Admissions Helpline Desk 2:** +91 8976890570\n• **Administrative Counter Desk 3:** +91 8976890571\n• **Office & Accounts Desk 4:** +91 8976890572\n\n• **WhatsApp Direct Chat:** +91 8976890569\n• **Official Emails:** alqalams26@gmail.com / info@thescholarsschool.edu.in\n\n*Administrative lines are answered Monday through Saturday from 9:00 AM to 3:00 PM.*",
     linkTo: '/contact-us/',
     linkText: 'View Full Contact Details',
     showContact: true,
@@ -288,7 +275,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'email_addresses',
     title: 'Email Addresses',
     keywords: ['email', 'mail', 'e-mail', 'send email', 'write email', 'official email', 'info email', 'admin email', 'email id'],
-    response: "**Official Email Addresses:**\n\n• **General School & Admission Inquiries:**\n  info@thescholarsschool.edu.in\n\n• **School Administration, Principal's Desk & Careers:**\n  admin@thescholarsschool.edu.in\n\nFor employment applications, please email your resume (PDF under 1 MB) directly to **admin@thescholarsschool.edu.in**.",
+    response: "**Official Email Addresses:**\n\n• **General School & Admission Inquiries:**\n  info@thescholarsschool.edu.in\n\n• **Trust & School Communications:**\n  alqalams26@gmail.com\n\n• **School Administration, Principal's Desk & Careers:**\n  alqalams26@gmail.com / info@thescholarsschool.edu.in\n\nFor employment applications, please email your resume (PDF under 1 MB) to **alqalams26@gmail.com** or **info@thescholarsschool.edu.in**.",
     linkTo: '/contact-us/',
     linkText: 'Go to Contact Us Page',
     showContact: true,
@@ -353,7 +340,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'smart_classrooms',
     title: 'Interactive Smart Digital Classrooms',
     keywords: ['smart class', 'smart classroom', 'smartboard', 'smart board', 'projector', 'audio visual', 'audiovisual', 'digital learning', 'interactive board', 'screen', 'digital classroom'],
-    response: "**Interactive Smart Classrooms & Digital Boards:**\n\n• **Audiovisual Learning:** Every classroom is equipped with interactive digital smart boards and high-resolution display systems.\n• **Engaging Curriculum Delivery:** Teachers utilize 3D simulations, animated science diagrams, interactive maps, and educational videos to make abstract topics crystal clear.\n• **Multi-Sensory Engagement:** Enhances auditory, visual, and kinesthetic comprehension across all age groups from Pre-Primary to Class 12.",
+    response: "**Interactive Smart Classrooms & Digital Boards:**\n\n• **Audiovisual Learning:** Every classroom is equipped with interactive digital smart boards and high-resolution display systems.\n• **Engaging Curriculum Delivery:** Teachers utilize 3D simulations, animated science diagrams, interactive maps, and educational videos to make abstract topics crystal clear.\n• **Multi-Sensory Engagement:** Enhances auditory, visual, and kinesthetic comprehension across all age groups from MRAK Kids to Class 12.",
     linkTo: '/about-us/',
     linkText: 'View Academic Infrastructure',
     actions: [
@@ -480,8 +467,8 @@ const CAMPUS_KNOWLEDGE_BASE = [
   {
     id: 'principals_leadership',
     title: 'School Principals & Leadership Team',
-    keywords: ['principal', 'headmistress', 'head mistress', 'zahida', 'azra', 'principal name', 'who is principal', 'chunawala', 'hakim khan', 'hasan kamal', 'head of primary', 'head of secondary', 'leadership team'],
-    response: "**School Leadership & Principals:**\n\n• **Mrs. Zahida Kader Chunawala** – Principal, Pre-Primary & Primary Section\n  *Focus:* Foundational literacy, emotional warmth, moral habits, and experiential learning.\n\n• **Mrs. Azra Nasreen Abdul Hakim Khan** – Principal, Secondary Section & Junior College\n  *Focus:* SSC & HSC Board examination rigour, academic discipline, and commerce specialization.\n\n• **Hasan Kamal** – Head of Deeniyat Program\n  *Focus:* Quranic recitation with Tajweed, Hadith ethics, and Islamic frame of reference.",
+    keywords: ['principal', 'headmistress', 'head mistress', 'principal name', 'who is principal', 'head of primary', 'head of secondary', 'leadership team'],
+    response: "**School Leadership & Principals:**\n\n• **School Principal** – Primary Section & MRAK Kids\n  *Focus:* Foundational literacy, emotional warmth, moral habits, and experiential learning.\n\n• **Principal (Secondary & College)** – Secondary Section & Junior College for Arts & Commerce\n  *Focus:* SSC & HSC Board examination rigour, academic discipline, and commerce specialization.\n\n• **Head of Deeniyat** – Deeniyat & Moral Education Program\n  *Focus:* Quranic recitation with Tajweed, Hadith ethics, and Islamic frame of reference.",
     linkTo: '/about-us/',
     linkText: 'Meet the Leadership Team on About Us',
     actions: [
@@ -507,7 +494,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'careers_jobs',
     title: 'Careers & Current Teaching Vacancies',
     keywords: ['career', 'careers', 'job', 'jobs', 'vacancy', 'vacancies', 'hiring', 'recruit', 'recruitment', 'vacancy teacher', 'teach', 'work with us', 'resume', 'cv', 'applying for job', 'opening', 'openings', 'head mistress vacancy', 'pt vacancy', 'teaching position'],
-    response: "**Current Teaching & Administrative Vacancies:**\n\nThe Scholars School is actively hiring qualified, passionate educators:\n\n1. **Head Mistress (Primary Section):** B.Ed / D.T.Ed with administrative leadership experience.\n2. **Subject Teachers (Primary & Secondary):**\n   • **English:** B.A. / M.A. in English with B.Ed\n   • **Marathi:** B.A. in Marathi with D.T.Ed / B.Ed\n   • **Mathematics:** B.Sc. / M.Sc. in Maths with B.Ed\n   • **Science (Physics, Chemistry, Biology):** B.Sc. / M.Sc. with B.Ed\n   • **Social Studies (History & Geography):** B.A. / M.A. with B.Ed\n   • **Art & Craft:** ATD / Diploma in Fine Arts\n   • **Physical Training (PT Teacher):** B.P.Ed / D.P.Ed\n\n**How to Apply:**\n• Email your updated PDF resume (under 1 MB) to **admin@thescholarsschool.edu.in**.\n• Clearly specify the position and subject in your email subject line.\n• Shortlisted candidates will be invited for personal interviews and classroom demonstrations.",
+    response: "**Current Teaching & Administrative Vacancies:**\n\nThe Scholars School is actively hiring qualified, passionate educators:\n\n1. **Head Mistress (Primary Section):** B.Ed / D.T.Ed with administrative leadership experience.\n2. **Subject Teachers (Primary & Secondary):**\n   • **English:** B.A. / M.A. in English with B.Ed\n   • **Marathi:** B.A. in Marathi with D.T.Ed / B.Ed\n   • **Mathematics:** B.Sc. / M.Sc. in Maths with B.Ed\n   • **Science (Physics, Chemistry, Biology):** B.Sc. / M.Sc. with B.Ed\n   • **Social Studies (History & Geography):** B.A. / M.A. with B.Ed\n   • **Art & Craft:** ATD / Diploma in Fine Arts\n   • **Physical Training (PT Teacher):** B.P.Ed / D.P.Ed\n\n**How to Apply:**\n• Email your updated PDF resume (under 1 MB) to **alqalams26@gmail.com** or **info@thescholarsschool.edu.in**.\n• Clearly specify the position and subject in your email subject line.\n• Shortlisted candidates will be invited for personal interviews and classroom demonstrations.",
     linkTo: '/careers/',
     linkText: 'View All Careers & Apply Online',
     showContact: true,
@@ -662,7 +649,7 @@ const INITIAL_MESSAGES = [
   {
     id: 'welcome-1',
     sender: 'bot',
-    text: 'Assalamu Alaikum! Welcome to **The Scholars High School & Junior College for Commerce** (Est. 1993, Al-Qalam Educational Trust). I am your AI campus assistant.',
+    text: 'Assalamu Alaikum! Welcome to **The Scholars High School & Junior College for Arts & Commerce** (Est. 1993, Al-Qalam Educational Trust). I am your AI campus assistant.',
     time: 'Just now'
   },
   {
@@ -766,7 +753,7 @@ function getBotResponse(userQuery) {
 
   // Comprehensive fallback if query has no specific keyword match
   return {
-    text: "Thank you for contacting **The Scholars High School & Junior College for Commerce** (Est. 1993, Al-Qalam Educational Trust).\n\nHere is a quick overview of our institution:\n\n• **Admissions 2026-27:** Actively open from MRAK Kids Pre-School through Junior College Commerce (XI & XII).\n• **Curriculum & Results:** Maharashtra SSC & HSC Commerce Board with an **unbroken 100% pass record**.\n• **Campus Facilities:** 7-floor campus at Hill Park, passenger elevator/lift across all floors, fully air-conditioned smart digital classrooms, science practical and IT labs, RO water, and prayer hall.\n• **Campus Location:** Captain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower, Jogeshwari (West), Mumbai 400102.\n• **Office Hours:** Monday to Saturday, 9:00 AM to 3:00 PM.\n\nPlease choose one of the popular categories below or type a specific question:",
+    text: "Thank you for contacting **The Scholars High School & Junior College for Arts & Commerce** (Est. 1993, Al-Qalam Educational Trust).\n\nHere is a quick overview of our institution:\n\n• **Admissions 2026-27:** Actively open from MRAK Kids Pre-School through Junior College Arts & Commerce (XI & XII).\n• **Curriculum & Results:** Maharashtra SSC & HSC Board with an **unbroken 100% pass record**.\n• **Campus Facilities:** 7-floor campus at Hill Park, passenger elevator/lift across all floors, fully air-conditioned smart digital classrooms, science practical and IT labs, RO water, and prayer hall.\n• **Campus Location:** Captain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower, Jogeshwari (West), Mumbai 400102.\n• **Office Hours:** Monday to Saturday, 9:00 AM to 3:00 PM.\n\nPlease choose one of the popular categories below or type a specific question:",
     actions: [
       { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
       { label: 'Academic Sections', query: 'What academic sections do you offer?' },

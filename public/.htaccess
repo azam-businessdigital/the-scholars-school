@@ -1,7 +1,13 @@
 # ==============================================================================
 # The Scholars High School & Junior College for Commerce
-# Apache / cPanel Production Configuration (Root & Subfolder Compatible)
+# Apache / cPanel Hardened Production Configuration
 # ==============================================================================
+
+# Prevent Directory Browsing
+Options -Indexes
+
+# Disable Server Signature Information Leakage
+ServerSignature Off
 
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>
@@ -31,9 +37,15 @@
   RewriteRule ^api/contact/?$ api/contact.php [L,QSA]
   RewriteRule ^api/admission-enquiry/?$ api/admission.php [L,QSA]
 
-  # Block direct access to hidden files and sensitive extensions
+  # Block direct access to hidden files and internal directories
   RewriteRule "(^|/)\.(?!well-known)" - [F]
-  RewriteRule \.(env|git|sql|bak|log|tar|gz|zip)$ - [F,L]
+
+  # Block direct access to sensitive extensions, archives, logs, configs, and internal code
+  RewriteRule \.(env.*|git.*|sql|bak|log|tar|gz|zip|ini|sh|md|lock)$ - [F,L]
+  RewriteRule (^|/)config(\.local|\.example)?\.php$ - [F,L]
+  RewriteRule (^|/)mailer\.php$ - [F,L]
+  RewriteRule (^|/)rate_limiter\.php$ - [F,L]
+  RewriteRule (^|/).*\.json$ - [F,L]
 
   # SPA Routing Fallback: Serve existing files or fallback to index.html (relative)
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -41,14 +53,35 @@
   RewriteRule . index.html [L]
 </IfModule>
 
-# Security Headers
+# Security Headers & Defense-in-Depth
 <IfModule mod_headers.c>
+  # Remove server banner headers
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+
+  # Prevent MIME-sniffing
   Header always set X-Content-Type-Options "nosniff"
+
+  # Prevent clickjacking
   Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Referrer Policy
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Restrict browser feature permissions
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+  # HTTP Strict Transport Security (HSTS)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-  Header always set Content-Security-Policy "default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://maps.google.com https://www.google.com/recaptcha/ https://recaptcha.google.com;"
+
+  # Prevent Adobe Flash / PDF cross-domain policy execution
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+
+  # Prevent window opener hijacking
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+
+  # Content Security Policy (Hardened, no unsafe-eval, explicit sandboxing)
+  Header always set Content-Security-Policy "default-src 'self' https: data: blob: 'unsafe-inline'; connect-src 'self' https:; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://maps.google.com https://www.google.com/recaptcha/ https://recaptcha.google.com; object-src 'none'; base-uri 'self';"
 </IfModule>
 
 # Disable caching for dynamic PHP endpoints and API requests

@@ -1,0 +1,36 @@
+# ==============================================================================
+# The Scholars High School - API Security Boundary
+# ==============================================================================
+
+# Disable directory browsing
+Options -Indexes
+
+# Deny direct access to all internal scripts, configuration, logs, and data
+<FilesMatch "^(config.*|mailer|rate_limiter|\.env.*|.*\.log|.*\.json|.*\.sql|.*\.bak|.*\.txt)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Limit request methods to POST and OPTIONS only for API endpoints
+<LimitExcept POST OPTIONS>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</LimitExcept>
+
+# Allow execution only for approved public form endpoints
+<FilesMatch "^(contact|admission)\.php$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Allow from all
+    </IfModule>
+</FilesMatch>

@@ -13,14 +13,14 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Us & Campus Location | The Scholars School"
-        description="Get in touch with The Scholars High School & Junior College for Commerce. Located at Captain Suresh Samant Marg, Jogeshwari West, Mumbai."
+        description="Get in touch with The Scholars High School & Junior College for Arts & Commerce. Located at Captain Suresh Samant Marg, Jogeshwari West, Mumbai."
         canonical="https://thescholarsschool.edu.in/contact-us/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">GET IN TOUCH</span>
-          <h1>Contact The Scholars High School &amp; Junior College</h1>
+          <h1>Contact The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
           <p>
             We are here to assist with admission enquiries, academic counseling, certificates, and campus visits.
           </p>

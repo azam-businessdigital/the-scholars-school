@@ -23,7 +23,7 @@ export default function Footer() {
                   The Scholars High School
                 </h4>
                 <span style={{ fontSize: '12px', color: 'var(--color-champagne-gold)', fontWeight: 600 }}>
-                  &amp; Junior College for Commerce
+                  &amp; Junior College for Arts &amp; Commerce
                 </span>
               </div>
             </div>
@@ -69,9 +69,6 @@ export default function Footer() {
             <ul className="footer-links">
               <li>
                 <Link to="/academics/mrak-kids/">MRAK Kids Pre School</Link>
-              </li>
-              <li>
-                <Link to="/academics/pre-primary/">Pre-Primary Section</Link>
               </li>
               <li>
                 <Link to="/academics/primary/">Primary Section</Link>
@@ -141,7 +138,10 @@ export default function Footer() {
               </li>
               <li className="footer-contact-item">
                 <Mail size={18} />
-                <a href="mailto:info@thescholarsschool.edu.in">info@thescholarsschool.edu.in</a>
+                <div>
+                  <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a><br />
+                  <a href="mailto:info@thescholarsschool.edu.in">info@thescholarsschool.edu.in</a>
+                </div>
               </li>
             </ul>
 
@@ -157,7 +157,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-inner">
             <p>
-              &copy; {currentYear} The Scholars High School &amp; Junior College for Commerce.
+              &copy; {currentYear} The Scholars High School &amp; Junior College for Arts &amp; Commerce.
             </p>
             <ul className="footer-bottom-links">
               <li>

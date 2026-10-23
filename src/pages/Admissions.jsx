@@ -29,7 +29,7 @@ import { schoolData } from '../data/schoolData';
 
 export default function Admissions() {
   const [selectedSection, setSelectedSection] = useState('');
-  const [activeEligibility, setActiveEligibility] = useState('preprimary');
+  const [activeEligibility, setActiveEligibility] = useState('preschool');
   const [activeChecklistTab, setActiveChecklistTab] = useState('general');
   const [faqCategory, setFaqCategory] = useState('all');
   const [openFaq, setOpenFaq] = useState(null);
@@ -46,29 +46,15 @@ export default function Admissions() {
     {
       id: 'mrak-kids',
       title: 'MRAK Kids Pre School',
-      category: 'Early Childhood',
-      ageBadge: 'Age: 2.5 – 4 Years',
+      category: 'STD: Nursery, Mont – 2 & Sr.KG',
+      ageBadge: 'Nursery, Mont – 2 & Sr.KG',
       image: '/images/academics/mrak-kids-play.jpg',
-      formValue: 'MRAK Kids Pre School',
-      desc: 'Joyful Montessori-inspired foundational schooling focused on sensory development, language curiosity, and early social confidence.',
+      formValue: 'MRAK Kids: Nursery',
+      desc: 'Joyful foundational schooling covering STD: Nursery, Mont – 2 & Sr.KG focused on sensory development, Jolly Phonics, early mathematics, and loving moral values.',
       features: [
-        'Air-conditioned, child-safe interactive rooms',
-        'English phonemic awareness & counting play',
-        'Caring, individualized teacher attention'
-      ]
-    },
-    {
-      id: 'pre-primary',
-      title: 'Pre-Primary Section',
-      category: 'Nursery, Jr. & Sr. KG',
-      ageBadge: 'Age: 3.5 – 5.5 Years',
-      image: '/images/academics/pre-primary.jpeg',
-      formValue: 'Pre-Primary: Nursery',
-      desc: 'Structured early literacy and numeracy blending curiosity with discipline, classroom etiquette, and foundational Islamic values.',
-      features: [
-        'Interactive smart-board digital learning',
-        'Foundation Deeniyat & Quranic manners',
-        'Gentle transition into formal schooling'
+        'Air-conditioned, child-safe interactive rooms with lift access',
+        'Jolly Phonics awareness & early numeracy play',
+        'Caring, individualized educator attention'
       ]
     },
     {
@@ -101,14 +87,14 @@ export default function Admissions() {
     },
     {
       id: 'junior-college',
-      title: 'Junior College of Commerce',
-      category: 'Grades XI & XII Commerce',
+      title: 'Junior College of Arts & Commerce',
+      category: 'Grades XI & XII Arts & Commerce',
       ageBadge: 'Higher Secondary (HSC)',
       image: '/images/academics/junior-college-girls.jpg',
-      formValue: 'Junior College: Commerce (Girls Section)',
-      desc: 'Comprehensive commerce education preparing students for professional university degrees (CA, CS, B.Com, BMS, BAF) in separate wings.',
+      formValue: 'Junior College: Arts & Commerce (Girls Section)',
+      desc: 'Comprehensive Arts & Commerce education preparing students for professional university degrees (CA, CS, B.Com, BMS, BAF, B.A.) in separate wings.',
       features: [
-        'Accountancy, Economics & OCM expertise',
+        'Arts, Humanities, Accountancy & Economics expertise',
         'Independent shifts for boys & girls',
         'Career mentorship & competitive exam support'
       ]
@@ -131,22 +117,13 @@ export default function Admissions() {
 
   const eligibilityCriteria = {
     preschool: {
-      title: 'MRAK Kids Pre School',
-      ageLimit: 'Minimum 2.5 to 3 years as of December 31st',
-      grades: 'Playgroup & Nursery Readiness',
-      shift: 'Morning Shift: 9:00 AM to 11:30 AM',
-      readiness: 'Basic motor curiosity, independent bathroom readiness encouragement',
+      title: 'MRAK Kids Pre School (STD: Nursery, Mont – 2 & Sr.KG)',
+      ageLimit: 'Nursery: 3+ yrs | Mont – 2: 4+ yrs | Sr.KG: 5+ yrs',
+      grades: 'STD: Nursery, Mont – 2 & Sr.KG',
+      shift: 'Morning Shift: 9:00 AM to 12:00 PM',
+      readiness: 'Basic curiosity, language immersion, and social habit encouragement',
       initialDocs: 'Original Municipal Birth Certificate & 4 passport photos',
-      formValue: 'MRAK Kids Pre School'
-    },
-    preprimary: {
-      title: 'Pre-Primary Section (Nursery, Jr. & Sr. KG)',
-      ageLimit: 'Nursery: 3+ yrs | Jr. KG: 4+ yrs | Sr. KG: 5+ yrs',
-      grades: 'Nursery, Junior Kindergarten & Senior Kindergarten',
-      shift: 'Morning Shift: 8:30 AM to 12:00 PM',
-      readiness: 'Basic verbal comprehension in English or mother tongue',
-      initialDocs: 'Birth Certificate, Student & Parent Aadhaar card copies',
-      formValue: 'Pre-Primary: Nursery'
+      formValue: 'MRAK Kids: Nursery'
     },
     primary: {
       title: 'Primary Section (Grades 1 to 4)',
@@ -167,13 +144,13 @@ export default function Admissions() {
       formValue: 'Secondary Section: Grades 5 to 10 (Boys)'
     },
     juniorcollege: {
-      title: 'Junior College for Commerce (XI & XII)',
+      title: 'Junior College for Arts & Commerce (XI & XII)',
       ageLimit: 'Successful completion of 10th Standard (SSC / CBSE / ICSE)',
-      grades: 'XI Commerce & XII Commerce (Independent Wings)',
+      grades: 'XI & XII Arts & Commerce (Independent Wings)',
       shift: 'College Morning / Afternoon Shifts',
       readiness: 'Minimum passing percentage in Class 10 board examination',
       initialDocs: '10th Board Marksheet, Original Leaving Certificate, Migration Cert',
-      formValue: 'Junior College: Commerce (Girls Section)'
+      formValue: 'Junior College: Arts & Commerce (Girls Section)'
     },
     deeniyat: {
       title: 'Integrated Deeniyat Program (Moral & Islamic Values)',
@@ -249,7 +226,7 @@ export default function Admissions() {
     {
       category: 'eligibility',
       q: 'Are the secondary and junior college classes segregated for boys and girls?',
-      a: 'Yes. In keeping with our institutional guidelines and Islamic principles, The Scholars High School maintains separate instructional sections and dedicated faculty for boys and girls in the Secondary Section (Grades 5 to 10) as well as separate sections in the Junior College of Commerce.'
+      a: 'Yes. In keeping with our institutional guidelines and Islamic principles, The Scholars High School maintains separate instructional sections and dedicated faculty for boys and girls in the Secondary Section (Grades 5 to 10) as well as separate sections in the Junior College of Arts & Commerce.'
     },
     {
       category: 'office',
@@ -276,16 +253,16 @@ export default function Admissions() {
     <>
       <SEO
         title="Admissions 2025–26 - Process, Eligibility & Enquiry | The Scholars School"
-        description="Admissions open from MRAK Kids Pre-School to Junior College for Commerce at The Scholars High School, Jogeshwari West, Mumbai. English medium with Deeniyat."
+        description="Admissions open from MRAK Kids Pre-School to Junior College for Arts & Commerce at The Scholars High School, Jogeshwari West, Mumbai. English medium with Deeniyat."
         canonical="https://thescholarsschool.edu.in/admissions/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">JOIN OUR INSTITUTION</span>
-          <h1>Admissions at The Scholars High School &amp; Junior College</h1>
+          <h1>Admissions at The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
           <p>
-            Welcoming students from MRAK Kids Pre School through Junior College for Commerce. Discover our transparent admission procedure and submit your enquiry.
+            Welcoming students from MRAK Kids Pre School through Junior College for Arts &amp; Commerce. Discover our transparent admission procedure and submit your enquiry.
           </p>
         </div>
       </div>
@@ -364,14 +341,7 @@ export default function Admissions() {
                 className={`eligibility-chip-btn ${activeEligibility === 'preschool' ? 'active' : ''}`}
                 onClick={() => setActiveEligibility('preschool')}
               >
-                <span>MRAK Kids Pre-School (2.5–4 yrs)</span>
-              </button>
-              <button
-                type="button"
-                className={`eligibility-chip-btn ${activeEligibility === 'preprimary' ? 'active' : ''}`}
-                onClick={() => setActiveEligibility('preprimary')}
-              >
-                <span>Pre-Primary (Nursery, Jr/Sr KG)</span>
+                <span>MRAK Kids Pre-School (Nursery, Mont – 2 &amp; Sr.KG)</span>
               </button>
               <button
                 type="button"
@@ -392,7 +362,7 @@ export default function Admissions() {
                 className={`eligibility-chip-btn ${activeEligibility === 'juniorcollege' ? 'active' : ''}`}
                 onClick={() => setActiveEligibility('juniorcollege')}
               >
-                <span>Junior College (XI &amp; XII Commerce)</span>
+                <span>Junior College (XI &amp; XII Arts &amp; Commerce)</span>
               </button>
               <button
                 type="button"
@@ -548,7 +518,7 @@ export default function Admissions() {
                     className={`checklist-tab-btn ${activeChecklistTab === 'juniorcollege' ? 'active' : ''}`}
                     onClick={() => setActiveChecklistTab('juniorcollege')}
                   >
-                    Junior College (XI/XII)
+                    Junior College (XI &amp; XII)
                   </button>
                 </div>
 

@@ -10,15 +10,10 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
 header('Expires: 0');
 
-// Handle preflight OPTIONS
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With');
-    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-    http_response_code(204);
-    exit;
-}
+require_once __DIR__ . '/rate_limiter.php';
+
+// Handle CORS and preflight requests
+handleSecureCors();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -26,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-header('Access-Control-Allow-Origin: *');
+// Enforce rate limiting: 5 contact submissions per 10 minutes per IP
+enforceRateLimit('contact', 5, 600);
 
 $config = require __DIR__ . '/config.php';
 require_once __DIR__ . '/mailer.php';
@@ -47,7 +43,7 @@ if (!empty($data['honeypot']) || !empty($data['website_honeypot'])) {
     exit;
 }
 
-// Basic Validation
+// Strict Input Sanitization & Bounds Checking
 $name = trim($data['name'] ?? '');
 $phone = trim($data['phone'] ?? '');
 $email = trim($data['email'] ?? '');
@@ -55,9 +51,16 @@ $subject = trim($data['subject'] ?? '');
 $message = trim($data['message'] ?? '');
 $recaptchaToken = trim($data['recaptchaToken'] ?? '');
 
-if (strlen($name) < 2) {
+// Strip CRLF to prevent header injection
+$name = str_replace(["\r", "\n"], ' ', $name);
+$subject = str_replace(["\r", "\n"], ' ', $subject);
+$email = str_replace(["\r", "\n"], '', $email);
+$phone = str_replace(["\r", "\n"], '', $phone);
+
+// Validate Lengths & Patterns
+if (strlen($name) < 2 || strlen($name) > 100) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please provide a valid full name.']);
+    echo json_encode(['success' => false, 'error' => 'Please provide a valid full name (2 to 100 characters).']);
     exit;
 }
 
@@ -68,15 +71,21 @@ if (!preg_match('/^[+]?[0-9]{10,14}$/', $cleanPhone)) {
     exit;
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please provide a valid email address.']);
+    echo json_encode(['success' => false, 'error' => 'Please provide a valid email address (max 100 characters).']);
     exit;
 }
 
-if (strlen($message) < 5) {
+if (strlen($subject) < 2 || strlen($subject) > 150) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please enter a message of at least 5 characters.']);
+    echo json_encode(['success' => false, 'error' => 'Please enter an inquiry subject (up to 150 characters).']);
+    exit;
+}
+
+if (strlen($message) < 5 || strlen($message) > 4000) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'error' => 'Please enter a message between 5 and 4000 characters.']);
     exit;
 }
 
@@ -91,7 +100,7 @@ if (!$captchaResult['success']) {
     http_response_code(400);
     echo json_encode([
         'success' => false,
-        'error' => $captchaResult['error'] ?? 'reCAPTCHA verification failed. Please try again.'
+        'error' => $captchaResult['error'] ?? 'Security verification failed. Please refresh and try again.'
     ]);
     exit;
 }
@@ -103,7 +112,7 @@ $meta = [
 ];
 $adminHtml = buildContactEmailHtml([
     'name' => $name,
-    'phone' => $phone,
+    'phone' => $cleanPhone,
     'email' => $email,
     'subject' => $subject,
     'message' => $message
@@ -121,8 +130,15 @@ $sendResult = sendSmtpEmail(
     $name
 );
 
-// Local Data Archive (Preserve enquiry in all circumstances)
-$archiveFile = __DIR__ . '/contacts_archive.json';
+// Secure Local Data Archive (Protected storage under .data/ folder)
+$storageDir = __DIR__ . '/.data';
+if (!is_dir($storageDir)) {
+    @mkdir($storageDir, 0750, true);
+    @file_put_contents($storageDir . '/.htaccess', "Require all denied\nDeny from all\n");
+    @file_put_contents($storageDir . '/index.html', "");
+}
+
+$archiveFile = $storageDir . '/contacts_archive.json';
 $entries = file_exists($archiveFile) ? json_decode(@file_get_contents($archiveFile), true) : [];
 if (!is_array($entries)) $entries = [];
 $entries[] = [
@@ -130,19 +146,19 @@ $entries[] = [
     'date' => date('Y-m-d H:i:s'),
     'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
     'name' => $name,
-    'phone' => $phone,
+    'phone' => $cleanPhone,
     'email' => $email,
     'subject' => $subject,
     'message' => $message,
     'recaptchaScore' => $captchaResult['score'] ?? 1.0
 ];
-@file_put_contents($archiveFile, json_encode($entries, JSON_PRETTY_PRINT));
+@file_put_contents($archiveFile, json_encode($entries, JSON_PRETTY_PRINT), LOCK_EX);
 
 if (!$sendResult['success']) {
     @file_put_contents(
-        __DIR__ . '/mail_debug.log',
+        $storageDir . '/mail_debug.log',
         date('[Y-m-d H:i:s] ') . "Email delivery queued/delayed: " . ($sendResult['error'] ?? 'Unknown error') . " - Record saved in archive.\n",
-        FILE_APPEND
+        FILE_APPEND | LOCK_EX
     );
 }
 

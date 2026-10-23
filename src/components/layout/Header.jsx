@@ -101,15 +101,9 @@ export default function Header() {
   const schoolingLinks = [
     {
       name: 'MRAK Kids Pre School',
-      desc: 'Ages 2.5 to 4 • Foundational Play & Phonics',
+      desc: 'STD: Nursery, Mont – 2 & Sr.KG • Early Childhood',
       path: '/academics/mrak-kids/',
       icon: Sparkles
-    },
-    {
-      name: 'Pre-Primary Section',
-      desc: 'Nursery, Jr & Sr KG • Child-Centered Learning',
-      path: '/academics/pre-primary/',
-      icon: BookOpen
     },
     {
       name: 'Primary Section',
@@ -128,13 +122,13 @@ export default function Header() {
   const collegeAndValuesLinks = [
     {
       name: 'Junior College (Girls Section)',
-      desc: 'XI & XII Commerce • HSC Board Distinction',
+      desc: 'XI & XII Arts & Commerce • HSC Board Distinction',
       path: '/academics/junior-college/girls/',
       icon: GraduationCap
     },
     {
       name: 'Junior College (Boys Section)',
-      desc: 'XI & XII Commerce • Professional Focus',
+      desc: 'XI & XII Arts & Commerce • Professional Focus',
       path: '/academics/junior-college/boys/',
       icon: Briefcase
     },
@@ -148,7 +142,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar with verified school contact & campus location */}
+      {/* Top Bar with verified school contact: Trust (Left), Mobile no (Center), Email (Right) */}
       <div className="topbar">
         <div className="header-container">
           <div className="topbar-content">
@@ -163,17 +157,16 @@ export default function Header() {
                 <Phone size={12} className="topbar-icon" />
                 <span>+91 8976890569</span>
               </a>
-              <span className="topbar-sep hide-tablet">•</span>
-              <a href="mailto:info@thescholarsschool.edu.in" className="topbar-link hide-tablet">
-                <Mail size={12} className="topbar-icon" />
-                <span>info@thescholarsschool.edu.in</span>
-              </a>
             </div>
             <div className="topbar-right">
-              <span className="topbar-address hide-mobile">
-                <MapPin size={12} className="topbar-icon" />
-                <span>Hill Park, Jogeshwari (W), Mumbai</span>
-              </span>
+              <a href="mailto:alqalams26@gmail.com" className="topbar-link">
+                <Mail size={12} className="topbar-icon" />
+                <span>alqalams26@gmail.com</span>
+              </a>
+              <span className="topbar-sep">|</span>
+              <a href="mailto:info@thescholarsschool.edu.in" className="topbar-link">
+                <span>info@thescholarsschool.edu.in</span>
+              </a>
             </div>
           </div>
         </div>
@@ -455,10 +448,26 @@ export default function Header() {
               <a
                 href="tel:+918976890569"
                 className="btn btn-outline"
-                style={{ width: '100%', marginBottom: '10px', gap: '8px', fontSize: '13px', padding: '10px 12px', whiteSpace: 'normal', textAlign: 'center' }}
+                style={{ width: '100%', marginBottom: '8px', gap: '8px', fontSize: '13px', padding: '10px 12px', whiteSpace: 'normal', textAlign: 'center' }}
               >
                 <Phone size={14} />
                 <span>Call Helpline: +91 8976890569</span>
+              </a>
+              <a
+                href="mailto:alqalams26@gmail.com"
+                className="btn btn-outline"
+                style={{ width: '100%', marginBottom: '8px', gap: '8px', fontSize: '13px', padding: '9px 12px', whiteSpace: 'normal', textAlign: 'center' }}
+              >
+                <Mail size={14} />
+                <span>alqalams26@gmail.com</span>
+              </a>
+              <a
+                href="mailto:info@thescholarsschool.edu.in"
+                className="btn btn-outline"
+                style={{ width: '100%', marginBottom: '10px', gap: '8px', fontSize: '13px', padding: '9px 12px', whiteSpace: 'normal', textAlign: 'center' }}
+              >
+                <Mail size={14} />
+                <span>info@thescholarsschool.edu.in</span>
               </a>
               <Link
                 to="/admissions/"

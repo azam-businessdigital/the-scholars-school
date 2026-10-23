@@ -7,6 +7,12 @@
  * and update the credentials. 'config.local.php' is git-ignored and safe.
  */
 
+// Prevent direct browser execution without request context
+if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
+    http_response_code(403);
+    exit('Direct access not permitted');
+}
+
 return [
     'smtp' => [
         'host' => 'mail.thescholarsschool.edu.in',

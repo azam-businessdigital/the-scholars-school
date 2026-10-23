@@ -155,7 +155,7 @@ export const printMediaData = [
   },
   {
     id: "print-parent-orientation",
-    title: "Parent Guidance and Pre-Primary Orientation Gathering",
+    title: "Parent Guidance and MRAK Kids Early Orientation Gathering",
     category: "Print Media",
     type: "print",
     date: "20 Jan 2024",

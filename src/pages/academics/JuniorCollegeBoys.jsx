@@ -24,14 +24,12 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function JuniorCollegeBoys() {
   const data = academicsData.find((a) => a.id === 'junior-college-boys');
-  const principal = schoolData.leadership.principals[1]; // Mrs. Azra Nasreen Abdul Hakim Khan
+  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
 
   const collegeGallery = [
     {
@@ -40,9 +38,9 @@ export default function JuniorCollegeBoys() {
       desc: 'Interactive lecture hall discussions, macroeconomic graph analysis, and ledger problem-solving.'
     },
     {
-      img: '/images/academics/college-staff.jpg',
-      title: 'Junior College Commerce Faculty Team',
-      desc: 'Seasoned lecturers specializing in Book Keeping, Commercial Mathematics, OCM, and Economics.'
+      img: '/images/campus/banner1.jpg',
+      title: 'Air-Conditioned Smart Classrooms',
+      desc: 'Modern lecture halls equipped with digital audio-visual boards, comfortable seating, and climate control.'
     },
     {
       img: '/images/academics/primary-computer-lab.jpg',
@@ -58,32 +56,26 @@ export default function JuniorCollegeBoys() {
 
   const dailyRoutine = [
     {
-      time: '07:15 AM',
       title: 'Morning Du\'aa & College Assembly',
       desc: 'Supplication for intellectual clarity, morning reflection, and motivation for academic excellence.'
     },
     {
-      time: '07:35 AM',
       title: 'Book Keeping & Accountancy',
       desc: 'Intensive financial accounting calculations, journal entries, ledger balancing, and partnership adjustments.'
     },
     {
-      time: '08:45 AM',
       title: 'Economics & Financial Systems',
       desc: 'Macroeconomic market demand, monetary policy, national income accounting, and banking systems.'
     },
     {
-      time: '09:45 AM',
       title: 'Wholesome Recess & Refreshment',
       desc: 'Nutritious break, collaborative peer discussions, and campus library visit.'
     },
     {
-      time: '10:15 AM',
       title: 'Organization of Commerce (OCM) / SP',
       desc: 'Corporate governance structures, commercial secretarial law, business management, and marketing.'
     },
     {
-      time: '11:45 AM',
       title: 'Commercial IT & Board Clinics',
       desc: 'Computer lab practicals, previous years board question drills, and faculty doubt resolution.'
     }
@@ -134,8 +126,8 @@ export default function JuniorCollegeBoys() {
   return (
     <>
       <SEO
-        title="Junior College for Commerce: Boys Section | The Scholars School"
-        description="Junior College for Commerce (Boys Section) at The Scholars High School, Jogeshwari West. 100% passing results preparing young men for finance and corporate degrees."
+        title="Junior College for Arts & Commerce: Boys Section | The Scholars School"
+        description="Junior College for Arts & Commerce (Boys Section) at The Scholars High School, Jogeshwari West. 100% passing results preparing young men for commerce, corporate degrees, and professional careers."
         canonical="https://thescholarsschool.edu.in/academics/junior-college/boys/"
       />
 
@@ -143,11 +135,11 @@ export default function JuniorCollegeBoys() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">HIGHER SECONDARY COMMERCE &bull; CLASS 11 &amp; 12 &bull; HSC BOARD</span>
+            <span className="mrak-banner-tag">HIGHER SECONDARY &bull; CLASS 11 &amp; 12 (XI &amp; XII) &bull; ARTS &amp; COMMERCE &bull; HSC BOARD</span>
           </div>
-          <h1>Junior College for Commerce: Boys Section (HSC Board)</h1>
+          <h1>Junior College for Arts &amp; Commerce: Boys Section (HSC Board)</h1>
           <p>
-            Rigorous commerce coaching, accounting precision, and career orientation preparing male students for commercial degrees, professional certifications, and entrepreneurial ventures.
+            Rigorous coaching, academic precision, and career orientation preparing male students for Arts &amp; Commerce degrees, professional certifications, and entrepreneurial ventures.
           </p>
         </div>
       </div>
@@ -247,16 +239,16 @@ export default function JuniorCollegeBoys() {
             <div className="mrak-principal-media">
               <img
                 src={principal.image}
-                alt={principal.name}
+                alt={principal.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.name}</div>
-              <div className="mrak-principal-role">{principal.designation}</div>
+              <div className="mrak-principal-name">{principal.designation}</div>
+              <div className="mrak-principal-role">{principal.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                Junior College for Commerce
+                Junior College for Arts &amp; Commerce
               </span>
             </div>
 
@@ -265,14 +257,14 @@ export default function JuniorCollegeBoys() {
                 Building Intellectual Rigour, Financial Insight &amp; Ethical Enterprise
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;At The Scholars Junior College for Commerce, we guide young men to develop sharp analytical thinking, financial calculation discipline, and entrepreneurial ambition. Backed by experienced lecturers, real-world case studies, and focused board examination drills, our students consistently achieve 100% HSC results and build solid foundations for premier commercial, banking, and professional careers.&rdquo;
+                &ldquo;At The Scholars Junior College for Arts &amp; Commerce, we guide young men to develop sharp analytical thinking, financial calculation discipline, and entrepreneurial ambition. Backed by experienced lecturers, real-world case studies, and focused board examination drills, our students consistently achieve 100% HSC results and build solid foundations for premier commercial, banking, and professional careers.&rdquo;
               </p>
               <div className="mrak-principal-pillars">
-                <span className="mrak-pillar-chip">&bull; 100% HSC Commerce Board Record</span>
+                <span className="mrak-pillar-chip">&bull; 100% HSC Arts &amp; Commerce Record</span>
                 <span className="mrak-pillar-chip">&bull; Conceptual Accounting Mastery</span>
                 <span className="mrak-pillar-chip">&bull; Business Economics &amp; Analytics</span>
                 <span className="mrak-pillar-chip">&bull; Individual Doubt-Solving Clinics</span>
-                <span className="mrak-pillar-chip">&bull; Ethical Commerce Foundations</span>
+                <span className="mrak-pillar-chip">&bull; Ethical Foundations</span>
               </div>
             </div>
           </div>
@@ -341,12 +333,12 @@ export default function JuniorCollegeBoys() {
         </div>
       </section>
 
-      {/* SECTION 5: A DAY IN JUNIOR COLLEGE (ROUTINE) */}
+      {/* SECTION 5: DISCIPLINED & CAREER-FOCUSED (ROUTINE) */}
       <section className="section section-ivory">
         <div className="container">
           <SectionHeader
             eyebrow="STRUCTURED DAILY TIMETABLE"
-            title="A Day in Junior College: Disciplined &amp; Career-Focused"
+            title="Disciplined &amp; Career-Focused"
             subtitle="Balanced college schedule combining conceptual lectures, practical accounting drills, and board preparation."
             centered
           />
@@ -354,7 +346,6 @@ export default function JuniorCollegeBoys() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -410,31 +401,17 @@ export default function JuniorCollegeBoys() {
         </div>
       </section>
 
-      {/* SECTION 7: TEACHING FACULTY ROSTER & SECTION 8: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="COMMERCE LECTURERS"
-        facultyTitle={facultyData.college.sectionTitle}
-        facultySubtitle={facultyData.college.description}
-        teachers={facultyData.college.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Junior College Commerce Faculty Team"
-        photoSubtitle={facultyData.college.photoCaptionSub}
-        largePhoto={facultyData.college.largePhoto}
-        captionTitle={facultyData.college.photoCaptionTitle}
-        captionSub={facultyData.college.photoCaptionSub}
-      />
-
-      {/* SECTION 9: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 7: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>
-            ENROLL FOR JUNIOR COLLEGE COMMERCE
+            ENROLL FOR JUNIOR COLLEGE (ARTS &amp; COMMERCE)
           </span>
           <h2 className="section-title" style={{ color: '#fff', marginBottom: '16px' }}>
-            Build a Solid Foundation in Business, Banking &amp; Finance
+            Build a Solid Foundation in Arts, Commerce, Banking &amp; Finance
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>
-            Admissions for Class XI Commerce (Boys Section) are processed following Class 10 result declarations. Submit your admission enquiry today to receive counsel on subject choices and seat allocation.
+            Admissions for Class XI (Arts &amp; Commerce - Boys Section) are processed following Class 10 result declarations. Submit your admission enquiry today to receive counsel on subject choices and seat allocation.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/admissions/" className="btn btn-gold btn-lg">

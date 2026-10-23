@@ -21,14 +21,12 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function Deeniyat() {
   const data = academicsData.find((a) => a.id === 'deeniyat');
-  const deeniyatHead = schoolData.leadership.principals[2]; // Hasan Kamal, Head of Deeniyat
+  const deeniyatHead = schoolData.leadership.principals[2]; // Head of Deeniyat
 
   const deeniyatGallery = [
     {
@@ -47,40 +45,34 @@ export default function Deeniyat() {
       desc: 'Seamless integration of daily prayers, morning assemblies, and Islamic values alongside general academic subjects.'
     },
     {
-      img: '/images/academics/staff-photo-with-head.jpeg',
-      title: 'Deeniyat Faculty & Leadership Team',
-      desc: 'Scholarly mentors dedicated to nurturing upright Muslim youth with compassionate pastoral care.'
+      img: '/images/campus/banner2.jpg',
+      title: 'Dedicated Campus Prayer Hall (Musalla)',
+      desc: 'Serene, designated prayer space for daily congregational prayers (Salah) and spiritual contemplation.'
     }
   ];
 
   const dailyRoutine = [
     {
-      time: 'Morning Assembly',
       title: 'Morning Remembrance & Du\'aa',
       desc: 'Recitation of Surah Al-Fatihah, morning supplications, and inspiring moral thoughts for the academic day.'
     },
     {
-      time: 'Daily Period',
       title: 'Structured Tajweed & Hadith Class',
       desc: 'Dedicated daily periods covering Quranic pronunciation, short Surah memorization, and Hadith lessons.'
     },
     {
-      time: 'Mid-Day Recess',
       title: 'Sunnah Etiquette & Mindful Meals',
       desc: 'Reciting Bismillah, eating with the right hand, sharing with peers, and practicing gratitude for sustenance.'
     },
     {
-      time: 'Zuhr Prayer Time',
       title: 'Congregational Prayer (Salah)',
       desc: 'Students and faculty joining in congregational prayer fostering spiritual focus, discipline, and unity.'
     },
     {
-      time: 'Weekly Friday Assembly',
       title: 'Friday Halaqah & Civic Service',
       desc: 'Weekly moral exhortation on community benevolence, honesty in society, and respecting parents and elders.'
     },
     {
-      time: 'Day Closure',
       title: 'Closing Du\'aa & Farewell Salam',
       desc: 'Recitation of Kaffaratul Majlis, reflecting on the day\'s deeds, and exchanging peaceful greetings of Salam.'
     }
@@ -167,7 +159,7 @@ export default function Deeniyat() {
                 {data.overview}
               </p>
               <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                Under the guidance of Deeniyat Head <strong>Hasan Kamal</strong> and our visionary trustees, the Deeniyat curriculum ensures that every child grows up with an understanding of faith, honesty, respect for elders, civic harmony, and dedication to societal service.
+                Under the guidance of our Head of Deeniyat and our visionary trustees, the Deeniyat curriculum ensures that every child grows up with an understanding of faith, honesty, respect for elders, civic harmony, and dedication to societal service.
               </p>
 
               <div className="mrak-badges-row stagger-group reveal-up">
@@ -244,14 +236,14 @@ export default function Deeniyat() {
             <div className="mrak-principal-media">
               <img
                 src={deeniyatHead.image}
-                alt={deeniyatHead.name}
+                alt={deeniyatHead.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{deeniyatHead.name}</div>
-              <div className="mrak-principal-role">{deeniyatHead.designation}</div>
+              <div className="mrak-principal-name">{deeniyatHead.designation}</div>
+              <div className="mrak-principal-role">{deeniyatHead.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
                 Deeniyat &amp; Moral Character Program
               </span>
@@ -351,7 +343,6 @@ export default function Deeniyat() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -395,21 +386,7 @@ export default function Deeniyat() {
         </div>
       </section>
 
-      {/* SECTION 7: TEACHING FACULTY ROSTER & SECTION 8: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="ACADEMIC MENTORS"
-        facultyTitle={facultyData.deeniyat.sectionTitle}
-        facultySubtitle={facultyData.deeniyat.description}
-        teachers={facultyData.deeniyat.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Deeniyat Faculty Team &amp; Leadership"
-        photoSubtitle={facultyData.deeniyat.photoCaptionSub}
-        largePhoto={facultyData.deeniyat.largePhoto}
-        captionTitle={facultyData.deeniyat.photoCaptionTitle}
-        captionSub={facultyData.deeniyat.photoCaptionSub}
-      />
-
-      {/* SECTION 9: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 7: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>

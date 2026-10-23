@@ -18,14 +18,12 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function MrakKids() {
   const data = academicsData.find((a) => a.id === 'mrak-kids');
-  const principal = schoolData.leadership.principals[0]; // Mrs. Zahida Kader Chunawala
+  const principal = schoolData.leadership.principals[0]; // School Principal
 
   const preschoolGallery = [
     {
@@ -39,6 +37,16 @@ export default function MrakKids() {
       desc: 'Finger painting, non-toxic modeling clay, and guided fine motor crafts.'
     },
     {
+      img: '/images/academics/pre-primary-reading.jpg',
+      title: 'Jolly Phonics & Reading Readiness',
+      desc: 'Interactive letter sounds, picture stories, and vocabulary building for young minds.'
+    },
+    {
+      img: '/images/academics/pre-primary-math.jpg',
+      title: 'Foundational Numbers & Logic',
+      desc: 'Hands-on counting manipulatives, pattern recognition, and basic number concepts.'
+    },
+    {
       img: '/images/academics/pre-school.jpg',
       title: 'Safe Child-Friendly Classrooms',
       desc: 'Low ergonomic desks, vibrant learning corners, and air-conditioned spaces.'
@@ -47,32 +55,26 @@ export default function MrakKids() {
 
   const dailyRoutine = [
     {
-      time: '08:30 AM',
       title: 'Morning Circle & Du\'aa',
       desc: 'Welcoming smiles, gentle morning remembrance, and joyful nursery songs.'
     },
     {
-      time: '09:15 AM',
       title: 'Phonics & Story World',
       desc: 'Interactive picture books, letter sounds, and playful vocabulary games.'
     },
     {
-      time: '10:00 AM',
       title: 'Snack & Sharing Time',
       desc: 'Learning table manners, sharing snacks with peers, and clean handwashing.'
     },
     {
-      time: '10:30 AM',
       title: 'Sensory & Montessori Play',
       desc: 'Hands-on shape sorters, building blocks, puzzles, and sensory trays.'
     },
     {
-      time: '11:15 AM',
       title: 'Music, Movement & Rhymes',
       desc: 'Rhythmic movement, action songs, and gross motor coordination exercises.'
     },
     {
-      time: '11:45 AM',
       title: 'Pack-up & Cheerful Farewell',
       desc: 'Reflective recap of the day and cheerful goodbye songs with teachers.'
     }
@@ -128,11 +130,11 @@ export default function MrakKids() {
               alt="MRAK Kids Pre School Logo"
               className="mrak-banner-logo"
             />
-            <span className="mrak-banner-tag">EARLY CHILDHOOD FOUNDATION &bull; AGES 2.5 - 4 YEARS</span>
+            <span className="mrak-banner-tag">EARLY CHILDHOOD FOUNDATION &bull; STD: NURSERY, MONT – 2 &amp; SR.KG</span>
           </div>
           <h1>Maulana Riyaz Ahmed Khan (MRAK) Kids Pre School</h1>
           <p>
-            A vibrant, caring early childhood haven where sensory play, phonics, and loving moral values spark a lifelong curiosity for learning.
+            A vibrant, caring early childhood haven covering STD: Nursery, Mont – 2 &amp; Sr.KG, where sensory play, Jolly Phonics, and loving moral values spark a lifelong curiosity for learning.
           </p>
         </div>
       </div>
@@ -150,7 +152,7 @@ export default function MrakKids() {
           <div className="grid-2 academic-hero-grid stagger-group reveal-up" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
             <div className="section-header reveal-left">
               <span className="eyebrow">A LOVING EARLY START</span>
-              <h2 className="section-title">Where Every Toddler Smiles, Explores &amp; Grows</h2>
+              <h2 className="section-title">Where Every Child Smiles, Explores &amp; Grows</h2>
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
                 {data.overview}
               </p>
@@ -164,8 +166,8 @@ export default function MrakKids() {
                     <Sun size={19} />
                   </div>
                   <div className="mrak-stat-content">
-                    <span className="mrak-stat-label">Age Group</span>
-                    <div className="mrak-stat-value">{data.ageGroup}</div>
+                    <span className="mrak-stat-label">Standards</span>
+                    <div className="mrak-stat-value">Nursery, Mont – 2 &amp; Sr.KG</div>
                   </div>
                 </div>
 
@@ -211,7 +213,7 @@ export default function MrakKids() {
           <SectionHeader
             eyebrow="SCHOOL PRINCIPAL'S MESSAGE"
             title="A Warm Welcome to Our Little Explorers"
-            subtitle="Guiding philosophy from our Pre-Primary and Primary leadership."
+            subtitle="Guiding philosophy from our MRAK Kids and Primary leadership."
             centered
           />
 
@@ -219,14 +221,14 @@ export default function MrakKids() {
             <div className="mrak-principal-media">
               <img
                 src={principal.image}
-                alt={principal.name}
+                alt={principal.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.name}</div>
-              <div className="mrak-principal-role">{principal.designation}</div>
+              <div className="mrak-principal-name">{principal.designation}</div>
+              <div className="mrak-principal-role">{principal.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
                 {principal.section}
               </span>
@@ -325,7 +327,6 @@ export default function MrakKids() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -334,21 +335,7 @@ export default function MrakKids() {
         </div>
       </section>
 
-      {/* SECTION 6: TEACHING FACULTY ROSTER & SECTION 7: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="ACADEMIC MENTORS"
-        facultyTitle={facultyData.prePrimary.sectionTitle}
-        facultySubtitle={facultyData.prePrimary.description}
-        teachers={facultyData.prePrimary.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Pre-Primary &amp; Early Childhood Faculty Team"
-        photoSubtitle={facultyData.prePrimary.photoCaptionSub}
-        largePhoto={facultyData.prePrimary.largePhoto}
-        captionTitle={facultyData.prePrimary.photoCaptionTitle}
-        captionSub={facultyData.prePrimary.photoCaptionSub}
-      />
-
-      {/* SECTION 8: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 6: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>
@@ -365,8 +352,8 @@ export default function MrakKids() {
               <span>Enroll Your Toddler</span>
               <ArrowUpRight size={18} />
             </Link>
-            <Link to="/academics/pre-primary/" className="btn btn-outline-white btn-lg">
-              <span>Explore Pre-Primary Section</span>
+            <Link to="/academics/primary/" className="btn btn-outline-white btn-lg">
+              <span>Explore Primary Section (Grades 1 to 4)</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

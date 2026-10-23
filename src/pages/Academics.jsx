@@ -12,7 +12,7 @@ export default function Academics() {
     <>
       <SEO
         title="Academic Programs - Pre-School to Junior College"
-        description="Comprehensive academic sections at The Scholars High School and Junior College for Commerce in Jogeshwari West, Mumbai."
+        description="Comprehensive academic sections at The Scholars High School and Junior College for Arts & Commerce in Jogeshwari West, Mumbai."
         canonical="https://thescholarsschool.edu.in/academics/"
       />
 
@@ -23,7 +23,7 @@ export default function Academics() {
           </div>
           <h1>Comprehensive Academic Programs</h1>
           <p>
-            From early sensory learning in MRAK Kids Pre School to specialized Higher Secondary Commerce education, discover our structured academic journey.
+            From early sensory learning in MRAK Kids Pre School to specialized Higher Secondary Arts &amp; Commerce education, discover our structured academic journey.
           </p>
         </div>
       </div>
@@ -34,8 +34,8 @@ export default function Academics() {
         <div className="container">
           <SectionHeader
             eyebrow="ACADEMIC DEPARTMENTS"
-            title="Seven Dedicated Academic Sections"
-            subtitle="From early childhood sensory exploration in MRAK Kids to specialized Higher Secondary Commerce preparation, explore our complete educational continuum."
+            title="Six Dedicated Academic Sections"
+            subtitle="From early childhood sensory exploration in MRAK Kids to specialized Higher Secondary Arts &amp; Commerce preparation, explore our complete educational continuum."
             centered
           />
 
@@ -64,7 +64,7 @@ export default function Academics() {
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
-                  <span>Junior College for Commerce preparing students for CA, CS, and university degrees</span>
+                  <span>Junior College for Arts &amp; Commerce preparing students for university degrees and professional careers</span>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
@@ -79,8 +79,8 @@ export default function Academics() {
 
             <div className="img-sheen-wrap reveal-up">
               <img
-                src="/images/campus/teacher-head.jpg"
-                alt="The Scholars School Teachers and Students"
+                src="/images/campus/building.jpg"
+                alt="The Scholars School Campus Building"
                 style={{
                   width: '100%',
                   borderRadius: 'var(--radius-sm)',

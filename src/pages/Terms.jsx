@@ -8,7 +8,7 @@ export default function Terms() {
     <>
       <SEO
         title="Terms of Use | The Scholars School"
-        description="Terms of use governing access and informational usage of The Scholars High School & Junior College for Commerce website."
+        description="Terms of use governing access and informational usage of The Scholars High School & Junior College for Arts & Commerce website."
         canonical="https://thescholarsschool.edu.in/terms-of-use/"
       />
 
@@ -31,7 +31,7 @@ export default function Terms() {
               1. Acceptance of Terms
             </h2>
             <p>
-              By accessing and browsing the official website of The Scholars High School &amp; Junior College for Commerce (located at https://thescholarsschool.edu.in/), you agree to abide by these Terms of Use and all applicable laws and regulations of Maharashtra, India.
+              By accessing and browsing the official website of The Scholars High School &amp; Junior College for Arts &amp; Commerce (located at https://thescholarsschool.edu.in/), you agree to abide by these Terms of Use and all applicable laws and regulations of Maharashtra, India.
             </p>
 
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-royal-navy)', marginTop: '24px', marginBottom: '12px' }}>

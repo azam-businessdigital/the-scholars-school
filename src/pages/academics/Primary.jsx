@@ -19,14 +19,12 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function Primary() {
   const data = academicsData.find((a) => a.id === 'primary');
-  const principal = schoolData.leadership.principals[0]; // Mrs. Zahida Kader Chunawala
+  const principal = schoolData.leadership.principals[0]; // School Principal
 
   const primaryGallery = [
     {
@@ -40,45 +38,39 @@ export default function Primary() {
       desc: 'Dedicated IT periods teaching essential keyboarding, digital literacy, and foundational computer concepts.'
     },
     {
-      img: '/images/academics/primary-boys-staff.jpeg',
-      title: 'Primary Boys Section Faculty',
-      desc: 'Devoted teachers directing classroom discipline, mathematical problem-solving, and foundational sciences for boys.'
+      img: '/images/campus/banner1.jpg',
+      title: 'Air-Conditioned Modern Classrooms',
+      desc: 'Spacious and climate-controlled classroom environments designed for optimal student focus and well-being.'
     },
     {
-      img: '/images/academics/primary-girls-staff.jpeg',
-      title: 'Primary Girls Section Faculty',
-      desc: 'Experienced educators fostering creative arts, expressive reading, moral integrity, and collaborative study for girls.'
+      img: '/images/campus/building.jpg',
+      title: 'Seven-Floor Educational Campus',
+      desc: 'Purpose-built facility in Hill Park featuring high-speed passenger lift, RO drinking water, and sanitized washrooms.'
     }
   ];
 
   const dailyRoutine = [
     {
-      time: '07:15 AM / 12:45 PM',
-      title: 'Morning Assembly & Du\'aa',
+      title: 'Afternoon Assembly & Du\'aa',
       desc: 'School prayer, Surah recitation, moral thought for the day, and respectful national anthem.'
     },
     {
-      time: '07:45 AM / 01:15 PM',
       title: 'Language Arts & Reading Immersion',
       desc: 'English grammar, vocabulary expansion, reading comprehension, and pronunciation drills.'
     },
     {
-      time: '08:45 AM / 02:15 PM',
       title: 'Mathematics & Mental Arithmetic',
       desc: 'Mental math drills, conceptual arithmetic, geometric patterns, and problem-solving exercises.'
     },
     {
-      time: '09:45 AM / 03:15 PM',
       title: 'Wholesome Recess & Refreshment',
       desc: 'Nourishing snacks, clean handwashing etiquette, and supervised social interaction with peers.'
     },
     {
-      time: '10:15 AM / 03:45 PM',
       title: 'Science, EVS & Digital Lab',
       desc: 'Smart board science visual lessons, environmental studies, and hands-on computer lab sessions.'
     },
     {
-      time: '11:45 AM / 05:15 PM',
       title: 'Deeniyat, Creative Arts & Dismissal',
       desc: 'Quranic recitation, Hadith reflections, creative arts, homework review, and orderly departure.'
     }
@@ -185,7 +177,7 @@ export default function Primary() {
                   </div>
                   <div className="mrak-stat-content">
                     <span className="mrak-stat-label">Shift Timings</span>
-                    <div className="mrak-stat-value">Morning &amp; Afternoon</div>
+                    <div className="mrak-stat-value">Afternoon Shift</div>
                   </div>
                 </div>
 
@@ -234,7 +226,7 @@ export default function Primary() {
           <SectionHeader
             eyebrow="SCHOOL PRINCIPAL'S MESSAGE"
             title="Inspiring Excellence in Academics &amp; Character"
-            subtitle="Guiding philosophy from our Pre-Primary and Primary leadership."
+            subtitle="Guiding philosophy from our primary and school leadership."
             centered
           />
 
@@ -242,14 +234,14 @@ export default function Primary() {
             <div className="mrak-principal-media">
               <img
                 src={principal.image}
-                alt={principal.name}
+                alt={principal.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.name}</div>
-              <div className="mrak-principal-role">{principal.designation}</div>
+              <div className="mrak-principal-name">{principal.designation}</div>
+              <div className="mrak-principal-role">{principal.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
                 {principal.section}
               </span>
@@ -349,7 +341,6 @@ export default function Primary() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -393,19 +384,7 @@ export default function Primary() {
         </div>
       </section>
 
-      {/* SECTION 7: TEACHING FACULTY ROSTER & SECTION 8: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="ACADEMIC MENTORS"
-        facultyTitle={facultyData.primary.sectionTitle}
-        facultySubtitle={facultyData.primary.description}
-        teachers={facultyData.primary.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Primary Faculty Cohort: Girls &amp; Boys Wings"
-        photoSubtitle="Our devoted educators photographed with school leadership across our campus wings."
-        largePhotos={facultyData.primary.largePhotos}
-      />
-
-      {/* SECTION 9: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 7: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>

@@ -1,6 +1,6 @@
 <?php
 /**
- * The Scholars High School & Junior College for Commerce
+ * The Scholars High School & Junior College for Arts & Commerce
  * Core Mailer, reCAPTCHA v3 Verifier & Professional HTML Email Generator
  */
 
@@ -13,27 +13,11 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  * Verify Google reCAPTCHA v3 Token
  */
 function verifyRecaptcha($token, $secretKey, $minScore = 0.3) {
-    // 1. Detect Local & Development Environments (localhost, 127.0.0.1, private LAN, dev ports, staging domains)
     $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
-    $httpHost = $_SERVER['HTTP_HOST'] ?? '';
-    $serverName = $_SERVER['SERVER_NAME'] ?? '';
-    $isPrivateIp = filter_var($remoteIp, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false;
-    $isLocalhost = in_array($remoteIp, ['127.0.0.1', '::1']) ||
-                   str_contains($httpHost, 'localhost') ||
-                   str_contains($httpHost, '127.0.0.1') ||
-                   str_contains($httpHost, ':3000') ||
-                   str_contains($httpHost, ':8008') ||
-                   str_contains($serverName, 'localhost') ||
-                   $isPrivateIp;
 
-    $isStaging = str_contains($httpHost, 'businessdigital.in') ||
-                 str_contains($httpHost, 'staging') ||
-                 str_contains($httpHost, 'vercel.app') ||
-                 str_contains($serverName, 'businessdigital.in') ||
-                 empty($secretKey);
-
-    if ($isLocalhost || $isStaging) {
-        @file_put_contents(__DIR__ . '/recaptcha_debug.log', date('[Y-m-d H:i:s] ') . "Local/Staging bypass approved (IP: {$remoteIp}, Host: {$httpHost})\n", FILE_APPEND);
+    // Only allow development bypass when running strictly on localhost with no secret key configured
+    $isLocal = in_array($remoteIp, ['127.0.0.1', '::1']);
+    if ($isLocal && empty($secretKey)) {
         return [
             'success' => true,
             'score' => 0.95,
@@ -46,7 +30,15 @@ function verifyRecaptcha($token, $secretKey, $minScore = 0.3) {
         return [
             'success' => false,
             'score' => 0,
-            'error' => 'reCAPTCHA verification token was not received. Please refresh and try again.'
+            'error' => 'Security verification token was not received. Please refresh and try again.'
+        ];
+    }
+
+    if (empty($secretKey)) {
+        return [
+            'success' => false,
+            'score' => 0,
+            'error' => 'Security configuration is incomplete. Please contact the school directly.'
         ];
     }
 
@@ -89,27 +81,29 @@ function verifyRecaptcha($token, $secretKey, $minScore = 0.3) {
 
     $result = json_decode($response, true);
     if (!is_array($result)) {
-        return ['success' => false, 'score' => 0, 'error' => 'Malformed response from reCAPTCHA service.'];
+        return ['success' => false, 'score' => 0, 'error' => 'Malformed response from verification service.'];
     }
 
     $success = !empty($result['success']);
     $hasScore = isset($result['score']);
-    // If Google returns success: true without score (v2 checkbox or invisible key), score is 1.0
     $score = $hasScore ? floatval($result['score']) : ($success ? 1.0 : 0.0);
     $errorCodes = $result['error-codes'] ?? [];
 
-    @file_put_contents(
-        __DIR__ . '/recaptcha_debug.log',
-        date('[Y-m-d H:i:s] ') . "Verify: success=" . ($success ? '1':'0') . " score={$score} errors=" . implode(',', $errorCodes) . " host={$httpHost}\n",
-        FILE_APPEND
-    );
+    $logDir = __DIR__ . '/.data';
+    if (is_dir($logDir)) {
+        @file_put_contents(
+            $logDir . '/recaptcha_debug.log',
+            date('[Y-m-d H:i:s] ') . "Verify: success=" . ($success ? '1':'0') . " score={$score} errors=" . implode(',', $errorCodes) . "\n",
+            FILE_APPEND
+        );
+    }
 
     if ($success) {
         if ($hasScore && $score < $minScore) {
             return [
                 'success' => false,
                 'score' => $score,
-                'error' => 'Automated bot detection score insufficient (' . $score . '). Please retry or call the helpline at +91 8976890569.'
+                'error' => 'Automated bot detection check failed. Please retry or call our admissions helpline at +91 8976890569.'
             ];
         }
 
@@ -128,16 +122,6 @@ function verifyRecaptcha($token, $secretKey, $minScore = 0.3) {
         ];
     }
 
-    if (in_array('hostname-mismatch', $errorCodes) || in_array('invalid-input-secret', $errorCodes)) {
-        @file_put_contents(__DIR__ . '/recaptcha_debug.log', date('[Y-m-d H:i:s] ') . "Tolerated reCAPTCHA (" . implode(',', $errorCodes) . ") for Host: {$httpHost}\n", FILE_APPEND);
-        return [
-            'success' => true,
-            'score' => 0.85,
-            'error' => null,
-            'warning' => 'reCAPTCHA bypass for host: ' . $httpHost
-        ];
-    }
-
     return [
         'success' => false,
         'score' => 0,
@@ -151,8 +135,11 @@ function verifyRecaptcha($token, $secretKey, $minScore = 0.3) {
 function sendPhpMailFallback($smtpConfig, $toEmail, $toName, $subject, $htmlBody, $replyToEmail = null, $replyToName = null) {
     if (!function_exists('mail')) return false;
 
-    $fromEmail = $smtpConfig['from_email'] ?? 'info@thescholarsschool.edu.in';
-    $fromName = $smtpConfig['from_name'] ?? 'The Scholars High School Website';
+    // Strict CRLF sanitization to prevent email header injection
+    $fromEmail = str_replace(["\r", "\n"], '', $smtpConfig['from_email'] ?? 'info@thescholarsschool.edu.in');
+    $fromName = str_replace(["\r", "\n"], '', $smtpConfig['from_name'] ?? 'The Scholars High School Website');
+    $toEmail = str_replace(["\r", "\n"], '', $toEmail);
+    $toName = str_replace(["\r", "\n"], '', $toName);
     $encodedFromName = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
     $cleanSubject = str_replace(["\r", "\n"], ' ', trim($subject));
     $encodedSubject = '=?UTF-8?B?' . base64_encode($cleanSubject) . '?=';
@@ -160,9 +147,10 @@ function sendPhpMailFallback($smtpConfig, $toEmail, $toName, $subject, $htmlBody
     $headers = [];
     $headers[] = "From: {$encodedFromName} <{$fromEmail}>";
     if ($replyToEmail) {
-        $repName = $replyToName ?: $toName;
-        $encodedRepName = '=?UTF-8?B?' . base64_encode($repName) . '?=';
-        $headers[] = "Reply-To: {$encodedRepName} <{$replyToEmail}>";
+        $cleanReplyEmail = str_replace(["\r", "\n"], '', $replyToEmail);
+        $cleanReplyName = str_replace(["\r", "\n"], '', $replyToName ?: $toName);
+        $encodedRepName = '=?UTF-8?B?' . base64_encode($cleanReplyName) . '?=';
+        $headers[] = "Reply-To: {$encodedRepName} <{$cleanReplyEmail}>";
     }
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-Type: text/html; charset=UTF-8";
@@ -172,7 +160,10 @@ function sendPhpMailFallback($smtpConfig, $toEmail, $toName, $subject, $htmlBody
     $bodyChunked = chunk_split(base64_encode($htmlBody));
     $sent = @mail($toEmail, $encodedSubject, $bodyChunked, implode("\r\n", $headers));
     if ($sent) {
-        @file_put_contents(__DIR__ . '/mail_debug.log', date('[Y-m-d H:i:s] ') . "Fallback PHP mail() sent successfully to {$toEmail}\n", FILE_APPEND);
+        $logDir = __DIR__ . '/.data';
+        if (is_dir($logDir)) {
+            @file_put_contents($logDir . '/mail_debug.log', date('[Y-m-d H:i:s] ') . "Fallback PHP mail() sent successfully to {$toEmail}\n", FILE_APPEND);
+        }
         return true;
     }
     return false;
@@ -283,8 +274,11 @@ function sendSmtpEmail($smtpConfig, $toEmail, $toName, $subject, $htmlBody, $rep
         return ['success' => false, 'error' => "DATA command rejected: {$res}"];
     }
 
-    // 9. Build MIME Headers
-    $fromName = $smtpConfig['from_name'];
+    // 9. Build MIME Headers with strict CRLF sanitization
+    $fromName = str_replace(["\r", "\n"], '', $smtpConfig['from_name']);
+    $fromEmail = str_replace(["\r", "\n"], '', $smtpConfig['from_email']);
+    $toName = str_replace(["\r", "\n"], '', $toName);
+    $toEmail = str_replace(["\r", "\n"], '', $toEmail);
     $encodedFromName = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
     $encodedToName = '=?UTF-8?B?' . base64_encode($toName) . '?=';
     $cleanSubject = str_replace(["\r", "\n"], ' ', trim($subject));
@@ -295,9 +289,10 @@ function sendSmtpEmail($smtpConfig, $toEmail, $toName, $subject, $htmlBody, $rep
     $headers[] = "To: {$encodedToName} <{$toEmail}>";
     $headers[] = "Subject: {$encodedSubject}";
     if ($replyToEmail) {
-        $repName = $replyToName ?: $toName;
+        $repName = str_replace(["\r", "\n"], '', $replyToName ?: $toName);
+        $cleanReplyEmail = str_replace(["\r", "\n"], '', $replyToEmail);
         $encodedRepName = '=?UTF-8?B?' . base64_encode($repName) . '?=';
-        $headers[] = "Reply-To: {$encodedRepName} <{$replyToEmail}>";
+        $headers[] = "Reply-To: {$encodedRepName} <{$cleanReplyEmail}>";
     }
     $headers[] = "Date: " . date('r');
     $headers[] = "Message-ID: <" . md5(uniqid(microtime(), true)) . "@thescholarsschool.edu.in>";
@@ -328,15 +323,15 @@ function buildAdmissionEmailHtml($data, $meta) {
     $refId = 'TSS-ADM-' . date('Ymd') . '-' . strtoupper(substr(md5(uniqid()), 0, 5));
     $timestamp = date('d M Y, h:i A') . ' IST';
 
-    $parentName = htmlspecialchars($data['parentName'] ?? 'N/A');
-    $studentName = htmlspecialchars($data['studentName'] ?? 'N/A');
-    $phone = htmlspecialchars($data['phone'] ?? 'N/A');
-    $cleanPhone = preg_replace('/\s+/', '', $phone);
-    $email = htmlspecialchars($data['email'] ?? 'Not provided');
-    $section = htmlspecialchars($data['section'] ?? 'N/A');
-    $message = !empty($data['message']) ? nl2br(htmlspecialchars($data['message'])) : '<em>None specified</em>';
+    $parentName = htmlspecialchars($data['parentName'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $studentName = htmlspecialchars($data['studentName'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $phone = htmlspecialchars($data['phone'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $cleanPhone = preg_replace('/[^\+0-9]/', '', $phone);
+    $email = htmlspecialchars($data['email'] ?? 'Not provided', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $section = htmlspecialchars($data['section'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $message = !empty($data['message']) ? nl2br(htmlspecialchars($data['message'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) : '<em>None specified</em>';
     $recaptchaScore = isset($meta['recaptchaScore']) ? number_format($meta['recaptchaScore'], 2) : '1.00';
-    $ip = htmlspecialchars($_SERVER['REMOTE_ADDR'] ?? 'Unknown');
+    $ip = htmlspecialchars($_SERVER['REMOTE_ADDR'] ?? 'Unknown', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
     return <<<HTML
 <!DOCTYPE html>
@@ -518,14 +513,14 @@ function buildContactEmailHtml($data, $meta) {
     $refId = 'TSS-MSG-' . date('Ymd') . '-' . strtoupper(substr(md5(uniqid()), 0, 5));
     $timestamp = date('d M Y, h:i A') . ' IST';
 
-    $name = htmlspecialchars($data['name'] ?? 'N/A');
-    $phone = htmlspecialchars($data['phone'] ?? 'N/A');
-    $cleanPhone = preg_replace('/\s+/', '', $phone);
-    $email = htmlspecialchars($data['email'] ?? 'N/A');
-    $subject = htmlspecialchars($data['subject'] ?? 'Website Inquiry');
-    $message = nl2br(htmlspecialchars($data['message'] ?? ''));
+    $name = htmlspecialchars($data['name'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $phone = htmlspecialchars($data['phone'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $cleanPhone = preg_replace('/[^\+0-9]/', '', $phone);
+    $email = htmlspecialchars($data['email'] ?? 'N/A', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $subject = htmlspecialchars($data['subject'] ?? 'Website Inquiry', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $message = nl2br(htmlspecialchars($data['message'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
     $recaptchaScore = isset($meta['recaptchaScore']) ? number_format($meta['recaptchaScore'], 2) : '1.00';
-    $ip = htmlspecialchars($_SERVER['REMOTE_ADDR'] ?? 'Unknown');
+    $ip = htmlspecialchars($_SERVER['REMOTE_ADDR'] ?? 'Unknown', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
     return <<<HTML
 <!DOCTYPE html>

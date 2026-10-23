@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Calendar, MapPin, Award } from 'lucide-react';
 import SEO from '../components/common/SEO';
 import Breadcrumbs from '../components/common/Breadcrumbs';
@@ -9,14 +9,9 @@ import { eventsData } from '../data/eventsData';
 export default function Events() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = [
-    'All',
-    'National Celebrations',
-    'Sports',
-    'Academic & Cultural',
-    'Arts & Creativity',
-    'Parent Engagement'
-  ];
+  const categories = useMemo(() => {
+    return ['All', ...new Set(eventsData.map((e) => e.category))];
+  }, []);
 
   const filteredEvents = activeCategory === 'All'
     ? eventsData

@@ -1,5 +1,5 @@
 export const schoolData = {
-  name: "The Scholars High School & Junior College for Commerce",
+  name: "The Scholars High School & Junior College for Arts & Commerce",
   shortName: "The Scholars School",
   established: "1993",
   trust: "Al-Qalam Educational Trust (Regd. 1991, Mumbai)",
@@ -22,8 +22,9 @@ export const schoolData = {
     "+91 8976890572"
   ],
   emails: {
+    primary: "alqalams26@gmail.com",
     info: "info@thescholarsschool.edu.in",
-    admin: "admin@thescholarsschool.edu.in"
+    admin: "alqalams26@gmail.com"
   },
   socials: {
     instagram: "https://www.instagram.com/thescholarshighschool",
@@ -51,26 +52,26 @@ export const schoolData = {
     },
     principals: [
       {
-        section: "Pre-Primary & Primary Section",
-        name: "Mrs. Zahida Kader Chunawala",
+        section: "Primary Section & MRAK Kids",
+        name: "",
         designation: "School Principal",
-        image: "/images/academics/primary-head.jpg",
+        image: "/images/academics/principal-female-avatar.png",
         focus: ["Foundational Literacy", "Moral Character", "Curiosity & Wonder"],
         message: "The Scholars High School aims to equip young learners with knowledge and foundational skills that instill academic curiosity, strong moral values, and sound character. With our visionary trustees and devoted faculty, we ensure a warm, engaging environment where each child develops confidence and a love for learning."
       },
       {
         section: "Secondary Section & Junior College",
-        name: "Mrs. Azra Nasreen Abdul Hakim Khan",
+        name: "",
         designation: "Principal (Secondary & College)",
-        image: "/images/academics/secondary-college-head.jpeg",
-        focus: ["SSC & HSC Board Mentorship", "Academic Discipline", "Commerce Specialization"],
+        image: "/images/academics/principal-female-avatar.png",
+        focus: ["SSC & HSC Board Mentorship", "Academic Discipline", "Arts & Commerce Specialization"],
         message: "Every academic year brings new milestones for our students. We focus on academic rigour, discipline, and personal integrity. By fostering gratitude, diligence, and intellectual exploration, we prepare our students to excel in board examinations and in life beyond the classroom."
       },
       {
         section: "Deeniyat Program",
-        name: "Hasan Kamal",
+        name: "",
         designation: "Head of Deeniyat",
-        image: "/images/academics/hasan-kamal.jpg",
+        image: "/images/academics/principal-male-avatar.png",
         focus: ["Quranic Principles", "Hadith & Islamic Ethics", "Character Building"],
         message: "Our Deeniyat curriculum provides students with a balanced understanding of Islamic ethics, Quranic values, Hadith, and moral conduct, seamlessly integrated alongside modern academic sciences."
       }

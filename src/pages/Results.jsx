@@ -12,7 +12,7 @@ export default function Results() {
     <>
       <SEO
         title="Board Examination Results | The Scholars School"
-        description="Official results of Maharashtra SSC and HSC examinations at The Scholars High School & Junior College for Commerce. Download official result gazettes."
+        description="Official results of Maharashtra SSC and HSC examinations at The Scholars High School & Junior College for Arts & Commerce. Download official result gazettes."
         canonical="https://thescholarsschool.edu.in/results/"
       />
 
@@ -33,7 +33,7 @@ export default function Results() {
           <SectionHeader
             eyebrow="PROVEN PERFORMANCE"
             title="Consistent 100% Board Passing Track Record"
-            subtitle="The Scholars High School and Junior College for Commerce adhere strictly to the examination curriculum of the Maharashtra State Board of Secondary and Higher Secondary Education."
+            subtitle="The Scholars High School and Junior College for Arts & Commerce adhere strictly to the examination curriculum of the Maharashtra State Board of Secondary and Higher Secondary Education."
             centered
           />
 

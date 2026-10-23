@@ -113,6 +113,9 @@ export default function ContactForm() {
       }
 
       if (!response.ok || !data.success) {
+        if (response.status === 429) {
+          throw new Error(data.error || 'Too many submissions from your connection. Please wait a few minutes before trying again.');
+        }
         if (response.status === 409) {
           throw new Error('A request was recently processed. Please wait a moment and try again.');
         }
@@ -262,7 +265,7 @@ export default function ContactForm() {
                 name="subject"
                 type="text"
                 className="contact-premium-input"
-                placeholder="e.g. Pre-Primary Admission Query"
+                placeholder="e.g. MRAK Kids Admission Query"
                 value={formData.subject}
                 onChange={handleChange}
                 maxLength="120"

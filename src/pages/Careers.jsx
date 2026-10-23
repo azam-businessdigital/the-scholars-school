@@ -12,7 +12,7 @@ export default function Careers() {
     { subject: "Mathematics", level: "Secondary Section", qualification: "B.Sc. / M.Sc. in Maths with B.Ed" },
     { subject: "Science (Physics, Chemistry, Biology)", level: "Secondary Section", qualification: "B.Sc. / M.Sc. in Science with B.Ed" },
     { subject: "Social Studies (History & Geography)", level: "Secondary Section", qualification: "B.A. / M.A. with B.Ed" },
-    { subject: "Art & Craft", level: "Pre-Primary & Primary", qualification: "ATD / Diploma in Fine Arts" },
+    { subject: "Art & Craft", level: "MRAK Kids & Primary", qualification: "ATD / Diploma in Fine Arts" },
     { subject: "Physical Training (PT Teacher)", level: "All Sections", qualification: "B.P.Ed / D.P.Ed" }
   ];
 
@@ -78,7 +78,7 @@ export default function Careers() {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ display: 'flex', gap: '10px', fontSize: '14px', color: 'var(--color-slate-grey-dark)', marginBottom: '10px' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <span>Send your updated resume in PDF format to <a href="mailto:admin@thescholarsschool.edu.in" style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>admin@thescholarsschool.edu.in</a>.</span>
+                    <span>Send your updated resume in PDF format to <a href={`mailto:${schoolData.emails.admin}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>{schoolData.emails.admin}</a> or <a href="mailto:info@thescholarsschool.edu.in" style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>info@thescholarsschool.edu.in</a>.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '10px', fontSize: '14px', color: 'var(--color-slate-grey-dark)', marginBottom: '10px' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />

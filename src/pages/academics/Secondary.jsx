@@ -23,66 +23,68 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function Secondary() {
   const data = academicsData.find((a) => a.id === 'secondary');
-  const principal = schoolData.leadership.principals[1]; // Mrs. Azra Nasreen Abdul Hakim Khan
+  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
 
   const secondaryGallery = [
     {
+      img: '/images/gallery/science-activity-4.jpeg',
+      title: 'Science Project Work & Working Model Showcase',
+      desc: 'Secondary scholars building functional physics, biological, and environmental working models.'
+    },
+    {
+      img: '/images/gallery/english-elocution-6.jpeg',
+      title: 'Annual English Elocution Competition',
+      desc: 'Students mastering oratorical poise, clear diction, and stage confidence in annual speech events.'
+    },
+    {
+      img: '/images/gallery/geography-activity-5.jpeg',
+      title: '3D Geography Landform & Cartography Study',
+      desc: 'Practical exploration of physical relief, contour structures, and earth landforms through 3D models.'
+    },
+    {
+      img: '/images/gallery/rubiks-cube-activity-2.jpeg',
+      title: 'Speed Cubing & Spatial Logic Workshops',
+      desc: 'Sharpening mental agility, sequence memory, and algorithmic problem solving with 3x3 Rubik\'s Cubes.'
+    },
+    {
+      img: '/images/gallery/class-cleaning-2.jpeg',
+      title: 'Swachh Campus & Civic Responsibility Drive',
+      desc: 'Instilling humility, hygiene discipline, and shared stewardship through classroom care campaigns.'
+    },
+    {
       img: '/images/academics/secondary-science-lab.jpg',
-      title: 'Advanced Science Laboratory Practicals',
-      desc: 'Physics, Chemistry, and Biology hands-on practical experiments preparing students for state board excellence.'
-    },
-    {
-      img: '/images/academics/primary-computer-lab.jpg',
-      title: 'Digital Technology & IT Applications',
-      desc: 'Dedicated workstation lab sessions covering digital spreadsheets, typing speed, and computer applications.'
-    },
-    {
-      img: '/images/academics/secondary-boys-staff.jpg',
-      title: 'Secondary Boys Section Faculty',
-      desc: 'Dedicated high school educators leading laboratory coaching, board revision, and character mentoring for boys.'
-    },
-    {
-      img: '/images/academics/secondary-girls-staff.jpg',
-      title: 'Secondary Girls Section Faculty',
-      desc: 'Subject specialists empowering young women with rigorous academic coaching, scientific practicals, and leadership.'
+      title: 'Hands-On Laboratory Practicals',
+      desc: 'Regular syllabus experiments in Physics, Chemistry, and Biology preparing students for SSC board exams.'
     }
   ];
 
   const dailyRoutine = [
     {
-      time: '07:10 AM',
       title: 'Morning Assembly & Du\'aa',
       desc: 'School assembly, Quranic recitation, moral thought for the day, and respectful national anthem.'
     },
     {
-      time: '07:35 AM',
       title: 'Core Mathematics & Sciences',
       desc: 'Intensive analytical lectures in Algebra, Geometry, and foundational Science theory with board problem solving.'
     },
     {
-      time: '09:30 AM',
       title: 'Science Lab & IT Practicals',
       desc: 'Hands-on laboratory experiments in Physics, Chemistry, and Biology, along with digital computer lab drills.'
     },
     {
-      time: '10:45 AM',
       title: 'Wholesome Recess & Refreshment',
       desc: 'Nutritious break, social interaction with peers, and disciplined campus movement.'
     },
     {
-      time: '11:15 AM',
       title: 'Languages & Social Sciences',
       desc: 'In-depth English grammar, literature analysis, Marathi, Hindi/Urdu, History, Civics, and Geography.'
     },
     {
-      time: '12:45 PM',
       title: 'Deeniyat, Doubt Clinics & Departure',
       desc: 'Daily Deeniyat period, individualized doubt clarification clinics, homework reviews, and orderly dismissal.'
     }
@@ -246,14 +248,14 @@ export default function Secondary() {
             <div className="mrak-principal-media">
               <img
                 src={principal.image}
-                alt={principal.name}
+                alt={principal.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.name}</div>
-              <div className="mrak-principal-role">{principal.designation}</div>
+              <div className="mrak-principal-name">{principal.designation}</div>
+              <div className="mrak-principal-role">{principal.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
                 {principal.section}
               </span>
@@ -288,7 +290,7 @@ export default function Secondary() {
             centered
           />
 
-          <div className="mrak-gallery-grid-4">
+          <div className="mrak-gallery-grid">
             {secondaryGallery.map((item, i) => (
               <div key={i} className="mrak-gallery-card">
                 <img
@@ -305,6 +307,13 @@ export default function Secondary() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-8)' }}>
+            <Link to="/gallery/?album=secondary-science-exhibition" className="btn btn-outline">
+              <span>View All Secondary Activity Albums in Gallery</span>
+              <ArrowUpRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -353,7 +362,6 @@ export default function Secondary() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -409,19 +417,7 @@ export default function Secondary() {
         </div>
       </section>
 
-      {/* SECTION 7: TEACHING FACULTY ROSTER & SECTION 8: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="ACADEMIC MENTORS"
-        facultyTitle={facultyData.secondary.sectionTitle}
-        facultySubtitle={facultyData.secondary.description}
-        teachers={facultyData.secondary.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Secondary Section Faculty: Girls &amp; Boys Wings"
-        photoSubtitle="Subject specialist educators photographed with school leadership across our secondary wings."
-        largePhotos={facultyData.secondary.largePhotos}
-      />
-
-      {/* SECTION 9: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 7: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>
@@ -439,7 +435,7 @@ export default function Secondary() {
               <ArrowUpRight size={18} />
             </Link>
             <Link to="/academics/junior-college/girls/" className="btn btn-outline-white btn-lg">
-              <span>Next: Junior College for Commerce</span>
+              <span>Next: Junior College for Arts &amp; Commerce</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

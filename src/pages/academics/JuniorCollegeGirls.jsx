@@ -23,14 +23,12 @@ import {
 import SEO from '../../components/common/SEO';
 import Breadcrumbs from '../../components/common/Breadcrumbs';
 import SectionHeader from '../../components/common/SectionHeader';
-import FacultyShowcase from '../../components/academics/FacultyShowcase';
 import { academicsData } from '../../data/academicsData';
 import { schoolData } from '../../data/schoolData';
-import { facultyData } from '../../data/facultyData';
 
 export default function JuniorCollegeGirls() {
   const data = academicsData.find((a) => a.id === 'junior-college-girls');
-  const principal = schoolData.leadership.principals[1]; // Mrs. Azra Nasreen Abdul Hakim Khan
+  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
 
   const collegeGallery = [
     {
@@ -39,9 +37,9 @@ export default function JuniorCollegeGirls() {
       desc: 'Collaborative commerce lectures, ledger adjustments, and real-world case discussions in our Commerce Department.'
     },
     {
-      img: '/images/academics/college-staff.jpg',
-      title: 'Junior College Commerce Faculty Team',
-      desc: 'Dedicated subject lecturers specializing in Book Keeping, Economics, OCM, and Secretarial Practice.'
+      img: '/images/academics/primary-computer-lab.jpg',
+      title: 'Digital Commerce & IT Practicals',
+      desc: 'Hands-on practical sessions in computerized accounting, digital spreadsheets, and commercial computing.'
     },
     {
       img: '/images/campus/banner1.jpg',
@@ -49,40 +47,34 @@ export default function JuniorCollegeGirls() {
       desc: 'Air-conditioned lecture rooms with smart audio-visual systems and comprehensive reference libraries.'
     },
     {
-      img: '/images/academics/secondary-girls-staff.jpg',
-      title: 'Pastoral Mentorship & Guidance',
-      desc: 'Experienced female faculty providing personalized academic counseling for CA, CS, and university admissions.'
+      img: '/images/campus/building.jpg',
+      title: 'Dedicated Seven-Floor Campus',
+      desc: 'Secure, modern educational environment with exclusive floor wings and dedicated amenities for girls.'
     }
   ];
 
   const dailyRoutine = [
     {
-      time: '07:15 AM',
       title: 'Morning Du\'aa & College Assembly',
       desc: 'Supplication for knowledge, morning reflection, and focus for a productive academic day.'
     },
     {
-      time: '07:35 AM',
       title: 'Book Keeping & Accountancy',
       desc: 'Double-entry ledger mechanics, partnership balance sheets, depreciation, and problem-solving drills.'
     },
     {
-      time: '08:45 AM',
       title: 'Economics & Financial Systems',
       desc: 'Microeconomic market analysis, national income computation, banking policies, and public finance.'
     },
     {
-      time: '09:45 AM',
       title: 'Wholesome Recess & Refreshment',
       desc: 'Restorative break, social bonding with classmates, and library research time.'
     },
     {
-      time: '10:15 AM',
       title: 'Organization of Commerce (OCM) / SP',
       desc: 'Corporate governance structures, commercial secretarial law, business management, and marketing.'
     },
     {
-      time: '11:45 AM',
       title: 'Commercial IT & Board Clinics',
       desc: 'Computerized accounting software, previous years board question drills, and individual doubt resolution.'
     }
@@ -133,8 +125,8 @@ export default function JuniorCollegeGirls() {
   return (
     <>
       <SEO
-        title="Junior College for Commerce: Girls Section | The Scholars School"
-        description="Junior College for Commerce (Girls Section) at The Scholars High School, Jogeshwari West. 100% HSC Board passing record preparing young women for professional financial careers."
+        title="Junior College for Arts & Commerce: Girls Section | The Scholars School"
+        description="Junior College for Arts & Commerce (Girls Section) at The Scholars High School, Jogeshwari West. 100% HSC Board passing record preparing young women for professional and academic careers."
         canonical="https://thescholarsschool.edu.in/academics/junior-college/girls/"
       />
 
@@ -142,11 +134,11 @@ export default function JuniorCollegeGirls() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">HIGHER SECONDARY COMMERCE &bull; CLASS 11 &amp; 12 &bull; HSC BOARD</span>
+            <span className="mrak-banner-tag">HIGHER SECONDARY &bull; CLASS 11 &amp; 12 (XI &amp; XII) &bull; ARTS &amp; COMMERCE &bull; HSC BOARD</span>
           </div>
-          <h1>Junior College for Commerce: Girls Section (HSC Board)</h1>
+          <h1>Junior College for Arts &amp; Commerce: Girls Section (HSC Board)</h1>
           <p>
-            An empowering educational space for young women providing rigorous commerce instruction, career mentoring, and a proven 100% HSC Board pass outcome.
+            An empowering educational space for young women providing rigorous Arts &amp; Commerce instruction, career mentoring, and a proven 100% HSC Board pass outcome.
           </p>
         </div>
       </div>
@@ -246,16 +238,16 @@ export default function JuniorCollegeGirls() {
             <div className="mrak-principal-media">
               <img
                 src={principal.image}
-                alt={principal.name}
+                alt={principal.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.name}</div>
-              <div className="mrak-principal-role">{principal.designation}</div>
+              <div className="mrak-principal-name">{principal.designation}</div>
+              <div className="mrak-principal-role">{principal.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                Junior College for Commerce
+                Junior College for Arts &amp; Commerce
               </span>
             </div>
 
@@ -264,11 +256,11 @@ export default function JuniorCollegeGirls() {
                 Inspiring Young Women to Excel in Business, Finance &amp; Leadership
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;Our Junior College Girls Section provides young women with a dignified, intellectually demanding, and supportive environment to excel in commerce and finance. Through rigorous grounding in Book Keeping, Economics, Corporate Secretarial Practice, and Business Mathematics, our students consistently achieve 100% HSC Board results and step confidently into careers in Chartered Accountancy, corporate finance, and business leadership.&rdquo;
+                &ldquo;Our Junior College Girls Section provides young women with a dignified, intellectually demanding, and supportive environment to excel in arts, commerce, and finance. Through rigorous grounding in Book Keeping, Economics, Corporate Secretarial Practice, and Humanities, our students consistently achieve 100% HSC Board results and step confidently into careers in Chartered Accountancy, civil services, corporate finance, and business leadership.&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; 100% HSC Board Pass Record</span>
-                <span className="mrak-pillar-chip">&bull; Professional Commerce Focus</span>
+                <span className="mrak-pillar-chip">&bull; Arts &amp; Commerce Distinction</span>
                 <span className="mrak-pillar-chip">&bull; CA / CS / CMA Mentorship</span>
                 <span className="mrak-pillar-chip">&bull; Safe &amp; Modest Campus Climate</span>
                 <span className="mrak-pillar-chip">&bull; Career Counseling &amp; Seminars</span>
@@ -340,12 +332,12 @@ export default function JuniorCollegeGirls() {
         </div>
       </section>
 
-      {/* SECTION 5: A DAY IN JUNIOR COLLEGE (ROUTINE) */}
+      {/* SECTION 5: DISCIPLINED & CAREER-FOCUSED (ROUTINE) */}
       <section className="section section-ivory">
         <div className="container">
           <SectionHeader
             eyebrow="STRUCTURED DAILY TIMETABLE"
-            title="A Day in Junior College: Disciplined &amp; Career-Focused"
+            title="Disciplined &amp; Career-Focused"
             subtitle="Balanced college schedule combining conceptual lectures, practical accounting drills, and board preparation."
             centered
           />
@@ -353,7 +345,6 @@ export default function JuniorCollegeGirls() {
           <div className="mrak-routine-grid">
             {dailyRoutine.map((step, i) => (
               <div key={i} className="mrak-routine-card">
-                <span className="mrak-routine-time">{step.time}</span>
                 <h3 className="mrak-routine-title">{step.title}</h3>
                 <p className="mrak-routine-desc">{step.desc}</p>
               </div>
@@ -409,31 +400,17 @@ export default function JuniorCollegeGirls() {
         </div>
       </section>
 
-      {/* SECTION 7: TEACHING FACULTY ROSTER & SECTION 8: LARGE TEACHERS PHOTO */}
-      <FacultyShowcase
-        facultyEyebrow="COMMERCE LECTURERS"
-        facultyTitle={facultyData.college.sectionTitle}
-        facultySubtitle={facultyData.college.description}
-        teachers={facultyData.college.teachers}
-        photoEyebrow="FACULTY HONOUR ROLL"
-        photoTitle="Junior College Commerce Faculty Team"
-        photoSubtitle={facultyData.college.photoCaptionSub}
-        largePhoto={facultyData.college.largePhoto}
-        captionTitle={facultyData.college.photoCaptionTitle}
-        captionSub={facultyData.college.photoCaptionSub}
-      />
-
-      {/* SECTION 9: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
+      {/* SECTION 7: ENROLLMENT & NEXT ACADEMIC STAGE CTA */}
       <section className="section section-navy" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="eyebrow" style={{ color: 'var(--color-champagne-gold)', letterSpacing: '0.12em' }}>
-            ENROLL FOR JUNIOR COLLEGE COMMERCE
+            ENROLL FOR JUNIOR COLLEGE (ARTS &amp; COMMERCE)
           </span>
           <h2 className="section-title" style={{ color: '#fff', marginBottom: '16px' }}>
-            Step Into a Rewarding Career in Commerce &amp; Finance
+            Step Into a Rewarding Career in Arts, Commerce &amp; Finance
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>
-            Admissions for Class XI Commerce (Girls Section) are processed following Class 10 result declarations. Submit your admission enquiry today to reserve your seat.
+            Admissions for Class XI (Arts &amp; Commerce - Girls Section) are processed following Class 10 result declarations. Submit your admission enquiry today to reserve your seat.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/admissions/" className="btn btn-gold btn-lg">

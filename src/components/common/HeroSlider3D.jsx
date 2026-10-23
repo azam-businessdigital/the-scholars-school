@@ -37,7 +37,7 @@ const slides = [
   },
   {
     id: 4,
-    image: '/images/campus/teacher-head.jpg',
+    image: '/images/academics/deeniyat-classroom.jpg',
     eyebrow: 'AL-QALAM EDUCATIONAL TRUST',
     title: 'Academic Excellence & Moral Values',
     subtitle: 'Holistic curriculum integrating academic rigor with ethical Islamic guidance.',

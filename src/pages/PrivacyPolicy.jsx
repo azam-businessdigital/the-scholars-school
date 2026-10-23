@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <>
       <SEO
         title="Privacy Policy | The Scholars School"
-        description="Privacy policy outlining data collection, admission enquiry handling, and personal information protection at The Scholars High School & Junior College."
+        description="Privacy policy outlining data collection, admission enquiry handling, and personal information protection at The Scholars High School & Junior College for Arts & Commerce."
         canonical="https://thescholarsschool.edu.in/privacy-policy/"
       />
 
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
           <span className="eyebrow">LEGAL DOCUMENTATION</span>
           <h1>Privacy Policy</h1>
           <p>
-            How The Scholars High School &amp; Junior College handles personal information collected via our website and admission enquiry portals.
+            How The Scholars High School &amp; Junior College for Arts &amp; Commerce handles personal information collected via our website and admission enquiry portals.
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
               1. Institutional Commitment
             </h2>
             <p>
-              The Scholars High School &amp; Junior College for Commerce, managed by the Al-Qalam Educational Trust (Regd. 1991, Mumbai), is committed to safeguarding the privacy and confidential personal data of our prospective students, enrolled learners, parents, guardians, and staff members.
+              The Scholars High School &amp; Junior College for Arts &amp; Commerce, managed by the Al-Qalam Educational Trust (Regd. 1991, Mumbai), is committed to safeguarding the privacy and confidential personal data of our prospective students, enrolled learners, parents, guardians, and staff members.
             </p>
 
             <h2 style={{ fontSize: '1.25rem', color: 'var(--color-royal-navy)', marginTop: '24px', marginBottom: '12px' }}>
@@ -82,9 +82,9 @@ export default function PrivacyPolicy() {
               If you have any questions or concerns regarding this privacy statement or our handling of personal information, please write to us at:
             </p>
             <p>
-              <strong>The Scholars High School &amp; Junior College for Commerce</strong><br />
+              <strong>The Scholars High School &amp; Junior College for Arts &amp; Commerce</strong><br />
               Captain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower, Jogeshwari (West), Mumbai 400102<br />
-              Email: <a href="mailto:info@thescholarsschool.edu.in">info@thescholarsschool.edu.in</a><br />
+              Email: <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a> &bull; <a href="mailto:info@thescholarsschool.edu.in">info@thescholarsschool.edu.in</a><br />
               Telephone: <a href="tel:+918976890569">+91 8976890569</a>
             </p>
           </div>

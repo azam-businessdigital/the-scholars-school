@@ -38,15 +38,14 @@ export default function AdmissionForm({ initialSection = '' }) {
   const [feedbackMessage, setFeedbackMessage] = useState('');
 
   const sectionsList = [
-    'MRAK Kids Pre School',
-    'Pre-Primary: Nursery',
-    'Pre-Primary: Junior KG',
-    'Pre-Primary: Senior KG',
+    'MRAK Kids: Nursery',
+    'MRAK Kids: Mont – 2',
+    'MRAK Kids: Sr.KG',
     'Primary Section: Grades 1 to 4',
     'Secondary Section: Grades 5 to 10 (Boys)',
     'Secondary Section: Grades 5 to 10 (Girls)',
-    'Junior College: Commerce (Girls Section)',
-    'Junior College: Commerce (Boys Section)',
+    'Junior College: Arts & Commerce (Girls Section)',
+    'Junior College: Arts & Commerce (Boys Section)',
     'Integrated Deeniyat Program'
   ];
 
@@ -139,73 +138,28 @@ export default function AdmissionForm({ initialSection = '' }) {
       const apiPrefix = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || (typeof window !== 'undefined' && window.location.pathname.startsWith('/the-scholars-school') ? '/the-scholars-school' : '');
       const endpoint = baseUrl ? `${baseUrl}/admission-enquiry` : `${apiPrefix}/api/admission.php`;
 
-      let isDevOrStatic = false;
       let result = {};
 
-      try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          cache: 'no-store',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            ...formData,
-            recaptchaToken: recaptchaToken || ''
-          })
-        });
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        cache: 'no-store',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: recaptchaToken || ''
+        })
+      });
 
-        const rawText = await response.text();
+      const rawText = await response.text();
 
-        // If server returns PHP source code (running under Vite dev without PHP interpreter)
-        if (rawText.trim().startsWith('<?php') || !response.ok) {
-          isDevOrStatic = true;
-        } else {
-          try {
-            result = JSON.parse(rawText);
-            if (result.success) {
-              setStatus('success');
-              setFeedbackMessage(
-                result.message || 'Thank you! Your admission enquiry has been logged successfully. Our admissions counseling office will contact you within 1 to 2 working days.'
-              );
-              setFormData({
-                parentName: '',
-                studentName: '',
-                phone: '',
-                email: '',
-                section: '',
-                message: '',
-                consent: false,
-                website_honeypot: ''
-              });
-              return;
-            } else {
-              throw new Error(result.error || 'Server error processing enquiry');
-            }
-          } catch (jsonErr) {
-            isDevOrStatic = true;
-          }
-        }
-      } catch (fetchErr) {
-        // If fetch fails in dev or static preview
-        isDevOrStatic = true;
-      }
-
-      // If testing in development or static hosting preview, simulate successful submission
-      if (isDevOrStatic) {
-        try {
-          const stored = JSON.parse(localStorage.getItem('scholars_admission_enquiries') || '[]');
-          stored.push({
-            ...formData,
-            submittedAt: new Date().toISOString()
-          });
-          localStorage.setItem('scholars_admission_enquiries', JSON.stringify(stored));
-        } catch (_) {}
-
+      // Only simulate success in local development if Vite serves raw PHP source
+      if (import.meta.env.DEV && rawText.trim().startsWith('<?php')) {
         setStatus('success');
         setFeedbackMessage(
-          `Thank you, ${formData.parentName}! Your admission enquiry for ${formData.studentName} (${formData.section}) has been recorded successfully. Our admissions counselor will contact you at ${formData.phone} within 24 working hours.`
+          `[Dev Mode] Thank you, ${formData.parentName}! Your admission enquiry for ${formData.studentName} (${formData.section}) simulated successfully.`
         );
         setFormData({
           parentName: '',
@@ -219,6 +173,35 @@ export default function AdmissionForm({ initialSection = '' }) {
         });
         return;
       }
+
+      try {
+        result = JSON.parse(rawText);
+      } catch (_) {
+        console.warn('API returned non-JSON response:', rawText);
+      }
+
+      if (!response.ok || !result.success) {
+        if (response.status === 429) {
+          throw new Error(result.error || 'Too many submissions received. Please wait a few minutes before trying again.');
+        }
+        throw new Error(result.error || `Server error (HTTP ${response.status || 'unknown'})`);
+      }
+
+      setStatus('success');
+      setFeedbackMessage(
+        result.message || 'Thank you! Your admission enquiry has been logged successfully. Our admissions counseling office will contact you within 1 to 2 working days.'
+      );
+      setFormData({
+        parentName: '',
+        studentName: '',
+        phone: '',
+        email: '',
+        section: '',
+        message: '',
+        consent: false,
+        website_honeypot: ''
+      });
+      return;
     } catch (err) {
       setStatus('error');
       setFeedbackMessage(

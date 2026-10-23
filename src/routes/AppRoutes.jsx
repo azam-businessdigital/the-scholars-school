@@ -19,7 +19,6 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 
 // Academic Detail Pages
 const MrakKids = lazy(() => import('../pages/academics/MrakKids'));
-const PrePrimary = lazy(() => import('../pages/academics/PrePrimary'));
 const Primary = lazy(() => import('../pages/academics/Primary'));
 const Secondary = lazy(() => import('../pages/academics/Secondary'));
 const Deeniyat = lazy(() => import('../pages/academics/Deeniyat'));
@@ -43,8 +42,8 @@ export default function AppRoutes() {
           <Route path="academics/mrak-kids" element={<Navigate to="/academics/mrak-kids/" replace />} />
           <Route path="academics/mrak-kids/" element={<MrakKids />} />
 
-          <Route path="academics/pre-primary" element={<Navigate to="/academics/pre-primary/" replace />} />
-          <Route path="academics/pre-primary/" element={<PrePrimary />} />
+          <Route path="academics/pre-primary" element={<Navigate to="/academics/mrak-kids/" replace />} />
+          <Route path="academics/pre-primary/" element={<Navigate to="/academics/mrak-kids/" replace />} />
 
           <Route path="academics/primary" element={<Navigate to="/academics/primary/" replace />} />
           <Route path="academics/primary/" element={<Primary />} />
@@ -102,7 +101,7 @@ export default function AppRoutes() {
           <Route path="about-us.php" element={<Navigate to="/about-us/" replace />} />
           <Route path="pre-school-section.php" element={<Navigate to="/academics/mrak-kids/" replace />} />
           <Route path="preschool.php" element={<Navigate to="/academics/mrak-kids/" replace />} />
-          <Route path="pre-primary-section.php" element={<Navigate to="/academics/pre-primary/" replace />} />
+          <Route path="pre-primary-section.php" element={<Navigate to="/academics/mrak-kids/" replace />} />
           <Route path="primary-section.php" element={<Navigate to="/academics/primary/" replace />} />
           <Route path="secondary-section.php" element={<Navigate to="/academics/secondary/" replace />} />
           <Route path="deeniyat.php" element={<Navigate to="/academics/deeniyat/" replace />} />

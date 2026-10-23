@@ -42,11 +42,22 @@ scratch/
 
 # API secrets and local configs
 public/api/config.local.php
+dist/api/config.local.php
 public/api/.env
+dist/api/.env
 *.local.php
 recaptcha_debug.log
 mail_debug.log
 *_archive.json
 public/api/*_archive.json
+dist/api/*_archive.json
+
+# Internal protected data & rate limiting storage
+.data/
+**/.data/
+rate_limits.json
+audit_links_images.json
+scraped_summary.json
+
 
 

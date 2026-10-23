@@ -10,15 +10,10 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
 header('Expires: 0');
 
-// Handle preflight OPTIONS
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With');
-    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-    http_response_code(204);
-    exit;
-}
+require_once __DIR__ . '/rate_limiter.php';
+
+// Handle CORS and preflight requests
+handleSecureCors();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -26,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-header('Access-Control-Allow-Origin: *');
+// Enforce rate limiting: 5 admission submissions per 10 minutes per IP
+enforceRateLimit('admission', 5, 600);
 
 $config = require __DIR__ . '/config.php';
 require_once __DIR__ . '/mailer.php';
@@ -46,7 +42,7 @@ if (!empty($data['honeypot']) || !empty($data['website_honeypot'])) {
     exit;
 }
 
-// Validation
+// Strict Input Validation & Bounds
 $parentName = trim($data['parentName'] ?? '');
 $studentName = trim($data['studentName'] ?? '');
 $phone = trim($data['phone'] ?? '');
@@ -56,15 +52,22 @@ $message = trim($data['message'] ?? '');
 $consent = !empty($data['consent']);
 $recaptchaToken = trim($data['recaptchaToken'] ?? '');
 
-if (strlen($parentName) < 2) {
+// Strip CRLF to prevent header injection
+$parentName = str_replace(["\r", "\n"], ' ', $parentName);
+$studentName = str_replace(["\r", "\n"], ' ', $studentName);
+$section = str_replace(["\r", "\n"], ' ', $section);
+$email = str_replace(["\r", "\n"], '', $email);
+$phone = str_replace(["\r", "\n"], '', $phone);
+
+if (strlen($parentName) < 2 || strlen($parentName) > 100) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please provide a valid parent or guardian name.']);
+    echo json_encode(['success' => false, 'error' => 'Please provide a valid parent or guardian name (2 to 100 characters).']);
     exit;
 }
 
-if (strlen($studentName) < 2) {
+if (strlen($studentName) < 2 || strlen($studentName) > 100) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please provide the student\'s full name.']);
+    echo json_encode(['success' => false, 'error' => 'Please provide the student\'s full name (2 to 100 characters).']);
     exit;
 }
 
@@ -75,15 +78,21 @@ if (!preg_match('/^[+]?[0-9]{10,14}$/', $cleanPhone)) {
     exit;
 }
 
-if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!empty($email) && (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100)) {
     http_response_code(422);
-    echo json_encode(['success' => false, 'error' => 'Please provide a valid email address.']);
+    echo json_encode(['success' => false, 'error' => 'Please provide a valid email address (max 100 characters).']);
     exit;
 }
 
-if (empty($section)) {
+if (empty($section) || strlen($section) > 120) {
     http_response_code(422);
     echo json_encode(['success' => false, 'error' => 'Please select the academic section of interest.']);
+    exit;
+}
+
+if (strlen($message) > 4000) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'error' => 'Your message is too long (maximum 4000 characters).']);
     exit;
 }
 
@@ -104,7 +113,7 @@ if (!$captchaResult['success']) {
     http_response_code(400);
     echo json_encode([
         'success' => false,
-        'error' => $captchaResult['error'] ?? 'reCAPTCHA verification failed. Please try again.'
+        'error' => $captchaResult['error'] ?? 'Security verification failed. Please refresh and try again.'
     ]);
     exit;
 }
@@ -117,7 +126,7 @@ $meta = [
 $adminHtml = buildAdmissionEmailHtml([
     'parentName' => $parentName,
     'studentName' => $studentName,
-    'phone' => $phone,
+    'phone' => $cleanPhone,
     'email' => $email,
     'section' => $section,
     'message' => $message
@@ -135,8 +144,15 @@ $sendResult = sendSmtpEmail(
     $parentName
 );
 
-// Local Data Archive (Preserve application in all circumstances)
-$archiveFile = __DIR__ . '/admissions_archive.json';
+// Secure Local Data Archive (Protected storage under .data/ folder)
+$storageDir = __DIR__ . '/.data';
+if (!is_dir($storageDir)) {
+    @mkdir($storageDir, 0750, true);
+    @file_put_contents($storageDir . '/.htaccess', "Require all denied\nDeny from all\n");
+    @file_put_contents($storageDir . '/index.html', "");
+}
+
+$archiveFile = $storageDir . '/admissions_archive.json';
 $entries = file_exists($archiveFile) ? json_decode(@file_get_contents($archiveFile), true) : [];
 if (!is_array($entries)) $entries = [];
 $entries[] = [
@@ -145,19 +161,19 @@ $entries[] = [
     'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
     'parentName' => $parentName,
     'studentName' => $studentName,
-    'phone' => $phone,
+    'phone' => $cleanPhone,
     'email' => $email,
     'section' => $section,
     'message' => $message,
     'recaptchaScore' => $captchaResult['score'] ?? 1.0
 ];
-@file_put_contents($archiveFile, json_encode($entries, JSON_PRETTY_PRINT));
+@file_put_contents($archiveFile, json_encode($entries, JSON_PRETTY_PRINT), LOCK_EX);
 
 if (!$sendResult['success']) {
     @file_put_contents(
-        __DIR__ . '/mail_debug.log',
+        $storageDir . '/mail_debug.log',
         date('[Y-m-d H:i:s] ') . "Email delivery queued/delayed: " . ($sendResult['error'] ?? 'Unknown error') . " - Record saved in archive.\n",
-        FILE_APPEND
+        FILE_APPEND | LOCK_EX
     );
 }
 

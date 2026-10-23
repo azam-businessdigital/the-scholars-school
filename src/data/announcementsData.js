@@ -14,10 +14,10 @@ export const announcementsData = [
     title: "Maharashtra HSC Commerce Board Examination 2024-2025 Results",
     date: "25 May 2025",
     category: "Results",
-    summary: "The Scholars Junior College for Commerce announces 100% pass results in the HSC Maharashtra State Board examinations.",
+    summary: "The Scholars Junior College for Arts & Commerce announces 100% pass results in the HSC Maharashtra State Board examinations.",
     documentUrl: "/documents/hsc_result_2024_25_commerce.pdf",
     documentName: "HSC Commerce Result Gazette (PDF)",
-    details: "Congratulations to our Junior College Commerce students for securing excellent grades and continuing the institution's tradition of 100% passing results in the Higher Secondary Certificate examination."
+    details: "Congratulations to our Junior College Arts & Commerce students for securing excellent grades and continuing the institution's tradition of 100% passing results in the Higher Secondary Certificate examination."
   },
   {
     id: "notice-hsc-arts-2024-25",
@@ -34,7 +34,7 @@ export const announcementsData = [
     title: "Admissions Open for Academic Session: Pre-School to Junior College",
     date: "15 January 2026",
     category: "Admissions",
-    summary: "Admission enquiry counters are open for MRAK Kids Pre School, Pre-Primary, Primary, Secondary, and Junior College for Commerce.",
+    summary: "Admission enquiry counters are open for MRAK Kids Pre School, Primary, Secondary, and Junior College for Arts & Commerce.",
     documentUrl: null,
     documentName: null,
     details: "Parents seeking values-based, English-medium education for their children are invited to submit admission enquiries online or visit the school administrative office at Hill Park, Jogeshwari West."
@@ -47,6 +47,6 @@ export const announcementsData = [
     summary: "Applications invited for Head Mistress (B.Ed/D.T.Ed) and Teachers in English, Marathi, Mathematics, Science, Social Studies, Art & Craft, and Physical Training.",
     documentUrl: null,
     documentName: null,
-    details: "The Scholars High School invites dedicated education professionals to join our family. Eligible candidates are requested to send resumes to admin@thescholarsschool.edu.in."
+    details: "The Scholars High School invites dedicated education professionals to join our family. Eligible candidates are requested to send resumes to alqalams26@gmail.com or info@thescholarsschool.edu.in."
   }
 ];

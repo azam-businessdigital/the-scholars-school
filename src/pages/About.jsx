@@ -32,14 +32,14 @@ export default function About() {
     <>
       <SEO
         title="About Us - Legacy, Leadership & Values"
-        description="Learn about The Scholars High School & Junior College, established in 1993 under Al-Qalam Educational Trust in Jogeshwari West, Mumbai."
+        description="Learn about The Scholars High School & Junior College for Arts & Commerce, established in 1993 under Al-Qalam Educational Trust in Jogeshwari West, Mumbai."
         canonical="https://thescholarsschool.edu.in/about-us/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">ABOUT THE INSTITUTION</span>
-          <h1>About The Scholars High School &amp; Junior College</h1>
+          <h1>About The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
           <p>
             Three decades of dedicated educational service: fostering academic excellence, moral integrity, and social responsibility in Mumbai since 1993.
           </p>
@@ -88,10 +88,10 @@ export default function About() {
                 Building Future Leaders Through Modern &amp; Moral Education
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School &amp; Junior College for Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Welcome to <strong>The Scholars High School &amp; Junior College for Arts &amp; Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
               </p>
               <p style={{ marginBottom: '24px' }}>
-                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record.
+                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
               </p>
 
               {/* 3 Core Highlights (Al-Irfan Style) */}
@@ -113,9 +113,9 @@ export default function About() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Junior College for Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">Junior College for Arts &amp; Commerce (Std XI - XII HSC)</h3>
                     <p className="about-feature-text">
-                      Specialized higher secondary commerce education with dedicated faculty and separate divisions for boys and girls, preparing future finance leaders.
+                      Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
                     </p>
                   </div>
                 </div>
@@ -276,7 +276,7 @@ export default function About() {
                 <div className="head-avatar-wrap">
                   <img
                     src={leader.image}
-                    alt={leader.name}
+                    alt={leader.designation}
                     className="head-avatar-img"
                     loading="lazy"
                     width="130"
@@ -287,8 +287,8 @@ export default function About() {
 
                 {/* Card Content Body */}
                 <div className="head-card-body">
-                  <h3 className="head-name">{leader.name}</h3>
-                  <div className="head-designation">{leader.designation}</div>
+                  <h3 className="head-name" style={{ minHeight: 'auto', marginBottom: '6px' }}>{leader.designation}</h3>
+                  <div className="head-designation">{leader.section}</div>
 
                   <div className="head-gold-divider" aria-hidden="true"></div>
 

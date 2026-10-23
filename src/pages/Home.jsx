@@ -49,18 +49,10 @@ const academicSectionsHome = [
   {
     id: 'mrak-kids',
     title: 'MRAK Kids Pre School',
-    badge: 'Ages 2.5 - 4 Years',
+    badge: 'STD: Nursery, Mont – 2 & Sr.KG',
     heroImage: '/images/academics/pre-school.jpg',
-    desc: 'Early childhood discovery, phonics, and play-based inquiry.',
+    desc: 'Early childhood foundation with Jolly Phonics, sensory play, and moral values.',
     path: '/academics/mrak-kids/'
-  },
-  {
-    id: 'pre-primary',
-    title: 'Pre-Primary Section',
-    badge: 'Nursery, Jr & Sr KG',
-    heroImage: '/images/academics/pre-primary.jpeg',
-    desc: 'Foundational literacy, numeracy, and cooperative social habits.',
-    path: '/academics/pre-primary/'
   },
   {
     id: 'primary',
@@ -74,16 +66,16 @@ const academicSectionsHome = [
     id: 'secondary',
     title: 'Secondary Section',
     badge: 'Grades 5 to 10 (SSC)',
-    heroImage: '/images/campus/banner2.jpg',
+    heroImage: '/images/gallery/science-activity-4.jpeg',
     desc: 'Rigorous state board preparation with consistent 100% SSC results.',
     path: '/academics/secondary/'
   },
   {
     id: 'junior-college',
-    title: 'Junior College (Commerce)',
-    badge: 'XI & XII Commerce (HSC)',
-    heroImage: '/images/academics/college-staff.jpg',
-    desc: 'Higher secondary commerce education with dedicated boys and girls sections.',
+    title: 'Junior College (Arts & Commerce)',
+    badge: 'XI & XII Arts & Commerce (HSC)',
+    heroImage: '/images/academics/junior-college-girls.jpg',
+    desc: 'Higher secondary Arts & Commerce education with dedicated boys and girls sections.',
     path: '/academics/junior-college/girls/'
   },
   {
@@ -173,10 +165,10 @@ export default function Home() {
                 Building Future Leaders Through Modern &amp; Moral Education
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School &amp; Junior College for Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Welcome to <strong>The Scholars High School &amp; Junior College for Arts &amp; Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
               </p>
               <p style={{ marginBottom: '24px' }}>
-                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record.
+                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
               </p>
 
               {/* 3 Core Highlights (Al-Irfan Style) */}
@@ -198,9 +190,9 @@ export default function Home() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Junior College for Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">Junior College for Arts &amp; Commerce (Std XI - XII HSC)</h3>
                     <p className="about-feature-text">
-                      Specialized higher secondary commerce education with dedicated faculty and separate divisions for boys and girls, preparing future finance leaders.
+                      Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
                     </p>
                   </div>
                 </div>
@@ -233,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 3: ADMISSIONS OPEN 2026-27 (Al-Irfan Dedicated Callout Banner) */}
+      {/* SECTION 3: ADMISSIONS OPEN 2026-27 (START YOUR CHILD'S JOURNEY) */}
       <section className="section admission-highlight-section" aria-labelledby="admission-banner-heading">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-12)' }}>
@@ -243,7 +235,7 @@ export default function Home() {
                 Admissions Open <br />For Academic Year 2026-27
               </h2>
               <p className="section-subtitle">
-                Join The Scholars High School &amp; Junior College for Commerce, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
+                Join The Scholars High School &amp; Junior College for Arts &amp; Commerce, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
               </p>
 
               <div className="admission-features-grid stagger-group">
@@ -253,7 +245,7 @@ export default function Home() {
                 </div>
                 <div className="admission-feature-chip">
                   <GraduationCap size={20} className="chip-icon" />
-                  <span>Junior College for Commerce (HSC)</span>
+                  <span>Junior College for Arts &amp; Commerce (HSC)</span>
                 </div>
                 <div className="admission-feature-chip">
                   <Building2 size={20} className="chip-icon" />
@@ -297,82 +289,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: WHY CHOOSE US (Al-Irfan 6-Card Modern Grid) */}
-      <section className="section section-white" aria-labelledby="why-choose-heading">
-        <div className="container">
-          <SectionHeader
-            eyebrow="WHY CHOOSE US"
-            title="Why Choose The Scholars High School"
-            subtitle="We provide a balanced educational environment focused on academic excellence, Islamic moral values, modern infrastructure, and student character."
-            centered
-          />
-
-          <div className="grid-3 stagger-group reveal-up">
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Award size={28} />
-              </div>
-              <h3 className="why-choose-title">100% Board Passing Track Record</h3>
-              <p className="why-choose-text">
-                Consistent 100% pass outcomes in Maharashtra SSC (Class 10) and HSC Commerce (Class 12) board examinations with numerous distinctions and subject toppers.
-              </p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <ShieldCheck size={28} />
-              </div>
-              <h3 className="why-choose-title">Values-Based Deeniyat Education</h3>
-              <p className="why-choose-text">
-                Integrated Islamic moral education encompassing Quranic literacy, Hadith principles, and ethical tarbiyah preparing students to become compassionate leaders.
-              </p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Building2 size={28} />
-              </div>
-              <h3 className="why-choose-title">7-Floor Purpose-Built Modern Campus</h3>
-              <p className="why-choose-text">
-                Spacious seven-level facility in Hill Park, Jogeshwari West, featuring passenger elevator accessibility, hygienic RO drinking water on every floor, and secure surveillance.
-              </p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Monitor size={28} />
-              </div>
-              <h3 className="why-choose-title">Air-Conditioned Smart Classrooms</h3>
-              <p className="why-choose-text">
-                Fully air-conditioned learning spaces with digital interactive smart boards and audiovisual equipment that make lessons engaging and effective throughout Mumbai's warm climate.
-              </p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Cpu size={28} />
-              </div>
-              <h3 className="why-choose-title">Advanced Computer &amp; Science Labs</h3>
-              <p className="why-choose-text">
-                Dedicated high-speed computer labs and fully equipped Physics, Chemistry, and Biology laboratories enabling hands-on curriculum practicals and technological literacy.
-              </p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Compass size={28} />
-              </div>
-              <h3 className="why-choose-title">Holistic Extracurricular Growth</h3>
-              <p className="why-choose-text">
-                Annual sports meets, leaf art exhibitions, patriotic observances, elocution contests, and co-curricular presentations fostering confidence, teamwork, and sportsmanship.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: ACADEMIC SECTIONS (FOUNDATION TO HIGHER SECONDARY) */}
-      <section className="section section-ivory" aria-labelledby="academics-heading">
+      {/* SECTION 4: ACADEMIC SECTIONS (FOUNDATION TO HIGHER SECONDARY) */}
+      <section className="section section-white" aria-labelledby="academics-heading">
         <div className="container">
           <SectionHeader
             eyebrow="FOUNDATION TO HIGHER SECONDARY"
@@ -396,7 +314,81 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 5: LEADERSHIP MESSAGE */}
+      {/* SECTION 5: WHY CHOOSE US (Al-Irfan 6-Card Modern Grid) */}
+      <section className="section section-ivory" aria-labelledby="why-choose-heading">
+        <div className="container">
+          <SectionHeader
+            eyebrow="WHY CHOOSE US"
+            title="Why Choose The Scholars High School"
+            subtitle="We provide a balanced educational environment focused on academic excellence, Islamic moral values, modern infrastructure, and student character."
+            centered
+          />
+
+          <div className="grid-3 stagger-group reveal-up">
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Award size={28} />
+              </div>
+              <h3 className="why-choose-title">100% Board Pass Record</h3>
+              <p className="why-choose-text">
+                100% pass outcomes in SSC (X) &amp; HSC Arts &amp; Commerce (XII).
+              </p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <ShieldCheck size={28} />
+              </div>
+              <h3 className="why-choose-title">Values-Based Deeniyat</h3>
+              <p className="why-choose-text">
+                Quranic literacy, Hadith principles, and moral tarbiyah.
+              </p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Building2 size={28} />
+              </div>
+              <h3 className="why-choose-title">7-Floor Modern Campus</h3>
+              <p className="why-choose-text">
+                Purpose-built campus with elevator, CCTV, and RO water.
+              </p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Monitor size={28} />
+              </div>
+              <h3 className="why-choose-title">AC Smart Classrooms</h3>
+              <p className="why-choose-text">
+                Climate-controlled spaces with interactive digital boards.
+              </p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Cpu size={28} />
+              </div>
+              <h3 className="why-choose-title">Science &amp; IT Labs</h3>
+              <p className="why-choose-text">
+                Equipped computer, Physics, Chemistry, and Biology labs.
+              </p>
+            </div>
+
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Compass size={28} />
+              </div>
+              <h3 className="why-choose-title">Holistic Growth &amp; Sports</h3>
+              <p className="why-choose-text">
+                Annual sports, creative arts, and confidence building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: LEADERSHIP MESSAGE */}
       <section className="section section-white" aria-labelledby="leadership-heading">
         <div className="container">
           <SectionHeader
@@ -661,7 +653,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="ACADEMIC TRACK RECORD"
             title="100% Board Results &amp; Academic Honors"
-            subtitle="The Scholars High School and Junior College for Commerce take pride in achieving 100% passing results in the Maharashtra State Board examinations every year."
+            subtitle="The Scholars High School and Junior College for Arts & Commerce take pride in achieving 100% passing results in the Maharashtra State Board examinations every year."
             centered
           />
 
@@ -1194,8 +1186,10 @@ export default function Home() {
                 <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }}>
                   <Mail size={20} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />
                   <div>
-                    <strong style={{ color: 'var(--color-royal-navy)' }}>Office Email:</strong>
+                    <strong style={{ color: 'var(--color-royal-navy)' }}>Office Emails:</strong>
                     <div className="card-text campus-card-links" style={{ margin: '4px 0 0 0' }}>
+                      <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a>
+                      <span style={{ margin: '0 8px', color: 'var(--color-slate-grey)' }}>•</span>
                       <a href={`mailto:${schoolData.emails.info}`}>{schoolData.emails.info}</a>
                     </div>
                   </div>
