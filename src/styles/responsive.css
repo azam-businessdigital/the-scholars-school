@@ -471,7 +471,8 @@ svg {
   /* Academic Heads & Principal Cards */
   .academic-heads-grid {
     grid-template-columns: 1fr !important;
-    gap: var(--space-6) !important;
+    row-gap: 28px !important;
+    column-gap: 0 !important;
   }
 
   .trustees-grid {

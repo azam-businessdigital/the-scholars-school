@@ -78,7 +78,7 @@ export default function Careers() {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ display: 'flex', gap: '10px', fontSize: '14px', color: 'var(--color-slate-grey-dark)', marginBottom: '10px' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <span>Send your updated resume in PDF format to <a href={`mailto:${schoolData.emails.admin}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>{schoolData.emails.admin}</a> or <a href="mailto:info@thescholarsschool.edu.in" style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>info@thescholarsschool.edu.in</a>.</span>
+                    <span>Send your updated resume in PDF format to <a href={`mailto:${schoolData.emails.admin}`} style={{ color: 'var(--color-champagne-gold)', fontWeight: 700, textDecoration: 'underline' }}>{schoolData.emails.admin}</a>.</span>
                   </li>
                   <li style={{ display: 'flex', gap: '10px', fontSize: '14px', color: 'var(--color-slate-grey-dark)', marginBottom: '10px' }}>
                     <CheckCircle2 size={16} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />

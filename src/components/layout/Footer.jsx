@@ -23,7 +23,7 @@ export default function Footer() {
                   The Scholars High School
                 </h4>
                 <span style={{ fontSize: '12px', color: 'var(--color-champagne-gold)', fontWeight: 600 }}>
-                  &amp; Junior College for Arts &amp; Commerce
+                  and Junior College
                 </span>
               </div>
             </div>
@@ -68,22 +68,22 @@ export default function Footer() {
             <h4>Academic Sections</h4>
             <ul className="footer-links">
               <li>
-                <Link to="/academics/mrak-kids/">MRAK Kids Pre School</Link>
+                <Link to="/academics/mrak-kids/">MRAK - The Scholars Kids Pre School</Link>
               </li>
               <li>
-                <Link to="/academics/primary/">Primary Section</Link>
+                <Link to="/academics/primary/">The Scholars Primary School</Link>
               </li>
               <li>
-                <Link to="/academics/secondary/">Secondary Section (SSC)</Link>
+                <Link to="/academics/secondary/">The Scholars High School</Link>
               </li>
               <li>
-                <Link to="/academics/deeniyat/">Deeniyat Moral Studies</Link>
+                <Link to="/academics/junior-college/girls/">The Scholars Junior College of Arts and Commerce (Girls)</Link>
               </li>
               <li>
-                <Link to="/academics/junior-college/girls/">Junior College: Girls</Link>
+                <Link to="/academics/junior-college/boys/">The Scholars Junior College of Arts and Commerce (Boys)</Link>
               </li>
               <li>
-                <Link to="/academics/junior-college/boys/">Junior College: Boys</Link>
+                <Link to="/academics/deeniyat/">Deeniyat Program</Link>
               </li>
             </ul>
           </div>
@@ -139,8 +139,7 @@ export default function Footer() {
               <li className="footer-contact-item">
                 <Mail size={18} />
                 <div>
-                  <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a><br />
-                  <a href="mailto:info@thescholarsschool.edu.in">info@thescholarsschool.edu.in</a>
+                  <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a>
                 </div>
               </li>
             </ul>
@@ -157,7 +156,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-inner">
             <p>
-              &copy; {currentYear} The Scholars High School &amp; Junior College for Arts &amp; Commerce.
+              &copy; {currentYear} The Scholars High School and Junior College.
             </p>
             <ul className="footer-bottom-links">
               <li>

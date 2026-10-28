@@ -26,13 +26,13 @@ import { schoolData } from '../../data/schoolData';
 
 export default function Deeniyat() {
   const data = academicsData.find((a) => a.id === 'deeniyat');
-  const deeniyatHead = schoolData.leadership.principals[2]; // Head of Deeniyat
+  const deeniyatHead = schoolData.leadership.principals.find((p) => p.id === 'deeniyat-head') || schoolData.leadership.principals[3];
 
   const deeniyatGallery = [
     {
-      img: '/images/academics/deeniyat-classroom.jpg',
-      title: 'Quranic Tajweed & Hifz Guidance',
-      desc: 'Systematic phonetic recitation, Makhaarij rules, and Quranic reflection in a peaceful classroom setting.'
+      img: '/images/gallery/ic.jpeg',
+      title: 'Quranic Tajweed & Islamic Competitions',
+      desc: 'Systematic phonetic recitation, Makhaarij rules, and Quranic reflection fostering stage poise and spiritual confidence.'
     },
     {
       img: '/images/hadees.png',
@@ -40,14 +40,14 @@ export default function Deeniyat() {
       desc: 'Instilling humility, filial respect, truthfulness, and kindness in daily actions and interpersonal habits.'
     },
     {
-      img: '/images/campus/about-home.png',
+      img: '/images/gallery/dastarkhaan-2.jfif',
       title: 'Holistic Campus Moral Atmosphere',
       desc: 'Seamless integration of daily prayers, morning assemblies, and Islamic values alongside general academic subjects.'
     },
     {
-      img: '/images/campus/banner2.jpg',
-      title: 'Dedicated Campus Prayer Hall (Musalla)',
-      desc: 'Serene, designated prayer space for daily congregational prayers (Salah) and spiritual contemplation.'
+      img: '/images/gallery/ic.jpeg',
+      title: 'Islamic Competitions & Cultural Assembly',
+      desc: 'Annual Islamic recitation, Tajweed, ethical debates, and values assembly encouraging spiritual poise and self-expression.'
     }
   ];
 
@@ -200,8 +200,8 @@ export default function Deeniyat() {
                 <Heart size={14} /> Moral Values &amp; Quranic Study
               </div>
               <img
-                src="/images/academics/deeniyat-classroom.jpg"
-                alt="Students engaged in Quran recitation with Tajweed and rehal stands"
+                src="/images/gallery/dastarkhaan-2.jfif"
+                alt="Students practicing Sunnah etiquette and Islamic moral values at The Scholars School"
                 className="academic-hero-img"
                 loading="lazy"
                 width="600"

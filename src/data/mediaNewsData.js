@@ -8,7 +8,7 @@
 export const electronicMediaData = [
   {
     id: "yt-annual-sports-2024",
-    title: "The Scholars High School & Junior College Annual Sports",
+    title: "The Scholars High School and Junior College Annual Sports",
     category: "Electronic Media",
     type: "electronic",
     date: "1 Jan 2024",
@@ -170,7 +170,7 @@ export const printMediaData = [
     type: "print",
     date: "05 Sept 2023",
     publication: "Regional Education Chronicle",
-    image: "/images/campus/banner1.jpg",
+    image: "/images/gallery/annual-day-2.jpeg",
     description: "Feature article detailing the 7-floor campus infrastructure, smart classrooms, and consistent 100% SSC results."
   }
 ];

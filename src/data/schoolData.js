@@ -1,5 +1,5 @@
 export const schoolData = {
-  name: "The Scholars High School & Junior College for Arts & Commerce",
+  name: "The Scholars High School and Junior College",
   shortName: "The Scholars School",
   established: "1993",
   trust: "Al-Qalam Educational Trust (Regd. 1991, Mumbai)",
@@ -23,9 +23,10 @@ export const schoolData = {
   ],
   emails: {
     primary: "alqalams26@gmail.com",
-    info: "info@thescholarsschool.edu.in",
     admin: "alqalams26@gmail.com"
   },
+  visitingHours: "Monday to Friday: 9:30 AM to 11:30 AM",
+  officeHours: "Monday to Saturday: 9:00 AM to 3:00 PM",
   socials: {
     instagram: "https://www.instagram.com/thescholarshighschool",
     facebook: "https://www.facebook.com/Al-Qalam-Educational-Trust-109036319271027/",
@@ -52,23 +53,39 @@ export const schoolData = {
     },
     principals: [
       {
-        section: "Primary Section & MRAK Kids",
+        id: "mrak-coordinator",
+        section: "MRAK - The Scholars Kids Pre School",
+        badge: "Pre-School",
         name: "",
-        designation: "School Principal",
+        designation: "Coordinator",
+        image: "/images/academics/principal-female-avatar.png",
+        focus: ["Early Childhood Development", "Foundational Phonics & Care", "Curiosity & Wonder"],
+        message: "At MRAK - The Scholars Kids Pre School, we celebrate every toddler's individuality. Early childhood is a window of wondrous growth where young hearts and curious minds begin to understand the world. We combine loving warmth, child-friendly learning environments, and timeless moral values so your child feels safe, valued, and genuinely excited to come to school every single morning."
+      },
+      {
+        id: "primary-incharge",
+        section: "The Scholars Primary School",
+        badge: "Primary School",
+        name: "",
+        designation: "Primary Incharge",
         image: "/images/academics/principal-female-avatar.png",
         focus: ["Foundational Literacy", "Moral Character", "Curiosity & Wonder"],
-        message: "The Scholars High School aims to equip young learners with knowledge and foundational skills that instill academic curiosity, strong moral values, and sound character. With our visionary trustees and devoted faculty, we ensure a warm, engaging environment where each child develops confidence and a love for learning."
+        message: "The Scholars Primary School aims to equip young learners with knowledge and foundational skills that instill academic curiosity, strong moral values, and sound character. With our visionary trustees and devoted faculty, we ensure a warm, engaging environment where each child develops confidence and a love for learning."
       },
       {
-        section: "Secondary Section & Junior College",
+        id: "secondary-principal",
+        section: "The Scholars High School & Junior College",
+        badge: "High School & College",
         name: "",
-        designation: "Principal (Secondary & College)",
+        designation: "Principal",
         image: "/images/academics/principal-female-avatar.png",
-        focus: ["SSC & HSC Board Mentorship", "Academic Discipline", "Arts & Commerce Specialization"],
-        message: "Every academic year brings new milestones for our students. We focus on academic rigour, discipline, and personal integrity. By fostering gratitude, diligence, and intellectual exploration, we prepare our students to excel in board examinations and in life beyond the classroom."
+        focus: ["SSC & HSC Board Mentorship", "Academic Discipline", "Commerce & Arts Specialization"],
+        message: "Every academic year brings new milestones for our students at The Scholars High School & Junior College. We focus on academic rigour, discipline, and personal integrity. By fostering gratitude, diligence, and intellectual exploration, we prepare our scholars to achieve exemplary board results and lead with sound character."
       },
       {
+        id: "deeniyat-head",
         section: "Deeniyat Program",
+        badge: "Moral & Deeniyat",
         name: "",
         designation: "Head of Deeniyat",
         image: "/images/academics/principal-male-avatar.png",

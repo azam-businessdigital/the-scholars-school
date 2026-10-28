@@ -5,12 +5,12 @@ export default function SEO({
   title,
   description,
   canonical,
-  ogImage = '/images/campus/banner1.jpg',
+  ogImage = '/images/campus/building.jpg',
   type = 'website'
 }) {
   const location = useLocation();
   const siteUrl = 'https://thescholarsschool.edu.in';
-  const fullTitle = `${title} | The Scholars High School & Junior College`;
+  const fullTitle = `${title} | The Scholars High School and Junior College`;
   const canonicalUrl = canonical || `${siteUrl}${location.pathname}`;
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
@@ -52,7 +52,7 @@ export default function SEO({
     setMeta('og:url', canonicalUrl);
     setMeta('og:image', absoluteOgImage);
     setMeta('og:type', type);
-    setMeta('og:site_name', 'The Scholars High School & Junior College');
+    setMeta('og:site_name', 'The Scholars High School and Junior College');
     setMeta('og:locale', 'en_IN');
     setMeta('og:image:width', '1200');
     setMeta('og:image:height', '630');

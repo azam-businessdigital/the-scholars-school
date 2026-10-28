@@ -35,7 +35,7 @@ export default function MediaNews() {
   return (
     <>
       <SEO
-        title="News & Media | The Scholars High School & Junior College"
+        title="News & Media | The Scholars High School and Junior College"
         description="Official electronic media YouTube broadcasts and regional newspaper print media clippings highlighting The Scholars High School, Jogeshwari West."
         canonical="https://thescholarsschool.edu.in/media-news/"
       />

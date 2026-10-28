@@ -247,8 +247,8 @@ export default function Gallery() {
   return (
     <>
       <SEO
-        title="Photo Gallery - Authentic Event Albums & Photo Archive | The Scholars School"
-        description="Explore the complete visual archive of The Scholars High School & Junior College: 79 event albums and 349 authentic photographs covering campus activities, competitions, sports, and modern facilities."
+        title="Photo Gallery - Authentic Event Albums & Photo Archive | The Scholars High School and Junior College"
+        description="Explore the complete visual archive of The Scholars High School and Junior College: 79 event albums and 349 authentic photographs covering campus activities, competitions, sports, and modern facilities."
         canonical="https://thescholarsschool.edu.in/gallery/"
       />
 

@@ -24,28 +24,28 @@ import { schoolData } from '../../data/schoolData';
 
 export default function Primary() {
   const data = academicsData.find((a) => a.id === 'primary');
-  const principal = schoolData.leadership.principals[0]; // School Principal
+  const primaryIncharge = schoolData.leadership.principals.find((p) => p.id === 'primary-incharge') || schoolData.leadership.principals[1];
 
   const primaryGallery = [
     {
-      img: '/images/academics/primary-smart-classroom.jpg',
+      img: '/images/gallery/smart-board-2.jfif',
       title: 'Interactive Smart Classroom Lessons',
       desc: 'Audio-visual interactive whiteboards bringing science, geography, and language to life with vivid clarity.'
     },
     {
-      img: '/images/academics/primary-computer-lab.jpg',
+      img: '/images/gallery/computer-lab-1.jfif',
       title: 'Modern Hands-On Computer Lab',
       desc: 'Dedicated IT periods teaching essential keyboarding, digital literacy, and foundational computer concepts.'
     },
     {
-      img: '/images/campus/banner1.jpg',
+      img: '/images/gallery/class-room-2.jfif',
       title: 'Air-Conditioned Modern Classrooms',
       desc: 'Spacious and climate-controlled classroom environments designed for optimal student focus and well-being.'
     },
     {
-      img: '/images/campus/building.jpg',
-      title: 'Seven-Floor Educational Campus',
-      desc: 'Purpose-built facility in Hill Park featuring high-speed passenger lift, RO drinking water, and sanitized washrooms.'
+      img: '/images/gallery/ro-water-3.jfif',
+      title: 'RO Purified Drinking Water & Campus Amenities',
+      desc: 'Multi-stage RO drinking water filtration systems and pristine sanitized amenities on every floor for student safety.'
     }
   ];
 
@@ -121,8 +121,8 @@ export default function Primary() {
   return (
     <>
       <SEO
-        title="Primary Section - Grades 1 to 4 | The Scholars School"
-        description="Primary Section at The Scholars High School, Jogeshwari West. Comprehensive English medium curriculum following Maharashtra Department of Education standards with separate boys and girls faculty."
+        title="The Scholars Primary School - Grades 1 to 4 | The Scholars School"
+        description="The Scholars Primary School at Jogeshwari West. Comprehensive English medium curriculum following Maharashtra Department of Education standards with separate boys and girls faculty."
         canonical="https://thescholarsschool.edu.in/academics/primary/"
       />
 
@@ -130,9 +130,9 @@ export default function Primary() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">PRIMARY ACADEMICS &bull; GRADES 1 TO 4 &bull; AGES 6 - 10 YEARS</span>
+            <span className="mrak-banner-tag">THE SCHOLARS PRIMARY SCHOOL &bull; GRADES 1 TO 4 &bull; AGES 6 - 10 YEARS</span>
           </div>
-          <h1>Primary Section: Grades 1 to 4</h1>
+          <h1>The Scholars Primary School: Grades 1 to 4</h1>
           <p>
             Building strong reading comprehension, quantitative logic, observational science, and timeless Islamic character in an engaging English-medium environment.
           </p>
@@ -142,7 +142,7 @@ export default function Primary() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Primary Section', path: '/academics/primary/' }
+          { label: 'The Scholars Primary School', path: '/academics/primary/' }
         ]}
       />
 
@@ -157,7 +157,7 @@ export default function Primary() {
                 {data.overview}
               </p>
               <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                At The Scholars High School, the Primary Section provides a vibrant, intellectually stimulating atmosphere following the Maharashtra State Board curriculum in English medium. With separate sections for boys and girls, students receive tailored instruction from dedicated faculty, blending interactive smart classroom technology, mental arithmetic, and daily Deeniyat moral guidance.
+                At The Scholars Primary School, our curriculum provides a vibrant, intellectually stimulating atmosphere following the Maharashtra State Board curriculum in English medium. With separate sections for boys and girls, students receive tailored instruction from dedicated faculty, blending interactive smart classroom technology, mental arithmetic, and daily Deeniyat moral guidance.
               </p>
 
               <div className="mrak-badges-row stagger-group reveal-up">
@@ -198,7 +198,7 @@ export default function Primary() {
                 <Sparkles size={14} /> Smart Classrooms &amp; Labs
               </div>
               <img
-                src="/images/academics/primary-smart-classroom.jpg"
+                src="/images/gallery/smart-board-2.jfif"
                 alt="Primary students learning interactively with smart board and teacher"
                 className="academic-hero-img"
                 loading="lazy"
@@ -220,30 +220,30 @@ export default function Primary() {
         </div>
       </section>
 
-      {/* SECTION 2: PRINCIPAL'S MESSAGE (PRE-PRIMARY & PRIMARY) - SAME EXECUTIVE STYLE AS MRAK */}
+      {/* SECTION 2: PRIMARY INCHARGE'S MESSAGE */}
       <section className="section mrak-principal-section">
         <div className="container">
           <SectionHeader
-            eyebrow="SCHOOL PRINCIPAL'S MESSAGE"
+            eyebrow="PRIMARY INCHARGE'S MESSAGE"
             title="Inspiring Excellence in Academics &amp; Character"
-            subtitle="Guiding philosophy from our primary and school leadership."
+            subtitle="Guiding philosophy from our Primary Section leadership."
             centered
           />
 
           <div className="mrak-principal-card">
             <div className="mrak-principal-media">
               <img
-                src={principal.image}
-                alt={principal.designation}
+                src={primaryIncharge.image}
+                alt={primaryIncharge.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.designation}</div>
-              <div className="mrak-principal-role">{principal.section}</div>
+              <div className="mrak-principal-name">{primaryIncharge.designation}</div>
+              <div className="mrak-principal-role">{primaryIncharge.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                {principal.section}
+                {primaryIncharge.section}
               </span>
             </div>
 
@@ -394,7 +394,7 @@ export default function Primary() {
             Build a Strong Academic &amp; Moral Foundation
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>
-            Admissions for Grades 1 through 4 are open for the upcoming academic session at The Scholars High School, Jogeshwari West. Schedule a school tour or submit your online enquiry today.
+            Admissions for Grades 1 through 4 are open for the upcoming academic session at The Scholars Primary School, Jogeshwari West. Schedule a school tour or submit your online enquiry today.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/admissions/" className="btn btn-gold btn-lg">
@@ -402,7 +402,7 @@ export default function Primary() {
               <ArrowUpRight size={18} />
             </Link>
             <Link to="/academics/secondary/" className="btn btn-outline-white btn-lg">
-              <span>Next: Secondary Section (SSC Board)</span>
+              <span>Next: The Scholars High School (SSC Board)</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

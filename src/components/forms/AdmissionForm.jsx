@@ -15,13 +15,67 @@ import {
 } from 'lucide-react';
 import { executeRecaptcha } from '../../utils/recaptcha';
 
+const SECTIONS_LIST = [
+  'MRAK Kids: Nursery',
+  'MRAK Kids: Mont – 2',
+  'MRAK Kids: Sr.KG',
+  'The Scholars Primary School (Grades 1 to 4)',
+  'The Scholars High School (Grades 5 to 10 - Boys)',
+  'The Scholars High School (Grades 5 to 10 - Girls)',
+  'The Scholars Junior College of Arts and Commerce (Girls Section)',
+  'The Scholars Junior College of Arts and Commerce (Boys Section)',
+  'Integrated Deeniyat Program'
+];
+
+export const resolveSectionValue = (sec) => {
+  if (!sec) return '';
+  if (SECTIONS_LIST.includes(sec)) return sec;
+
+  const secLower = sec.toLowerCase();
+  const exactCase = SECTIONS_LIST.find((s) => s.toLowerCase() === secLower);
+  if (exactCase) return exactCase;
+
+  if (secLower.includes('primary')) {
+    return 'The Scholars Primary School (Grades 1 to 4)';
+  }
+  if (secLower.includes('girls') && (secLower.includes('college') || secLower.includes('junior'))) {
+    return 'The Scholars Junior College of Arts and Commerce (Girls Section)';
+  }
+  if (secLower.includes('boys') && (secLower.includes('college') || secLower.includes('junior'))) {
+    return 'The Scholars Junior College of Arts and Commerce (Boys Section)';
+  }
+  if (secLower.includes('college') || secLower.includes('junior')) {
+    return 'The Scholars Junior College of Arts and Commerce (Girls Section)';
+  }
+  if (secLower.includes('girls') && (secLower.includes('high') || secLower.includes('secondary'))) {
+    return 'The Scholars High School (Grades 5 to 10 - Girls)';
+  }
+  if (secLower.includes('boys') && (secLower.includes('high') || secLower.includes('secondary'))) {
+    return 'The Scholars High School (Grades 5 to 10 - Boys)';
+  }
+  if (secLower.includes('secondary') || secLower.includes('high')) {
+    return 'The Scholars High School (Grades 5 to 10 - Boys)';
+  }
+  if (secLower.includes('mrak') || secLower.includes('preschool') || secLower.includes('pre-school') || secLower.includes('nursery')) {
+    return 'MRAK Kids: Nursery';
+  }
+  if (secLower.includes('deeniyat')) {
+    return 'Integrated Deeniyat Program';
+  }
+
+  const subMatch = SECTIONS_LIST.find(
+    (s) => s.toLowerCase().includes(secLower) || secLower.includes(s.toLowerCase())
+  );
+  return subMatch || sec;
+};
+
 export default function AdmissionForm({ initialSection = '' }) {
   const [formData, setFormData] = useState({
     parentName: '',
     studentName: '',
     phone: '',
     email: '',
-    section: initialSection || '',
+    section: resolveSectionValue(initialSection),
     message: '',
     consent: false,
     website_honeypot: '' // Anti-spam honeypot
@@ -29,7 +83,7 @@ export default function AdmissionForm({ initialSection = '' }) {
 
   React.useEffect(() => {
     if (initialSection) {
-      setFormData((prev) => ({ ...prev, section: initialSection }));
+      setFormData((prev) => ({ ...prev, section: resolveSectionValue(initialSection) }));
     }
   }, [initialSection]);
 
@@ -37,17 +91,7 @@ export default function AdmissionForm({ initialSection = '' }) {
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
   const [feedbackMessage, setFeedbackMessage] = useState('');
 
-  const sectionsList = [
-    'MRAK Kids: Nursery',
-    'MRAK Kids: Mont – 2',
-    'MRAK Kids: Sr.KG',
-    'Primary Section: Grades 1 to 4',
-    'Secondary Section: Grades 5 to 10 (Boys)',
-    'Secondary Section: Grades 5 to 10 (Girls)',
-    'Junior College: Arts & Commerce (Girls Section)',
-    'Junior College: Arts & Commerce (Boys Section)',
-    'Integrated Deeniyat Program'
-  ];
+  const sectionsList = SECTIONS_LIST;
 
   const validate = () => {
     const errs = {};

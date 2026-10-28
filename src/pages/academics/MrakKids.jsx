@@ -23,28 +23,28 @@ import { schoolData } from '../../data/schoolData';
 
 export default function MrakKids() {
   const data = academicsData.find((a) => a.id === 'mrak-kids');
-  const principal = schoolData.leadership.principals[0]; // School Principal
+  const coordinator = schoolData.leadership.principals.find((p) => p.id === 'mrak-coordinator') || schoolData.leadership.principals[0];
 
   const preschoolGallery = [
     {
-      img: '/images/academics/mrak-kids-play.jpg',
-      title: 'Play-Based Sensory Discovery',
-      desc: 'Montessori-inspired wooden blocks, shape sorters, and tactile exploration.'
+      img: '/images/gallery/fancy-dress-1.jpeg',
+      title: 'Play-Based Sensory Discovery & Events',
+      desc: 'Costume exhibitions, Montessori-inspired learning, and tactile exploration.'
     },
     {
-      img: '/images/academics/mrak-kids-art.jpg',
+      img: '/images/gallery/class-activity-1.jpeg',
       title: 'Creative Art & Expression',
-      desc: 'Finger painting, non-toxic modeling clay, and guided fine motor crafts.'
+      desc: 'Drawing, coloring, paper craft, and guided fine motor development.'
     },
     {
-      img: '/images/academics/pre-primary-reading.jpg',
+      img: '/images/gallery/class-activity-2.jpeg',
       title: 'Jolly Phonics & Reading Readiness',
       desc: 'Interactive letter sounds, picture stories, and vocabulary building for young minds.'
     },
     {
-      img: '/images/academics/pre-primary-math.jpg',
-      title: 'Foundational Numbers & Logic',
-      desc: 'Hands-on counting manipulatives, pattern recognition, and basic number concepts.'
+      img: '/images/gallery/blue-day-1.jpeg',
+      title: 'Color Days & Foundational Activities',
+      desc: 'Hands-on theme days, pattern recognition, and joyful socialization.'
     },
     {
       img: '/images/academics/pre-school.jpg',
@@ -130,9 +130,9 @@ export default function MrakKids() {
               alt="MRAK Kids Pre School Logo"
               className="mrak-banner-logo"
             />
-            <span className="mrak-banner-tag">EARLY CHILDHOOD FOUNDATION &bull; STD: NURSERY, MONT – 2 &amp; SR.KG</span>
+            <span className="mrak-banner-tag">MRAK - THE SCHOLARS KIDS PRE SCHOOL &bull; STD: NURSERY, MONT – 2 &amp; SR.KG</span>
           </div>
-          <h1>Maulana Riyaz Ahmed Khan (MRAK) Kids Pre School</h1>
+          <h1>MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School</h1>
           <p>
             A vibrant, caring early childhood haven covering STD: Nursery, Mont – 2 &amp; Sr.KG, where sensory play, Jolly Phonics, and loving moral values spark a lifelong curiosity for learning.
           </p>
@@ -142,7 +142,7 @@ export default function MrakKids() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'MRAK Kids Pre School', path: '/academics/mrak-kids/' }
+          { label: 'MRAK - The Scholars Kids Pre School', path: '/academics/mrak-kids/' }
         ]}
       />
 
@@ -200,37 +200,37 @@ export default function MrakKids() {
                 className="mrak-official-emblem"
                 loading="lazy"
               />
-              <div className="mrak-logo-motto">MRAK Kids Pre School</div>
+              <div className="mrak-logo-motto">MRAK - The Scholars Kids Pre School</div>
               <div className="mrak-logo-sub">Modern Education with Islamic Frame of Reference</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: PRINCIPAL'S MESSAGE (PRE-PRIMARY & PRIMARY) */}
+      {/* SECTION 2: COORDINATOR'S MESSAGE */}
       <section className="section mrak-principal-section">
         <div className="container">
           <SectionHeader
-            eyebrow="SCHOOL PRINCIPAL'S MESSAGE"
+            eyebrow="CO-ORDINATOR'S MESSAGE"
             title="A Warm Welcome to Our Little Explorers"
-            subtitle="Guiding philosophy from our MRAK Kids and Primary leadership."
+            subtitle="Guiding philosophy from our MRAK Kids Pre-School leadership."
             centered
           />
 
           <div className="mrak-principal-card">
             <div className="mrak-principal-media">
               <img
-                src={principal.image}
-                alt={principal.designation}
+                src={coordinator.image}
+                alt={coordinator.designation}
                 className="mrak-principal-avatar"
                 loading="lazy"
                 width="170"
                 height="190"
               />
-              <div className="mrak-principal-name">{principal.designation}</div>
-              <div className="mrak-principal-role">{principal.section}</div>
+              <div className="mrak-principal-name">{coordinator.designation}</div>
+              <div className="mrak-principal-role">{coordinator.section}</div>
               <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                {principal.section}
+                {coordinator.section}
               </span>
             </div>
 
@@ -345,7 +345,7 @@ export default function MrakKids() {
             Give Your Child the Best Start in Education
           </h2>
           <p className="section-subtitle" style={{ color: '#E2E8F0', margin: '0 auto 28px auto', textAlign: 'center' }}>
-            Admissions for Maulana Riyaz Ahmed Khan (MRAK) Kids Pre School are open. Visit our campus at Hill Park, Jogeshwari West to experience our warm, joyful environment.
+            Admissions for MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School are open. Visit our campus at Hill Park, Jogeshwari West to experience our warm, joyful environment.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/admissions/" className="btn btn-gold btn-lg">
@@ -353,7 +353,7 @@ export default function MrakKids() {
               <ArrowUpRight size={18} />
             </Link>
             <Link to="/academics/primary/" className="btn btn-outline-white btn-lg">
-              <span>Explore Primary Section (Grades 1 to 4)</span>
+              <span>Explore The Scholars Primary School</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

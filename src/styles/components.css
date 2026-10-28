@@ -1470,7 +1470,7 @@
 .about-thumb-secondary img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border-radius: calc(var(--radius-md) - 4px);
   background-color: #ffffff;
@@ -3744,9 +3744,19 @@
 
 .academic-heads-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8);
-  margin-top: var(--space-8);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 36px;
+  max-width: 1040px;
+  margin: var(--space-8) auto 0 auto;
+}
+
+@media (max-width: 768px) {
+  .academic-heads-grid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    column-gap: 0;
+  }
 }
 
 .academic-head-card {
@@ -3852,7 +3862,7 @@
 }
 
 .head-card-body {
-  padding: 16px 24px 24px;
+  padding: 18px 30px 28px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -3861,12 +3871,12 @@
 
 .head-name {
   font-family: var(--font-heading);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-royal-navy);
   line-height: 1.35;
   margin: 0;
-  min-height: 54px;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3874,13 +3884,13 @@
 }
 
 .head-designation {
-  font-size: 0.8125rem;
+  font-size: 0.84375rem;
   font-weight: 700;
   color: var(--color-champagne-gold);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin: 4px 0 14px 0;
-  min-height: 24px;
+  margin: 6px 0 14px 0;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3888,7 +3898,7 @@
 }
 
 .head-gold-divider {
-  width: 36px;
+  width: 40px;
   height: 2px;
   background: var(--color-champagne-gold);
   margin: 0 auto 16px auto;
@@ -3896,30 +3906,30 @@
 }
 
 .head-quote-box {
-  background: #FAF8F5;
-  border: 1px solid rgba(198, 161, 91, 0.2);
+  background: #FAF9F6;
+  border: 1px solid rgba(198, 161, 91, 0.22);
   border-left: 3px solid var(--color-champagne-gold);
-  border-radius: 0 10px 10px 0;
-  padding: 14px 16px;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
   position: relative;
   text-align: left;
   flex-grow: 1;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .head-quote-icon {
   color: var(--color-champagne-gold);
-  opacity: 0.6;
-  margin-bottom: 6px;
+  opacity: 0.7;
+  margin-bottom: 8px;
   display: block;
 }
 
 .head-quote-text {
   font-family: var(--font-body);
-  font-size: 0.84375rem;
-  line-height: 1.65;
+  font-size: 0.8875rem;
+  line-height: 1.7;
   color: #334155;
   font-style: italic;
   margin: 0;
@@ -3928,44 +3938,32 @@
 .head-focus-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   justify-content: center;
-  padding-top: 14px;
+  padding-top: 16px;
   border-top: 1px solid rgba(20, 43, 74, 0.07);
 }
 
 .head-focus-tag {
-  background: #FFFFFF;
+  background: #F8FAFC;
   border: 1px solid rgba(20, 43, 74, 0.1);
   color: var(--color-royal-navy);
-  font-size: 0.71875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
   transition: all 0.2s ease;
 }
 
 .academic-head-card:hover .head-focus-tag {
-  border-color: rgba(198, 161, 91, 0.4);
+  border-color: rgba(198, 161, 91, 0.45);
   background: #FFFDF9;
   color: var(--color-royal-navy);
 }
 
-@media (max-width: 991px) {
-  .academic-heads-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-}
-
-@media (max-width: 680px) {
-  .academic-heads-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-
+@media (max-width: 768px) {
   .head-card-body {
-    padding: 16px 18px 20px;
+    padding: 16px 20px 22px;
   }
 }
 

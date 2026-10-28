@@ -100,19 +100,19 @@ export default function Header() {
 
   const schoolingLinks = [
     {
-      name: 'MRAK Kids Pre School',
+      name: 'MRAK - The Scholars Kids Pre School',
       desc: 'STD: Nursery, Mont – 2 & Sr.KG • Early Childhood',
       path: '/academics/mrak-kids/',
       icon: Sparkles
     },
     {
-      name: 'Primary Section',
+      name: 'The Scholars Primary School',
       desc: 'Grades 1 to 4 • Smart Digital Classrooms',
       path: '/academics/primary/',
       icon: GraduationCap
     },
     {
-      name: 'Secondary Section',
+      name: 'The Scholars High School',
       desc: 'Grades 5 to 10 • Maharashtra SSC Board',
       path: '/academics/secondary/',
       icon: Award
@@ -121,13 +121,13 @@ export default function Header() {
 
   const collegeAndValuesLinks = [
     {
-      name: 'Junior College (Girls Section)',
+      name: 'The Scholars Junior College of Arts & Commerce (Girls)',
       desc: 'XI & XII Arts & Commerce • HSC Board Distinction',
       path: '/academics/junior-college/girls/',
       icon: GraduationCap
     },
     {
-      name: 'Junior College (Boys Section)',
+      name: 'The Scholars Junior College of Arts & Commerce (Boys)',
       desc: 'XI & XII Arts & Commerce • Professional Focus',
       path: '/academics/junior-college/boys/',
       icon: Briefcase
@@ -162,10 +162,6 @@ export default function Header() {
               <a href="mailto:alqalams26@gmail.com" className="topbar-link">
                 <Mail size={12} className="topbar-icon" />
                 <span>alqalams26@gmail.com</span>
-              </a>
-              <span className="topbar-sep">|</span>
-              <a href="mailto:info@thescholarsschool.edu.in" className="topbar-link">
-                <span>info@thescholarsschool.edu.in</span>
               </a>
             </div>
           </div>
@@ -456,18 +452,10 @@ export default function Header() {
               <a
                 href="mailto:alqalams26@gmail.com"
                 className="btn btn-outline"
-                style={{ width: '100%', marginBottom: '8px', gap: '8px', fontSize: '13px', padding: '9px 12px', whiteSpace: 'normal', textAlign: 'center' }}
-              >
-                <Mail size={14} />
-                <span>alqalams26@gmail.com</span>
-              </a>
-              <a
-                href="mailto:info@thescholarsschool.edu.in"
-                className="btn btn-outline"
                 style={{ width: '100%', marginBottom: '10px', gap: '8px', fontSize: '13px', padding: '9px 12px', whiteSpace: 'normal', textAlign: 'center' }}
               >
                 <Mail size={14} />
-                <span>info@thescholarsschool.edu.in</span>
+                <span>alqalams26@gmail.com</span>
               </a>
               <Link
                 to="/admissions/"

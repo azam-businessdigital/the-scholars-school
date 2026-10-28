@@ -11,6 +11,7 @@ import {
   MapPin,
   Phone,
   Mail,
+  Clock,
   CheckCircle,
   CheckCircle2,
   ExternalLink,
@@ -48,7 +49,7 @@ import PearlsOfWisdom from '../components/common/PearlsOfWisdom';
 const academicSectionsHome = [
   {
     id: 'mrak-kids',
-    title: 'MRAK Kids Pre School',
+    title: 'MRAK - The Scholars Kids Pre School',
     badge: 'STD: Nursery, Mont – 2 & Sr.KG',
     heroImage: '/images/academics/pre-school.jpg',
     desc: 'Early childhood foundation with Jolly Phonics, sensory play, and moral values.',
@@ -56,15 +57,15 @@ const academicSectionsHome = [
   },
   {
     id: 'primary',
-    title: 'Primary Section',
+    title: 'The Scholars Primary School',
     badge: 'Grades 1 to 4',
-    heroImage: '/images/campus/banner1.jpg',
+    heroImage: '/images/gallery/smart-board-2.jfif',
     desc: 'English medium curriculum with interactive smart classrooms.',
     path: '/academics/primary/'
   },
   {
     id: 'secondary',
-    title: 'Secondary Section',
+    title: 'The Scholars High School',
     badge: 'Grades 5 to 10 (SSC)',
     heroImage: '/images/gallery/science-activity-4.jpeg',
     desc: 'Rigorous state board preparation with consistent 100% SSC results.',
@@ -72,17 +73,17 @@ const academicSectionsHome = [
   },
   {
     id: 'junior-college',
-    title: 'Junior College (Arts & Commerce)',
+    title: 'The Scholars Junior College of Arts and Commerce',
     badge: 'XI & XII Arts & Commerce (HSC)',
-    heroImage: '/images/academics/junior-college-girls.jpg',
+    heroImage: '/images/gallery/college-g-1.jpg',
     desc: 'Higher secondary Arts & Commerce education with dedicated boys and girls sections.',
     path: '/academics/junior-college/girls/'
   },
   {
     id: 'deeniyat',
-    title: 'Deeniyat & Values',
+    title: 'Deeniyat Program',
     badge: 'All Grade Levels',
-    heroImage: '/images/campus/about-home.png',
+    heroImage: '/images/gallery/dastarkhaan-2.jfif',
     desc: 'Islamic frame of reference, Quranic Tajweed, and moral character.',
     path: '/academics/deeniyat/'
   }
@@ -103,9 +104,9 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Welcome to The Scholars High School & Junior College"
+        title="Welcome to The Scholars High School and Junior College"
         description="Established in 1993 in Jogeshwari West, Mumbai under Al-Qalam Educational Trust. Quality English medium education with moral foundation from Pre-School to Junior College."
-        ogImage="/images/campus/banner1.jpg"
+        ogImage="/images/campus/building.jpg"
       />
 
       {/* SECTION 1: 3D INTERACTIVE HERO SLIDER */}
@@ -139,7 +140,7 @@ export default function Home() {
                   <div className="about-thumb-main">
                     <img
                       src="/images/campus/building.jpg"
-                      alt="The Scholars High School 7-story campus building at Hill Park"
+                      alt="The Scholars High School 7-story campus building at Hill Park, Jogeshwari West"
                       loading="lazy"
                       width="600"
                       height="380"
@@ -147,8 +148,8 @@ export default function Home() {
                   </div>
                   <div className="about-thumb-secondary">
                     <img
-                      src="/images/campus/banner2.jpg"
-                      alt="Neuroscience Based Curriculum at The Scholars School"
+                      src="/images/gallery/science-activity-4.jpeg"
+                      alt="Hands-On Science Working Model Demonstration at The Scholars School"
                       loading="lazy"
                       width="360"
                       height="202"
@@ -165,7 +166,7 @@ export default function Home() {
                 Building Future Leaders Through Modern &amp; Moral Education
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School &amp; Junior College for Arts &amp; Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Welcome to <strong>The Scholars High School and Junior College</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
               </p>
               <p style={{ marginBottom: '24px' }}>
                 Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
@@ -190,7 +191,7 @@ export default function Home() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Junior College for Arts &amp; Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">The Scholars Junior College of Arts and Commerce (Std XI - XII HSC)</h3>
                     <p className="about-feature-text">
                       Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
                     </p>
@@ -235,7 +236,7 @@ export default function Home() {
                 Admissions Open <br />For Academic Year 2026-27
               </h2>
               <p className="section-subtitle">
-                Join The Scholars High School &amp; Junior College for Arts &amp; Commerce, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
+                Join The Scholars High School and Junior College, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
               </p>
 
               <div className="admission-features-grid stagger-group">
@@ -245,7 +246,7 @@ export default function Home() {
                 </div>
                 <div className="admission-feature-chip">
                   <GraduationCap size={20} className="chip-icon" />
-                  <span>Junior College for Arts &amp; Commerce (HSC)</span>
+                  <span>The Scholars Junior College of Arts and Commerce (HSC)</span>
                 </div>
                 <div className="admission-feature-chip">
                   <Building2 size={20} className="chip-icon" />
@@ -272,8 +273,8 @@ export default function Home() {
             <div className="reveal-right">
               <div className="admission-thumb-wrap">
                 <img
-                  src="/images/campus/banner1.jpg"
-                  alt="The Scholars School Campus Building Entrance"
+                  src="/images/gallery/sports-day-1.jpeg"
+                  alt="Vibrant Student Life & Extracurricular Activities at The Scholars School"
                   className="admission-thumb-img"
                   loading="lazy"
                   width="600"
@@ -653,7 +654,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="ACADEMIC TRACK RECORD"
             title="100% Board Results &amp; Academic Honors"
-            subtitle="The Scholars High School and Junior College for Arts & Commerce take pride in achieving 100% passing results in the Maharashtra State Board examinations every year."
+            subtitle="The Scholars High School and Junior College take pride in achieving 100% passing results in the Maharashtra State Board examinations every year."
             centered
           />
 
@@ -1183,14 +1184,23 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }}>
+                <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
                   <Mail size={20} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />
                   <div>
-                    <strong style={{ color: 'var(--color-royal-navy)' }}>Office Emails:</strong>
+                    <strong style={{ color: 'var(--color-royal-navy)' }}>Official Email:</strong>
                     <div className="card-text campus-card-links" style={{ margin: '4px 0 0 0' }}>
                       <a href="mailto:alqalams26@gmail.com">alqalams26@gmail.com</a>
-                      <span style={{ margin: '0 8px', color: 'var(--color-slate-grey)' }}>•</span>
-                      <a href={`mailto:${schoolData.emails.info}`}>{schoolData.emails.info}</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }}>
+                  <Clock size={20} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0, marginTop: '2px' }} />
+                  <div>
+                    <strong style={{ color: 'var(--color-royal-navy)' }}>Visiting &amp; Office Hours:</strong>
+                    <div className="card-text" style={{ margin: '4px 0 0 0', fontSize: '0.875rem', lineHeight: 1.5 }}>
+                      <div><strong>Visiting Hours:</strong> Mon to Fri: 9:30 AM to 11:30 AM</div>
+                      <div><strong>Office Hours:</strong> Mon to Sat: 9:00 AM to 3:00 PM</div>
                     </div>
                   </div>
                 </div>

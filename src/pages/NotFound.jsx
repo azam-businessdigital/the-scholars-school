@@ -7,8 +7,8 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="Page Not Found (404) | The Scholars School"
-        description="The requested page could not be located on The Scholars High School & Junior College website."
+        title="Page Not Found (404) | The Scholars High School and Junior College"
+        description="The requested page could not be located on The Scholars High School and Junior College website."
       />
 
       <section className="section section-ivory" style={{ minHeight: '65vh', display: 'flex', alignItems: 'center' }}>

@@ -32,14 +32,14 @@ export default function About() {
     <>
       <SEO
         title="About Us - Legacy, Leadership & Values"
-        description="Learn about The Scholars High School & Junior College for Arts & Commerce, established in 1993 under Al-Qalam Educational Trust in Jogeshwari West, Mumbai."
+        description="Learn about The Scholars High School and Junior College, established in 1993 under Al-Qalam Educational Trust in Jogeshwari West, Mumbai."
         canonical="https://thescholarsschool.edu.in/about-us/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">ABOUT THE INSTITUTION</span>
-          <h1>About The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
+          <h1>About The Scholars High School and Junior College</h1>
           <p>
             Three decades of dedicated educational service: fostering academic excellence, moral integrity, and social responsibility in Mumbai since 1993.
           </p>
@@ -62,7 +62,7 @@ export default function About() {
                   <div className="about-thumb-main">
                     <img
                       src="/images/campus/building.jpg"
-                      alt="The Scholars High School 7-story campus building at Hill Park"
+                      alt="The Scholars High School 7-story campus building at Hill Park, Jogeshwari West"
                       loading="lazy"
                       width="600"
                       height="380"
@@ -70,8 +70,8 @@ export default function About() {
                   </div>
                   <div className="about-thumb-secondary">
                     <img
-                      src="/images/campus/banner2.jpg"
-                      alt="Neuroscience Based Curriculum at The Scholars School"
+                      src="/images/gallery/science-activity-4.jpeg"
+                      alt="Hands-On Science Working Model Demonstration at The Scholars School"
                       loading="lazy"
                       width="360"
                       height="202"
@@ -88,7 +88,7 @@ export default function About() {
                 Building Future Leaders Through Modern &amp; Moral Education
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School &amp; Junior College for Arts &amp; Commerce</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Welcome to <strong>The Scholars High School and Junior College</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
               </p>
               <p style={{ marginBottom: '24px' }}>
                 Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
@@ -113,7 +113,7 @@ export default function About() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Junior College for Arts &amp; Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">The Scholars Junior College of Arts and Commerce (Std XI - XII HSC)</h3>
                     <p className="about-feature-text">
                       Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
                     </p>
@@ -258,7 +258,7 @@ export default function About() {
         <div className="container">
           <SectionHeader
             eyebrow="ACADEMIC HEADS"
-            title="School Leadership &amp; Principals"
+            title="School Leadership &amp; Academic Heads"
             subtitle="Devoted academic heads steering each section towards educational achievement, intellectual curiosity, and moral discipline."
             centered
           />
@@ -269,7 +269,7 @@ export default function About() {
                 {/* Visual Header Banner */}
                 <div className="head-card-hero">
                   <div className="head-hero-pattern" aria-hidden="true"></div>
-                  <span className="head-section-badge">{leader.section}</span>
+                  <span className="head-section-badge">{leader.badge || leader.section}</span>
                 </div>
 
                 {/* Profile Image Overlapping the Banner */}

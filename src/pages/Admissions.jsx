@@ -40,15 +40,21 @@ export default function Admissions() {
     if (formEl) {
       formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    setTimeout(() => {
+      const selectEl = document.getElementById('section');
+      if (selectEl) {
+        selectEl.focus();
+      }
+    }, 400);
   };
 
   const academicStreams = [
     {
       id: 'mrak-kids',
-      title: 'MRAK Kids Pre School',
+      title: 'MRAK - The Scholars Kids Pre School',
       category: 'STD: Nursery, Mont – 2 & Sr.KG',
       ageBadge: 'Nursery, Mont – 2 & Sr.KG',
-      image: '/images/academics/mrak-kids-play.jpg',
+      image: '/images/gallery/fancy-dress-1.jpeg',
       formValue: 'MRAK Kids: Nursery',
       desc: 'Joyful foundational schooling covering STD: Nursery, Mont – 2 & Sr.KG focused on sensory development, Jolly Phonics, early mathematics, and loving moral values.',
       features: [
@@ -59,11 +65,11 @@ export default function Admissions() {
     },
     {
       id: 'primary',
-      title: 'Primary Section',
+      title: 'The Scholars Primary School',
       category: 'Grades 1 to 4',
       ageBadge: 'Age: 6 – 9 Years',
-      image: '/images/academics/primary-smart-classroom.jpg',
-      formValue: 'Primary Section: Grades 1 to 4',
+      image: '/images/gallery/smart-board-2.jfif',
+      formValue: 'The Scholars Primary School (Grades 1 to 4)',
       desc: 'Maharashtra State Board aligned curriculum emphasizing English reading fluency, analytical mathematics, and environmental science.',
       features: [
         'Hands-on computer & language education',
@@ -73,11 +79,11 @@ export default function Admissions() {
     },
     {
       id: 'secondary',
-      title: 'Secondary Section',
+      title: 'The Scholars High School',
       category: 'Grades 5 to 10 (Separate Wings)',
       ageBadge: 'Age: 10 – 15 Years',
-      image: '/images/academics/secondary-science-lab.jpg',
-      formValue: 'Secondary Section: Grades 5 to 10 (Boys)',
+      image: '/images/gallery/science-activity-4.jpeg',
+      formValue: 'The Scholars High School (Grades 5 to 10 - Boys)',
       desc: 'Rigorous academic preparation for SSC Board examinations with dedicated, separate wings and instructional staff for boys and girls.',
       features: [
         'Modern physics, chemistry & biology labs',
@@ -87,11 +93,11 @@ export default function Admissions() {
     },
     {
       id: 'junior-college',
-      title: 'Junior College of Arts & Commerce',
+      title: 'The Scholars Junior College of Arts and Commerce',
       category: 'Grades XI & XII Arts & Commerce',
       ageBadge: 'Higher Secondary (HSC)',
-      image: '/images/academics/junior-college-girls.jpg',
-      formValue: 'Junior College: Arts & Commerce (Girls Section)',
+      image: '/images/gallery/college-g-1.jpg',
+      formValue: 'The Scholars Junior College of Arts and Commerce (Girls Section)',
       desc: 'Comprehensive Arts & Commerce education preparing students for professional university degrees (CA, CS, B.Com, BMS, BAF, B.A.) in separate wings.',
       features: [
         'Arts, Humanities, Accountancy & Economics expertise',
@@ -104,7 +110,7 @@ export default function Admissions() {
       title: 'Integrated Deeniyat Program',
       category: 'Values & Islamic Ethics',
       ageBadge: 'Integrated All Grades',
-      image: '/images/academics/deeniyat-classroom.jpg',
+      image: '/images/gallery/ic.jpeg',
       formValue: 'Integrated Deeniyat Program',
       desc: 'Holistic values-based education integrating Quranic recitation with Tajweed, Hadith studies, and Islamic etiquette into daily school periods alongside English-medium academics.',
       features: [
@@ -117,7 +123,8 @@ export default function Admissions() {
 
   const eligibilityCriteria = {
     preschool: {
-      title: 'MRAK Kids Pre School (STD: Nursery, Mont – 2 & Sr.KG)',
+      title: 'MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School',
+      shortName: 'MRAK Kids Pre-School',
       ageLimit: 'Nursery: 3+ yrs | Mont – 2: 4+ yrs | Sr.KG: 5+ yrs',
       grades: 'STD: Nursery, Mont – 2 & Sr.KG',
       shift: 'Morning Shift: 9:00 AM to 12:00 PM',
@@ -126,34 +133,38 @@ export default function Admissions() {
       formValue: 'MRAK Kids: Nursery'
     },
     primary: {
-      title: 'Primary Section (Grades 1 to 4)',
+      title: 'The Scholars Primary School (Grades 1 to 4)',
+      shortName: 'Primary School',
       ageLimit: 'Grade 1: Minimum 6 years completed as per Maharashtra norms',
       grades: 'Standards 1st to 4th',
       shift: 'Day Shift: 8:00 AM to 1:30 PM',
       readiness: 'Grade-appropriate reading readiness & basic arithmetic',
       initialDocs: 'Transfer Certificate (TC), Previous Marksheet, Aadhaar',
-      formValue: 'Primary Section: Grades 1 to 4'
+      formValue: 'The Scholars Primary School (Grades 1 to 4)'
     },
     secondary: {
-      title: 'Secondary Section (Grades 5 to 10)',
+      title: 'The Scholars High School (Grades 5 to 10)',
+      shortName: 'High School',
       ageLimit: 'Age appropriate for enrolled grade (10 to 15 years)',
       grades: 'Standards 5th to 10th (Segregated Boys & Girls Sections)',
       shift: 'Separate shifts & dedicated faculty floors',
       readiness: 'Sound previous academic foundation & conduct record',
       initialDocs: 'Original Countersigned TC, 2-Year Report Cards, Aadhaar',
-      formValue: 'Secondary Section: Grades 5 to 10 (Boys)'
+      formValue: 'The Scholars High School (Grades 5 to 10 - Boys)'
     },
     juniorcollege: {
-      title: 'Junior College for Arts & Commerce (XI & XII)',
+      title: 'The Scholars Junior College of Arts and Commerce (XI & XII)',
+      shortName: 'Junior College',
       ageLimit: 'Successful completion of 10th Standard (SSC / CBSE / ICSE)',
       grades: 'XI & XII Arts & Commerce (Independent Wings)',
       shift: 'College Morning / Afternoon Shifts',
       readiness: 'Minimum passing percentage in Class 10 board examination',
       initialDocs: '10th Board Marksheet, Original Leaving Certificate, Migration Cert',
-      formValue: 'Junior College: Arts & Commerce (Girls Section)'
+      formValue: 'The Scholars Junior College of Arts and Commerce (Girls Section)'
     },
     deeniyat: {
       title: 'Integrated Deeniyat Program (Moral & Islamic Values)',
+      shortName: 'Deeniyat Program',
       ageLimit: 'All Enrolled Students (Pre-School through Junior College)',
       grades: 'Integrated into all grades (Nursery to Grade 10 & Junior College)',
       shift: 'Embedded daily periods within regular school hours',
@@ -231,7 +242,7 @@ export default function Admissions() {
     {
       category: 'office',
       q: 'What are the school administrative office visiting hours for admissions?',
-      a: 'Our administrative office at Captain Suresh Samant Marg, Jogeshwari West is open Monday through Saturday from 9:00 AM to 3:00 PM for admissions enquiries, campus tours, document verification, and counseling.'
+      a: 'Campus visiting hours for admissions enquiries, campus tours, and document verification are Monday to Friday from 9:30 AM to 11:30 AM. General office hours are Monday through Saturday from 9:00 AM to 3:00 PM at Captain Suresh Samant Marg, Jogeshwari West.'
     },
     {
       category: 'office',
@@ -253,16 +264,16 @@ export default function Admissions() {
     <>
       <SEO
         title="Admissions 2025–26 - Process, Eligibility & Enquiry | The Scholars School"
-        description="Admissions open from MRAK Kids Pre-School to Junior College for Arts & Commerce at The Scholars High School, Jogeshwari West, Mumbai. English medium with Deeniyat."
+        description="Admissions open from MRAK - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce at The Scholars High School and Junior College, Jogeshwari West, Mumbai. English medium with Deeniyat."
         canonical="https://thescholarsschool.edu.in/admissions/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">JOIN OUR INSTITUTION</span>
-          <h1>Admissions at The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
+          <h1>Admissions at The Scholars High School and Junior College</h1>
           <p>
-            Welcoming students from MRAK Kids Pre School through Junior College for Arts &amp; Commerce. Discover our transparent admission procedure and submit your enquiry.
+            Welcoming students from MRAK - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce. Discover our transparent admission procedure and submit your enquiry.
           </p>
         </div>
       </div>
@@ -423,7 +434,7 @@ export default function Admissions() {
                       style={{ width: '100%', justifyContent: 'center' }}
                       onClick={() => handleSelectStream(current.formValue)}
                     >
-                      <span>Apply for {current.title.split(' ')[0]}</span>
+                      <span>Apply for {current.shortName}</span>
                       <ArrowRight size={15} />
                     </button>
                   </div>

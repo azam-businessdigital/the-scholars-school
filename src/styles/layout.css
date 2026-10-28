@@ -472,8 +472,8 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-42%) translateY(6px);
-  width: 660px;
+  transform: translateX(-50%) translateY(6px);
+  width: 720px;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -504,15 +504,21 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-42%) translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .mega-menu-inner {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 22px 24px;
   background-color: #FFFFFF;
+}
+
+.mega-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .mega-col-header {

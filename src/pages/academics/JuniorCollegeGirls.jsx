@@ -28,28 +28,28 @@ import { schoolData } from '../../data/schoolData';
 
 export default function JuniorCollegeGirls() {
   const data = academicsData.find((a) => a.id === 'junior-college-girls');
-  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
+  const principal = schoolData.leadership.principals.find((p) => p.id === 'secondary-principal') || schoolData.leadership.principals[2];
 
   const collegeGallery = [
     {
-      img: '/images/academics/junior-college-girls.jpg',
+      img: '/images/gallery/college-g-1.jpg',
       title: 'Accountancy & Financial Economics',
       desc: 'Collaborative commerce lectures, ledger adjustments, and real-world case discussions in our Commerce Department.'
     },
     {
-      img: '/images/academics/primary-computer-lab.jpg',
+      img: '/images/gallery/computer-lab-1.jfif',
       title: 'Digital Commerce & IT Practicals',
       desc: 'Hands-on practical sessions in computerized accounting, digital spreadsheets, and commercial computing.'
     },
     {
-      img: '/images/campus/banner1.jpg',
+      img: '/images/gallery/college-g-2.jpg',
       title: 'Digital Classrooms & Study Resources',
       desc: 'Air-conditioned lecture rooms with smart audio-visual systems and comprehensive reference libraries.'
     },
     {
-      img: '/images/campus/building.jpg',
-      title: 'Dedicated Seven-Floor Campus',
-      desc: 'Secure, modern educational environment with exclusive floor wings and dedicated amenities for girls.'
+      img: '/images/gallery/lift-1.jfif',
+      title: 'Modern Infrastructure & Safe Campus Transit',
+      desc: 'Secure high-speed passenger elevator access connecting all floors with monitored corridors and dedicated amenities for girls.'
     }
   ];
 
@@ -125,8 +125,8 @@ export default function JuniorCollegeGirls() {
   return (
     <>
       <SEO
-        title="Junior College for Arts & Commerce: Girls Section | The Scholars School"
-        description="Junior College for Arts & Commerce (Girls Section) at The Scholars High School, Jogeshwari West. 100% HSC Board passing record preparing young women for professional and academic careers."
+        title="The Scholars Junior College of Arts and Commerce: Girls Section | The Scholars School"
+        description="The Scholars Junior College of Arts and Commerce (Girls Section) at Jogeshwari West. 100% HSC Board passing record preparing young women for professional and academic careers."
         canonical="https://thescholarsschool.edu.in/academics/junior-college/girls/"
       />
 
@@ -134,9 +134,9 @@ export default function JuniorCollegeGirls() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">HIGHER SECONDARY &bull; CLASS 11 &amp; 12 (XI &amp; XII) &bull; ARTS &amp; COMMERCE &bull; HSC BOARD</span>
+            <span className="mrak-banner-tag">THE SCHOLARS JUNIOR COLLEGE OF ARTS AND COMMERCE &bull; GIRLS SECTION &bull; HSC BOARD</span>
           </div>
-          <h1>Junior College for Arts &amp; Commerce: Girls Section (HSC Board)</h1>
+          <h1>The Scholars Junior College of Arts and Commerce: Girls Section (HSC Board)</h1>
           <p>
             An empowering educational space for young women providing rigorous Arts &amp; Commerce instruction, career mentoring, and a proven 100% HSC Board pass outcome.
           </p>
@@ -146,7 +146,7 @@ export default function JuniorCollegeGirls() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Junior College (Girls Section)', path: '/academics/junior-college/girls/' }
+          { label: 'The Scholars Junior College (Girls Section)', path: '/academics/junior-college/girls/' }
         ]}
       />
 
@@ -202,7 +202,7 @@ export default function JuniorCollegeGirls() {
                 <GraduationCap size={14} /> Dedicated Girls Campus
               </div>
               <img
-                src="/images/academics/junior-college-girls.jpg"
+                src="/images/gallery/college-g-1.jpg"
                 alt="Junior College female students discussing accountancy principles with professor"
                 className="academic-hero-img"
                 loading="lazy"
@@ -230,7 +230,7 @@ export default function JuniorCollegeGirls() {
           <SectionHeader
             eyebrow="COLLEGE PRINCIPAL'S MESSAGE"
             title="Nurturing Professional Ambition &amp; Moral Integrity"
-            subtitle="Guiding philosophy from our Secondary and Junior College leadership."
+            subtitle="Guiding philosophy from our Junior College leadership."
             centered
           />
 
@@ -246,9 +246,6 @@ export default function JuniorCollegeGirls() {
               />
               <div className="mrak-principal-name">{principal.designation}</div>
               <div className="mrak-principal-role">{principal.section}</div>
-              <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                Junior College for Arts &amp; Commerce
-              </span>
             </div>
 
             <div className="mrak-principal-content">
@@ -418,7 +415,7 @@ export default function JuniorCollegeGirls() {
               <ArrowUpRight size={18} />
             </Link>
             <Link to="/academics/junior-college/boys/" className="btn btn-outline-white btn-lg">
-              <span>Explore: Junior College (Boys Section)</span>
+              <span>Explore: The Scholars Junior College (Boys Section)</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

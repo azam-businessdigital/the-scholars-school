@@ -10,7 +10,7 @@ import {
 const slides = [
   {
     id: 1,
-    image: '/images/campus/banner1.jpg',
+    image: '/images/events/independence-day-1.jpeg',
     eyebrow: 'ESTD. 1993 • JOGESHWARI WEST',
     title: 'Nurturing Minds. Building Character.',
     subtitle: 'Excellence in English-medium education from Pre-School to Junior College.',
@@ -28,7 +28,7 @@ const slides = [
   },
   {
     id: 3,
-    image: '/images/campus/banner2.jpg',
+    image: '/images/gallery/science-activity-4.jpeg',
     eyebrow: 'PROVEN ACADEMIC TRACK RECORD',
     title: '100% Board Exam Distinction',
     subtitle: 'Consistent 100% pass record in Maharashtra SSC & HSC board examinations.',
@@ -37,7 +37,7 @@ const slides = [
   },
   {
     id: 4,
-    image: '/images/academics/deeniyat-classroom.jpg',
+    image: '/images/gallery/ic.jpeg',
     eyebrow: 'AL-QALAM EDUCATIONAL TRUST',
     title: 'Academic Excellence & Moral Values',
     subtitle: 'Holistic curriculum integrating academic rigor with ethical Islamic guidance.',

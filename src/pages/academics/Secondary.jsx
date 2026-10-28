@@ -28,7 +28,7 @@ import { schoolData } from '../../data/schoolData';
 
 export default function Secondary() {
   const data = academicsData.find((a) => a.id === 'secondary');
-  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
+  const principal = schoolData.leadership.principals.find((p) => p.id === 'secondary-principal') || schoolData.leadership.principals[2];
 
   const secondaryGallery = [
     {
@@ -57,7 +57,7 @@ export default function Secondary() {
       desc: 'Instilling humility, hygiene discipline, and shared stewardship through classroom care campaigns.'
     },
     {
-      img: '/images/academics/secondary-science-lab.jpg',
+      img: '/images/gallery/science-activity-1.jpeg',
       title: 'Hands-On Laboratory Practicals',
       desc: 'Regular syllabus experiments in Physics, Chemistry, and Biology preparing students for SSC board exams.'
     }
@@ -135,8 +135,8 @@ export default function Secondary() {
   return (
     <>
       <SEO
-        title="Secondary Section (Maharashtra SSC Board) | The Scholars School"
-        description="Secondary Section (Grades 5 to 10) at The Scholars High School, Jogeshwari West. Proven 100% passing results in Maharashtra SSC Board examinations with dedicated faculty."
+        title="The Scholars High School (Maharashtra SSC Board) | The Scholars School"
+        description="The Scholars High School (Grades 5 to 10), Jogeshwari West. Proven 100% passing results in Maharashtra SSC Board examinations with dedicated faculty."
         canonical="https://thescholarsschool.edu.in/academics/secondary/"
       />
 
@@ -144,9 +144,9 @@ export default function Secondary() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">HIGH SCHOOL ACADEMICS &bull; GRADES 5 TO 10 &bull; MAHARASHTRA SSC BOARD</span>
+            <span className="mrak-banner-tag">THE SCHOLARS HIGH SCHOOL &bull; GRADES 5 TO 10 &bull; MAHARASHTRA SSC BOARD</span>
           </div>
-          <h1>Secondary Section: Grades 5 to 10 (Maharashtra SSC Board)</h1>
+          <h1>The Scholars High School: Grades 5 to 10 (Maharashtra SSC Board)</h1>
           <p>
             Rigorous academic preparation, state-of-the-art science laboratories, and subject specialist mentorship delivering a consistent 100% SSC Board passing record.
           </p>
@@ -156,7 +156,7 @@ export default function Secondary() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Secondary Section', path: '/academics/secondary/' }
+          { label: 'The Scholars High School', path: '/academics/secondary/' }
         ]}
       />
 
@@ -212,7 +212,7 @@ export default function Secondary() {
                 <Award size={14} /> 100% SSC Distinction
               </div>
               <img
-                src="/images/academics/secondary-science-lab.jpg"
+                src="/images/gallery/science-activity-4.jpeg"
                 alt="High school secondary students conducting science experiments in laboratory"
                 className="academic-hero-img"
                 loading="lazy"
@@ -238,9 +238,9 @@ export default function Secondary() {
       <section className="section mrak-principal-section">
         <div className="container">
           <SectionHeader
-            eyebrow="SCHOOL PRINCIPAL'S MESSAGE"
+            eyebrow="HIGH SCHOOL PRINCIPAL'S MESSAGE"
             title="Fostering Academic Rigour, Gratitude &amp; Integrity"
-            subtitle="Guiding philosophy from our Secondary and Junior College leadership."
+            subtitle="Guiding philosophy from our High School leadership."
             centered
           />
 
@@ -256,9 +256,6 @@ export default function Secondary() {
               />
               <div className="mrak-principal-name">{principal.designation}</div>
               <div className="mrak-principal-role">{principal.section}</div>
-              <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                {principal.section}
-              </span>
             </div>
 
             <div className="mrak-principal-content">
@@ -435,7 +432,7 @@ export default function Secondary() {
               <ArrowUpRight size={18} />
             </Link>
             <Link to="/academics/junior-college/girls/" className="btn btn-outline-white btn-lg">
-              <span>Next: Junior College for Arts &amp; Commerce</span>
+              <span>Next: The Scholars Junior College of Arts and Commerce</span>
               <ArrowUpRight size={18} />
             </Link>
           </div>

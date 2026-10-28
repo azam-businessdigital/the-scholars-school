@@ -29,28 +29,28 @@ import { schoolData } from '../../data/schoolData';
 
 export default function JuniorCollegeBoys() {
   const data = academicsData.find((a) => a.id === 'junior-college-boys');
-  const principal = schoolData.leadership.principals[1]; // Principal (Secondary & College)
+  const principal = schoolData.leadership.principals.find((p) => p.id === 'secondary-principal') || schoolData.leadership.principals[2];
 
   const collegeGallery = [
     {
-      img: '/images/academics/junior-college-boys.jpg',
+      img: '/images/gallery/farewell-1.jpeg',
       title: 'Business Economics & Financial Accounting',
       desc: 'Interactive lecture hall discussions, macroeconomic graph analysis, and ledger problem-solving.'
     },
     {
-      img: '/images/campus/banner1.jpg',
+      img: '/images/gallery/smart-board-2.jfif',
       title: 'Air-Conditioned Smart Classrooms',
       desc: 'Modern lecture halls equipped with digital audio-visual boards, comfortable seating, and climate control.'
     },
     {
-      img: '/images/academics/primary-computer-lab.jpg',
+      img: '/images/gallery/computer-lab-1.jfif',
       title: 'Commercial Computing & IT Practicals',
       desc: 'Hands-on digital spreadsheet training, financial calculation software, and business computing.'
     },
     {
-      img: '/images/campus/building.jpg',
-      title: 'Dedicated 7-Floor Educational Campus',
-      desc: 'Centrally located in Jogeshwari West featuring modern lecture halls, elevators, and reference library.'
+      img: '/images/gallery/college-g-1.jpg',
+      title: 'Dedicated Senior Lecture Wings',
+      desc: 'Exclusive collegiate floor divisions designed for focused higher secondary learning and academic preparation.'
     }
   ];
 
@@ -126,8 +126,8 @@ export default function JuniorCollegeBoys() {
   return (
     <>
       <SEO
-        title="Junior College for Arts & Commerce: Boys Section | The Scholars School"
-        description="Junior College for Arts & Commerce (Boys Section) at The Scholars High School, Jogeshwari West. 100% passing results preparing young men for commerce, corporate degrees, and professional careers."
+        title="The Scholars Junior College of Arts and Commerce: Boys Section | The Scholars School"
+        description="The Scholars Junior College of Arts and Commerce (Boys Section) at Jogeshwari West. 100% passing results preparing young men for commerce, corporate degrees, and professional careers."
         canonical="https://thescholarsschool.edu.in/academics/junior-college/boys/"
       />
 
@@ -135,9 +135,9 @@ export default function JuniorCollegeBoys() {
       <div className="page-banner">
         <div className="container">
           <div className="mrak-banner-badge">
-            <span className="mrak-banner-tag">HIGHER SECONDARY &bull; CLASS 11 &amp; 12 (XI &amp; XII) &bull; ARTS &amp; COMMERCE &bull; HSC BOARD</span>
+            <span className="mrak-banner-tag">THE SCHOLARS JUNIOR COLLEGE OF ARTS AND COMMERCE &bull; BOYS SECTION &bull; HSC BOARD</span>
           </div>
-          <h1>Junior College for Arts &amp; Commerce: Boys Section (HSC Board)</h1>
+          <h1>The Scholars Junior College of Arts and Commerce: Boys Section (HSC Board)</h1>
           <p>
             Rigorous coaching, academic precision, and career orientation preparing male students for Arts &amp; Commerce degrees, professional certifications, and entrepreneurial ventures.
           </p>
@@ -147,7 +147,7 @@ export default function JuniorCollegeBoys() {
       <Breadcrumbs
         items={[
           { label: 'Academics', path: '/academics/' },
-          { label: 'Junior College (Boys Section)', path: '/academics/junior-college/boys/' }
+          { label: 'The Scholars Junior College (Boys Section)', path: '/academics/junior-college/boys/' }
         ]}
       />
 
@@ -203,7 +203,7 @@ export default function JuniorCollegeBoys() {
                 <TrendingUp size={14} /> Professional Career Prep
               </div>
               <img
-                src="/images/academics/junior-college-boys.jpg"
+                src="/images/gallery/farewell-1.jpeg"
                 alt="Junior College male students attending business economics and financial accounting lecture"
                 className="academic-hero-img"
                 loading="lazy"
@@ -231,7 +231,7 @@ export default function JuniorCollegeBoys() {
           <SectionHeader
             eyebrow="COLLEGE PRINCIPAL'S MESSAGE"
             title="Guiding Young Men Toward Commercial Leadership"
-            subtitle="Guiding philosophy from our Secondary and Junior College leadership."
+            subtitle="Guiding philosophy from our Junior College leadership."
             centered
           />
 
@@ -247,9 +247,6 @@ export default function JuniorCollegeBoys() {
               />
               <div className="mrak-principal-name">{principal.designation}</div>
               <div className="mrak-principal-role">{principal.section}</div>
-              <span style={{ fontSize: '11px', color: 'var(--color-slate-grey)', marginTop: '4px' }}>
-                Junior College for Arts &amp; Commerce
-              </span>
             </div>
 
             <div className="mrak-principal-content">
@@ -257,7 +254,7 @@ export default function JuniorCollegeBoys() {
                 Building Intellectual Rigour, Financial Insight &amp; Ethical Enterprise
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;At The Scholars Junior College for Arts &amp; Commerce, we guide young men to develop sharp analytical thinking, financial calculation discipline, and entrepreneurial ambition. Backed by experienced lecturers, real-world case studies, and focused board examination drills, our students consistently achieve 100% HSC results and build solid foundations for premier commercial, banking, and professional careers.&rdquo;
+                &ldquo;At The Scholars Junior College of Arts and Commerce, we guide young men to develop sharp analytical thinking, financial calculation discipline, and entrepreneurial ambition. Backed by experienced lecturers, real-world case studies, and focused board examination drills, our students consistently achieve 100% HSC results and build solid foundations for premier commercial, banking, and professional careers.&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; 100% HSC Arts &amp; Commerce Record</span>

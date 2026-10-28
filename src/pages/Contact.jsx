@@ -13,14 +13,14 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Us & Campus Location | The Scholars School"
-        description="Get in touch with The Scholars High School & Junior College for Arts & Commerce. Located at Captain Suresh Samant Marg, Jogeshwari West, Mumbai."
+        description="Get in touch with The Scholars High School and Junior College. Located at Captain Suresh Samant Marg, Jogeshwari West, Mumbai."
         canonical="https://thescholarsschool.edu.in/contact-us/"
       />
 
       <div className="page-banner">
         <div className="container">
           <span className="eyebrow">GET IN TOUCH</span>
-          <h1>Contact The Scholars High School &amp; Junior College for Arts &amp; Commerce</h1>
+          <h1>Contact The Scholars High School and Junior College</h1>
           <p>
             We are here to assist with admission enquiries, academic counseling, certificates, and campus visits.
           </p>
@@ -75,8 +75,7 @@ export default function Contact() {
                   <div className="contact-info-content">
                     <h4>Electronic Mail</h4>
                     <p className="contact-email-links">
-                      <span>General:</span> <a href={`mailto:${schoolData.emails.info}`}>{schoolData.emails.info}</a><br />
-                      <span>Admin &amp; Careers:</span> <a href={`mailto:${schoolData.emails.admin}`}>{schoolData.emails.admin}</a>
+                      <span>Official:</span> <a href={`mailto:${schoolData.emails.primary}`}>{schoolData.emails.primary}</a>
                     </p>
                   </div>
                 </div>
@@ -89,7 +88,8 @@ export default function Contact() {
                   <div className="contact-info-content">
                     <h4>Visiting &amp; Office Hours</h4>
                     <p>
-                      <strong>Monday to Saturday:</strong> 9:00 AM to 3:00 PM<br />
+                      <strong>Visiting Hours:</strong> Monday to Friday: 9:30 AM to 11:30 AM<br />
+                      <strong>Office Hours:</strong> Monday to Saturday: 9:00 AM to 3:00 PM<br />
                       <span style={{ color: 'var(--color-slate-grey)', fontSize: '0.85rem' }}>Sunday &amp; Public Holidays: Closed</span>
                     </p>
                   </div>
