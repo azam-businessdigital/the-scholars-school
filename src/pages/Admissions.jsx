@@ -82,7 +82,7 @@ export default function Admissions() {
       title: 'The Scholars High School',
       category: 'Grades 5 to 10 (Separate Wings)',
       ageBadge: 'Age: 10 – 15 Years',
-      image: '/images/gallery/science-activity-4.jpeg',
+      image: '/images/facilities/science-lab-1.jpg',
       formValue: 'The Scholars High School (Grades 5 to 10 - Boys)',
       desc: 'Rigorous academic preparation for SSC Board examinations with dedicated, separate wings and instructional staff for boys and girls.',
       features: [

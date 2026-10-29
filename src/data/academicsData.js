@@ -61,7 +61,7 @@ export const academicsData = [
     shortTitle: "High School",
     path: "/academics/secondary/",
     h1: "The Scholars High School: Grades 5 to 10 (Maharashtra SSC Board)",
-    heroImage: "/images/gallery/science-activity-4.jpeg",
+    heroImage: "/images/facilities/science-lab-1.jpg",
     headOfSection: "Principal",
     summary: "Rigorous academic preparation leading to the Maharashtra SSC Board examination, supported by science labs, computer labs, and focused mentoring.",
     ageGroup: "10 to 16 Years",

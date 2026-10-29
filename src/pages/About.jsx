@@ -70,8 +70,8 @@ export default function About() {
                   </div>
                   <div className="about-thumb-secondary">
                     <img
-                      src="/images/gallery/science-activity-4.jpeg"
-                      alt="Hands-On Science Working Model Demonstration at The Scholars School"
+                      src="/images/facilities/science-lab-2.jpg"
+                      alt="Secondary Students Conducting Science Chemistry Practical at The Scholars School"
                       loading="lazy"
                       width="360"
                       height="202"

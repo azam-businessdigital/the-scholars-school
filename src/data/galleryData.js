@@ -3421,22 +3421,43 @@ export const albumsData = [
     "category": "Campus Facilities",
     "eventDate": "Annual Academic Calendar",
     "location": "Main Campus Wing",
-    "coverImage": "/images/gallery/lab-2.jfif",
-    "photoCount": 2,
-    "description": "Visual archive of 2 photographs from Science Lab at The Scholars High School & Junior College.",
+    "coverImage": "/images/facilities/science-lab-1.jpg",
+    "photoCount": 5,
+    "description": "Visual archive of 5 photographs from Science Lab at The Scholars High School & Junior College.",
     "photos": [
       {
         "id": "science-lab-1",
-        "src": "/images/gallery/lab-2.jfif",
-        "title": "Science Lab - Photo 1",
-        "alt": "Science Lab photograph 1 at The Scholars High School",
+        "src": "/images/facilities/science-lab-1.jpg",
+        "title": "Science Lab - Practical Experiment",
+        "alt": "Secondary students observing chemical reaction with test tubes in Science Laboratory",
         "aspect": "landscape"
       },
       {
         "id": "science-lab-2",
+        "src": "/images/facilities/science-lab-2.jpg",
+        "title": "Science Lab - Hands-on Chemistry Session",
+        "alt": "Students conducting chemical experiments at the laboratory counter",
+        "aspect": "landscape"
+      },
+      {
+        "id": "science-lab-3",
+        "src": "/images/facilities/science-lab-3.jpg",
+        "title": "Science Lab - Student Investigation Table",
+        "alt": "Students observing test tubes and lab practical notes at The Scholars High School",
+        "aspect": "portrait"
+      },
+      {
+        "id": "science-lab-4",
+        "src": "/images/gallery/lab-2.jfif",
+        "title": "Science Lab - Laboratory Overview",
+        "alt": "Science Lab equipment and workstations at The Scholars High School",
+        "aspect": "landscape"
+      },
+      {
+        "id": "science-lab-5",
         "src": "/images/gallery/lab-1.jfif",
-        "title": "Science Lab - Photo 2",
-        "alt": "Science Lab photograph 2 at The Scholars High School",
+        "title": "Science Lab - Apparatus & Reagents",
+        "alt": "Science Lab practical setup at The Scholars High School",
         "aspect": "portrait"
       }
     ]

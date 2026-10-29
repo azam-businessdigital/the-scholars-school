@@ -67,7 +67,7 @@ const academicSectionsHome = [
     id: 'secondary',
     title: 'The Scholars High School',
     badge: 'Grades 5 to 10 (SSC)',
-    heroImage: '/images/gallery/science-activity-4.jpeg',
+    heroImage: '/images/facilities/science-lab-1.jpg',
     desc: 'Rigorous state board preparation with consistent 100% SSC results.',
     path: '/academics/secondary/'
   },
@@ -148,8 +148,8 @@ export default function Home() {
                   </div>
                   <div className="about-thumb-secondary">
                     <img
-                      src="/images/gallery/science-activity-4.jpeg"
-                      alt="Hands-On Science Working Model Demonstration at The Scholars School"
+                      src="/images/facilities/science-lab-2.jpg"
+                      alt="Secondary Students Conducting Science Chemistry Practical at The Scholars School"
                       loading="lazy"
                       width="360"
                       height="202"

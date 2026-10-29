@@ -57,7 +57,7 @@ export default function Secondary() {
       desc: 'Instilling humility, hygiene discipline, and shared stewardship through classroom care campaigns.'
     },
     {
-      img: '/images/gallery/science-activity-1.jpeg',
+      img: '/images/facilities/science-lab-2.jpg',
       title: 'Hands-On Laboratory Practicals',
       desc: 'Regular syllabus experiments in Physics, Chemistry, and Biology preparing students for SSC board exams.'
     }
@@ -212,7 +212,7 @@ export default function Secondary() {
                 <Award size={14} /> 100% SSC Distinction
               </div>
               <img
-                src="/images/gallery/science-activity-4.jpeg"
+                src="/images/facilities/science-lab-1.jpg"
                 alt="High school secondary students conducting science experiments in laboratory"
                 className="academic-hero-img"
                 loading="lazy"

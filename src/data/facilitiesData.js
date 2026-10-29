@@ -25,7 +25,8 @@ export const facilitiesData = [
     title: "Equipped Science Laboratories",
     category: "Practical Sciences",
     description: "Fully stocked Physics, Chemistry, and Biology laboratories enabling students to perform hands-on experiments, scientific investigations, and curriculum board practicals under specialized faculty supervision.",
-    highlight: "Hands-on Scientific Investigation"
+    highlight: "Hands-on Scientific Investigation",
+    image: "/images/facilities/science-lab-1.jpg"
   },
   {
     id: "campus-building",

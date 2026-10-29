@@ -248,7 +248,7 @@ export default function Gallery() {
     <>
       <SEO
         title="Photo Gallery - Authentic Event Albums & Photo Archive | The Scholars High School and Junior College"
-        description="Explore the complete visual archive of The Scholars High School and Junior College: 79 event albums and 349 authentic photographs covering campus activities, competitions, sports, and modern facilities."
+        description={`Explore the complete visual archive of The Scholars High School and Junior College: ${albumsData.length} event albums and ${galleryData.length} authentic photographs covering campus activities, competitions, sports, and modern facilities.`}
         canonical="https://thescholarsschool.edu.in/gallery/"
       />
 
@@ -258,7 +258,7 @@ export default function Gallery() {
           <span className="eyebrow">AUTHENTIC VISUAL ARCHIVE</span>
           <h1>Event Albums &amp; Photo Gallery</h1>
           <p>
-            Explore our complete archive of 79 event albums and 349 authentic photographs documenting student life, academic activities, annual celebrations, and campus infrastructure.
+            Explore our complete archive of {albumsData.length} event albums and {galleryData.length} authentic photographs documenting student life, academic activities, annual celebrations, and campus infrastructure.
           </p>
         </div>
       </div>
