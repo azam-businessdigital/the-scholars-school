@@ -56,11 +56,11 @@ export default function Admissions() {
       ageBadge: 'Nursery, Mont – 2 & Sr.KG',
       image: '/images/gallery/fancy-dress-1.jpeg',
       formValue: 'MRAK Kids: Nursery',
-      desc: 'Joyful foundational schooling covering STD: Nursery, Mont – 2 & Sr.KG focused on sensory development, Jolly Phonics, early mathematics, and loving moral values.',
+      desc: 'Joyful early schooling for Nursery, Mont-2, and Sr.KG where young children explore through sensory play, Jolly Phonics, early numbers, and kind habits.',
       features: [
         'Air-conditioned, child-safe interactive rooms with lift access',
-        'Jolly Phonics awareness & early numeracy play',
-        'Caring, individualized educator attention'
+        'Jolly Phonics, vocabulary play & early numeracy',
+        'Warm, attentive care from dedicated teachers'
       ]
     },
     {
@@ -68,13 +68,13 @@ export default function Admissions() {
       title: 'The Scholars Primary School',
       category: 'Grades 1 to 4',
       ageBadge: 'Age: 6 – 9 Years',
-      image: '/images/gallery/smart-board-2.jfif',
+      image: '/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg',
       formValue: 'The Scholars Primary School (Grades 1 to 4)',
-      desc: 'Maharashtra State Board aligned curriculum emphasizing English reading fluency, analytical mathematics, and environmental science.',
+      desc: 'English-medium Maharashtra State Board schooling focusing on strong reading, practical arithmetic, science discovery, and good manners.',
       features: [
-        'Hands-on computer & language education',
+        'Interactive smart boards & dedicated computer lab',
         'Daily Deeniyat with Tajweed pronunciation',
-        'Co-curricular arts, sports, and elocution'
+        'Co-curricular arts, sports, and speech activities'
       ]
     },
     {
@@ -84,11 +84,11 @@ export default function Admissions() {
       ageBadge: 'Age: 10 – 15 Years',
       image: '/images/facilities/science-lab-1.jpg',
       formValue: 'The Scholars High School (Grades 5 to 10 - Boys)',
-      desc: 'Rigorous academic preparation for SSC Board examinations with dedicated, separate wings and instructional staff for boys and girls.',
+      desc: 'Focused preparation for Maharashtra SSC Board examinations in dedicated, separate wings with experienced faculty for boys and girls.',
       features: [
-        'Modern physics, chemistry & biology labs',
-        'Dedicated boys & girls instructional floors',
-        '100% SSC board passing track record'
+        'Equipped physics, chemistry & biology labs',
+        'Separate floors & learning wings for boys and girls',
+        'Proven 100% SSC board passing track record'
       ]
     },
     {
@@ -96,13 +96,13 @@ export default function Admissions() {
       title: 'The Scholars Junior College of Arts and Commerce',
       category: 'Grades XI & XII Arts & Commerce',
       ageBadge: 'Higher Secondary (HSC)',
-      image: '/images/gallery/college-g-1.jpg',
+      image: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg',
       formValue: 'The Scholars Junior College of Arts and Commerce (Girls Section)',
-      desc: 'Comprehensive Arts & Commerce education preparing students for professional university degrees (CA, CS, B.Com, BMS, BAF, B.A.) in separate wings.',
+      desc: 'Quality Higher Secondary education in Arts and Commerce, preparing students for university degrees and competitive careers (CA, CS, B.Com, BMS, BAF).',
       features: [
-        'Arts, Humanities, Accountancy & Economics expertise',
-        'Independent shifts for boys & girls',
-        'Career mentorship & competitive exam support'
+        'Expert faculty in Accountancy, Economics & Humanities',
+        'Separate wings & shifts for boys and girls',
+        'Regular career counseling & exam preparation'
       ]
     },
     {
@@ -112,11 +112,11 @@ export default function Admissions() {
       ageBadge: 'Integrated All Grades',
       image: '/images/gallery/ic.jpeg',
       formValue: 'Integrated Deeniyat Program',
-      desc: 'Holistic values-based education integrating Quranic recitation with Tajweed, Hadith studies, and Islamic etiquette into daily school periods alongside English-medium academics.',
+      desc: 'A daily values program teaching Quran recitation with Tajweed, Hadith reflections, and everyday etiquette alongside regular academics.',
       features: [
         'Quranic recitation with authentic Tajweed rules',
-        'Hadith memorization, daily Duas & Islamic jurisprudence (Fiqh)',
-        'Moral character mentoring, elder respect & social responsibility'
+        'Hadith memorization, daily Duas & Islamic etiquette',
+        'Character building, kindness & respect for all'
       ]
     }
   ];
@@ -128,7 +128,7 @@ export default function Admissions() {
       ageLimit: 'Nursery: 3+ yrs | Mont – 2: 4+ yrs | Sr.KG: 5+ yrs',
       grades: 'STD: Nursery, Mont – 2 & Sr.KG',
       shift: 'Morning Shift: 9:00 AM to 12:00 PM',
-      readiness: 'Basic curiosity, language immersion, and social habit encouragement',
+      readiness: 'Natural curiosity, basic verbal skills, and gentle social interaction',
       initialDocs: 'Original Municipal Birth Certificate & 4 passport photos',
       formValue: 'MRAK Kids: Nursery'
     },
@@ -138,7 +138,7 @@ export default function Admissions() {
       ageLimit: 'Grade 1: Minimum 6 years completed as per Maharashtra norms',
       grades: 'Standards 1st to 4th',
       shift: 'Day Shift: 8:00 AM to 1:30 PM',
-      readiness: 'Grade-appropriate reading readiness & basic arithmetic',
+      readiness: 'Age-appropriate reading readiness & basic arithmetic',
       initialDocs: 'Transfer Certificate (TC), Previous Marksheet, Aadhaar',
       formValue: 'The Scholars Primary School (Grades 1 to 4)'
     },
@@ -146,9 +146,9 @@ export default function Admissions() {
       title: 'The Scholars High School (Grades 5 to 10)',
       shortName: 'High School',
       ageLimit: 'Age appropriate for enrolled grade (10 to 15 years)',
-      grades: 'Standards 5th to 10th (Segregated Boys & Girls Sections)',
+      grades: 'Standards 5th to 10th (Separate Boys & Girls Wings)',
       shift: 'Separate shifts & dedicated faculty floors',
-      readiness: 'Sound previous academic foundation & conduct record',
+      readiness: 'Solid academic foundation & good conduct record from previous school',
       initialDocs: 'Original Countersigned TC, 2-Year Report Cards, Aadhaar',
       formValue: 'The Scholars High School (Grades 5 to 10 - Boys)'
     },
@@ -158,7 +158,7 @@ export default function Admissions() {
       ageLimit: 'Successful completion of 10th Standard (SSC / CBSE / ICSE)',
       grades: 'XI & XII Arts & Commerce (Independent Wings)',
       shift: 'College Morning / Afternoon Shifts',
-      readiness: 'Minimum passing percentage in Class 10 board examination',
+      readiness: 'Passing marks in Class 10 board examination',
       initialDocs: '10th Board Marksheet, Original Leaving Certificate, Migration Cert',
       formValue: 'The Scholars Junior College of Arts and Commerce (Girls Section)'
     },
@@ -168,7 +168,7 @@ export default function Admissions() {
       ageLimit: 'All Enrolled Students (Pre-School through Junior College)',
       grades: 'Integrated into all grades (Nursery to Grade 10 & Junior College)',
       shift: 'Embedded daily periods within regular school hours',
-      readiness: 'Open to all enrolled learners; interest in Quranic recitation with Tajweed and Islamic ethics',
+      readiness: 'Open to all enrolled students eager to learn Quranic recitation and moral values',
       initialDocs: 'Standard institutional admission documents (Birth Certificate, TC, or Aadhaar)',
       formValue: 'Integrated Deeniyat Program'
     }
@@ -178,26 +178,26 @@ export default function Admissions() {
     {
       num: '01',
       title: 'Submit Online Enquiry',
-      time: 'Immediate',
-      desc: 'Fill out the digital enquiry application below or visit our Hill Park campus reception counter to register interest.'
+      time: 'Takes 2 Minutes',
+      desc: 'Fill out our quick enquiry form below, or visit our campus reception in Jogeshwari West to collect a prospectus.'
     },
     {
       num: '02',
-      title: 'Counseling & Interaction',
+      title: 'Parent & Student Interaction',
       time: 'Within 24–48 Hours',
-      desc: 'Our academic coordinators hold a friendly, constructive interaction with the student and parents to assess grade readiness.'
+      desc: 'Our academic team welcomes you and your child for a friendly conversation to understand their learning needs and answer your questions.'
     },
     {
       num: '03',
       title: 'Document Verification',
       time: 'Campus Desk Visit',
-      desc: 'Parents submit original documents (Birth Certificate, Leaving Certificate, Marksheets, Aadhaar) for administrative verification.'
+      desc: 'Bring basic documents (such as birth or leaving certificate, marksheets, and Aadhaar) for quick verification at the office.'
     },
     {
       num: '04',
       title: 'Enrollment & Welcome Kit',
-      time: 'Final Confirmation',
-      desc: 'Upon seat allotment, fee schedule arrangements are completed. Textbooks, uniforms, and student ID orientation are provided.'
+      time: 'Final Step',
+      desc: 'Confirm your admission, complete simple fee formalities, and receive your child\'s welcome kit, books, and class schedule.'
     }
   ];
 
@@ -227,32 +227,32 @@ export default function Admissions() {
     {
       category: 'curriculum',
       q: 'What is the medium of instruction at The Scholars High School?',
-      a: 'The school instructs all general academic subjects strictly in the English medium, following the Maharashtra State Department of Education guidelines. Languages such as Hindi and Marathi are taught as part of state board mandates.'
+      a: 'All core subjects are taught in English following the Maharashtra State Board curriculum. Hindi and Marathi are also taught in accordance with state guidelines.'
     },
     {
       category: 'curriculum',
       q: 'How is the Deeniyat curriculum integrated into daily academics?',
-      a: 'Deeniyat is incorporated into the daily timetable across all grade levels without compromising general academic periods. Students learn Quranic recitation with correct Tajweed, Hadith memorization, basic Islamic jurisprudence, and moral etiquette.'
+      a: 'Deeniyat is part of the daily timetable for every class without cutting into regular academic hours. Children learn Quran recitation with proper Tajweed, memorise daily Duas, and learn everyday moral manners.'
     },
     {
       category: 'eligibility',
-      q: 'Are the secondary and junior college classes segregated for boys and girls?',
-      a: 'Yes. In keeping with our institutional guidelines and Islamic principles, The Scholars High School maintains separate instructional sections and dedicated faculty for boys and girls in the Secondary Section (Grades 5 to 10) as well as separate sections in the Junior College of Arts & Commerce.'
+      q: 'Are classes separate for boys and girls in senior grades?',
+      a: 'Yes. To provide a comfortable and focused environment, secondary school (Grades 5 to 10) and junior college have dedicated, separate wings and faculties for boys and girls.'
     },
     {
       category: 'office',
-      q: 'What are the school administrative office visiting hours for admissions?',
-      a: 'Campus visiting hours for admissions enquiries, campus tours, and document verification are Monday to Friday from 9:30 AM to 11:30 AM. General office hours are Monday through Saturday from 9:00 AM to 3:00 PM at Captain Suresh Samant Marg, Jogeshwari West.'
+      q: 'What are the office hours for admissions and campus visits?',
+      a: 'Our admissions desk is open Monday through Saturday from 9:00 AM to 3:00 PM. For guided campus walkthroughs, we recommend visiting between 9:30 AM and 11:30 AM.'
     },
     {
       category: 'office',
       q: 'What is the fee structure policy at The Scholars School?',
-      a: 'Operated under the non-profit patronage of Al-Qalam Educational Trust (Regd. 1991), our fees are affordable, transparent, and structured strictly according to government guidelines. There are no capitation fees or compulsory donations. Detailed grade-wise breakdowns are provided during the campus visit.'
+      a: 'As an institution guided by the non-profit Al-Qalam Educational Trust, our fees are affordable, transparent, and compliant with government norms. We never charge capitation fees or donations, and flexible installment plans are provided.'
     },
     {
       category: 'eligibility',
       q: 'Can mid-term transfer admissions be granted if families relocate?',
-      a: 'Yes, mid-term transfers are accommodated subject to vacancy in the requested grade, valid Transfer Certificate (TC) countersigned by the appropriate education authority, and satisfactory evaluation in our counseling assessment.'
+      a: 'Yes. Mid-term admissions are accepted subject to seat availability in that grade and submission of a valid Transfer Certificate (TC) from the previous school.'
     }
   ];
 
@@ -270,10 +270,10 @@ export default function Admissions() {
 
       <div className="page-banner">
         <div className="container">
-          <span className="eyebrow">JOIN OUR INSTITUTION</span>
-          <h1>Admissions at The Scholars High School and Junior College</h1>
+          <span className="eyebrow">JOIN OUR COMMUNITY</span>
+          <h1>Admissions at The Scholars</h1>
           <p>
-            Welcoming students from MRAK - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce. Discover our transparent admission procedure and submit your enquiry.
+            Welcome to The Scholars School and Junior College. Learn about our simple, step-by-step admissions process and submit your online enquiry today.
           </p>
         </div>
       </div>
@@ -285,8 +285,8 @@ export default function Admissions() {
         <div className="container">
           <SectionHeader
             eyebrow="ACADEMIC DIVISIONS"
-            title="Explore Programs &amp; Grade Levels"
-            subtitle="Explore our structured academic divisions catering to early childhood, primary, secondary, junior college, and integrated Deeniyat values education."
+            title="Find the Right Grade for Your Child"
+            subtitle="Explore our age-appropriate programs—from joyful early childhood play in MRAK Kids to Higher Secondary degrees in Arts and Commerce."
             centered
           />
 
@@ -341,7 +341,7 @@ export default function Admissions() {
           <SectionHeader
             eyebrow="OFFICIAL CRITERIA"
             title="Interactive Age &amp; Grade Eligibility Checker"
-            subtitle="Verify your child's age eligibility and entry guidelines in accordance with the Maharashtra Education Department rules."
+            subtitle="Check entry age, grade standards, school timings, and initial document requirements below."
             centered
           />
 
@@ -472,10 +472,10 @@ export default function Admissions() {
             </div>
             <div className="trust-policy-content">
               <h4 className="trust-policy-title">
-                Affordable, Merit-Driven Policy under Al-Qalam Educational Trust
+                Affordable, Honest &amp; Non-Profit Education
               </h4>
               <p className="trust-policy-text">
-                The Scholars High School is maintained on a non-profit foundation. We do not accept donations or capitation fees. Transparent fee schedules and installment payment options are provided to support parents.
+                Run by the Al-Qalam Educational Trust since 1993, we believe every child deserves a quality education. We never charge donations or capitation fees, and our fee structure is transparent with simple installment options to support families.
               </p>
             </div>
           </div>
@@ -579,7 +579,7 @@ export default function Admissions() {
                   </a>
 
                   <a
-                    href="https://wa.me/918976890569?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20The%20Scholars%20School."
+                    href="https://wa.me/918976890572?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20The%20Scholars%20School."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-emerald btn-whatsapp btn-sm"
@@ -588,7 +588,7 @@ export default function Admissions() {
                     <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
                       <path d="M16.01 2.01C8.28 2.01 2 8.28 2 16.02c0 2.6.7 5.04 1.93 7.15L2 30l7.05-1.85c2.05 1.13 4.4 1.76 6.96 1.76 7.73 0 14.01-6.27 14.01-14.01 0-7.74-6.28-14.01-14.01-14.01zm8.24 19.83c-.35.98-1.74 1.8-2.42 1.91-.65.11-1.49.16-2.42-.14-.56-.18-1.28-.42-2.22-.83-3.92-1.7-6.49-5.65-6.68-5.91-.2-.26-1.61-2.14-1.61-4.08 0-1.94 1.02-2.9 1.38-3.3.36-.4.78-.5 1.04-.5.26 0 .52 0 .75.01.24.01.56-.09.87.66.33.79 1.12 2.74 1.22 2.94.1.2.16.44.03.7-.13.26-.2.42-.39.65-.2.23-.42.51-.6.69-.2.2-.41.42-.18.82.23.4 1.03 1.7 2.21 2.75 1.52 1.35 2.8 1.77 3.2 1.97.4.2.63.17.86-.1.23-.26.99-1.15 1.25-1.55.26-.4.53-.33.89-.2.36.13 2.28 1.08 2.68 1.27.39.2.66.29.75.46.1.16.1.95-.25 1.93z" />
                     </svg>
-                    <span>WhatsApp Admissions Enquiry</span>
+                    <span>WhatsApp Enquiry: +91 8976890572</span>
                   </a>
                 </div>
               </div>

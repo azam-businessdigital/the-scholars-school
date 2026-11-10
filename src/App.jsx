@@ -17,6 +17,9 @@ function resolveBasename() {
   }
   if (typeof window !== 'undefined') {
     const pathname = window.location.pathname || '';
+    if (pathname.startsWith('/the-scholars-school-v1')) {
+      return '/the-scholars-school-v1';
+    }
     if (pathname.startsWith('/the-scholars-school')) {
       return '/the-scholars-school';
     }

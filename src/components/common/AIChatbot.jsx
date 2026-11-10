@@ -19,9 +19,9 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'greetings',
     title: 'Greetings & Welcome',
     keywords: ['hi', 'hello', 'hey', 'salam', 'assalam', 'assalamu alaikum', 'assalamualaikum', 'good morning', 'good afternoon', 'good evening', 'subah bakhair', 'kaise ho', 'how are you'],
-    response: "Wa Alaikum Assalam! Welcome to **The Scholars High School and Junior College** (Est. 1993, Al-Qalam Educational Trust).\n\nI am your comprehensive AI campus assistant. I can answer any questions regarding:\n• **Admissions 2026-27:** Procedure, age criteria, and document checklist\n• **Academic Sections:** MRAK Kids Pre-School to Junior College of Arts and Commerce (XI & XII)\n• **Curriculum & Subjects:** Arts & Commerce subjects (BK, OCM, Economics, SP, Math, IT, Languages, Humanities)\n• **100% Board Results:** SSC and HSC state board examination records\n• **Campus Facilities:** 7-floor campus, passenger elevator/lift, interactive AC smart classrooms, science practical & IT labs, RO water, and prayer hall\n• **School Timings & Location:** Shift timings, office hours, and Jogeshwari West directions\n• **Fee Guidance:** Non-profit, transparent policy under Al-Qalam Trust\n• **Careers & Vacancies:** Head Mistress and Subject Teacher openings\n\nHow may I help you today?",
+    response: "Wa Alaikum Assalam! Welcome to **The Scholars High School and Junior College** (Est. 1993, Al-Qalam Educational Trust).\n\nI am your comprehensive AI campus assistant. I can answer any questions regarding:\n• **Admissions 2027-28:** Procedure, age criteria, and document checklist\n• **Academic Sections:** MRAK Kids Pre-School to Junior College of Arts and Commerce (XI & XII)\n• **Curriculum & Subjects:** Arts & Commerce subjects (BK, OCM, Economics, SP, Math, IT, Languages, Humanities)\n• **100% Board Results:** SSC and HSC state board examination records\n• **Campus Facilities:** 7-floor campus, passenger elevator/lift, interactive AC smart classrooms, science practical & IT labs, RO water, and prayer hall\n• **School Timings & Location:** Shift timings, office hours, and Jogeshwari West directions\n• **Fee Guidance:** Non-profit, transparent policy under Al-Qalam Trust\n• **Careers & Vacancies:** Head Mistress and Subject Teacher openings\n\nHow may I help you today?",
     actions: [
-      { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
+      { label: 'Admissions 2027-28', query: 'Tell me about the admission procedure and required documents' },
       { label: 'Academic Sections', query: 'What academic sections do you offer?' },
       { label: 'Age Criteria', query: 'What is the age limit for admission?' },
       { label: 'School Timings & Location', query: 'What are the school timings and campus address?' },
@@ -33,7 +33,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'admissions_procedure',
     title: 'Admissions Procedure & Roadmap',
     keywords: ['admission', 'admissions', 'apply', 'application', 'how to apply', 'enroll', 'enrollment', 'register', 'registration', 'seat', 'seats', 'enquiry', 'inquiry', 'procedure', 'admission process', 'admission form', 'admission step', 'steps to apply', 'online form', 'online enquiry'],
-    response: "**Admissions for Academic Session 2026-27 are open** across all sections from MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce!\n\n**4-Step Admission Roadmap:**\n1. **Submit Enquiry:** Fill out the online admission enquiry form on our website or visit our administrative reception desk at Hill Park, Jogeshwari West.\n2. **Counseling & Interaction:** A friendly, constructive interaction with the student and parents (within 24–48 hours) to assess grade readiness.\n3. **Document Verification:** Verification of municipal birth certificate, previous school Leaving Certificate / Transfer Certificate (LC/TC), and marksheets.\n4. **Enrollment & Welcome Kit:** Formal confirmation of seat allotment, fee schedule briefing, uniforms, textbooks, and ID orientation.\n\nVisit our administrative desk Monday to Saturday (9:00 AM – 3:00 PM) or submit your online enquiry directly through the link below.",
+    response: "**Admissions for Academic Session 2027-28 are open** across all sections from MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce!\n\n**4-Step Admission Roadmap:**\n1. **Submit Enquiry:** Fill out the online admission enquiry form on our website or visit our administrative reception desk at Hill Park, Jogeshwari West.\n2. **Counseling & Interaction:** A friendly, constructive interaction with the student and parents (within 24–48 hours) to assess grade readiness.\n3. **Document Verification:** Verification of municipal birth certificate, previous school Leaving Certificate / Transfer Certificate (LC/TC), and marksheets.\n4. **Enrollment & Welcome Kit:** Formal confirmation of seat allotment, fee schedule briefing, uniforms, textbooks, and ID orientation.\n\nVisit our administrative desk Monday to Saturday (9:00 AM – 3:00 PM) or submit your online enquiry directly through the link below.",
     linkTo: '/admissions/',
     linkText: 'Go to Online Admissions Page & Form',
     showContact: true,
@@ -174,7 +174,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'College Boys Section', query: 'Tell me about the Junior College Boys Section' },
       { label: 'Commerce Subjects', query: 'What subjects are taught in Commerce?' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -187,7 +187,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'College Girls Section', query: 'Tell me about the Junior College Girls Section' },
       { label: 'Commerce Subjects', query: 'What subjects are taught in Commerce?' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -213,7 +213,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Secondary Section', query: 'Tell me about the Secondary Section' },
       { label: 'Junior College', query: 'Tell me about Junior College Commerce' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -226,7 +226,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Download Gazettes', query: 'Where can I see the announcements and notices?' },
       { label: 'Secondary Section', query: 'Tell me about the Secondary Section' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -240,7 +240,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Campus Address', query: 'Where is the school located?' },
       { label: 'Phone Helplines', query: 'Give me your official phone numbers' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -254,7 +254,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'School Timings', query: 'What are the office hours?' },
       { label: 'Phone Helplines', query: 'Give me your phone numbers' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -268,7 +268,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'School Timings', query: 'What are the school office hours?' },
       { label: 'Campus Address', query: 'Where is the school located?' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -282,7 +282,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Careers & Jobs', query: 'What teaching jobs are available?' },
       { label: 'Phone Numbers', query: 'Give me your phone numbers' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -293,7 +293,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     showContact: true,
     actions: [
       { label: 'Call Helpdesk', query: 'Give me your phone numbers' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'Campus Address', query: 'Where is the school located?' }
     ]
   },
@@ -333,7 +333,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Smart Classrooms', query: 'Tell me about the smart classrooms' },
       { label: 'Campus Facilities', query: 'What other facilities do you have?' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -416,7 +416,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'trust_history',
     title: 'Al-Qalam Educational Trust & History',
     keywords: ['history', 'trust', 'al-qalam', 'al qalam', 'established', '1993', '1991', 'background', 'about school', 'about the scholars', 'foundation', 'registration', 'who established', 'when was school founded'],
-    response: "**About Al-Qalam Educational Trust & School History:**\n\n• **Established:** Al-Qalam Educational Trust was registered in **1991**, and founded **The Scholars High School in 1993** in Jogeshwari West, Mumbai.\n• **Visionary Mission:** Founded to provide high-standard modern English education firmly rooted in moral and Islamic values.\n• **30+ Years of Academic Eminence:** From humble beginnings, the institution has blossomed into a comprehensive **7-floor campus** serving over **2,000+ school students** and **150+ junior college students**.\n• **Motto:** *Education That Builds Knowledge, Character and Confidence*.",
+    response: "**About Al-Qalam Educational Trust & School History:**\n\n• **Established:** Al-Qalam Educational Trust was registered in **1991**, and founded **The Scholars High School in 1993** in Jogeshwari West, Mumbai.\n• **Visionary Mission:** Founded to provide high-standard modern English education firmly rooted in moral and Islamic values.\n• **30+ Years of Academic Eminence:** From humble beginnings, the institution has blossomed into a comprehensive **7-floor campus** serving over **2,500+ students** and **150+ dedicated staff members**.\n• **Motto:** *Education That Builds Knowledge, Character and Confidence*.",
     linkTo: '/about-us/',
     linkText: 'Read Complete History & Mission on About Us',
     actions: [
@@ -433,18 +433,18 @@ const CAMPUS_KNOWLEDGE_BASE = [
     linkTo: '/about-us/',
     linkText: "Read About Founder's Vision on About Us",
     actions: [
-      { label: 'President & Chairman', query: 'Who is the president of the school?' },
+      { label: 'President', query: 'Who is the president of the school?' },
       { label: 'Board of Trustees', query: 'Who are the trustees?' },
       { label: 'About School History', query: 'Tell me about the history of the school' }
     ]
   },
   {
     id: 'chairman_president',
-    title: 'President & Chairman: Mr. Mohammad Aslam Ghazi',
+    title: 'President: Mr. Mohammad Aslam Ghazi',
     keywords: ['president', 'chairman', 'aslam ghazi', 'mohammad aslam', 'ghazi', 'head of trust', 'chairman message'],
-    response: "**President & Chairman: Mr. Mohammad Aslam Ghazi:**\n\nMr. Mohammad Aslam Ghazi leads Al-Qalam Educational Trust as its President and Chairman.\n\n• **Chairman's Message:** Reflecting on the Quranic verse *'Can those with knowledge be equal to those without it?'*, Mr. Ghazi emphasizes that education is the single most transformative tool to uplift humanity, sharpen discernment between truth and falsehood, and prepare young minds to lead with integrity.\n• Under his guidance, the Trust continues to modernize infrastructure, support deserving students, and expand higher secondary educational opportunities.",
+    response: "**President: Mr. Mohammad Aslam Ghazi:**\n\nMr. Mohammad Aslam Ghazi leads Al-Qalam Educational Trust as its President and Chairman.\n\n• **President's Message:** Reflecting on the Quranic verse *'Can those with knowledge be equal to those without it?'*, Mr. Ghazi emphasizes that education is the single most transformative tool to uplift humanity, sharpen discernment between truth and falsehood, and prepare young minds to lead with integrity.\n• Under his guidance, the Trust continues to modernize infrastructure, support deserving students, and expand higher secondary educational opportunities.",
     linkTo: '/about-us/',
-    linkText: "Read Chairman's Full Message",
+    linkText: "Read President's Full Message",
     actions: [
       { label: 'Board of Trustees', query: 'Who are the trustees of the school?' },
       { label: 'Principals Team', query: 'Who are the principals of the school?' },
@@ -455,7 +455,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'trustees_list',
     title: 'Board of Trustees',
     keywords: ['trustees of al qalam', 'al qalam trustees', 'trustee list', 'trustees list', 'trustee', 'trustees', 'board members', 'committee', 'mahfooz', 'siddiqui', 'abdur rashid', 'tehseen', 'amin gulzar', 'badar nawab', 'padiyar', 'ataswala', 'waheed shaikh', 'management'],
-    response: "**Distinguished Board of Trustees (Al-Qalam Educational Trust):**\n\n• **Mr. Mohammad Aslam Ghazi** – President & Chairman\n• **Mr. Mahfooz Ahmad Siddiqui** – General Secretary\n• **Mohammad Abdur Rashid** – Treasurer\n• **Syed Tehseen Ahmed** – Trustee\n• **Mr. Hasan Badar Nawab** – Founder Member\n• **Mahmood Usman Padiyar** – Trustee\n• **Mr. Abdul Waheed Shaikh** – Trustee\n• **Mr. Amin Gulzar** – Trustee\n• **Mr. Abdul Gani Atalaswala** – Trustee\n\nOur trustees bring decades of civic leadership, educational stewardship, and philanthropic commitment to The Scholars School family.",
+    response: "**Distinguished Board of Trustees (Al-Qalam Educational Trust):**\n\n• **Mr. Mohammad Aslam Ghazi** – President\n• **Mr. Mahfooz Ahmad Siddiqui** – General Secretary\n• **Mohammad Abdur Rashid** – Treasurer\n• **Syed Tehseen Ahmed** – Trustee\n• **Mr. Hasan Badar Nawab** – Founder Member\n• **Mahmood Usman Padiyar** – Trustee\n• **Mr. Abdul Waheed Shaikh** – Trustee\n• **Mr. Amin Gulzar** – Trustee\n• **Mr. Abdul Gani Atalaswala** – Trustee\n\nOur trustees bring decades of civic leadership, educational stewardship, and philanthropic commitment to The Scholars School family.",
     linkTo: '/about-us/',
     linkText: 'View Trustees Profiles on About Us',
     actions: [
@@ -474,7 +474,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     actions: [
       { label: 'Faculty Qualifications', query: 'What qualifications do teachers have?' },
       { label: '100% Board Results', query: 'Tell me about the SSC Board examination results' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' }
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' }
     ]
   },
   {
@@ -508,12 +508,12 @@ const CAMPUS_KNOWLEDGE_BASE = [
     id: 'announcements_circulars',
     title: 'Latest Announcements & Circulars',
     keywords: ['announcement', 'announcements', 'notice', 'notices', 'circular', 'circulars', 'update', 'updates', 'gazette download', 'notification', 'notifications', 'bulletin'],
-    response: "**Latest Official Announcements & Notices:**\n\n• **Maharashtra SSC Board Class 10 Results:** 100% Pass record achieved. Official Result Gazette PDF is available for download on our announcements page.\n• **Maharashtra HSC Board Class 12 Commerce Results:** 100% Pass record declared. HSC Commerce Gazette PDF is available for download.\n• **Admissions Open for 2026-27:** Registration open across all sections (Pre-School through Junior College).\n• **Faculty Recruitment Notice:** Applications open for Head Mistress and Subject Teachers in English, Marathi, Maths, Science, Social Studies, Art, and PT.",
+    response: "**Latest Official Announcements & Notices:**\n\n• **Maharashtra SSC Board Class 10 Results:** 100% Pass record achieved. Official Result Gazette PDF is available for download on our announcements page.\n• **Maharashtra HSC Board Class 12 Commerce Results:** 100% Pass record declared. HSC Commerce Gazette PDF is available for download.\n• **Admissions Open for 2027-28:** Registration open across all sections (Pre-School through Junior College).\n• **Faculty Recruitment Notice:** Applications open for Head Mistress and Subject Teachers in English, Marathi, Maths, Science, Social Studies, Art, and PT.",
     linkTo: '/announcements/',
     linkText: 'View All Notices & Download Gazettes',
     actions: [
       { label: '100% Board Results', query: 'Tell me about the SSC Board examination results' },
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'Careers & Jobs', query: 'What teaching jobs are available?' }
     ]
   },
@@ -562,7 +562,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     keywords: ['uniform', 'dress', 'dress code', 'clothes', 'book', 'books', 'textbook', 'textbooks', 'notebook', 'notebooks', 'stationery', 'bag', 'kit', 'school uniform'],
     response: "**School Uniform & Textbooks Guidelines:**\n\n• **Prescribed Uniform:** In keeping with dignity, modesty, and institutional equality, a distinct formal uniform is prescribed for boys and girls across all grade sections.\n• **Textbooks & Stationery:** Maharashtra State Board curriculum textbooks (Balbharati) and specialized school workbooks are prescribed.\n• **Distribution Schedule:** Upon final admission confirmation, parents receive an official vendor list, uniform measurement guidelines, and complete book lists from the administrative desk.",
     actions: [
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'Fee Structure', query: 'What are the school fees?' },
       { label: 'Contact Helpdesk', query: 'Give me your phone numbers' }
     ]
@@ -615,7 +615,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     linkTo: '/privacy-policy/',
     linkText: 'Read Complete Privacy Policy',
     actions: [
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'Contact Us', query: 'Give me your official phone numbers' }
     ]
   },
@@ -626,7 +626,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     response: "**Alhamdulillah & JazakAllahu Khairan!**\n\nYou are most welcome! We are delighted to assist you. If you have any further questions about admissions, academic programs, timings, or would like to visit our Hill Park campus in Jogeshwari West, please let us know or call our helpline at +91 8976890569.",
     showContact: true,
     actions: [
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'School Timings', query: 'What are the school timings?' },
       { label: 'Campus Address', query: 'Where is the school located?' },
       { label: 'Phone Helplines', query: 'Give me your phone numbers' }
@@ -638,7 +638,7 @@ const CAMPUS_KNOWLEDGE_BASE = [
     keywords: ['bye', 'goodbye', 'see you', 'take care', 'khuda hafiz', 'allah hafiz', 'shabbakhair', 'have a nice day'],
     response: "**Khuda Hafiz & Ma'a as-salama!**\n\nThank you for reaching out to **The Scholars High School and Junior College**. We wish you and your family abundant blessing and success. If you need anything in the future, we are always here to help!",
     actions: [
-      { label: 'Admissions 2026-27', query: 'How do I apply for admission?' },
+      { label: 'Admissions 2027-28', query: 'How do I apply for admission?' },
       { label: 'Campus Address', query: 'Where is the school located?' },
       { label: 'Phone Helplines', query: 'Give me your phone numbers' }
     ]
@@ -658,7 +658,7 @@ const INITIAL_MESSAGES = [
     text: 'How can I assist you today? You can choose a quick topic below or ask any question about admissions, age limits, required documents, 6 academic sections, commerce subjects, 100% board results, timings, lift, facilities, fees, or careers.',
     time: 'Just now',
     actions: [
-      { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
+      { label: 'Admissions 2027-28', query: 'Tell me about the admission procedure and required documents' },
       { label: 'Academic Sections', query: 'What academic sections do you offer?' },
       { label: 'Age Criteria', query: 'What is the age limit for each grade?' },
       { label: 'Commerce Subjects', query: 'What subjects are offered in 11th and 12th Commerce?' },
@@ -687,7 +687,7 @@ function getBotResponse(userQuery) {
     return {
       text: "Please type your question or select one of the suggested topics below. I can answer any question about admissions, academic sections, subjects, timings, fees, results, facilities, and careers.",
       actions: [
-        { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
+        { label: 'Admissions 2027-28', query: 'Tell me about the admission procedure and required documents' },
         { label: 'Academic Sections', query: 'What academic sections do you offer?' },
         { label: 'School Timings & Location', query: 'What are the school timings and campus address?' }
       ]
@@ -753,9 +753,9 @@ function getBotResponse(userQuery) {
 
   // Comprehensive fallback if query has no specific keyword match
   return {
-    text: "Thank you for contacting **The Scholars High School and Junior College** (Est. 1993, Al-Qalam Educational Trust).\n\nHere is a quick overview of our institution:\n\n• **Admissions 2026-27:** Actively open across all sections from MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce (XI & XII).\n• **Curriculum & Results:** Maharashtra SSC & HSC Board with an **unbroken 100% pass record**.\n• **Campus Facilities:** 7-floor campus at Hill Park, passenger elevator/lift across all floors, fully air-conditioned smart digital classrooms, science practical and IT labs, RO water, and prayer hall.\n• **Campus Location:** Captain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower, Jogeshwari (West), Mumbai 400102.\n• **Visiting Hours:** Monday to Friday, 9:30 AM to 11:30 AM.\n• **Office Hours:** Monday to Saturday, 9:00 AM to 3:00 PM.\n\nPlease choose one of the popular categories below or type a specific question:",
+    text: "Thank you for contacting **The Scholars High School and Junior College** (Est. 1993, Al-Qalam Educational Trust).\n\nHere is a quick overview of our institution:\n\n• **Admissions 2027-28:** Actively open across all sections from MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School through The Scholars Junior College of Arts and Commerce (XI & XII).\n• **Curriculum & Results:** Maharashtra SSC & HSC Board with an **unbroken 100% pass record**.\n• **Campus Facilities:** 7-floor campus at Hill Park, passenger elevator/lift across all floors, fully air-conditioned smart digital classrooms, science practical and IT labs, RO water, and prayer hall.\n• **Campus Location:** Captain Suresh Samant Marg, Agarwal Estate, Opp. Hill Park Tower, Jogeshwari (West), Mumbai 400102.\n• **Visiting Hours:** Monday to Friday, 9:30 AM to 11:30 AM.\n• **Office Hours:** Monday to Saturday, 9:00 AM to 3:00 PM.\n\nPlease choose one of the popular categories below or type a specific question:",
     actions: [
-      { label: 'Admissions 2026-27', query: 'Tell me about the admission procedure and required documents' },
+      { label: 'Admissions 2027-28', query: 'Tell me about the admission procedure and required documents' },
       { label: 'Academic Sections', query: 'What academic sections do you offer?' },
       { label: 'Commerce Subjects', query: 'What subjects are taught in 11th and 12th Commerce?' },
       { label: 'School Timings & Location', query: 'What are the school timings and campus location?' },

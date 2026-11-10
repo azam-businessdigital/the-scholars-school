@@ -10,39 +10,57 @@ import {
 const slides = [
   {
     id: 1,
-    image: '/images/events/independence-day-1.jpeg',
-    eyebrow: 'ESTD. 1993 • JOGESHWARI WEST',
-    title: 'Nurturing Minds. Building Character.',
-    subtitle: 'Excellence in English-medium education from Pre-School to Junior College.',
-    primaryBtn: { text: 'Explore Academics', path: '/academics/' },
-    secondaryBtn: { text: 'Admissions 2026–27', path: '/admissions/' }
+    image: '/images/campus/building-hero.jpg',
+    eyebrow: 'ESTD. 1993 • JOGESHWARI WEST, MUMBAI',
+    title: 'Welcome to The Scholars High School & Junior College',
+    subtitle: 'A modern 7-storey campus in Jogeshwari West bringing together top academics, hands-on learning, and strong everyday values from Pre-School to Junior College.',
+    primaryBtn: { text: 'Explore Campus', path: '/about-us/' },
+    secondaryBtn: { text: 'Admissions 2027–28', path: '/admissions/' }
   },
   {
     id: 2,
-    image: '/images/campus/building.jpg',
-    eyebrow: 'MODERN CAMPUS FACILITIES',
-    title: 'Purpose-Built 7-Story Campus',
-    subtitle: 'Smart digital classrooms, advanced labs, and elevator accessibility.',
-    primaryBtn: { text: 'Campus Facilities', path: '/about-us/' },
-    secondaryBtn: { text: 'Schedule a Visit', path: '/contact-us/' }
+    image: '/images/academics/pre-school.jpg',
+    eyebrow: 'MRAK KIDS PRE-SCHOOL • NURSERY, MONT-2 & SR.KG',
+    title: 'Early Wonder & Joyful Foundational Learning',
+    subtitle: 'A loving first step into school where little learners build confidence through phonics, sensory play, and caring teachers in bright, air-conditioned rooms.',
+    primaryBtn: { text: 'Explore MRAK Kids', path: '/academics/mrak-kids/' },
+    secondaryBtn: { text: 'Admission Enquiry', path: '/admissions/' }
   },
   {
     id: 3,
-    image: '/images/gallery/science-activity-4.jpeg',
-    eyebrow: 'PROVEN ACADEMIC TRACK RECORD',
-    title: '100% Board Exam Distinction',
-    subtitle: 'Consistent 100% pass record in Maharashtra SSC & HSC board examinations.',
-    primaryBtn: { text: 'View Board Results', path: '/results/' },
-    secondaryBtn: { text: 'Apply Online', path: '/admissions/' }
+    image: '/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg',
+    eyebrow: 'THE SCHOLARS PRIMARY SCHOOL • GRADES 1 TO 4',
+    title: 'Interactive Learning & Active Student Curiosity',
+    subtitle: 'Building a love for reading, math, and science through interactive smart boards, creative arts, and friendly classroom guidance.',
+    primaryBtn: { text: 'Explore Primary', path: '/academics/primary/' },
+    secondaryBtn: { text: 'View Curriculum', path: '/academics/' }
   },
   {
     id: 4,
-    image: '/images/gallery/ic.jpeg',
-    eyebrow: 'AL-QALAM EDUCATIONAL TRUST',
-    title: 'Academic Excellence & Moral Values',
-    subtitle: 'Holistic curriculum integrating academic rigor with ethical Islamic guidance.',
+    image: '/images/facilities/science-lab-1.jpg',
+    eyebrow: 'THE SCHOLARS HIGH SCHOOL • GRADES 5 TO 10',
+    title: 'Academic Rigor & Consistent 100% SSC Results',
+    subtitle: 'Experienced subject teachers, well-equipped science labs, and separate wings for boys and girls delivering 100% board pass results year after year.',
+    primaryBtn: { text: 'Explore High School', path: '/academics/secondary/' },
+    secondaryBtn: { text: '100% Board Results', path: '/results/' }
+  },
+  {
+    id: 5,
+    image: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg',
+    eyebrow: 'THE SCHOLARS JUNIOR COLLEGE • ARTS & COMMERCE (HSC)',
+    title: 'Collegiate Excellence & Professional Degree Pathways',
+    subtitle: 'Higher Secondary education in Commerce and Arts with separate shifts, expert lecturers, and dedicated guidance for university degrees and CA foundations.',
+    primaryBtn: { text: 'Junior College (Girls)', path: '/academics/junior-college/girls/' },
+    secondaryBtn: { text: 'Junior College (Boys)', path: '/academics/junior-college/boys/' }
+  },
+  {
+    id: 6,
+    image: '/images/gallery/Deeniyat Girls/deeniyat-girls-4.jpg',
+    eyebrow: 'INTEGRATED DEENIYAT • ALL GRADE LEVELS',
+    title: 'Modern Education with Islamic Frame of Reference',
+    subtitle: 'Daily Quran recitation with Tajweed, Hadith reflections, and good manners integrated naturally into the school day alongside general academics.',
     primaryBtn: { text: 'Deeniyat Program', path: '/academics/deeniyat/' },
-    secondaryBtn: { text: 'About Our Trust', path: '/about-us/' }
+    secondaryBtn: { text: 'About Our Ethos', path: '/about-us/' }
   }
 ];
 

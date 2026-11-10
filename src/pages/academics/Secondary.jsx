@@ -52,14 +52,14 @@ export default function Secondary() {
       desc: 'Sharpening mental agility, sequence memory, and algorithmic problem solving with 3x3 Rubik\'s Cubes.'
     },
     {
-      img: '/images/gallery/class-cleaning-2.jpeg',
-      title: 'Swachh Campus & Civic Responsibility Drive',
-      desc: 'Instilling humility, hygiene discipline, and shared stewardship through classroom care campaigns.'
+      img: '/images/gallery/All Maharashtra Science & Mathematics Teachers Workshop/science-maths-teachers-workshop-1.jpg',
+      title: 'State Science & Math Faculty Workshop (Level 1 & 2)',
+      desc: 'Our science and mathematics educators participating in the state-level pedagogy training at IIC Kondhwa, Pune.'
     },
     {
-      img: '/images/facilities/science-lab-2.jpg',
-      title: 'Hands-On Laboratory Practicals',
-      desc: 'Regular syllabus experiments in Physics, Chemistry, and Biology preparing students for SSC board exams.'
+      img: '/images/facilities/science-lab-4.jpg',
+      title: 'Biology & Microscopic Investigations',
+      desc: 'Hands-on laboratory practicals with compound microscopes, specimen slides, and SSC board practical preparations.'
     }
   ];
 
@@ -170,9 +170,28 @@ export default function Secondary() {
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
                 {data.overview}
               </p>
-              <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                At The Scholars High School, our secondary students benefit from dedicated subject specialist teachers across Mathematics, Sciences, Social Sciences, and Languages. In separate wings for boys and girls, students participate in laboratory experiments, regular unit assessments, board-style prelims, and personalized doubt-solving clinics to ensure comprehensive mastery and confidence for the Class 10 State Board examinations.
+              <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '18px' }}>
+                At The Scholars High School, students learn under experienced subject teachers across Math, Science, Social Studies, and Languages. In completely separate, dedicated wings and classrooms for boys and girls, students take part in hands-on lab practicals, regular mock tests, and one-on-one doubt clearing sessions—building the clarity and confidence they need to succeed in their Class 10 Board exams.
               </p>
+
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  backgroundColor: 'rgba(20, 43, 74, 0.04)',
+                  border: '1px solid rgba(20, 43, 74, 0.1)',
+                  borderRadius: '10px',
+                  padding: '10px 16px',
+                  marginBottom: '22px',
+                  fontSize: '0.875rem',
+                  color: 'var(--color-royal-navy)',
+                  fontWeight: 600
+                }}
+              >
+                <ShieldCheck size={18} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0 }} />
+                <span>Dedicated Separate Wings: Entire classrooms, corridors, and study wings are strictly separate for boys and girls.</span>
+              </div>
 
               <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
@@ -200,8 +219,8 @@ export default function Secondary() {
                     <Users size={19} />
                   </div>
                   <div className="mrak-stat-content">
-                    <span className="mrak-stat-label">Campus Wings</span>
-                    <div className="mrak-stat-value">Boys &amp; Girls Wings</div>
+                    <span className="mrak-stat-label">Campus Setup</span>
+                    <div className="mrak-stat-value">Separate Boys &amp; Girls Wings</div>
                   </div>
                 </div>
               </div>
@@ -263,7 +282,7 @@ export default function Secondary() {
                 Nurturing Excellence, Discipline &amp; Character for Life Beyond the Classroom
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;Secondary education at The Scholars High School is a transformative journey where academic curiosity evolves into disciplined intellectual mastery and upright moral character. We provide a rigorous, supportive environment where boys and girls receive dedicated faculty coaching, comprehensive laboratory training, and continuous board examination preparation. Our consistent 100% SSC passing record is a testament to our educators' devotion and our students' tireless work ethic. We inspire every scholar to step into the future with academic brilliance, humility, and unwavering ethical conviction.&rdquo;
+                &ldquo;{principal.message}&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; 100% SSC Board Track Record</span>

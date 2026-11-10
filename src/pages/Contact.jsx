@@ -38,7 +38,7 @@ export default function Contact() {
               <span className="eyebrow">OFFICE DETAILS</span>
               <h2 className="section-title" style={{ marginBottom: '12px' }}>Campus Information</h2>
               <p className="section-subtitle" style={{ color: 'var(--color-slate-grey-dark)', marginBottom: '28px', lineHeight: 1.6 }}>
-                Visit our campus at Hill Park, Jogeshwari West, or reach out directly to our administrative office via telephone, WhatsApp, or email during school working hours.
+                Visit our campus at Hill Park, Jogeshwari West, or reach out directly to our administrative office via telephone or email during school working hours.
               </p>
 
               <div className="contact-cards-stack stagger-group reveal-up">
@@ -59,7 +59,7 @@ export default function Contact() {
                     <Phone size={22} />
                   </div>
                   <div className="contact-info-content">
-                    <h4>Direct Telephones</h4>
+                    <h4>Phone Numbers</h4>
                     <p className="contact-phone-links">
                       <a href="tel:+918976890569">+91 8976890569</a> &bull; <a href="tel:+918976890570">+91 8976890570</a><br />
                       <a href="tel:+918976890571">+91 8976890571</a> &bull; <a href="tel:+918976890572">+91 8976890572</a>
@@ -73,7 +73,7 @@ export default function Contact() {
                     <Mail size={22} />
                   </div>
                   <div className="contact-info-content">
-                    <h4>Electronic Mail</h4>
+                    <h4>Email Address</h4>
                     <p className="contact-email-links">
                       <span>Official:</span> <a href={`mailto:${schoolData.emails.primary}`}>{schoolData.emails.primary}</a>
                     </p>

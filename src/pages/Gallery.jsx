@@ -139,7 +139,7 @@ export default function Gallery() {
 
   // Categories across albums
   const categories = useMemo(() => {
-    return ['All', 'School Activities', 'College Activities', 'Campus Facilities'];
+    return ['All', 'School Activities', 'College Activities', 'Deeniyat', 'Campus Facilities'];
   }, []);
 
   // Filtered albums based on category and search query

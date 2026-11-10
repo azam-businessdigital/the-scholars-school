@@ -78,7 +78,7 @@ function resolveBase(command) {
   }
 
   // Default to staging subfolder for current preview
-  return '/the-scholars-school/';
+  return '/the-scholars-school-v1/';
 }
 
 export default defineConfig(({ command }) => {
@@ -90,6 +90,9 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: false, // Security: do not expose source maps in production
       rollupOptions: {
+        checks: {
+          pluginTimings: false
+        },
         output: {
           manualChunks(id) {
             if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {

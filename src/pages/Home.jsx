@@ -59,8 +59,8 @@ const academicSectionsHome = [
     id: 'primary',
     title: 'The Scholars Primary School',
     badge: 'Grades 1 to 4',
-    heroImage: '/images/gallery/smart-board-2.jfif',
-    desc: 'English medium curriculum with interactive smart classrooms.',
+    heroImage: '/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg',
+    desc: 'Lively English curriculum with interactive smart boards and completely separate classes for boys and girls.',
     path: '/academics/primary/'
   },
   {
@@ -68,23 +68,23 @@ const academicSectionsHome = [
     title: 'The Scholars High School',
     badge: 'Grades 5 to 10 (SSC)',
     heroImage: '/images/facilities/science-lab-1.jpg',
-    desc: 'Rigorous state board preparation with consistent 100% SSC results.',
+    desc: 'Rigorous state board preparation with 100% SSC results and dedicated separate wings for boys and girls.',
     path: '/academics/secondary/'
   },
   {
     id: 'junior-college',
     title: 'The Scholars Junior College of Arts and Commerce',
     badge: 'XI & XII Arts & Commerce (HSC)',
-    heroImage: '/images/gallery/college-g-1.jpg',
-    desc: 'Higher secondary Arts & Commerce education with dedicated boys and girls sections.',
+    heroImage: '/images/gallery/College Section/college-boys-study-hall-1.jpg',
+    desc: 'Higher secondary Arts & Commerce with independent shifts and dedicated separate sections for boys and girls.',
     path: '/academics/junior-college/girls/'
   },
   {
     id: 'deeniyat',
     title: 'Deeniyat Program',
     badge: 'All Grade Levels',
-    heroImage: '/images/gallery/dastarkhaan-2.jfif',
-    desc: 'Islamic frame of reference, Quranic Tajweed, and moral character.',
+    heroImage: '/images/gallery/Deeniyat Boys/deeniyat-boys-1.jpg',
+    desc: 'Quranic Tajweed, Hadith reflections, and everyday moral character taught in separate classes for boys and girls.',
     path: '/academics/deeniyat/'
   }
 ];
@@ -163,13 +163,13 @@ export default function Home() {
             <div className="reveal-right">
               <span className="eyebrow">ABOUT THE SCHOLARS</span>
               <h2 id="about-heading" className="section-title">
-                Building Future Leaders Through Modern &amp; Moral Education
+                Where Academic Excellence Meets Everyday Character
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School and Junior College</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Established in 1993 under the aegis of <strong>Al-Qalam Educational Trust (Regd. 1991)</strong>, <strong>The Scholars High School &amp; Junior College</strong> provides quality English-medium education in Jogeshwari West rooted in strong moral values.
               </p>
               <p style={{ marginBottom: '24px' }}>
-                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
+                Across our modern 7-storey campus, over 2,000 students learn and thrive across our 5 dedicated academic sections—<strong>MRAK Kids Pre School</strong>, <strong>The Scholars Primary School</strong>, <strong>The Scholars High School (SSC)</strong> with separate wings for boys and girls, <strong>The Scholars Junior College of Arts &amp; Commerce (HSC)</strong>, and our integrated <strong>Deeniyat Program</strong>. We combine state board academic rigor, interactive smart classrooms, and hands-on labs with an unbroken 100% board pass record.
               </p>
 
               {/* 3 Core Highlights (Al-Irfan Style) */}
@@ -179,9 +179,9 @@ export default function Home() {
                     <GraduationCap size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">School Education (Pre-School to Class X SSC)</h3>
+                    <h3 className="about-feature-title">School Education (Nursery to Class 10 SSC)</h3>
                     <p className="about-feature-text">
-                      Comprehensive English-medium curriculum conforming to Maharashtra State Board guidelines, with holistic student growth and 100% pass outcomes.
+                      A lively, English-medium curriculum taught by passionate educators, featuring interactive smart boards and an unbroken 100% SSC Board passing record.
                     </p>
                   </div>
                 </div>
@@ -191,9 +191,9 @@ export default function Home() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">The Scholars Junior College of Arts and Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">Junior College of Arts &amp; Commerce (Class 11 &amp; 12 HSC)</h3>
                     <p className="about-feature-text">
-                      Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
+                      Dedicated wings for boys and girls with focused preparation for commerce careers, CA Foundation, BMS, banking, and university degrees.
                     </p>
                   </div>
                 </div>
@@ -203,9 +203,9 @@ export default function Home() {
                     <ShieldCheck size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Integrated Deeniyat &amp; Moral Character</h3>
+                    <h3 className="about-feature-title">Values &amp; Character (Integrated Deeniyat)</h3>
                     <p className="about-feature-text">
-                      Grounded moral tarbiyah, Quranic literacy, and ethical discipline under the trusted stewardship of Al-Qalam Educational Trust.
+                      Daily Quranic recitation with Tajweed, memorable Hadith lessons, and practical manners that teach children respect, empathy, and honesty.
                     </p>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function Home() {
             <div className="reveal-left">
               <span className="eyebrow">START YOUR CHILD&apos;S JOURNEY</span>
               <h2 id="admission-banner-heading" className="section-title">
-                Admissions Open <br />For Academic Year 2026-27
+                Admissions Open <br />For Academic Year 2027-28
               </h2>
               <p className="section-subtitle">
                 Join The Scholars High School and Junior College, offering a harmonious blend of academic rigor, Islamic values, smart infrastructure, and proven state board distinction.
@@ -273,15 +273,15 @@ export default function Home() {
             <div className="reveal-right">
               <div className="admission-thumb-wrap">
                 <img
-                  src="/images/gallery/sports-day-1.jpeg"
-                  alt="Vibrant Student Life & Extracurricular Activities at The Scholars School"
+                  src="/images/academics/pre-school.jpg"
+                  alt="MRAK - The Scholars Kids Pre School Early Learning & Play Environment"
                   className="admission-thumb-img"
                   loading="lazy"
                   width="600"
                   height="420"
                 />
                 <div className="admission-float-badge">
-                  <span className="badge-year">2026-27</span>
+                  <span className="badge-year">2027-28</span>
                   <span className="badge-text">Admissions Open</span>
                 </div>
               </div>
@@ -320,8 +320,8 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             eyebrow="WHY CHOOSE US"
-            title="Why Choose The Scholars High School"
-            subtitle="We provide a balanced educational environment focused on academic excellence, Islamic moral values, modern infrastructure, and student character."
+            title="Why Families Choose The Scholars School"
+            subtitle="We give your child the right balance of academic excellence, practical life skills, modern campus facilities, and lasting moral values."
             centered
           />
 
@@ -330,9 +330,9 @@ export default function Home() {
               <div className="why-choose-icon">
                 <Award size={28} />
               </div>
-              <h3 className="why-choose-title">100% Board Pass Record</h3>
+              <h3 className="why-choose-title">100% Board Success</h3>
               <p className="why-choose-text">
-                100% pass outcomes in SSC (X) &amp; HSC Arts &amp; Commerce (XII).
+                Consistent 100% pass track record in Class 10 (SSC) and Class 12 (HSC) board examinations with top distinctions.
               </p>
             </div>
 
@@ -340,9 +340,9 @@ export default function Home() {
               <div className="why-choose-icon">
                 <ShieldCheck size={28} />
               </div>
-              <h3 className="why-choose-title">Values-Based Deeniyat</h3>
+              <h3 className="why-choose-title">Character &amp; Deeniyat</h3>
               <p className="why-choose-text">
-                Quranic literacy, Hadith principles, and moral tarbiyah.
+                Everyday Islamic values, Tajweed recitation, and moral character integrated smoothly into the school day.
               </p>
             </div>
 
@@ -350,9 +350,9 @@ export default function Home() {
               <div className="why-choose-icon">
                 <Building2 size={28} />
               </div>
-              <h3 className="why-choose-title">7-Floor Modern Campus</h3>
+              <h3 className="why-choose-title">Well-Equipped Infrastructure</h3>
               <p className="why-choose-text">
-                Purpose-built campus with elevator, CCTV, and RO water.
+                A clean, purpose-built 7-storey school campus with interactive smart classrooms, science labs, high-capacity elevator, CCTV security, and RO water on every level.
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
               <h3 className="why-choose-title">AC Smart Classrooms</h3>
               <p className="why-choose-text">
-                Climate-controlled spaces with interactive digital boards.
+                Air-conditioned classrooms equipped with large interactive digital touchscreens that make every lesson vivid and fun.
               </p>
             </div>
 
@@ -370,9 +370,9 @@ export default function Home() {
               <div className="why-choose-icon">
                 <Cpu size={28} />
               </div>
-              <h3 className="why-choose-title">Science &amp; IT Labs</h3>
+              <h3 className="why-choose-title">Science &amp; Computer Labs</h3>
               <p className="why-choose-text">
-                Equipped computer, Physics, Chemistry, and Biology labs.
+                Hands-on practical laboratories for Physics, Chemistry, Biology, and computer science where students learn by doing.
               </p>
             </div>
 
@@ -380,9 +380,9 @@ export default function Home() {
               <div className="why-choose-icon">
                 <Compass size={28} />
               </div>
-              <h3 className="why-choose-title">Holistic Growth &amp; Sports</h3>
+              <h3 className="why-choose-title">Arts, Sports &amp; Life Skills</h3>
               <p className="why-choose-text">
-                Annual sports, creative arts, and confidence building.
+                Annual sports meets, public speaking, stone art, and festivals that help students build lasting confidence.
               </p>
             </div>
           </div>
@@ -394,7 +394,7 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             eyebrow="GOVERNANCE & LEADERSHIP"
-            title="Chairman's Message"
+            title="President's Message"
             subtitle="Guiding philosophy from the leadership of Al-Qalam Educational Trust."
             centered
           />
@@ -443,8 +443,8 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             eyebrow="CAMPUS INFRASTRUCTURE"
-            title="Purpose-Built 7-Floor Educational Facility"
-            subtitle="A modern, climate-controlled learning space situated in Hill Park, Jogeshwari West."
+            title="A Modern 7-Storey Campus Built for Growth"
+            subtitle="Spacious, climate-controlled, and designed with safety in mind in Hill Park, Jogeshwari West."
             centered
           />
 
@@ -454,7 +454,7 @@ export default function Home() {
             <div className="campus-building-spotlight reveal-left">
               <div className="campus-img-container">
                 <img
-                  src="/images/campus/building.jpg"
+                  src="/images/campus/building-hero.jpg"
                   alt="The Scholars School 7-Floor Campus Building at Hill Park, Jogeshwari West"
                   className="campus-building-img"
                   loading="lazy"
@@ -498,7 +498,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Smart Classrooms</h3>
-                  <p className="simple-facility-desc">Interactive digital display panels and multimedia tools.</p>
+                  <p className="simple-facility-desc">Interactive touchscreen display panels that bring every lesson to life.</p>
                 </div>
               </div>
 
@@ -508,7 +508,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">100% Air-Conditioned</h3>
-                  <p className="simple-facility-desc">Climate-controlled rooms for focused, comfortable study.</p>
+                  <p className="simple-facility-desc">Cool, pleasant classrooms that keep children fresh and focused all day.</p>
                 </div>
               </div>
 
@@ -518,7 +518,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Computer &amp; IT Lab</h3>
-                  <p className="simple-facility-desc">Modern workstations with coding and digital tools.</p>
+                  <p className="simple-facility-desc">Dedicated PC stations teaching typing, coding basics, and digital tools.</p>
                 </div>
               </div>
 
@@ -528,7 +528,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Science Laboratories</h3>
-                  <p className="simple-facility-desc">Equipped Physics, Chemistry, and Biology practical labs.</p>
+                  <p className="simple-facility-desc">Fully equipped practical labs for hands-on Physics, Chemistry, and Biology.</p>
                 </div>
               </div>
 
@@ -538,7 +538,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Passenger Elevator</h3>
-                  <p className="simple-facility-desc">Effortless multi-floor access across all 7 levels.</p>
+                  <p className="simple-facility-desc">High-capacity elevator providing easy, safe access across all 7 levels.</p>
                 </div>
               </div>
 
@@ -548,7 +548,7 @@ export default function Home() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">RO Purified Water</h3>
-                  <p className="simple-facility-desc">Hygienic filtered drinking water on every floor.</p>
+                  <p className="simple-facility-desc">Multi-stage filtered drinking water and sanitized washrooms on every floor.</p>
                 </div>
               </div>
             </div>
@@ -1221,7 +1221,10 @@ export default function Home() {
                 overflow: 'hidden',
                 border: '1px solid var(--color-border-subtle)',
                 boxShadow: 'var(--shadow-sm)',
-                minHeight: '340px'
+                height: '100%',
+                minHeight: '380px',
+                display: 'flex',
+                flexDirection: 'column'
               }}
             >
               <iframe
@@ -1229,7 +1232,14 @@ export default function Home() {
                 src={schoolData.location.mapEmbedUrl}
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '340px' }}
+                style={{
+                  border: 0,
+                  width: '100%',
+                  height: '100%',
+                  flex: 1,
+                  minHeight: '380px',
+                  display: 'block'
+                }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

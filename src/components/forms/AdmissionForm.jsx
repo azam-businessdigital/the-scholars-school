@@ -179,7 +179,7 @@ export default function AdmissionForm({ initialSection = '' }) {
 
       // 2. Transmit to backend endpoint
       const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
-      const apiPrefix = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || (typeof window !== 'undefined' && window.location.pathname.startsWith('/the-scholars-school') ? '/the-scholars-school' : '');
+      const apiPrefix = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || (typeof window !== 'undefined' && window.location.pathname.startsWith('/the-scholars-school-v1') ? '/the-scholars-school-v1' : typeof window !== 'undefined' && window.location.pathname.startsWith('/the-scholars-school') ? '/the-scholars-school' : '');
       const endpoint = baseUrl ? `${baseUrl}/admission-enquiry` : `${apiPrefix}/api/admission.php`;
 
       let result = {};

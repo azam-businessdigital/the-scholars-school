@@ -27,6 +27,11 @@ export default function MrakKids() {
 
   const preschoolGallery = [
     {
+      img: '/images/gallery/Visit to Police Station - MRAK/mrak-police-station-visit-1.jpg',
+      title: 'Educational Visit to Oshiwara Police Station',
+      desc: 'Experiential community helpers visit learning about civic safety, police officers, and developing positive confidence.'
+    },
+    {
       img: '/images/gallery/fancy-dress-1.jpeg',
       title: 'Play-Based Sensory Discovery & Events',
       desc: 'Costume exhibitions, Montessori-inspired learning, and tactile exploration.'

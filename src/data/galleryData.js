@@ -6,6 +6,424 @@
 
 export const albumsData = [
   {
+    "id": "deeniyat-boys-activities",
+    "title": "Deeniyat & Quranic Studies - Boys Section",
+    "category": "Deeniyat",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Boys Wing - Deeniyat Activity Classrooms",
+    "coverImage": "/images/gallery/Deeniyat Boys/deeniyat-boys-1.jpg",
+    "photoCount": 4,
+    "description": "Visual archive of 4 authentic photographs documenting daily Quranic recitation with Tajweed, Hadith reflections, and Islamic moral character education in the dedicated Boys Section at The Scholars School.",
+    "photos": [
+      {
+        "id": "deeniyat-boys-1",
+        "src": "/images/gallery/Deeniyat Boys/deeniyat-boys-1.jpg",
+        "title": "Quranic Tajweed & Group Recitation - Boys Section",
+        "alt": "Male scholars engaged in Quran recitation with Tajweed and Islamic studies in dedicated classroom",
+        "aspect": "landscape"
+      },
+      {
+        "id": "deeniyat-boys-2",
+        "src": "/images/gallery/Deeniyat Boys/deeniyat-boys-2.jpg",
+        "title": "Tajweed Coaching & Quran Study Circle - Boys Section",
+        "alt": "Students learning correct Quranic pronunciation and Tajweed rules in boys section",
+        "aspect": "landscape"
+      },
+      {
+        "id": "deeniyat-boys-3",
+        "src": "/images/gallery/Deeniyat Boys/deeniyat-boys-3.jpg",
+        "title": "Individual Quranic Assessment & Makhaarij Practice - Boys Section",
+        "alt": "Student reading Quran with teacher guidance on Makhaarij rules in boys classroom",
+        "aspect": "portrait"
+      },
+      {
+        "id": "deeniyat-boys-4",
+        "src": "/images/gallery/Deeniyat Boys/deeniyat-boys-4.jpg",
+        "title": "Deeniyat Studies & Moral Reflection - Boys Section",
+        "alt": "Scholars participating in Hadith learning and Islamic manners session in boys wing",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "deeniyat-girls-activities",
+    "title": "Deeniyat & Quranic Studies - Girls Section",
+    "category": "Deeniyat",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Girls Wing - Deeniyat Activity Classrooms",
+    "coverImage": "/images/gallery/Deeniyat Girls/deeniyat-girls-4.jpg",
+    "photoCount": 6,
+    "description": "Visual archive of 6 authentic photographs documenting Quranic Tajweed, Hadith memorization, and Islamic values education in the dedicated Girls Section at The Scholars School.",
+    "photos": [
+      {
+        "id": "deeniyat-girls-1",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-1.jpg",
+        "title": "Rehal & Quranic Tajweed Recitation - Girls Section",
+        "alt": "Girls students reading Quran from wooden Rehals with focused Tajweed discipline",
+        "aspect": "portrait"
+      },
+      {
+        "id": "deeniyat-girls-2",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-2.jpg",
+        "title": "Tajweed Learning Circle & Pronunciation Practice - Girls Section",
+        "alt": "Female scholars practicing phonetic Tajweed rules and Quran recitation",
+        "aspect": "portrait"
+      },
+      {
+        "id": "deeniyat-girls-3",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-3.jpg",
+        "title": "Quran Memorization & Character Session - Girls Section",
+        "alt": "Girls student reciting Quran with devotion in classroom setting",
+        "aspect": "portrait"
+      },
+      {
+        "id": "deeniyat-girls-4",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-4.jpg",
+        "title": "Group Tajweed Class & Spiritual Atmosphere - Girls Section",
+        "alt": "Classroom full of girl students reading Quran with Rehals in girls wing",
+        "aspect": "landscape"
+      },
+      {
+        "id": "deeniyat-girls-5",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-5.jpg",
+        "title": "Daily Hadith & Islamic Ethics Classroom - Girls Section",
+        "alt": "Girls section scholars learning moral character, Sunnah etiquette, and Islamic ethics",
+        "aspect": "landscape"
+      },
+      {
+        "id": "deeniyat-girls-6",
+        "src": "/images/gallery/Deeniyat Girls/deeniyat-girls-6.jpg",
+        "title": "Dedicated Deeniyat Study Session - Girls Section",
+        "alt": "Students engaged in mindful Quranic study and Tajweed practice in girls wing",
+        "aspect": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "college-section-activities",
+    "title": "Junior College Activities & Campus Life",
+    "category": "College Activities",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Junior College Wing & Campus Ground",
+    "coverImage": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg",
+    "photoCount": 18,
+    "description": "Visual archive of 18 photographs documenting collegiate student life, boys and girls academic lectures, career guidance seminars, Zafeera food festival, graduation celebrations, sports day, and outdoor excursions at The Scholars Junior College.",
+    "photos": [
+      {
+        "id": "college-section-1",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg",
+        "title": "Junior College Girls Scholars & Faculty Group Showcase",
+        "alt": "Junior College girls students and faculty in college activity room at The Scholars Junior College",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-2",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.07 PM.jpeg",
+        "title": "Higher Education & Career Guidance Seminar",
+        "alt": "Career guidance presentation on smart board for Junior College students",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-3",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.06 PM.jpeg",
+        "title": "Interactive Collegiate Smart Classroom Lecture",
+        "alt": "Junior College students attending lecture in air-conditioned classroom with digital panel",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-4",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM (1).jpeg",
+        "title": "Student Council Election & Leadership Ballot",
+        "alt": "Junior college scholar at the ballot box during student council elections",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-5",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM (2).jpeg",
+        "title": "Zafeera Festival - Food, Mehndi & Creative Arts Stalls",
+        "alt": "Junior College annual festival showcasing food stalls, mehndi, and handicrafts",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-6",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM (3).jpeg",
+        "title": "Zafeera Food Fest - Ribbon Cutting & Culinary Exhibits",
+        "alt": "Inauguration ceremony, culinary dishes, and hand-crafted displays at Zafeera festival",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-7",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM.jpeg",
+        "title": "Campus Terrace Outdoor Giant Logic Game",
+        "alt": "College scholars participating in floor logic game on campus terrace",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-8",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.10 PM (1).jpeg",
+        "title": "Annual Athletic Meet & Sports Day Events",
+        "alt": "Collegiate students assembled on the sports ground for track and field events",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-9",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.10 PM (2).jpeg",
+        "title": "Culinary Entrepreneurship Presentation",
+        "alt": "College students presenting culinary dish exhibits during competition",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-10",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.10 PM.jpeg",
+        "title": "Academic Mentorship & Corridor Guidance",
+        "alt": "Faculty mentor advising college students in campus hallway",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-11",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.11 PM (1).jpeg",
+        "title": "Inter-House Tug-of-War Championship",
+        "alt": "College students in enthusiastic tug of war contest",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-12",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.11 PM (2).jpeg",
+        "title": "Annual Nature Excursion & College Picnic",
+        "alt": "Junior College students on outdoor nature picnic excursion",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-13",
+        "src": "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.11 PM.jpeg",
+        "title": "Collegiate Scholars, Library Reference & Current Affairs",
+        "alt": "Boys and girls college students engaged in reference book study and collegiate reading",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-14",
+        "src": "/images/gallery/College Section/college-boys-smart-class-1.jpg",
+        "title": "Corporate Finance Lecture on Smart Board - Boys Section",
+        "alt": "Junior College male scholars attending interactive corporate finance lecture on digital board",
+        "aspect": "portrait"
+      },
+      {
+        "id": "college-section-15",
+        "src": "/images/gallery/College Section/college-boys-study-hall-1.jpg",
+        "title": "College Lecture & Examination Hall - Boys Section",
+        "alt": "Junior College male scholars in quiet study and examination hall with digital screen",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-16",
+        "src": "/images/gallery/College Section/college-boys-celebration-1.jpg",
+        "title": "Junior College Boys Graduation & Farewell Celebration",
+        "alt": "Junior College male scholars celebrating with graduation caps and thumbs up",
+        "aspect": "landscape"
+      },
+      {
+        "id": "college-section-17",
+        "src": "/images/gallery/College Section/college-boys-culinary-1.jpg",
+        "title": "Culinary & Entrepreneurship Food Display - Boys Section",
+        "alt": "Junior College male scholars presenting culinary dishes during college exhibition",
+        "aspect": "portrait"
+      },
+      {
+        "id": "college-section-18",
+        "src": "/images/gallery/College Section/college-boys-activity-1.jpg",
+        "title": "Classroom Cultural Activity & Team Celebration - Boys Section",
+        "alt": "Junior College male scholars celebrating campus event with tricolour balloons",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "all-maharashtra-science-maths-teachers-workshop",
+    "title": "All Maharashtra Science & Mathematics Teachers' Workshop (Level 1 & Level 2)",
+    "category": "School Activities",
+    "eventDate": "27-28 September",
+    "location": "IIC Kondhwa, Pune",
+    "coverImage": "/images/gallery/All Maharashtra Science & Mathematics Teachers Workshop/science-maths-teachers-workshop-1.jpg",
+    "photoCount": 1,
+    "description": "Visual archive from the All Maharashtra Science & Mathematics Teachers' Workshop (Level 1 & Level 2) held at IIC Kondhwa, Pune on 27-28 September, organized by Markazi Taleemi Board Maharashtra, Holistic Education Trust (HET), and Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune.",
+    "photos": [
+      {
+        "id": "science-maths-teachers-workshop-1",
+        "src": "/images/gallery/All Maharashtra Science & Mathematics Teachers Workshop/science-maths-teachers-workshop-1.jpg",
+        "title": "Science & Mathematics Faculty Delegation at IIC Kondhwa, Pune",
+        "alt": "The Scholars School science and mathematics teachers with dignitaries at the All Maharashtra Teachers Workshop in Pune",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "visit-to-police-station-mrak",
+    "title": "Visit to Police Station - MRAK Kids Pre School",
+    "category": "School Activities",
+    "eventDate": "Educational Field Trip",
+    "location": "Oshiwara Police Station, Mumbai",
+    "coverImage": "/images/gallery/Visit to Police Station - MRAK/mrak-police-station-visit-1.jpg",
+    "photoCount": 3,
+    "description": "Visual archive of 3 authentic photographs from the educational field trip by MRAK Kids Pre School to Oshiwara Police Station, introducing young learners to community helpers, safety rules, and civic awareness.",
+    "photos": [
+      {
+        "id": "mrak-police-station-1",
+        "src": "/images/gallery/Visit to Police Station - MRAK/mrak-police-station-visit-1.jpg",
+        "title": "Police Officer Interactive Session with MRAK Kids",
+        "alt": "MRAK Kids Pre School students and teachers interacting with a police officer at Oshiwara Police Station",
+        "aspect": "landscape"
+      },
+      {
+        "id": "mrak-police-station-2",
+        "src": "/images/gallery/Visit to Police Station - MRAK/mrak-police-station-visit-2.jpg",
+        "title": "Pre-School Field Trip Group at Police Station Courtyard",
+        "alt": "MRAK Kids Pre School students in yellow uniforms and teachers outside Oshiwara Police Station",
+        "aspect": "landscape"
+      },
+      {
+        "id": "mrak-police-station-3",
+        "src": "/images/gallery/Visit to Police Station - MRAK/mrak-police-station-visit-3.jpg",
+        "title": "Community Helpers & Safety Orientation Visit",
+        "alt": "Little scholars gathered outside the police station entrance for educational civic visit",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "examination-hall-primary-section",
+    "title": "Examination Hall - Primary Section",
+    "category": "School Activities",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Primary Section Examination Hall",
+    "coverImage": "/images/gallery/Examination hall primary section/exam-hall-primary-1.jpg",
+    "photoCount": 9,
+    "description": "Visual archive of 9 authentic photographs documenting organized examination hall seating, focused assessment environment, and academic discipline in The Scholars Primary School.",
+    "photos": [
+      {
+        "id": "exam-hall-primary-1",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-1.jpg",
+        "title": "Primary Section Examination Hall - Wide View",
+        "alt": "Primary school students seated in spacious examination hall for assessments",
+        "aspect": "landscape"
+      },
+      {
+        "id": "exam-hall-primary-2",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-2.jpg",
+        "title": "Disciplined Examination Atmosphere",
+        "alt": "Quiet and organized examination hall seating arrangement in primary section",
+        "aspect": "landscape"
+      },
+      {
+        "id": "exam-hall-primary-3",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-3.jpg",
+        "title": "Individual Exam Desk Seating & Focus",
+        "alt": "Young primary student concentrating on exam paper at single desk",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-4",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-4.jpg",
+        "title": "Supervised Examination Hall Session",
+        "alt": "Primary students writing term examinations under faculty supervision",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-5",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-5.jpg",
+        "title": "Calm & Structured Testing Environment",
+        "alt": "Students writing examination papers in orderly classroom hall",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-6",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-6.jpg",
+        "title": "Academic Integrity & Assessment Discipline",
+        "alt": "Supervised assessment hall session in primary school",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-7",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-7.jpg",
+        "title": "Focused Examination Hall Rows",
+        "alt": "Orderly spaced desks in primary examination hall",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-8",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-8.jpg",
+        "title": "Student Writing Assessment Paper",
+        "alt": "Primary student writing examination paper attentively",
+        "aspect": "portrait"
+      },
+      {
+        "id": "exam-hall-primary-9",
+        "src": "/images/gallery/Examination hall primary section/exam-hall-primary-9.jpg",
+        "title": "Term Evaluation & Test Day",
+        "alt": "Young learners engaged in peaceful exam hall test session",
+        "aspect": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "pebble-painting-primary",
+    "title": "Pebble Painting Creative Art - Primary Section",
+    "category": "School Activities",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Primary Section Activity Hall",
+    "coverImage": "/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg",
+    "photoCount": 3,
+    "description": "Visual archive of 3 photographs from Pebble Painting creative art activity conducted by primary section students at The Scholars Primary School.",
+    "photos": [
+      {
+        "id": "pebble-painting-primary-1",
+        "src": "/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg",
+        "title": "Pebble Painting Showcase - Classroom Presentation",
+        "alt": "Primary school students proudly holding hand-painted artistic pebbles in front of smart display board",
+        "aspect": "landscape"
+      },
+      {
+        "id": "pebble-painting-primary-2",
+        "src": "/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.22 (1).jpeg",
+        "title": "Creative Stone Art Exhibition",
+        "alt": "Primary school girls displaying custom painted colorful stone art pieces",
+        "aspect": "landscape"
+      },
+      {
+        "id": "pebble-painting-primary-3",
+        "src": "/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.22.jpeg",
+        "title": "Colorful Hand-Painted Pebbles Collection",
+        "alt": "Close-up of students showing diverse creative painted pebbles with emoji faces and nature art",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
+    "id": "group-activity-primary",
+    "title": "Collaborative Group Activity - Primary Section",
+    "category": "School Activities",
+    "eventDate": "Annual Academic Calendar",
+    "location": "Primary Section Learning Floor",
+    "coverImage": "/images/gallery/Group Activity -Primary Section/WhatsApp Image 2026-10-29 at 16.09.58.jpeg",
+    "photoCount": 2,
+    "description": "Visual archive of 2 photographs from collaborative group chart making and experiential project work in The Scholars Primary School.",
+    "photos": [
+      {
+        "id": "group-activity-primary-1",
+        "src": "/images/gallery/Group Activity -Primary Section/WhatsApp Image 2026-10-29 at 16.09.58.jpeg",
+        "title": "Collaborative Chart Work & Craft Session",
+        "alt": "Primary students working together in teams on creative educational charts and cutouts on carpet",
+        "aspect": "landscape"
+      },
+      {
+        "id": "group-activity-primary-2",
+        "src": "/images/gallery/Group Activity -Primary Section/WhatsApp Image 2026-10-29 at 16.11.29.jpeg",
+        "title": "Teacher-Guided Interactive Project Learning",
+        "alt": "Primary teacher guiding young students during collaborative educational chart making activity",
+        "aspect": "landscape"
+      }
+    ]
+  },
+  {
     "id": "secondary-science-exhibition",
     "title": "Secondary Science Exhibition & Working Model Showcase",
     "category": "School Activities",
@@ -3422,8 +3840,8 @@ export const albumsData = [
     "eventDate": "Annual Academic Calendar",
     "location": "Main Campus Wing",
     "coverImage": "/images/facilities/science-lab-1.jpg",
-    "photoCount": 5,
-    "description": "Visual archive of 5 photographs from Science Lab at The Scholars High School & Junior College.",
+    "photoCount": 7,
+    "description": "Visual archive of 7 photographs from Science Lab at The Scholars High School & Junior College.",
     "photos": [
       {
         "id": "science-lab-1",
@@ -3448,13 +3866,27 @@ export const albumsData = [
       },
       {
         "id": "science-lab-4",
-        "src": "/images/gallery/lab-2.jfif",
-        "title": "Science Lab - Laboratory Overview",
-        "alt": "Science Lab equipment and workstations at The Scholars High School",
+        "src": "/images/facilities/science-lab-4.jpg",
+        "title": "Science Lab - Microscope Specimen Observation",
+        "alt": "Secondary boys section scholars conducting biology practicals using compound microscopes",
         "aspect": "landscape"
       },
       {
         "id": "science-lab-5",
+        "src": "/images/facilities/science-lab-5.jpg",
+        "title": "Science Lab - Biology Investigation & Research",
+        "alt": "Students examining microscope slides and recording scientific findings in the Science Laboratory",
+        "aspect": "portrait"
+      },
+      {
+        "id": "science-lab-6",
+        "src": "/images/gallery/lab-2.jfif",
+        "title": "Science Lab - Laboratory Workstations Overview",
+        "alt": "Science Lab equipment and workstations at The Scholars High School",
+        "aspect": "landscape"
+      },
+      {
+        "id": "science-lab-7",
         "src": "/images/gallery/lab-1.jfif",
         "title": "Science Lab - Apparatus & Reagents",
         "alt": "Science Lab practical setup at The Scholars High School",

@@ -30,24 +30,34 @@ export default function Deeniyat() {
 
   const deeniyatGallery = [
     {
-      img: '/images/gallery/ic.jpeg',
-      title: 'Quranic Tajweed & Islamic Competitions',
-      desc: 'Systematic phonetic recitation, Makhaarij rules, and Quranic reflection fostering stage poise and spiritual confidence.'
+      img: '/images/gallery/Deeniyat Boys/deeniyat-boys-1.jpg',
+      title: 'Quranic Tajweed & Study Circle (Boys Section)',
+      desc: 'Systematic phonetic recitation, Makhaarij rules, and Quranic reflection in dedicated boys classrooms.'
     },
     {
-      img: '/images/hadees.png',
-      title: 'Daily Hadith & Character Building',
-      desc: 'Instilling humility, filial respect, truthfulness, and kindness in daily actions and interpersonal habits.'
+      img: '/images/gallery/Deeniyat Girls/deeniyat-girls-4.jpg',
+      title: 'Group Tajweed & Rehal Recitation (Girls Section)',
+      desc: 'Students reading Quran with reverence using wooden Rehals in a focused, spiritual classroom environment.'
     },
     {
-      img: '/images/gallery/dastarkhaan-2.jfif',
-      title: 'Holistic Campus Moral Atmosphere',
-      desc: 'Seamless integration of daily prayers, morning assemblies, and Islamic values alongside general academic subjects.'
+      img: '/images/gallery/Deeniyat Boys/deeniyat-boys-2.jpg',
+      title: 'Tajweed Pronunciation Coaching (Boys Section)',
+      desc: 'Teacher-guided instruction ensuring accurate articulation of Arabic phonetics and Surah memorization.'
     },
     {
-      img: '/images/gallery/ic.jpeg',
-      title: 'Islamic Competitions & Cultural Assembly',
-      desc: 'Annual Islamic recitation, Tajweed, ethical debates, and values assembly encouraging spiritual poise and self-expression.'
+      img: '/images/gallery/Deeniyat Girls/deeniyat-girls-5.jpg',
+      title: 'Daily Hadith & Sunnah Etiquette (Girls Section)',
+      desc: 'Daily lessons teaching practical Islamic manners, truthfulness, compassion, and respect for parents.'
+    },
+    {
+      img: '/images/gallery/Deeniyat Boys/deeniyat-boys-4.jpg',
+      title: 'Moral Reflection & Character Building (Boys Section)',
+      desc: 'Instilling humility, integrity, civic awareness, and brotherly camaraderie during daily Deeniyat periods.'
+    },
+    {
+      img: '/images/gallery/Deeniyat Girls/deeniyat-girls-1.jpg',
+      title: 'Dedicated Quran Learning & Tajweed (Girls Section)',
+      desc: 'Focused scriptural literacy and spiritual discipline nurturing young women with virtuous character.'
     }
   ];
 
@@ -159,7 +169,7 @@ export default function Deeniyat() {
                 {data.overview}
               </p>
               <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                Under the guidance of our Head of Deeniyat and our visionary trustees, the Deeniyat curriculum ensures that every child grows up with an understanding of faith, honesty, respect for elders, civic harmony, and dedication to societal service.
+                Under the guidance of our Head of Deeniyat and teachers, our program ensures that every child grows up with an understanding of faith, honesty, respect for parents and elders, and kindness toward everyone in society.
               </p>
 
               <div className="mrak-badges-row stagger-group reveal-up">
@@ -175,11 +185,11 @@ export default function Deeniyat() {
 
                 <div className="mrak-stat-pill">
                   <div className="mrak-stat-icon clock">
-                    <GraduationCap size={19} />
+                    <Users size={19} />
                   </div>
                   <div className="mrak-stat-content">
-                    <span className="mrak-stat-label">Scope</span>
-                    <div className="mrak-stat-value">All Grade Levels</div>
+                    <span className="mrak-stat-label">Campus Setup</span>
+                    <div className="mrak-stat-value">Separate Boys &amp; Girls Classes</div>
                   </div>
                 </div>
 
@@ -200,8 +210,8 @@ export default function Deeniyat() {
                 <Heart size={14} /> Moral Values &amp; Quranic Study
               </div>
               <img
-                src="/images/gallery/dastarkhaan-2.jfif"
-                alt="Students practicing Sunnah etiquette and Islamic moral values at The Scholars School"
+                src="/images/gallery/Deeniyat Girls/deeniyat-girls-4.jpg"
+                alt="Students practicing Quranic Tajweed recitation with wooden Rehals at The Scholars School"
                 className="academic-hero-img"
                 loading="lazy"
                 width="600"
@@ -254,7 +264,7 @@ export default function Deeniyat() {
                 Nurturing Gratitude, Upright Akhlaq &amp; Lifelong Faith
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;Education achieves its highest purpose only when academic knowledge is illuminated by sound moral character and gratitude to the Almighty. Our Deeniyat curriculum seamlessly weaves Quranic Tajweed, authentic Hadith, and timeless Islamic ethics (Adab) into daily school life, shaping polite, compassionate, and upright scholars who contribute meaningfully to modern society.&rdquo;
+                &ldquo;{deeniyatHead.message}&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; Quranic Recitation with Tajweed</span>
@@ -278,7 +288,7 @@ export default function Deeniyat() {
             centered
           />
 
-          <div className="mrak-gallery-grid-4">
+          <div className="mrak-gallery-grid">
             {deeniyatGallery.map((item, i) => (
               <div key={i} className="mrak-gallery-card">
                 <img

@@ -21,6 +21,8 @@ export const schoolData = {
     "+91 8976890571",
     "+91 8976890572"
   ],
+  whatsapp: "+91 8976890572",
+  whatsappRaw: "918976890572",
   emails: {
     primary: "alqalams26@gmail.com",
     admin: "alqalams26@gmail.com"
@@ -34,21 +36,21 @@ export const schoolData = {
   },
   stats: [
     { label: "Year Established", value: "1993" },
-    { label: "School Students", value: "2,000+" },
-    { label: "Junior College Students", value: "150+" },
+    { label: "Total Students", value: "2,500+" },
+    { label: "Staff", value: "150+" },
     { label: "Campus Floors", value: "7 Floors" },
     { label: "SSC Board Track Record", value: "100%" }
   ],
   leadership: {
     chairman: {
       name: "Mr. Mohammad Aslam Ghazi",
-      title: "President & Chairman, Al-Qalam Educational Trust",
+      title: "President, Al-Qalam Educational Trust",
       image: "/images/trustees/president.png",
-      messageTitle: "Message from the Desk of the Chairman",
+      messageTitle: "A Message from Our President",
       message: [
-        "Can those with knowledge be equal to those without it? This is the fundamental question posed in the Holy Quran. Indeed, they cannot be equal. It is like comparing a person without sight to one who sees clearly: discerning colors, navigating obstacles, and choosing the righteous path.",
-        "Education empowers every individual. It is the single most transformative tool to uplift society and prepare young minds for the future. The challenges of our times require education that imparts core human values, cultivating discernment between right and wrong, truth and falsehood.",
-        "With this noble vision, our journey commenced under the banner of Al-Qalam Educational Trust. Throughout the decades, we have remained committed to providing quality, values-driven education that develops knowledgeable professionals and responsible citizens. We express gratitude to Almighty Allah, our visionary trustees, and our dedicated educators who make this mission possible."
+        "True education does more than fill notebooks—it shapes how a person sees the world and treats others. Just as clear sight helps us choose our path safely, good knowledge gives young minds the wisdom to tell right from wrong.",
+        "Since 1993, The Scholars High School and Junior College has focused on one simple mission: offering excellent English-medium education paired with strong, everyday moral values. In a fast-moving world, our children need both sharp intellect and a kind heart to truly succeed.",
+        "We are deeply grateful to Almighty God, our visionary trustees, our hard-working teachers, and the families who place their trust in us year after year as we guide over 2,000 young scholars toward bright, honorable futures."
       ]
     },
     principals: [
@@ -60,7 +62,7 @@ export const schoolData = {
         designation: "Coordinator",
         image: "/images/academics/principal-female-avatar.png",
         focus: ["Early Childhood Development", "Foundational Phonics & Care", "Curiosity & Wonder"],
-        message: "At MRAK - The Scholars Kids Pre School, we celebrate every toddler's individuality. Early childhood is a window of wondrous growth where young hearts and curious minds begin to understand the world. We combine loving warmth, child-friendly learning environments, and timeless moral values so your child feels safe, valued, and genuinely excited to come to school every single morning."
+        message: "Every child begins life with natural wonder. At MRAK Kids Pre-School, we make their very first steps into learning joyful and safe. Through hands-on activities, phonics, gentle routines, and loving encouragement, we help each little learner build confidence and a genuine smile every morning."
       },
       {
         id: "primary-incharge",
@@ -70,7 +72,7 @@ export const schoolData = {
         designation: "Primary Incharge",
         image: "/images/academics/principal-female-avatar.png",
         focus: ["Foundational Literacy", "Moral Character", "Curiosity & Wonder"],
-        message: "The Scholars Primary School aims to equip young learners with knowledge and foundational skills that instill academic curiosity, strong moral values, and sound character. With our visionary trustees and devoted faculty, we ensure a warm, engaging environment where each child develops confidence and a love for learning."
+        message: "Primary school is where curiosity turns into real skills. We focus on strong English reading, practical math, creative art, and everyday kindness. In bright, air-conditioned classrooms with interactive boards, our teachers make sure no child feels left behind."
       },
       {
         id: "secondary-principal",
@@ -80,7 +82,7 @@ export const schoolData = {
         designation: "Principal",
         image: "/images/academics/principal-female-avatar.png",
         focus: ["SSC & HSC Board Mentorship", "Academic Discipline", "Commerce & Arts Specialization"],
-        message: "Every academic year brings new milestones for our students at The Scholars High School & Junior College. We focus on academic rigour, discipline, and personal integrity. By fostering gratitude, diligence, and intellectual exploration, we prepare our scholars to achieve exemplary board results and lead with sound character."
+        message: "High school and junior college are crucial stepping stones for life. We provide a focused, disciplined atmosphere with separate wings for boys and girls, fully equipped science and IT labs, and personalized board exam guidance. Our unbroken 100% board results reflect the genuine dedication of our students and faculty."
       },
       {
         id: "deeniyat-head",
@@ -90,7 +92,7 @@ export const schoolData = {
         designation: "Head of Deeniyat",
         image: "/images/academics/principal-male-avatar.png",
         focus: ["Quranic Principles", "Hadith & Islamic Ethics", "Character Building"],
-        message: "Our Deeniyat curriculum provides students with a balanced understanding of Islamic ethics, Quranic values, Hadith, and moral conduct, seamlessly integrated alongside modern academic sciences."
+        message: "Academic excellence means so much more when guided by good manners and respect. Our Deeniyat classes naturally integrate Quranic recitation, Hadith wisdom, and daily moral habits into school life, helping students grow into thoughtful, upright human beings."
       }
     ]
   },
@@ -105,6 +107,6 @@ export const schoolData = {
     { name: "Mr. Amin Gulzar", role: "Trustee", image: "/images/trustees/amin.jpg" },
     { name: "Mr. Abdul Gani Atalaswala", role: "Trustee", image: "/images/trustees/trustee-4.png" }
   ],
-  vision: "To be an institution of excellence where sound ethical values, character, wisdom, leadership, service, and academic achievement are encouraged in a safe and nurturing environment.",
-  mission: "To establish and assist in the promotion of educational and humanitarian projects including schools, colleges, technical and vocational programs, libraries, reading rooms, healthcare, and physical training centers."
+  vision: "To be a vibrant learning community where academic excellence, creative thinking, and upright moral character prepare students to lead meaningful and successful lives.",
+  mission: "To deliver high-quality, English-medium education in a modern, supportive environment—blending state board standards with practical technology and timeless values so every student reaches their full potential."
 };

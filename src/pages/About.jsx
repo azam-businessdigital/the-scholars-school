@@ -16,7 +16,8 @@ import {
   FlaskConical,
   MoveVertical,
   Droplets,
-  Sparkles
+  Sparkles,
+  BookOpen
 } from 'lucide-react';
 
 
@@ -85,13 +86,13 @@ export default function About() {
             <div className="reveal-right">
               <span className="eyebrow">ABOUT THE SCHOLARS</span>
               <h2 id="about-heading" className="section-title">
-                Building Future Leaders Through Modern &amp; Moral Education
+                Where Academic Excellence Meets Everyday Character
               </h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Welcome to <strong>The Scholars High School and Junior College</strong>, a distinguished English-medium institution established in 1993 under the patronage of the <strong>Al-Qalam Educational Trust (Regd. 1991)</strong> in Jogeshwari West, Mumbai.
+                Established in 1993 under the aegis of <strong>Al-Qalam Educational Trust (Regd. 1991)</strong>, <strong>The Scholars High School &amp; Junior College</strong> provides quality English-medium education in Jogeshwari West rooted in strong moral values.
               </p>
               <p style={{ marginBottom: '24px' }}>
-                Spanning a purpose-built seven-floor campus in the tranquil surroundings of Hill Park, our institution nurtures over 2,000 school students and 150 junior college arts &amp; commerce scholars with dedicated faculty, smart interactive classrooms, and a proven 100% board passing record through modern &amp; moral education.
+                Across our modern 7-storey campus, over 2,000 students learn and thrive across our 5 dedicated academic sections—<strong>MRAK Kids Pre School</strong>, <strong>The Scholars Primary School</strong>, <strong>The Scholars High School (SSC)</strong> with separate wings for boys and girls, <strong>The Scholars Junior College of Arts &amp; Commerce (HSC)</strong>, and our integrated <strong>Deeniyat Program</strong>. We combine state board academic rigor, interactive smart classrooms, and hands-on labs with an unbroken 100% board pass record.
               </p>
 
               {/* 3 Core Highlights (Al-Irfan Style) */}
@@ -101,9 +102,9 @@ export default function About() {
                     <GraduationCap size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">School Education (Pre-School to Class X SSC)</h3>
+                    <h3 className="about-feature-title">School Education (Nursery to Class 10 SSC)</h3>
                     <p className="about-feature-text">
-                      Comprehensive English-medium curriculum conforming to Maharashtra State Board guidelines, with holistic student growth and 100% pass outcomes.
+                      A lively, English-medium curriculum taught by passionate educators, featuring interactive smart boards and an unbroken 100% SSC Board passing record.
                     </p>
                   </div>
                 </div>
@@ -113,9 +114,9 @@ export default function About() {
                     <Award size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">The Scholars Junior College of Arts and Commerce (Std XI - XII HSC)</h3>
+                    <h3 className="about-feature-title">Junior College of Arts &amp; Commerce (Class 11 &amp; 12 HSC)</h3>
                     <p className="about-feature-text">
-                      Specialized higher secondary Arts &amp; Commerce education with dedicated faculty and separate divisions for boys and girls, preparing future leaders.
+                      Dedicated wings for boys and girls with focused preparation for commerce careers, CA Foundation, BMS, banking, and university degrees.
                     </p>
                   </div>
                 </div>
@@ -125,9 +126,9 @@ export default function About() {
                     <ShieldCheck size={22} />
                   </div>
                   <div>
-                    <h3 className="about-feature-title">Integrated Deeniyat &amp; Moral Character</h3>
+                    <h3 className="about-feature-title">Values &amp; Character (Integrated Deeniyat)</h3>
                     <p className="about-feature-text">
-                      Grounded moral tarbiyah, Quranic literacy, and ethical discipline under the trusted stewardship of Al-Qalam Educational Trust.
+                      Daily Quranic recitation with Tajweed, memorable Hadith lessons, and practical manners that teach children respect, empathy, and honesty.
                     </p>
                   </div>
                 </div>
@@ -210,12 +211,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* Chairman's Message */}
+      {/* President's Message */}
       <section className="section section-white">
         <div className="container">
           <SectionHeader
             eyebrow="GOVERNANCE & LEADERSHIP"
-            title="Chairman's Message"
+            title="President's Message"
             subtitle="Guiding philosophy from the leadership of Al-Qalam Educational Trust."
             centered
           />
@@ -370,8 +371,8 @@ export default function About() {
         <div className="container">
           <SectionHeader
             eyebrow="CAMPUS INFRASTRUCTURE"
-            title="Purpose-Built 7-Floor Educational Facility"
-            subtitle="A modern, climate-controlled learning space situated in Hill Park, Jogeshwari West."
+            title="A Modern 7-Storey Campus Built for Growth"
+            subtitle="Spacious, climate-controlled, and designed with safety in mind in Hill Park, Jogeshwari West."
             centered
           />
 
@@ -381,7 +382,7 @@ export default function About() {
             <div className="campus-building-spotlight reveal-left">
               <div className="campus-img-container">
                 <img
-                  src="/images/campus/building.jpg"
+                  src="/images/campus/building-hero.jpg"
                   alt="The Scholars School 7-Floor Campus Building at Hill Park, Jogeshwari West"
                   className="campus-building-img"
                   loading="lazy"
@@ -425,7 +426,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Smart Classrooms</h3>
-                  <p className="simple-facility-desc">Interactive digital display panels and multimedia tools.</p>
+                  <p className="simple-facility-desc">Interactive touchscreen display panels that bring every lesson to life.</p>
                 </div>
               </div>
 
@@ -435,7 +436,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">100% Air-Conditioned</h3>
-                  <p className="simple-facility-desc">Climate-controlled rooms for focused, comfortable study.</p>
+                  <p className="simple-facility-desc">Cool, pleasant classrooms that keep children fresh and focused all day.</p>
                 </div>
               </div>
 
@@ -445,7 +446,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Computer &amp; IT Lab</h3>
-                  <p className="simple-facility-desc">Modern workstations with coding and digital tools.</p>
+                  <p className="simple-facility-desc">Dedicated PC stations teaching typing, coding basics, and digital tools.</p>
                 </div>
               </div>
 
@@ -455,7 +456,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Science Laboratories</h3>
-                  <p className="simple-facility-desc">Equipped Physics, Chemistry, and Biology practical labs.</p>
+                  <p className="simple-facility-desc">Fully equipped practical labs for hands-on Physics, Chemistry, and Biology.</p>
                 </div>
               </div>
 
@@ -465,7 +466,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">Passenger Elevator</h3>
-                  <p className="simple-facility-desc">Effortless multi-floor access across all 7 levels.</p>
+                  <p className="simple-facility-desc">High-capacity elevator providing easy, safe access across all 7 levels.</p>
                 </div>
               </div>
 
@@ -475,7 +476,7 @@ export default function About() {
                 </div>
                 <div className="simple-facility-content">
                   <h3 className="simple-facility-title">RO Purified Water</h3>
-                  <p className="simple-facility-desc">Hygienic filtered drinking water on every floor.</p>
+                  <p className="simple-facility-desc">Multi-stage filtered drinking water and sanitized washrooms on every floor.</p>
                 </div>
               </div>
             </div>

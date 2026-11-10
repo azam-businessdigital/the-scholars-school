@@ -33,24 +33,34 @@ export default function JuniorCollegeBoys() {
 
   const collegeGallery = [
     {
-      img: '/images/gallery/farewell-1.jpeg',
-      title: 'Business Economics & Financial Accounting',
-      desc: 'Interactive lecture hall discussions, macroeconomic graph analysis, and ledger problem-solving.'
+      img: '/images/gallery/College Section/college-boys-celebration-1.jpg',
+      title: 'Collegiate Graduation & Annual Celebration',
+      desc: 'Junior College boys scholars celebrating academic milestones, camaraderie, and future career ambitions.'
     },
     {
-      img: '/images/gallery/smart-board-2.jfif',
-      title: 'Air-Conditioned Smart Classrooms',
-      desc: 'Modern lecture halls equipped with digital audio-visual boards, comfortable seating, and climate control.'
+      img: '/images/gallery/College Section/college-boys-smart-class-1.jpg',
+      title: 'Corporate Finance & Accountancy Lecture',
+      desc: 'Teacher-guided lessons on interactive smart boards exploring business management and finance principles.'
     },
     {
-      img: '/images/gallery/computer-lab-1.jfif',
-      title: 'Commercial Computing & IT Practicals',
+      img: '/images/gallery/College Section/college-boys-study-hall-1.jpg',
+      title: 'Dedicated Lecture & Examination Hall',
+      desc: 'Disciplined classroom atmosphere equipped with digital presentation tools for board exam preparations.'
+    },
+    {
+      img: '/images/gallery/College Section/college-boys-culinary-1.jpg',
+      title: 'Culinary & Entrepreneurship Exhibition',
+      desc: 'Students developing teamwork, presentation poise, and culinary craft during campus events.'
+    },
+    {
+      img: '/images/gallery/College Section/college-boys-activity-1.jpg',
+      title: 'Campus Cultural & Team Activities',
+      desc: 'Joyful co-curricular events and classroom collaborations strengthening peer bonding.'
+    },
+    {
+      img: '/images/gallery/College Section/blank-photo.svg',
+      title: 'Commercial Computing & IT Lab Practicals',
       desc: 'Hands-on digital spreadsheet training, financial calculation software, and business computing.'
-    },
-    {
-      img: '/images/gallery/college-g-1.jpg',
-      title: 'Dedicated Senior Lecture Wings',
-      desc: 'Exclusive collegiate floor divisions designed for focused higher secondary learning and academic preparation.'
     }
   ];
 
@@ -162,7 +172,7 @@ export default function JuniorCollegeBoys() {
                 {data.overview}
               </p>
               <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                Our Boys Section is structured to cultivate intellectual discipline, economic insight, and strong financial calculation skills. Students have access to computer facilities for commerce practicals, comprehensive library resources, and dedicated mock examination drills designed to secure distinction in the Maharashtra HSC Board examinations.
+                Our dedicated boys wing offers a focused, disciplined environment where students build sharp economic thinking and strong accounting skills. With modern IT labs for commercial applications, reference libraries, and regular mock exams, students develop the knowledge and confidence to earn top marks in the Maharashtra HSC Board exams.
               </p>
 
               <div className="mrak-badges-row stagger-group reveal-up">
@@ -203,8 +213,8 @@ export default function JuniorCollegeBoys() {
                 <TrendingUp size={14} /> Professional Career Prep
               </div>
               <img
-                src="/images/gallery/farewell-1.jpeg"
-                alt="Junior College male students attending business economics and financial accounting lecture"
+                src="/images/gallery/College Section/college-boys-study-hall-1.jpg"
+                alt="Junior College male scholars attending academic lectures in lecture hall"
                 className="academic-hero-img"
                 loading="lazy"
                 width="600"
@@ -213,10 +223,10 @@ export default function JuniorCollegeBoys() {
               <div className="academic-hero-caption">
                 <div>
                   <div style={{ fontWeight: 700, color: 'var(--color-royal-navy)', fontSize: '0.9375rem' }}>
-                    Business Economics &amp; Financial Analysis
+                    The Scholars Junior College Boys Section
                   </div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-slate-grey)', marginTop: '2px' }}>
-                    Interactive lectures in market demand, balance sheet structures, and economic policies.
+                    Higher Secondary Commerce &amp; Arts scholars engaged in focused academic study, financial reasoning, and board exam preparation.
                   </div>
                 </div>
               </div>
@@ -254,7 +264,7 @@ export default function JuniorCollegeBoys() {
                 Building Intellectual Rigour, Financial Insight &amp; Ethical Enterprise
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;At The Scholars Junior College of Arts and Commerce, we guide young men to develop sharp analytical thinking, financial calculation discipline, and entrepreneurial ambition. Backed by experienced lecturers, real-world case studies, and focused board examination drills, our students consistently achieve 100% HSC results and build solid foundations for premier commercial, banking, and professional careers.&rdquo;
+                &ldquo;We guide young men to develop sharp analytical thinking, financial clarity, and honest work ethics. With experienced lecturers, practical commerce exercises, and thorough exam practice, our students consistently score 100% board results and build strong stepping stones for business, finance, and professional degrees.&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; 100% HSC Arts &amp; Commerce Record</span>
@@ -273,12 +283,12 @@ export default function JuniorCollegeBoys() {
         <div className="container">
           <SectionHeader
             eyebrow="CAMPUS LIFE &amp; LEARNING IN ACTION"
-            title="Glimpses of Junior College Academic Life"
-            subtitle="Explore our lecture halls, commerce faculty, IT practicals, and 7-floor educational facility."
+            title="Glimpses of Junior College Boys Academic Life"
+            subtitle="Explore our lecture halls, commerce faculty, IT practicals, and vibrant student activities."
             centered
           />
 
-          <div className="mrak-gallery-grid-4">
+          <div className="mrak-gallery-grid">
             {collegeGallery.map((item, i) => (
               <div key={i} className="mrak-gallery-card">
                 <img

@@ -28,6 +28,26 @@ export default function Primary() {
 
   const primaryGallery = [
     {
+      img: '/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg',
+      title: 'Creative Pebble Painting & Stone Art',
+      desc: 'Primary students showcasing imaginative stone art, color blending, and hand-painted creative designs.'
+    },
+    {
+      img: '/images/gallery/Group Activity -Primary Section/WhatsApp Image 2026-10-29 at 16.09.58.jpeg',
+      title: 'Collaborative Group Project & Chart Work',
+      desc: 'Students collaborating in teams on creative educational charts, craft cutouts, and interactive displays.'
+    },
+    {
+      img: '/images/gallery/Group Activity -Primary Section/WhatsApp Image 2026-10-29 at 16.11.29.jpeg',
+      title: 'Teacher-Guided Interactive Learning',
+      desc: 'Dedicated faculty mentorship during hands-on project sessions, fostering teamwork and peer cooperation.'
+    },
+    {
+      img: '/images/gallery/Examination hall primary section/exam-hall-primary-1.jpg',
+      title: 'Dedicated Examination Hall & Quiet Assessments',
+      desc: 'Spacious, organized examination hall seating arrangement fostering academic discipline, calm focus, and integrity.'
+    },
+    {
       img: '/images/gallery/smart-board-2.jfif',
       title: 'Interactive Smart Classroom Lessons',
       desc: 'Audio-visual interactive whiteboards bringing science, geography, and language to life with vivid clarity.'
@@ -36,16 +56,6 @@ export default function Primary() {
       img: '/images/gallery/computer-lab-1.jfif',
       title: 'Modern Hands-On Computer Lab',
       desc: 'Dedicated IT periods teaching essential keyboarding, digital literacy, and foundational computer concepts.'
-    },
-    {
-      img: '/images/gallery/class-room-2.jfif',
-      title: 'Air-Conditioned Modern Classrooms',
-      desc: 'Spacious and climate-controlled classroom environments designed for optimal student focus and well-being.'
-    },
-    {
-      img: '/images/gallery/ro-water-3.jfif',
-      title: 'RO Purified Drinking Water & Campus Amenities',
-      desc: 'Multi-stage RO drinking water filtration systems and pristine sanitized amenities on every floor for student safety.'
     }
   ];
 
@@ -156,9 +166,28 @@ export default function Primary() {
               <p style={{ fontSize: '1.0625rem', lineHeight: '1.7', color: 'var(--color-slate-grey-dark)', marginBottom: '16px' }}>
                 {data.overview}
               </p>
-              <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                At The Scholars Primary School, our curriculum provides a vibrant, intellectually stimulating atmosphere following the Maharashtra State Board curriculum in English medium. With separate sections for boys and girls, students receive tailored instruction from dedicated faculty, blending interactive smart classroom technology, mental arithmetic, and daily Deeniyat moral guidance.
+              <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '18px' }}>
+                At The Scholars Primary School, children learn in an encouraging, lively environment. We follow the English-medium Maharashtra State Board syllabus with completely separate classes and sections for boys and girls. Our teachers bring concepts alive using interactive smart boards, hands-on math, and daily moral lessons from our Deeniyat curriculum.
               </p>
+
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  backgroundColor: 'rgba(20, 43, 74, 0.04)',
+                  border: '1px solid rgba(20, 43, 74, 0.1)',
+                  borderRadius: '10px',
+                  padding: '10px 16px',
+                  marginBottom: '22px',
+                  fontSize: '0.875rem',
+                  color: 'var(--color-royal-navy)',
+                  fontWeight: 600
+                }}
+              >
+                <ShieldCheck size={18} style={{ color: 'var(--color-champagne-gold)', flexShrink: 0 }} />
+                <span>Dedicated Separate Classes: Boys and girls attend entirely independent classrooms and sections.</span>
+              </div>
 
               <div className="mrak-badges-row stagger-group reveal-up">
                 <div className="mrak-stat-pill">
@@ -186,8 +215,8 @@ export default function Primary() {
                     <Users size={19} />
                   </div>
                   <div className="mrak-stat-content">
-                    <span className="mrak-stat-label">Sections</span>
-                    <div className="mrak-stat-value">Boys &amp; Girls Wings</div>
+                    <span className="mrak-stat-label">Campus Setup</span>
+                    <div className="mrak-stat-value">Separate Boys &amp; Girls Classes</div>
                   </div>
                 </div>
               </div>
@@ -252,7 +281,7 @@ export default function Primary() {
                 Empowering Every Student to Think, Discover &amp; Lead
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;Primary education at The Scholars High School is where fundamental curiosity transforms into disciplined academic achievement and upright moral character. We provide a supportive, stimulating learning environment where boys and girls receive dedicated faculty guidance, modern smart classroom instruction, and regular moral grounding through Deeniyat. Our aim is to develop articulate, thoughtful scholars who approach both secular knowledge and Islamic values with passion and humility.&rdquo;
+                &ldquo;{primaryIncharge.message}&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; Concept-Based Mastery</span>
@@ -276,7 +305,7 @@ export default function Primary() {
             centered
           />
 
-          <div className="mrak-gallery-grid-4">
+          <div className="mrak-gallery-grid">
             {primaryGallery.map((item, i) => (
               <div key={i} className="mrak-gallery-card">
                 <img

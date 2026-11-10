@@ -32,24 +32,34 @@ export default function JuniorCollegeGirls() {
 
   const collegeGallery = [
     {
-      img: '/images/gallery/college-g-1.jpg',
-      title: 'Accountancy & Financial Economics',
-      desc: 'Collaborative commerce lectures, ledger adjustments, and real-world case discussions in our Commerce Department.'
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.06 PM.jpeg',
+      title: 'Interactive Smart Classroom Lecture',
+      desc: 'Junior College students attending an interactive lecture in air-conditioned classroom with digital panel.'
     },
     {
-      img: '/images/gallery/computer-lab-1.jfif',
-      title: 'Digital Commerce & IT Practicals',
-      desc: 'Hands-on practical sessions in computerized accounting, digital spreadsheets, and commercial computing.'
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.07 PM.jpeg',
+      title: 'Career Guidance & Higher Education Seminars',
+      desc: 'Interactive career orientation sessions on smart interactive display boards preparing students for professional degree pathways.'
     },
     {
-      img: '/images/gallery/college-g-2.jpg',
-      title: 'Digital Classrooms & Study Resources',
-      desc: 'Air-conditioned lecture rooms with smart audio-visual systems and comprehensive reference libraries.'
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM (2).jpeg',
+      title: 'Zafeera Annual Fest - Entrepreneurship Stalls',
+      desc: 'Annual collegiate cultural and food festival fostering culinary, entrepreneurial, and artistic talents.'
     },
     {
-      img: '/images/gallery/lift-1.jfif',
-      title: 'Modern Infrastructure & Safe Campus Transit',
-      desc: 'Secure high-speed passenger elevator access connecting all floors with monitored corridors and dedicated amenities for girls.'
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.09 PM (1).jpeg',
+      title: 'Student Council Election & Democratic Leadership',
+      desc: 'Cultivating leadership, civic responsibility, and student representation through secret ballot elections.'
+    },
+    {
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.11 PM (2).jpeg',
+      title: 'Annual College Nature Excursion & Picnic',
+      desc: 'Refreshing outdoor nature excursions strengthening peer bonding, camaraderie, and holistic personal growth.'
+    },
+    {
+      img: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.10 PM (1).jpeg',
+      title: 'Annual Sports Day & Athletics Meet',
+      desc: 'Track and field events, sprint races, and inter-house competitions on the sports ground.'
     }
   ];
 
@@ -161,7 +171,7 @@ export default function JuniorCollegeGirls() {
                 {data.overview}
               </p>
               <p style={{ color: 'var(--color-slate-grey)', lineHeight: '1.65', marginBottom: '24px' }}>
-                Our separate girls section provides a secure, focused, and scholarly environment. Guided by seasoned commerce lecturers, students master conceptual accounting clarity, macroeconomic analysis, corporate secretarial law, and practical financial reasoning required for competitive entry into CA, CS, CMA, and prestigious commerce university degrees.
+                Our dedicated girls wing offers a quiet, secure, and encouraging atmosphere. With guidance from experienced teachers, students master core accounting, economics, commerce management, and business communication—giving them the solid footing they need for university degrees, CA Foundation, BMS, and corporate careers.
               </p>
 
               <div className="mrak-badges-row stagger-group reveal-up">
@@ -202,8 +212,8 @@ export default function JuniorCollegeGirls() {
                 <GraduationCap size={14} /> Dedicated Girls Campus
               </div>
               <img
-                src="/images/gallery/college-g-1.jpg"
-                alt="Junior College female students discussing accountancy principles with professor"
+                src="/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg"
+                alt="The Scholars Junior College Girls Section students and faculty members"
                 className="academic-hero-img"
                 loading="lazy"
                 width="600"
@@ -212,10 +222,10 @@ export default function JuniorCollegeGirls() {
               <div className="academic-hero-caption">
                 <div>
                   <div style={{ fontWeight: 700, color: 'var(--color-royal-navy)', fontSize: '0.9375rem' }}>
-                    Commerce Department Collaborative Learning
+                    The Scholars Junior College Girls Section
                   </div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-slate-grey)', marginTop: '2px' }}>
-                    In-depth exploration of double-entry ledger mechanics, accounting, and financial reasoning.
+                    Young women scholars and dedicated faculty in an empowering, supportive Higher Secondary learning environment.
                   </div>
                 </div>
               </div>
@@ -253,7 +263,7 @@ export default function JuniorCollegeGirls() {
                 Inspiring Young Women to Excel in Business, Finance &amp; Leadership
               </h3>
               <p className="mrak-principal-quote">
-                &ldquo;Our Junior College Girls Section provides young women with a dignified, intellectually demanding, and supportive environment to excel in arts, commerce, and finance. Through rigorous grounding in Book Keeping, Economics, Corporate Secretarial Practice, and Humanities, our students consistently achieve 100% HSC Board results and step confidently into careers in Chartered Accountancy, civil services, corporate finance, and business leadership.&rdquo;
+                &ldquo;Our Junior College Girls Section gives young women a respectful, encouraging space to excel in commerce, finance, and the arts. With dedicated guidance in accountancy, economics, and business studies, our students consistently achieve 100% board results and move forward into successful careers with confidence and dignity.&rdquo;
               </p>
               <div className="mrak-principal-pillars">
                 <span className="mrak-pillar-chip">&bull; 100% HSC Board Pass Record</span>
@@ -277,7 +287,7 @@ export default function JuniorCollegeGirls() {
             centered
           />
 
-          <div className="mrak-gallery-grid-4">
+          <div className="mrak-gallery-grid">
             {collegeGallery.map((item, i) => (
               <div key={i} className="mrak-gallery-card">
                 <img

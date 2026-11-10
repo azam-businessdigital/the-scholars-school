@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
 
             <p style={{ marginBottom: '16px' }}>
-              Established in 1993 under the patronage of Al-Qalam Educational Trust (Regd. 1991, Mumbai). Providing quality English-medium education with moral foundation from Pre-School to Higher Secondary.
+              Nurturing young minds in Jogeshwari West since 1993. Providing quality English-medium education and timeless moral values from Pre-School to Junior College under the Al-Qalam Educational Trust.
             </p>
 
             <div className="footer-social-links">
@@ -133,7 +133,10 @@ export default function Footer() {
                 <Phone size={18} />
                 <div>
                   <a href="tel:+918976890569">+91 8976890569</a> / <a href="tel:+918976890570">+91 8976890570</a><br />
-                  <a href="tel:+918976890571">+91 8976890571</a> / <a href="tel:+918976890572">+91 8976890572</a>
+                  <a href="tel:+918976890571">+91 8976890571</a> / <a href="tel:+918976890572">+91 8976890572</a><br />
+                  <a href="https://wa.me/918976890572" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-champagne-gold)', fontSize: '0.8125rem' }}>
+                    WhatsApp: +91 8976890572
+                  </a>
                 </div>
               </li>
               <li className="footer-contact-item">

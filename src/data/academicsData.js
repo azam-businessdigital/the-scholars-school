@@ -6,26 +6,27 @@ export const academicsData = [
     path: "/academics/mrak-kids/",
     h1: "MRAK (Maulana Riyaz Ahmed Khan) - The Scholars Kids Pre School",
     heroImage: "/images/academics/pre-school.jpg",
-    summary: "Complete early childhood foundation covering STD: Nursery, Mont – 2 & Sr.KG with sensory exploration, Jolly Phonics, numeracy, and loving moral values.",
+    summary: "A warm, joyful start to early learning (Nursery, Mont-2 & Sr.KG) with Jolly Phonics, hands-on play, sensory activities, and loving care.",
     standards: "STD: Nursery, Mont – 2 & Sr.KG",
     ageGroup: "STD: Nursery, Mont – 2 & Sr.KG",
     timings: "Morning Sessions",
     headOfSection: "Coordinator",
-    overview: "Named in honor of Maulana Riyaz Ahmed Khan, MRAK - The Scholars Kids Pre School provides a warm, stimulating early childhood environment covering STD: Nursery, Mont – 2, and Sr.KG (no LKG). Our young learners engage in play-based inquiry, Jolly Phonics, number awareness, sensory play, and creative arts that lay a joyful foundation for future schooling.",
+    overview: "At MRAK Pre-School, named after Maulana Riyaz Ahmed Khan, we believe early childhood should be full of wonder, play, and discovery. Our little learners explore words through Jolly Phonics, count with interactive games, paint, and develop polite daily habits in cheerful, air-conditioned activity rooms.",
     keyFeatures: [
-      "Covers complete early education: STD Nursery, Mont – 2 & Sr.KG",
-      "Activity-based learning with specialized Montessori-inspired materials",
-      "Child-safe, air-conditioned activity rooms and play areas with lift access",
-      "Early literacy and Jolly Phonics word reading in English",
-      "Moral stories, daily Du'aas, greeting with Salam, and social habit development",
-      "Close educator-to-student attention ensuring individualized care"
+      "Complete pre-school journey: Nursery, Mont-2, and Senior KG",
+      "Fun, play-based learning with Montessori-style toys and puzzles",
+      "Bright, air-conditioned rooms designed safely for small children",
+      "Early English reading confidence with Jolly Phonics",
+      "Gentle moral stories, daily supplications, and polite manners",
+      "Experiential community helper field trips (such as visits to the local police station)",
+      "Small group sizes so every toddler gets personal attention"
     ],
     curriculum: [
-      { area: "Language & Communication", description: "Jolly Phonics awareness, vocabulary expansion through interactive stories, and expressive conversational English." },
-      { area: "Numeracy & Logic", description: "Color recognition, shape matching, sequential counting games, and basic mathematical reasoning." },
-      { area: "Creative Expression", description: "Drawing, coloring, modeling with non-toxic play clay, and rhythm activities." },
-      { area: "Sensory & Physical Motor Skills", description: "Fine and gross motor development through building blocks, bead threading, and guided physical play." },
-      { area: "Values & Adab", description: "Foundational Islamic etiquette, polite speech, sharing, and daily personal hygiene." }
+      { area: "Language & Communication", description: "Jolly Phonics sounds, storytelling, picture books, and confident English conversation." },
+      { area: "Numbers & Logic", description: "Color matching, shapes, counting games, and basic everyday problem solving." },
+      { area: "Art & Creativity", description: "Drawing, coloring, non-toxic clay modeling, and joyful music and movement." },
+      { area: "Motor Skills & Play", description: "Building blocks, bead threading, and fun indoor games that build hand-eye coordination." },
+      { area: "Good Habits & Values", description: "Saying Salam, sharing with friends, washing hands, and speaking kindly." }
     ]
   },
   {
@@ -34,25 +35,26 @@ export const academicsData = [
     shortTitle: "Primary School",
     path: "/academics/primary/",
     h1: "The Scholars Primary School: Grades 1 to 4",
-    heroImage: "/images/gallery/smart-board-2.jfif",
+    heroImage: "/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg",
     headOfSection: "Primary Incharge",
-    summary: "Building academic strength, intellectual discipline, and social values across English medium curriculum prescribed by the Department of Education.",
+    summary: "Building reading confidence, practical math skills, and moral character in a welcoming, smart-board-enabled English-medium environment.",
     ageGroup: "6 to 10 Years",
     timings: "Afternoon Shift",
-    overview: "The Scholars Primary School is structured to foster independent thinking, reading comprehension, mathematical confidence, and scientific curiosity. With dedicated faculty for boys and girls, students receive personalized guidance within air-conditioned, digitally enabled classrooms.",
+    overview: "The Scholars Primary School helps children build strong academic roots and good daily habits. Conducted in completely separate classrooms for boys and girls, from interactive smart board lessons to hands-on computer practice, collaborative chart work, and pebble painting, our students learn with excitement while growing in kindness and mutual respect.",
     keyFeatures: [
-      "Maharashtra State Education curriculum taught in English medium",
-      "Smart classroom interactive lectures enhancing conceptual clarity",
-      "Dedicated hands-on computer lab sessions for modern IT skills",
-      "Deeniyat classes incorporating Quranic recitation, Hadith, and moral education",
-      "Extracurricular activities including leaf art, recitations, and sports"
+      "English-medium Maharashtra State Board curriculum",
+      "Completely separate classrooms for boys and girls for focused learning",
+      "Interactive smart boards making everyday lessons visual and exciting",
+      "Hands-on computer lab sessions teaching digital confidence early",
+      "Daily Deeniyat classes teaching Quranic recitation and good character",
+      "Creative crafts, stone art, group projects, elocution, and active sports"
     ],
     curriculum: [
-      { area: "Languages", description: "English (First Language), Hindi (Composite), and Marathi (State curriculum requirement)." },
-      { area: "Mathematics", description: "Arithmetic, mental math, geometry basics, word problems, and real-world applications." },
-      { area: "Environmental Studies & Science", description: "Observational science, living world, environmental conservation, and social sciences." },
-      { area: "Computer Literacy", description: "Basic operating system fundamentals, typing, and digital awareness." },
-      { area: "Islamic Studies (Deeniyat)", description: "Tajweed recitation, basic Islamic jurisprudence, moral stories, and daily supplications." }
+      { area: "Languages", description: "Fluent English reading and writing, Hindi, and Marathi as per state guidelines." },
+      { area: "Mathematics", description: "Mental math, practical arithmetic, geometry shapes, and everyday word problems." },
+      { area: "Science & Environment", description: "Hands-on nature study, living things, hygiene, and environmental awareness." },
+      { area: "Computer Literacy", description: "Touch typing, basic operating systems, and safe digital exploration." },
+      { area: "Deeniyat & Ethics", description: "Quranic recitation with Tajweed, Hadith reflections, and daily moral character." }
     ]
   },
   {
@@ -63,24 +65,24 @@ export const academicsData = [
     h1: "The Scholars High School: Grades 5 to 10 (Maharashtra SSC Board)",
     heroImage: "/images/facilities/science-lab-1.jpg",
     headOfSection: "Principal",
-    summary: "Rigorous academic preparation leading to the Maharashtra SSC Board examination, supported by science labs, computer labs, and focused mentoring.",
+    summary: "Thorough academic coaching, well-equipped science and IT labs, and personalized guidance leading to our unbroken 100% SSC Board results.",
     ageGroup: "10 to 16 Years",
     timings: "Regular High School Sessions",
-    overview: "The Scholars High School has earned a commendable reputation for consistently achieving 100% pass results in the Maharashtra State Board SSC examinations. Led by our dedicated Principal, our experienced subject specialists mentor students in academic discipline, board exam technique, and personal responsibility.",
+    overview: "The Scholars High School provides students with the focus, discipline, and knowledge they need to succeed in their Class 10 Board exams and beyond. In separate wings for boys and girls, students carry out real experiments in physics, chemistry, and biology labs, practice coding, and receive caring academic mentorship.",
     keyFeatures: [
-      "Consistent 100% SSC Board passing record with numerous distinctions",
-      "Separate boys and girls sections ensuring focused academic concentration",
-      "Fully equipped Physics, Chemistry, and Biology laboratories for practicals",
-      "Advanced computer facilities with high-speed internet and digital learning tools",
-      "Remedial coaching, regular mock tests, and rigorous revision schedules"
+      "Consistent 100% SSC Board pass record with numerous distinctions",
+      "Separate instructional wings for boys and girls for focused study",
+      "Modern, fully stocked labs for Physics, Chemistry, and Biology practicals",
+      "High-speed computer lab with individual student workstations",
+      "Careful revision plans, mock prelim tests, and doubt-clearing clinics"
     ],
     curriculum: [
-      { area: "Core Languages", description: "English Higher Level, Marathi, and Hindi or Urdu as per Board standards." },
-      { area: "Sciences", description: "Physics, Chemistry, and Biology with compulsory laboratory practical sessions." },
-      { area: "Mathematics", description: "Algebra, Geometry, Coordinate Geometry, Trigonometry, and Statistics." },
-      { area: "Social Sciences", description: "History, Political Science, Geography, and Economics." },
-      { area: "Information Technology", description: "Hands-on computing, spreadsheet analysis, and digital literacy." },
-      { area: "Deeniyat & Ethics", description: "Advanced moral ethics, character building, and Islamic principles." }
+      { area: "Core Languages", description: "English (Higher Level), Marathi, and Hindi or Urdu as per Board syllabus." },
+      { area: "Science & Labs", description: "Physics, Chemistry, and Biology taught with regular laboratory practicals." },
+      { area: "Mathematics", description: "Algebra, Geometry, Trigonometry, and Statistics with clear step-by-step problem solving." },
+      { area: "Social Studies", description: "History, Civics, Geography, and basic Economics." },
+      { area: "Information Technology", description: "Practical computing, digital spreadsheets, and essential software skills." },
+      { area: "Deeniyat & Ethics", description: "Moral principles, personal integrity, and community responsibility." }
     ]
   },
   {
@@ -89,24 +91,25 @@ export const academicsData = [
     shortTitle: "Deeniyat",
     path: "/academics/deeniyat/",
     h1: "Deeniyat: Modern Education with Islamic Frame of Reference",
-    heroImage: "/images/gallery/dastarkhaan-2.jfif",
+    heroImage: "/images/gallery/Deeniyat Boys/deeniyat-boys-1.jpg",
     headOfSection: "Head of Deeniyat",
-    summary: "Value-based Islamic studies curriculum instilling moral integrity, Quranic literacy, Hadith, and civic responsibility alongside general education.",
+    summary: "Weaving timeless moral values, Quranic Tajweed, and Hadith principles into everyday schooling across all grade levels.",
     ageGroup: "All Grade Levels",
     timings: "Integrated Daily Periods",
-    overview: "The Deeniyat program embodies the school's defining ethos: Modern Education with Islamic frame of reference. Led by our Head of Deeniyat, this curriculum equips students with a sound comprehension of Islamic values, moral discipline, and compassionate conduct in modern society.",
+    overview: "Our Deeniyat program brings to life our motto: Modern Education with an Islamic Frame of Reference. Designed for all grade levels and conducted in completely separate classrooms for boys and girls, it helps students read the Quran with proper Tajweed, understand the Prophet's teachings on honesty and kindness, and practice good manners in daily life.",
     keyFeatures: [
-      "Structured Quranic recitation with correct Tajweed rules",
-      "Memorization and contextual understanding of daily Hadith and Duas",
-      "Ethical education emphasizing honesty, respect for parents, and social harmony",
-      "Guidance for parents on positive parenting and wholesome home environments",
-      "Active encouragement of civic service, tolerance, and peaceful coexistence"
+      "Conducted in dedicated separate classrooms for boys and girls",
+      "Step-by-step Quran recitation with proper Tajweed rules",
+      "Memorable Hadith reflections on kindness, honesty, and family respect",
+      "Daily moral grounding, peaceful coexistence, and polite manners",
+      "Parent workshops on nurturing positive, caring homes",
+      "Annual Islamic quiz competitions, speech events, and community service"
     ],
     curriculum: [
-      { area: "Quranic Studies & Tajweed", description: "Correct phonetics, recitation rules, and reflection on core moral teachings of the Quran." },
-      { area: "Hadith Studies", description: "Selected sayings and traditions of Prophet Muhammad (SAW) on integrity, diligence, and mercy." },
-      { area: "Islamic Jurisprudence (Fiqh)", description: "Daily prayers, ablution, fasting, clean living, and civic etiquette." },
-      { area: "Islamic History & Civilization", description: "The golden age of knowledge, scientific contributions of Muslim scholars, and cultural heritage." }
+      { area: "Quranic Recitation & Tajweed", description: "Accurate pronunciation (Makhaarij), fluent reading, and understanding core verses." },
+      { area: "Hadith & Daily Sunnah", description: "Selected sayings of Prophet Muhammad (SAW) on truthfulness, hard work, and compassion." },
+      { area: "Islamic Living (Fiqh)", description: "Daily prayers, clean living habits, fasting, and social etiquette." },
+      { area: "Islamic Heritage", description: "Great Muslim scholars, scientific discoveries, and inspiring historical role models." }
     ]
   },
   {
@@ -115,25 +118,25 @@ export const academicsData = [
     shortTitle: "Junior College (Girls)",
     path: "/academics/junior-college/girls/",
     h1: "The Scholars Junior College of Arts and Commerce: Girls Section (HSC Board)",
-    heroImage: "/images/gallery/college-g-1.jpg",
+    heroImage: "/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg",
     headOfSection: "Principal",
-    summary: "Dedicated higher secondary Arts & Commerce stream providing young women with academic rigor, career preparation, and university readiness.",
+    summary: "An empowering higher secondary Arts & Commerce environment for young women, featuring specialized coaching, career seminars, and 100% HSC results.",
     ageGroup: "16 to 18 Years (XI & XII Arts & Commerce)",
     timings: "Morning College Timings",
-    overview: "The Scholars Junior College of Arts and Commerce (Girls Section) offers an empowering educational space where young women prepare for careers in accounting, finance, management, law, humanities, civil services, and entrepreneurship. Following the Maharashtra State Board HSC curriculum, our dedicated lecturers provide comprehensive subject mentoring.",
+    overview: "Our Girls Junior College gives young women the academic edge and personal confidence to pursue degrees in chartered accountancy (CA), management, banking, law, and civil services. With dedicated female faculty, air-conditioned lecture halls, and vibrant annual events like the Zafeera Fest, students thrive academically and socially.",
     keyFeatures: [
-      "100% HSC Board examination passing track record",
-      "Separate campus section designed for comfort, focus, and security",
-      "Air-conditioned classrooms equipped with multimedia lecture systems",
-      "Guidance for professional competitive courses including CA, CS, and CMA",
-      "Convenient accessibility with elevator across all 7 floors"
+      "Proud 100% pass record in Maharashtra HSC Board exams",
+      "Exclusive collegiate floor for privacy, focus, and comfort",
+      "Air-conditioned lecture rooms with smart audio-visual screens",
+      "Orientation seminars for CA Foundation, CS, BMS, and competitive exams",
+      "Lift access across all floors, modern amenities, and safe campus transit"
     ],
     curriculum: [
-      { area: "Book Keeping & Accountancy", description: "Financial accounting principles, ledger posting, partnership firms, and company accounts." },
-      { area: "Organization of Commerce & Management", description: "Business structures, internal trade, modern marketing, and principles of management." },
-      { area: "Economics", description: "Microeconomics, Macroeconomics, Indian economic policies, and banking systems." },
-      { area: "Secretarial Practice / Mathematics", description: "Corporate secretarial duties, share capital, or commercial mathematics and statistics." },
-      { area: "English & Second Language", description: "Business communication, literature, and second language options." }
+      { area: "Book Keeping & Accountancy", description: "Practical ledger accounts, partnership balance sheets, and company finances." },
+      { area: "Organization of Commerce", description: "Business structures, marketing, trade, and modern management principles." },
+      { area: "Economics", description: "Microeconomics, national budget, banking systems, and Indian economic policy." },
+      { area: "Secretarial Practice / Math", description: "Company secretary practices, corporate shares, or commercial statistics." },
+      { area: "English & Languages", description: "Professional communication, essay writing, and language options." }
     ]
   },
   {
@@ -142,25 +145,25 @@ export const academicsData = [
     shortTitle: "Junior College (Boys)",
     path: "/academics/junior-college/boys/",
     h1: "The Scholars Junior College of Arts and Commerce: Boys Section (HSC Board)",
-    heroImage: "/images/gallery/farewell-1.jpeg",
+    heroImage: "/images/gallery/College Section/college-boys-study-hall-1.jpg",
     headOfSection: "Principal",
-    summary: "Rigorous Arts & Commerce curriculum preparing young men for leadership in financial markets, commerce, banking, civil services, and professional degrees.",
+    summary: "Strong foundation in Commerce and Arts for young men, emphasizing financial literacy, board exam preparation, and career readiness.",
     ageGroup: "16 to 18 Years (XI & XII Arts & Commerce)",
     timings: "Morning College Timings",
-    overview: "The Scholars Junior College of Arts and Commerce (Boys Section) delivers comprehensive higher secondary education aligned with the Maharashtra State Board HSC syllabus. We emphasize conceptual understanding, business ethics, quantitative skills, and career counseling to transition students successfully into university degrees.",
+    overview: "The Boys Junior College delivers thorough higher secondary preparation designed for ambitious commerce and arts students. Our faculty helps students master double-entry bookkeeping, economic analysis, and business management, while encouraging academic discipline and ethical leadership.",
     keyFeatures: [
-      "100% passing results in HSC Board examinations year after year",
-      "Focus on commercial analysis, case studies, and business problem-solving",
-      "Access to advanced computer laboratories for computer applications in commerce",
-      "Experienced college lecturers with proven board examination preparation methods",
-      "Regular guest lectures, career guidance workshops, and mock examinations"
+      "Unbroken 100% passing results in HSC Board exams year after year",
+      "Practical case studies, commerce drills, and business problem-solving",
+      "Access to advanced IT labs for computerized accounting and spreadsheets",
+      "Personalized mentoring from experienced subject specialist lecturers",
+      "Regular mock examinations, university guidance, and athletic sports events"
     ],
     curriculum: [
-      { area: "Book Keeping & Accountancy", description: "Fundamentals of double-entry bookkeeping, final accounts, and corporate financial statements." },
-      { area: "Organization of Commerce", description: "Forms of business organizations, modern supply chain concepts, and management theory." },
-      { area: "Economics", description: "National income, public finance, monetary policy, and international trade dynamics." },
-      { area: "Secretarial Practice / Mathematics", description: "Corporate governance, securities markets, or commercial statistics." },
-      { area: "Languages & Communication", description: "Professional English business communication and language electives." }
+      { area: "Book Keeping & Accountancy", description: "Fundamentals of double-entry bookkeeping, final accounts, and corporate statements." },
+      { area: "Organization of Commerce", description: "Forms of business ownership, supply chains, and management fundamentals." },
+      { area: "Economics", description: "National income, inflation, money & banking, and foreign trade." },
+      { area: "Secretarial Practice / Math", description: "Corporate rules, capital markets, or commercial mathematics." },
+      { area: "Languages & Communication", description: "Effective workplace English, business correspondence, and electives." }
     ]
   }
 ];

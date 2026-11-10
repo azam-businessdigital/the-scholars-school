@@ -21,9 +21,9 @@ export default function Academics() {
           <div className="mrak-banner-badge">
             <span className="mrak-banner-tag">ACADEMIC EXCELLENCE &bull; PRE-SCHOOL TO JUNIOR COLLEGE</span>
           </div>
-          <h1>Comprehensive Academic Programs</h1>
+          <h1>Academic Programs at The Scholars</h1>
           <p>
-            From early sensory learning in MRAK - The Scholars Kids Pre School to specialized education at The Scholars Junior College of Arts and Commerce, discover our structured academic journey.
+            From their first curious questions in pre-school to high school board exams and junior college degrees, we give children a caring, structured space to learn, achieve, and grow.
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Academics() {
           <SectionHeader
             eyebrow="ACADEMIC DEPARTMENTS"
             title="Six Dedicated Academic Sections"
-            subtitle="From early childhood sensory exploration in MRAK Kids to specialized Higher Secondary education at The Scholars Junior College of Arts and Commerce, explore our complete educational continuum."
+            subtitle="Explore our age-appropriate programs—from joyful early childhood play in MRAK Kids to Higher Secondary degrees, featuring dedicated separate classes for boys and girls."
             centered
           />
 
@@ -52,27 +52,27 @@ export default function Academics() {
         <div className="container">
           <div className="grid-2 stagger-group reveal-up" style={{ alignItems: 'center' }}>
             <div className="section-header reveal-up">
-              <span className="eyebrow">PEDAGOGICAL APPROACH</span>
-              <h2 className="section-title">The Scholars Academic Framework</h2>
+              <span className="eyebrow">HOW WE TEACH</span>
+              <h2 className="section-title">Learning That Goes Beyond Textbooks</h2>
               <p>
-                Our curriculum follows the standards established by the Maharashtra Department of Education, delivered fully in English medium. We complement state academic rigor with digital smart board learning, active laboratory practicals, and foundational moral values through our Deeniyat curriculum.
+                We follow the English-medium Maharashtra State Board curriculum, pairing solid classroom fundamentals with interactive smart boards, hands-on lab experiments, and grounding in moral values through our Deeniyat program.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, marginTop: '16px' }}>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
-                  <span>Maharashtra SSC State Board curriculum with 100% pass track record</span>
+                  <span>Maharashtra SSC State Board curriculum with a consistent 100% pass track record</span>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
-                  <span>The Scholars Junior College of Arts and Commerce preparing students for university degrees and professional careers</span>
+                  <span>Junior College programs in Commerce and Arts preparing students for higher degrees and professional careers</span>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
-                  <span>Integrated Deeniyat moral education fostering character and ethics</span>
+                  <span>Integrated Deeniyat classes nurturing good character, honesty, and empathy</span>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                   <CheckCircle size={18} style={{ color: 'var(--color-champagne-gold)' }} />
-                  <span>Separate boys and girls sections for focused senior learning</span>
+                  <span>Completely separate classrooms and dedicated wings for boys and girls across all school and college sections</span>
                 </li>
               </ul>
             </div>

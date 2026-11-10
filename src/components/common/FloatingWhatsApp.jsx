@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { schoolData } from '../../data/schoolData';
 
 /**
  * FloatingWhatsApp
@@ -6,7 +7,7 @@ import React, { useState } from 'react';
  */
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(false);
-  const phoneNumber = '918976890569';
+  const phoneNumber = schoolData.whatsappRaw || '918976890572';
   const defaultMessage = 'Hello The Scholars School, I would like to enquire about admissions & courses.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
@@ -28,7 +29,7 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         className="floating-whatsapp-btn"
-        aria-label="Chat with The Scholars School on WhatsApp (+91 8976890569)"
+        aria-label={`Chat with The Scholars School on WhatsApp (${schoolData.whatsapp || '+91 8976890572'})`}
       >
         <div className="floating-whatsapp-pulse" />
         <svg

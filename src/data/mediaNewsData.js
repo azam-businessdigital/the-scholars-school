@@ -114,6 +114,16 @@ export const electronicMediaData = [
 
 export const printMediaData = [
   {
+    id: "print-teachers-workshop-pune",
+    title: "All Maharashtra Science & Mathematics Teachers' Workshop (Level 1 & Level 2)",
+    category: "Print Media",
+    type: "print",
+    date: "27-28 September",
+    publication: "Markazi Taleemi Board / IUCAA Pune",
+    image: "/images/gallery/All Maharashtra Science & Mathematics Teachers Workshop/science-maths-teachers-workshop-1.jpg",
+    description: "Faculty professional development: The Scholars School science and mathematics educators participating in the state-level pedagogy workshop at IIC Kondhwa, Pune, organized by Markazi Taleemi Board Maharashtra, Holistic Education Trust (HET), and IUCAA Pune."
+  },
+  {
     id: "print-independence-day",
     title: "Scholars School And Junior College Celebrated Independence Day",
     category: "Print Media",
