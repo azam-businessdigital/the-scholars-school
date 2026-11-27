@@ -24,8 +24,10 @@ import {
 import SEO from '../components/common/SEO';
 import Breadcrumbs from '../components/common/Breadcrumbs';
 import SectionHeader from '../components/common/SectionHeader';
+import AcademicCard from '../components/cards/AcademicCard';
 import AdmissionForm from '../components/forms/AdmissionForm';
 import { schoolData } from '../data/schoolData';
+import { academicsData } from '../data/academicsData';
 
 export default function Admissions() {
   const [selectedSection, setSelectedSection] = useState('');
@@ -47,79 +49,6 @@ export default function Admissions() {
       }
     }, 400);
   };
-
-  const academicStreams = [
-    {
-      id: 'mrak-kids',
-      title: 'MRAK - The Scholars Kids Pre School',
-      category: 'STD: Nursery, Mont – 2 & Sr.KG',
-      ageBadge: 'Nursery, Mont – 2 & Sr.KG',
-      image: '/images/gallery/fancy-dress-1.jpeg',
-      formValue: 'MRAK Kids: Nursery',
-      desc: 'Joyful early schooling for Nursery, Mont-2, and Sr.KG where young children explore through sensory play, Jolly Phonics, early numbers, and kind habits.',
-      features: [
-        'Air-conditioned, child-safe interactive rooms with lift access',
-        'Jolly Phonics, vocabulary play & early numeracy',
-        'Warm, attentive care from dedicated teachers'
-      ]
-    },
-    {
-      id: 'primary',
-      title: 'The Scholars Primary School',
-      category: 'Grades 1 to 4',
-      ageBadge: 'Age: 6 – 9 Years',
-      image: '/images/gallery/Pebble Painting - Primary Section/WhatsApp Image 2026-10-29 at 16.12.21.jpeg',
-      formValue: 'The Scholars Primary School (Grades 1 to 4)',
-      desc: 'English-medium Maharashtra State Board schooling focusing on strong reading, practical arithmetic, science discovery, and good manners.',
-      features: [
-        'Interactive smart boards & dedicated computer lab',
-        'Daily Deeniyat with Tajweed pronunciation',
-        'Co-curricular arts, sports, and speech activities'
-      ]
-    },
-    {
-      id: 'secondary',
-      title: 'The Scholars High School',
-      category: 'Grades 5 to 10 (Separate Wings)',
-      ageBadge: 'Age: 10 – 15 Years',
-      image: '/images/facilities/science-lab-1.jpg',
-      formValue: 'The Scholars High School (Grades 5 to 10 - Boys)',
-      desc: 'Focused preparation for Maharashtra SSC Board examinations in dedicated, separate wings with experienced faculty for boys and girls.',
-      features: [
-        'Equipped physics, chemistry & biology labs',
-        'Separate floors & learning wings for boys and girls',
-        'Proven 100% SSC board passing track record'
-      ]
-    },
-    {
-      id: 'junior-college',
-      title: 'The Scholars Junior College of Arts and Commerce',
-      category: 'Grades XI & XII Arts & Commerce',
-      ageBadge: 'Higher Secondary (HSC)',
-      image: '/images/gallery/College Section/WhatsApp Image 2026-10-27 at 8.12.08 PM.jpeg',
-      formValue: 'The Scholars Junior College of Arts and Commerce (Girls Section)',
-      desc: 'Quality Higher Secondary education in Arts and Commerce, preparing students for university degrees and competitive careers (CA, CS, B.Com, BMS, BAF).',
-      features: [
-        'Expert faculty in Accountancy, Economics & Humanities',
-        'Separate wings & shifts for boys and girls',
-        'Regular career counseling & exam preparation'
-      ]
-    },
-    {
-      id: 'deeniyat',
-      title: 'Integrated Deeniyat Program',
-      category: 'Values & Islamic Ethics',
-      ageBadge: 'Integrated All Grades',
-      image: '/images/gallery/ic.jpeg',
-      formValue: 'Integrated Deeniyat Program',
-      desc: 'A daily values program teaching Quran recitation with Tajweed, Hadith reflections, and everyday etiquette alongside regular academics.',
-      features: [
-        'Quranic recitation with authentic Tajweed rules',
-        'Hadith memorization, daily Duas & Islamic etiquette',
-        'Character building, kindness & respect for all'
-      ]
-    }
-  ];
 
   const eligibilityCriteria = {
     preschool: {
@@ -280,56 +209,19 @@ export default function Admissions() {
 
       <Breadcrumbs items={[{ label: 'Admissions', path: '/admissions/' }]} />
 
-      {/* 2. ACADEMIC STREAMS & WINGS OFFERINGS */}
-      <section className="section section-white">
+      {/* 2. ACADEMIC DEPARTMENTS */}
+      <section className="section section-white" id="academic-sections">
         <div className="container">
           <SectionHeader
-            eyebrow="ACADEMIC DIVISIONS"
-            title="Find the Right Grade for Your Child"
-            subtitle="Explore our age-appropriate programs—from joyful early childhood play in MRAK Kids to Higher Secondary degrees in Arts and Commerce."
+            eyebrow="ACADEMIC DEPARTMENTS"
+            title="Six Dedicated Academic Sections"
+            subtitle="Explore our age-appropriate programs—from joyful early childhood play in MRAK Kids to Higher Secondary degrees, featuring dedicated separate classes for boys and girls."
             centered
           />
 
-          <div className="admissions-streams-grid stagger-group reveal-up">
-            {academicStreams.map((stream) => (
-              <div key={stream.id} className="admissions-stream-card card reveal-up">
-                <div className="admissions-stream-img-box img-sheen-wrap">
-                  <img
-                    src={stream.image}
-                    alt={stream.title}
-                    className="admissions-stream-img"
-                    loading="lazy"
-                  />
-                  <span className="admissions-stream-badge">{stream.category}</span>
-                  <span className="admissions-stream-age">{stream.ageBadge}</span>
-                </div>
-
-                <div className="admissions-stream-body">
-                  <h3 className="admissions-stream-title">{stream.title}</h3>
-                  <p className="admissions-stream-desc">{stream.desc}</p>
-
-                  <ul className="admissions-stream-features">
-                    {stream.features.map((feat, idx) => (
-                      <li key={idx}>
-                        <CheckCircle2 size={14} />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="admissions-stream-footer">
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-sm"
-                      style={{ width: '100%', justifyContent: 'center' }}
-                      onClick={() => handleSelectStream(stream.formValue)}
-                    >
-                      <span>Inquire for this Program</span>
-                      <ArrowRight size={15} />
-                    </button>
-                  </div>
-                </div>
-              </div>
+          <div className="grid-3 stagger-group reveal-up">
+            {academicsData.map((section) => (
+              <AcademicCard key={section.id} section={section} />
             ))}
           </div>
         </div>

@@ -5,7 +5,7 @@ export default function SEO({
   title,
   description,
   canonical,
-  ogImage = '/images/campus/building.jpg',
+  ogImage = '/images/og-image.jpg',
   type = 'website'
 }) {
   const location = useLocation();
@@ -51,6 +51,8 @@ export default function SEO({
     setMeta('og:description', description);
     setMeta('og:url', canonicalUrl);
     setMeta('og:image', absoluteOgImage);
+    setMeta('og:image:secure_url', absoluteOgImage);
+    setMeta('og:image:type', 'image/jpeg');
     setMeta('og:type', type);
     setMeta('og:site_name', 'The Scholars High School and Junior College');
     setMeta('og:locale', 'en_IN');

@@ -215,7 +215,7 @@ function sendSmtpEmail($smtpConfig, $toEmail, $toName, $subject, $htmlBody, $rep
     }
 
     // 2. EHLO
-    $sendCommand("EHLO localhost");
+    $sendCommand("EHLO thescholarsschool.edu.in");
     $res = $readResponse();
     if (!str_starts_with($res, '250')) {
         fclose($socket);

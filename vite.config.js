@@ -77,8 +77,8 @@ function resolveBase(command) {
     return process.env.VITE_BASE_PATH;
   }
 
-  // Default to staging subfolder for current preview
-  return '/the-scholars-school-v1/';
+  // Default to root domain for production deployment
+  return '/';
 }
 
 export default defineConfig(({ command }) => {

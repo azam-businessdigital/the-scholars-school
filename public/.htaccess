@@ -34,7 +34,7 @@ ServerSignature Off
   RewriteRule ^contact-us\.php$ contact-us/ [R=301,L]
 
   # API Endpoints (relative rewrite)
-  RewriteRule ^api/contact/?$ api/contact.php [L,QSA]
+  RewriteRule ^api/contact/?$ api/inquiry.php [L,QSA]
   RewriteRule ^api/admission-enquiry/?$ api/admission.php [L,QSA]
 
   # Block direct access to hidden files and internal directories
